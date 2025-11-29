@@ -1,9 +1,22 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import PDFUploader from '@/components/PDFUploader';
-import PDFViewer from '@/components/PDFViewer';
 import { motion, AnimatePresence } from 'framer-motion';
+
+// Dynamically import PDFViewer with SSR disabled to avoid server-side rendering issues
+const PDFViewer = dynamic(() => import('@/components/PDFViewer'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto"></div>
+        <p className="mt-4 text-gray-600">Loading PDF viewer...</p>
+      </div>
+    </div>
+  ),
+});
 
 export default function Home() {
   const [pdfFile, setPdfFile] = useState<File | null>(null);

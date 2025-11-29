@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import 'react-pdf/dist/esm/Page/TextLayer.css';
 
 // Configure PDF.js worker
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -80,8 +78,8 @@ export default function PDFViewer({ file }: PDFViewerProps) {
               <Page
                 pageNumber={index + 1}
                 width={800}
-                renderTextLayer={true}
-                renderAnnotationLayer={true}
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
               />
             </motion.div>
           );

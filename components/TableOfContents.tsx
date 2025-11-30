@@ -43,6 +43,7 @@ const slides: Slide[] = [
   { number: 36, title: "Roadshow Metrics Disclosures", id: "slide-36" },
   { number: 37, title: "Roadshow Metrics Disclosures V2", id: "slide-37" },
   { number: 38, title: "Atlassian Messaging", id: "slide-38" },
+  { number: 39, title: "Disclaimer", id: "slide-39" },
 ];
 
 export default function TableOfContents() {

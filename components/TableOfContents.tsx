@@ -38,6 +38,7 @@ const slides: Slide[] = [
   { number: 31, title: "What Do Most Companies Disclose at IPO?", id: "slide-31" },
   { number: 32, title: "Deep Dive Into Model Builds", id: "slide-32" },
   { number: 33, title: "Customer Thresholds", id: "slide-33" },
+  { number: 34, title: "Customer Thresholds V2", id: "slide-34" },
 ];
 
 export default function TableOfContents() {

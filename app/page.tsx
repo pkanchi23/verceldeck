@@ -26,6 +26,7 @@ import Slide30DisclosuresKPIs from "@/components/sections/Slide30DisclosuresKPIs
 import Slide31DisclosureIPO from "@/components/sections/Slide31DisclosureIPO";
 import Slide32DeepDiveComps from "@/components/sections/Slide32DeepDiveComps";
 import Slide33CustomerThresholds from "@/components/sections/Slide33CustomerThresholds";
+import Slide34CustomerThresholdsV2 from "@/components/sections/Slide34CustomerThresholdsV2";
 
 export default function HomePage() {
   return (
@@ -58,6 +59,7 @@ export default function HomePage() {
       <Slide31DisclosureIPO />
       <Slide32DeepDiveComps />
       <Slide33CustomerThresholds />
+      <Slide34CustomerThresholdsV2 />
     </main>
   );
 }

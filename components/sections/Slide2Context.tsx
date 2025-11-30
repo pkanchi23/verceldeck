@@ -99,7 +99,7 @@ export default function Slide2Context() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="absolute bottom-6 right-6 text-2xl md:text-3xl font-light text-white/60"
+          className="absolute bottom-6 right-6 text-sm md:text-base font-light text-white/60"
         >
           2
         </motion.div>

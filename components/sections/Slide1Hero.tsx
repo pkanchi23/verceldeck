@@ -70,7 +70,7 @@ export default function Slide1Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
-          className="absolute bottom-6 right-6 text-2xl md:text-3xl font-light text-white/60"
+          className="absolute bottom-6 right-6 text-sm md:text-base font-light text-white/60"
         >
           1
         </motion.div>

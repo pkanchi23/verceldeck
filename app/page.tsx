@@ -23,6 +23,7 @@ import Slide27IllustrativeFramework from "@/components/sections/Slide27Illustrat
 import Slide28GrowthAlgorithm from "@/components/sections/Slide28GrowthAlgorithm";
 import Slide29BuildingBlocks from "@/components/sections/Slide29BuildingBlocks";
 import Slide30DisclosuresKPIs from "@/components/sections/Slide30DisclosuresKPIs";
+import Slide31DisclosureIPO from "@/components/sections/Slide31DisclosureIPO";
 
 export default function HomePage() {
   return (
@@ -52,6 +53,7 @@ export default function HomePage() {
       <Slide28GrowthAlgorithm />
       <Slide29BuildingBlocks />
       <Slide30DisclosuresKPIs />
+      <Slide31DisclosureIPO />
     </main>
   );
 }

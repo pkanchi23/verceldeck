@@ -16,6 +16,7 @@ import Slide18MarketSpend from "@/components/sections/Slide18MarketSpend";
 import Slide19CreatingNewMarkets from "@/components/sections/Slide19CreatingNewMarkets";
 import Slide21BuildersNewEra from "@/components/sections/Slide21BuildersNewEra";
 import Slide22FastAINative from "@/components/sections/Slide22FastAINative";
+import Slide24NextLayerAbstraction from "@/components/sections/Slide24NextLayerAbstraction";
 
 export default function HomePage() {
   return (
@@ -38,6 +39,7 @@ export default function HomePage() {
       <Slide19CreatingNewMarkets />
       <Slide21BuildersNewEra />
       <Slide22FastAINative />
+      <Slide24NextLayerAbstraction />
     </main>
   );
 }

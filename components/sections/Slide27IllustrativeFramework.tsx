@@ -23,26 +23,34 @@ const ChartBlock = ({
       {/* Bars */}
       <div className="flex items-end gap-3 md:gap-4 mb-4">
         {/* Q1 Bar */}
-        <div className="flex flex-col items-center">
-          <div
-            className={`w-12 md:w-16 h-20 md:h-24 ${colorClass} rounded-t`}
+        <div className="flex flex-col items-center h-28 md:h-32 justify-end">
+          <motion.div
+            initial={{ height: 0 }}
+            whileInView={{ height: "5rem" }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+            className={`w-12 md:w-16 ${colorClass} rounded-t`}
           />
         </div>
 
         {/* Q2 Bar with Arrow */}
-        <div className="flex flex-col items-center relative">
+        <div className="flex flex-col items-center relative h-28 md:h-32 justify-end">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.3, duration: 0.3, type: "spring" }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.6, duration: 0.3, type: "spring" }}
             className="absolute -top-6 text-lg"
             style={{ color }}
           >
             ↑
           </motion.div>
-          <div
-            className={`w-12 md:w-16 h-28 md:h-32 ${colorClass} rounded-t`}
+          <motion.div
+            initial={{ height: 0 }}
+            whileInView={{ height: "7rem" }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+            className={`w-12 md:w-16 ${colorClass} rounded-t`}
           />
         </div>
       </div>
@@ -122,8 +130,8 @@ export default function Slide27IllustrativeFramework() {
         {/* Header Section */}
         <div className="flex items-start justify-between px-6 md:px-12 pt-16 md:pt-20 mb-8 md:mb-12">
           {/* Title */}
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white underline">
-            Illustrative long-term framework
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+            <span className="underline">Illustrative</span> long-term framework
           </h1>
 
           {/* Top-Right Logo Placeholder (Vercel) */}
@@ -171,7 +179,7 @@ export default function Slide27IllustrativeFramework() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
                 className="absolute top-1/2 -translate-y-1/2"
               >

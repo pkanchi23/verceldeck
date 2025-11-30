@@ -20,7 +20,7 @@ const AnimatedPlaceholder = ({
     <motion.span
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       onMouseEnter={() => withHover && setIsHovered(true)}
       onMouseLeave={() => withHover && setIsHovered(false)}
@@ -46,7 +46,7 @@ const AnimatedText = ({
     <motion.span
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className="inline-block"
     >
@@ -69,7 +69,7 @@ const LogoPlaceholder = ({
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className="inline-block border border-white/30 rounded bg-transparent ml-3"
       style={{ width: `${width}px`, height: `${height}px` }}
@@ -89,7 +89,7 @@ const CornerLogoPlaceholder = ({
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className="border border-zinc-700 rounded bg-transparent flex items-center justify-center w-[120px] h-[40px]"
     >
@@ -101,9 +101,22 @@ const CornerLogoPlaceholder = ({
 export default function Slide22FastAINative() {
   return (
     <Section id="slide-22" className="bg-black">
-      <div className="relative w-full min-h-screen flex items-center justify-center">
+      <div className="relative w-full h-screen flex items-center justify-center">
+        {/* Triangle Graphic Placeholder - Background */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.95, duration: 0.4, ease: "easeOut" }}
+          className="absolute inset-0 flex items-center justify-center z-0"
+        >
+          <div className="w-[200px] md:w-[280px] h-[160px] md:h-[220px] border border-white/30 rounded bg-transparent flex items-center justify-center">
+            <span className="text-white/40 text-sm">Triangle Mark</span>
+          </div>
+        </motion.div>
+
         {/* Main Content Container */}
-        <div className="text-center px-6 md:px-12">
+        <div className="text-center px-6 md:px-12 relative z-10">
           {/* Line 1 */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-4 md:mb-6 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
             <AnimatedText delay={0.0}>
@@ -137,19 +150,6 @@ export default function Slide22FastAINative() {
 
             <LogoPlaceholder delay={0.75} width={140} height={45} />
           </div>
-
-          {/* Triangle Graphic Placeholder */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.95, duration: 0.4, ease: "easeOut" }}
-            className="flex items-center justify-center mt-8 md:mt-12"
-          >
-            <div className="w-[200px] md:w-[280px] h-[160px] md:h-[220px] border border-white/30 rounded bg-transparent flex items-center justify-center">
-              <span className="text-white/40 text-sm">Triangle Mark</span>
-            </div>
-          </motion.div>
         </div>
 
         {/* Bottom-Left Logo Placeholder (Vercel) */}
@@ -161,6 +161,17 @@ export default function Slide22FastAINative() {
         <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6">
           <CornerLogoPlaceholder delay={1.2} label="V0" />
         </div>
+
+        {/* Page Number - Bottom-Right */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 1.3, duration: 0.4 }}
+          className="absolute bottom-16 right-4 md:bottom-20 md:right-6 text-sm md:text-base font-light text-white/70"
+        >
+          22
+        </motion.div>
       </div>
     </Section>
   );

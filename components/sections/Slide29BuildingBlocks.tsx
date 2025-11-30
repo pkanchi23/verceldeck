@@ -17,7 +17,7 @@ const PlaceholderBox = ({
     <motion.div
       initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className={`border border-zinc-700 rounded-lg bg-zinc-900/30 p-4 flex items-center justify-center ${className}`}
     >
@@ -33,7 +33,7 @@ const TimesIcon = ({ delay }: { delay: number }) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4 }}
       className="flex items-center justify-center text-white/60 text-xl font-bold"
     >
@@ -45,7 +45,7 @@ const TimesIcon = ({ delay }: { delay: number }) => {
 export default function Slide29BuildingBlocks() {
   return (
     <Section id="slide-29" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -87,7 +87,7 @@ export default function Slide29BuildingBlocks() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
                 className="w-full max-w-5xl border-2 border-zinc-700 rounded-full bg-zinc-900/30 p-4 text-center"
               >
@@ -100,7 +100,7 @@ export default function Slide29BuildingBlocks() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
                 className="absolute left-[15%] -bottom-8 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
               >
@@ -111,7 +111,7 @@ export default function Slide29BuildingBlocks() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
                 className="absolute right-[15%] -bottom-8 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
               >
@@ -173,7 +173,7 @@ export default function Slide29BuildingBlocks() {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.7, duration: 0.5 }}
               className="border-2 border-dashed border-yellow-600/60 rounded-xl p-6 bg-yellow-900/5 space-y-6"
             >
@@ -185,7 +185,7 @@ export default function Slide29BuildingBlocks() {
               />
 
               {/* B2. Ongoing P*Q Boxes */}
-              <div className="grid grid-cols-[1fr_auto_1fr] gap-3 items-center">
+              <div className="grid grid-cols-[1fr_auto_0.8fr] gap-3 items-center">
                 <PlaceholderBox
                   label="NUM_CUSTOMERS_PLACEHOLDER"
                   delay={1.9}
@@ -195,7 +195,7 @@ export default function Slide29BuildingBlocks() {
                 <PlaceholderBox
                   label="ARPC_PLACEHOLDER"
                   delay={2.1}
-                  className="h-20"
+                  className="h-20 overflow-hidden"
                 />
               </div>
 
@@ -207,7 +207,7 @@ export default function Slide29BuildingBlocks() {
               />
 
               {/* B4. P*Q Longer-Term */}
-              <div className="grid grid-cols-[1fr_auto_1fr] gap-3 items-center">
+              <div className="grid grid-cols-[1fr_auto_0.8fr] gap-3 items-center">
                 <PlaceholderBox
                   label="TARGET_NUM_CUSTOMERS_PLACEHOLDER"
                   delay={2.3}
@@ -217,7 +217,7 @@ export default function Slide29BuildingBlocks() {
                 <PlaceholderBox
                   label="ARPC_PLACEHOLDER"
                   delay={2.5}
-                  className="h-20"
+                  className="h-20 overflow-hidden"
                 />
               </div>
             </motion.div>
@@ -227,7 +227,7 @@ export default function Slide29BuildingBlocks() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 2.6, duration: 0.5 }}
             className="mt-6 flex justify-center lg:justify-end"
           >

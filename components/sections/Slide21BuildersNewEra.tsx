@@ -6,7 +6,7 @@ import Section from "@/components/Section";
 export default function Slide21BuildersNewEra() {
   return (
     <Section id="slide-21" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -46,7 +46,7 @@ export default function Slide21BuildersNewEra() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
               className="w-[75%] md:w-[80%] aspect-[16/10] border border-white rounded-lg flex items-center justify-center bg-transparent"
             >

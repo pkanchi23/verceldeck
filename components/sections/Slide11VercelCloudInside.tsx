@@ -23,7 +23,7 @@ export default function Slide11VercelCloudInside() {
 
   return (
     <Section id="slide-11" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -71,7 +71,7 @@ export default function Slide11VercelCloudInside() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
                 className="absolute w-[600px] h-[600px] rounded-full border-2 border-purple-500/30"
               />
@@ -80,7 +80,7 @@ export default function Slide11VercelCloudInside() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="absolute w-[400px] h-[400px] rounded-full border border-purple-500/20"
               />
@@ -89,7 +89,7 @@ export default function Slide11VercelCloudInside() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
                 className="absolute w-[200px] h-[200px] rounded-full border border-purple-500/20"
               />
@@ -98,7 +98,7 @@ export default function Slide11VercelCloudInside() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.7, duration: 0.8 }}
                 className="absolute w-[80px] h-[80px] border border-white/40 rounded-lg flex items-center justify-center bg-zinc-900/60"
               >
@@ -116,7 +116,7 @@ export default function Slide11VercelCloudInside() {
                     key={label}
                     initial={{ opacity: 0, scale: 0.9, x: x * 0.8, y: y * 0.8 }}
                     whileInView={{ opacity: 1, scale: 1, x, y }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.5 }}
                     transition={{
                       delay: 0.8 + index * 0.075,
                       duration: 0.5,
@@ -148,7 +148,7 @@ export default function Slide11VercelCloudInside() {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.6, duration: 0.6 }}
               className="absolute top-[8%] left-[2%] w-[220px] border border-white/30 rounded-xl p-6 bg-zinc-900/80"
             >
@@ -166,7 +166,7 @@ export default function Slide11VercelCloudInside() {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.7, duration: 0.6 }}
               className="absolute top-[8%] right-[2%] w-[220px] border border-pink-500/40 rounded-xl p-6 bg-zinc-900/80"
             >
@@ -185,7 +185,7 @@ export default function Slide11VercelCloudInside() {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.8, duration: 0.6 }}
               className="absolute bottom-[8%] left-[2%] w-[220px] border border-yellow-500/40 rounded-xl p-6 bg-zinc-900/80"
             >
@@ -203,7 +203,7 @@ export default function Slide11VercelCloudInside() {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.9, duration: 0.6 }}
               className="absolute bottom-[8%] right-[2%] w-[220px] border border-teal-500/40 rounded-xl p-6 bg-zinc-900/80"
             >

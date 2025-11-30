@@ -42,7 +42,7 @@ export default function Slide9VercelAICloud() {
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="w-[50%] mx-auto mb-16 md:mb-20 mt-8 md:mt-12"
           >
@@ -59,7 +59,7 @@ export default function Slide9VercelAICloud() {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.6, duration: 0.6 }}
               className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-center gap-4"
               style={{
@@ -83,7 +83,7 @@ export default function Slide9VercelAICloud() {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.7, duration: 0.6 }}
               className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-start gap-4"
               style={{
@@ -112,7 +112,7 @@ export default function Slide9VercelAICloud() {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.8, duration: 0.6 }}
               className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-start gap-4"
               style={{

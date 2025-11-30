@@ -48,7 +48,7 @@ export default function Slide34CustomerThresholdsV2() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
               className="flex-1 lg:w-[40%] border border-white rounded-lg p-6 bg-transparent"
               style={{ minHeight: "500px" }}
@@ -72,7 +72,7 @@ export default function Slide34CustomerThresholdsV2() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
               className="flex-1 lg:w-[40%] border border-white rounded-lg p-6 bg-transparent"
               style={{ minHeight: "500px" }}

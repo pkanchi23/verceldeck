@@ -72,15 +72,19 @@ const CompanyCard = ({
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay: delay + 0.5, duration: 0.5, ease: "easeOut" }}
       className="flex-1 min-w-[200px] max-w-[280px]"
     >
       <div
-        className="h-full border border-white rounded-xl p-6 flex flex-col items-center"
+        className={`h-full rounded-xl p-6 flex flex-col items-center ${
+          highlight
+            ? "border-2 border-teal-500"
+            : "border border-white"
+        }`}
         style={{
           backgroundColor: "#0a0a0a",
-          boxShadow: highlight ? "0 0 30px rgba(34, 211, 238, 0.3)" : "none",
+          boxShadow: highlight ? "0 0 40px rgba(20, 184, 166, 0.6), 0 0 80px rgba(20, 184, 166, 0.3)" : "none",
         }}
       >
         {/* Logo Placeholder */}
@@ -93,24 +97,44 @@ const CompanyCard = ({
           <span className="text-white text-xs font-medium">{category}</span>
         </div>
 
-        {/* Photo Placeholder */}
-        <div className="w-24 h-24 border border-zinc-700 rounded-full bg-zinc-900/30 flex items-center justify-center mb-4">
-          <span className="text-zinc-600 text-[10px] text-center px-2">
-            {photoLabel}
-          </span>
-        </div>
-
-        {/* People Info */}
-        <div className="text-center space-y-1">
-          {people.map((person, index) => (
-            <p
-              key={index}
-              className="text-white/90 text-xs md:text-sm font-light leading-relaxed"
-            >
-              {person}
-            </p>
-          ))}
-        </div>
+        {/* Photo Placeholder(s) */}
+        {people.length > 1 ? (
+          // Multiple people - show side by side
+          <div className="flex gap-3 mb-4">
+            {people.map((person, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <div className="w-20 h-20 border border-zinc-700 rounded-lg bg-zinc-900/30 flex items-center justify-center mb-2">
+                  <span className="text-zinc-600 text-[9px] text-center px-1">
+                    PHOTO_{index + 1}
+                  </span>
+                </div>
+                <p className="text-white/90 text-xs font-light text-center max-w-[80px] leading-tight">
+                  {person}
+                </p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          // Single person
+          <>
+            <div className="w-24 h-24 border border-zinc-700 rounded-lg bg-zinc-900/30 flex items-center justify-center mb-4">
+              <span className="text-zinc-600 text-[10px] text-center px-2">
+                {photoLabel}
+              </span>
+            </div>
+            {/* People Info */}
+            <div className="text-center space-y-1">
+              {people.map((person, index) => (
+                <p
+                  key={index}
+                  className="text-white/90 text-xs md:text-sm font-light leading-relaxed"
+                >
+                  {person}
+                </p>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </motion.div>
   );

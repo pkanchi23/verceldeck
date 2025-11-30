@@ -58,7 +58,7 @@ export default function Slide13Foundation() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10 mb-16 md:mb-20"
           >
@@ -73,9 +73,9 @@ export default function Slide13Foundation() {
           </motion.div>
 
           {/* Bottom Two Pyramids */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 max-w-6xl mx-auto items-end">
             {/* Left Pyramid (AWS) */}
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex flex-col items-center gap-3 justify-end">
               {/* Pyramid Rows (bottom to top) */}
               <div className="flex flex-col-reverse items-center gap-3">
                 {leftPyramidRows.map((row, rowIndex) => (
@@ -83,7 +83,7 @@ export default function Slide13Foundation() {
                     key={rowIndex}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.5 }}
                     transition={{
                       delay: 0.6 + row.delay,
                       duration: 0.5,
@@ -105,7 +105,7 @@ export default function Slide13Foundation() {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
                 className="w-full max-w-[400px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2"
               >
@@ -116,7 +116,7 @@ export default function Slide13Foundation() {
             </div>
 
             {/* Right Pyramid (Vercel) */}
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex flex-col items-center gap-3 justify-end">
               {/* Pyramid Rows (bottom to top) */}
               <div className="flex flex-col-reverse items-center gap-3">
                 {rightPyramidRows.map((row, rowIndex) => (
@@ -124,7 +124,7 @@ export default function Slide13Foundation() {
                     key={rowIndex}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.5 }}
                     transition={{
                       delay: 0.6 + row.delay,
                       duration: 0.5,
@@ -146,7 +146,7 @@ export default function Slide13Foundation() {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
                 className="w-full max-w-[500px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2"
               >

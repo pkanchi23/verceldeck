@@ -97,7 +97,7 @@ export default function Slide19CreatingNewMarkets() {
                       key={tier.id}
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.3 }}
+                      viewport={{ once: true, amount: 0.5 }}
                       transition={{
                         delay: tierDelay,
                         duration: 0.5,
@@ -117,7 +117,7 @@ export default function Slide19CreatingNewMarkets() {
                         style={{
                           boxShadow:
                             hoveredTier === tier.id
-                              ? `0 0 20px ${tier.glowColor}`
+                              ? `0 0 40px ${tier.glowColor}`
                               : "none",
                         }}
                       >
@@ -132,7 +132,7 @@ export default function Slide19CreatingNewMarkets() {
                         style={{
                           boxShadow:
                             hoveredTier === tier.id
-                              ? `0 0 30px ${tier.glowColor}`
+                              ? `0 0 60px ${tier.glowColor}`
                               : "none",
                         }}
                       >
@@ -167,7 +167,7 @@ export default function Slide19CreatingNewMarkets() {
                       key={tier.id}
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.3 }}
+                      viewport={{ once: true, amount: 0.5 }}
                       transition={{
                         delay: tierDelay,
                         duration: 0.5,
@@ -181,7 +181,7 @@ export default function Slide19CreatingNewMarkets() {
                         style={{
                           boxShadow:
                             hoveredTier === tier.id
-                              ? `0 0 20px ${tier.glowColor}`
+                              ? `0 0 40px ${tier.glowColor}`
                               : "none",
                         }}
                       >
@@ -196,7 +196,7 @@ export default function Slide19CreatingNewMarkets() {
                         style={{
                           boxShadow:
                             hoveredTier === tier.id
-                              ? `0 0 30px ${tier.glowColor}`
+                              ? `0 0 60px ${tier.glowColor}`
                               : "none",
                         }}
                       >
@@ -214,7 +214,7 @@ export default function Slide19CreatingNewMarkets() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 1.5, duration: 0.6 }}
             className="mt-12 md:mt-16"
           >

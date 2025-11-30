@@ -10,7 +10,7 @@ interface Slide {
 }
 
 const slides: Slide[] = [
-  { number: 1, title: "Hero", id: "slide-1" },
+  { number: 1, title: "Title", id: "slide-1" },
   { number: 2, title: "Context", id: "slide-2" },
   { number: 3, title: "Agenda", id: "slide-3" },
   { number: 4, title: "AI Era Expectations", id: "slide-4" },

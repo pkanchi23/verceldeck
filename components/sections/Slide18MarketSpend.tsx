@@ -45,7 +45,7 @@ const marketCategories = [
 export default function Slide18MarketSpend() {
   return (
     <Section id="slide-18" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -70,7 +70,7 @@ export default function Slide18MarketSpend() {
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="w-full max-w-4xl mx-auto mb-12 md:mb-16"
           >
@@ -93,7 +93,7 @@ export default function Slide18MarketSpend() {
                 key={category.label}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{
                   delay: 0.8 + index * 0.12,
                   duration: 0.5,
@@ -122,7 +122,7 @@ export default function Slide18MarketSpend() {
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   transition={{ delay: 0.8 + index * 0.12 + 0.3, duration: 0.4 }}
                   className="flex flex-wrap gap-2 justify-center mt-auto"
                 >

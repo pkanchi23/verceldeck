@@ -39,7 +39,7 @@ const layers = [
 export default function Slide12InfrastructureLayers() {
   return (
     <Section id="slide-12" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -67,7 +67,7 @@ export default function Slide12InfrastructureLayers() {
                 key={layer.heading}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{
                   delay: 0.4 + index * 0.2,
                   duration: 0.6,

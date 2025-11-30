@@ -10,7 +10,7 @@ export default function Slide2Context() {
         {/* Grid Container - 95% of viewport, centered */}
         <div className="relative w-[95vw] h-[95vh] max-w-[1800px]">
           {/* Grid Background Overlay - 6 columns x 4 rows */}
-          <div
+          {/* <div
             className="absolute inset-0"
             style={{
               backgroundImage: `
@@ -19,7 +19,7 @@ export default function Slide2Context() {
               `,
               backgroundSize: 'calc(100% / 6) calc(100% / 4)',
             }}
-          />
+          /> */}
 
           {/* Top-Right Logo Placeholder (Vercel) */}
           <motion.div

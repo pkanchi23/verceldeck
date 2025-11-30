@@ -7,8 +7,8 @@ export default function Slide1Hero() {
   return (
     <Section id="slide-1" className="bg-black">
       <div className="relative w-full h-screen flex items-center justify-center">
-        {/* Grid Container - 90% of viewport, centered */}
-        <div className="relative w-[90vw] h-[90vh] max-w-[1600px]">
+        {/* Grid Container - 95% of viewport, centered */}
+        <div className="relative w-[95vw] h-[95vh] max-w-[1800px]">
           {/* Grid Background Overlay */}
           <div
             className="absolute inset-0"
@@ -70,7 +70,7 @@ export default function Slide1Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
-          className="absolute bottom-6 right-6 text-sm text-white/60"
+          className="absolute bottom-6 right-6 text-2xl md:text-3xl font-light text-white/60"
         >
           1
         </motion.div>

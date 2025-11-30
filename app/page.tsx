@@ -10,6 +10,7 @@ import Slide9VercelAICloud from "@/components/sections/Slide9VercelAICloud";
 import Slide11VercelCloudInside from "@/components/sections/Slide11VercelCloudInside";
 import Slide12InfrastructureLayers from "@/components/sections/Slide12InfrastructureLayers";
 import Slide13Foundation from "@/components/sections/Slide13Foundation";
+import Slide14AImoment from "@/components/sections/Slide14AImoment";
 
 export default function HomePage() {
   return (
@@ -26,6 +27,7 @@ export default function HomePage() {
       <Slide11VercelCloudInside />
       <Slide12InfrastructureLayers />
       <Slide13Foundation />
+      <Slide14AImoment />
     </main>
   );
 }

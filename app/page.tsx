@@ -28,6 +28,8 @@ import Slide32DeepDiveComps from "@/components/sections/Slide32DeepDiveComps";
 import Slide33CustomerThresholds from "@/components/sections/Slide33CustomerThresholds";
 import Slide34CustomerThresholdsV2 from "@/components/sections/Slide34CustomerThresholdsV2";
 import Slide35CustomerThresholdsFocus from "@/components/sections/Slide35CustomerThresholdsFocus";
+import Slide36RoadshowMetrics from "@/components/sections/Slide36RoadshowMetrics";
+import Slide37RoadshowMetricsV2 from "@/components/sections/Slide37RoadshowMetricsV2";
 
 export default function HomePage() {
   return (
@@ -62,6 +64,8 @@ export default function HomePage() {
       <Slide33CustomerThresholds />
       <Slide34CustomerThresholdsV2 />
       <Slide35CustomerThresholdsFocus />
+      <Slide36RoadshowMetrics />
+      <Slide37RoadshowMetricsV2 />
     </main>
   );
 }

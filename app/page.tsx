@@ -21,6 +21,7 @@ import Slide25PlatformCompanies from "@/components/sections/Slide25PlatformCompa
 import Slide26ModelBuildFramework from "@/components/sections/Slide26ModelBuildFramework";
 import Slide27IllustrativeFramework from "@/components/sections/Slide27IllustrativeFramework";
 import Slide28GrowthAlgorithm from "@/components/sections/Slide28GrowthAlgorithm";
+import Slide29BuildingBlocks from "@/components/sections/Slide29BuildingBlocks";
 
 export default function HomePage() {
   return (
@@ -48,6 +49,7 @@ export default function HomePage() {
       <Slide26ModelBuildFramework />
       <Slide27IllustrativeFramework />
       <Slide28GrowthAlgorithm />
+      <Slide29BuildingBlocks />
     </main>
   );
 }

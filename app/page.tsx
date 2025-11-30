@@ -14,6 +14,7 @@ import Slide14AImoment from "@/components/sections/Slide14AImoment";
 import Slide17Differentiation from "@/components/sections/Slide17Differentiation";
 import Slide18MarketSpend from "@/components/sections/Slide18MarketSpend";
 import Slide19CreatingNewMarkets from "@/components/sections/Slide19CreatingNewMarkets";
+import Slide21BuildersNewEra from "@/components/sections/Slide21BuildersNewEra";
 
 export default function HomePage() {
   return (
@@ -34,6 +35,7 @@ export default function HomePage() {
       <Slide17Differentiation />
       <Slide18MarketSpend />
       <Slide19CreatingNewMarkets />
+      <Slide21BuildersNewEra />
     </main>
   );
 }

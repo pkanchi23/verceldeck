@@ -24,6 +24,7 @@ import Slide28GrowthAlgorithm from "@/components/sections/Slide28GrowthAlgorithm
 import Slide29BuildingBlocks from "@/components/sections/Slide29BuildingBlocks";
 import Slide30DisclosuresKPIs from "@/components/sections/Slide30DisclosuresKPIs";
 import Slide31DisclosureIPO from "@/components/sections/Slide31DisclosureIPO";
+import Slide32DeepDiveComps from "@/components/sections/Slide32DeepDiveComps";
 
 export default function HomePage() {
   return (
@@ -54,6 +55,7 @@ export default function HomePage() {
       <Slide29BuildingBlocks />
       <Slide30DisclosuresKPIs />
       <Slide31DisclosureIPO />
+      <Slide32DeepDiveComps />
     </main>
   );
 }

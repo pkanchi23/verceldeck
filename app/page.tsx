@@ -11,6 +11,7 @@ import Slide11VercelCloudInside from "@/components/sections/Slide11VercelCloudIn
 import Slide12InfrastructureLayers from "@/components/sections/Slide12InfrastructureLayers";
 import Slide13Foundation from "@/components/sections/Slide13Foundation";
 import Slide14AImoment from "@/components/sections/Slide14AImoment";
+import Slide17Differentiation from "@/components/sections/Slide17Differentiation";
 
 export default function HomePage() {
   return (
@@ -28,6 +29,7 @@ export default function HomePage() {
       <Slide12InfrastructureLayers />
       <Slide13Foundation />
       <Slide14AImoment />
+      <Slide17Differentiation />
     </main>
   );
 }

@@ -34,6 +34,7 @@ const slides: Slide[] = [
   { number: 27, title: "Illustrative Long-Term Framework", id: "slide-27" },
   { number: 28, title: "The Vercel Growth Algorithm", id: "slide-28" },
   { number: 29, title: "Building Blocks for Vercel's Model", id: "slide-29" },
+  { number: 30, title: "Disclosures and KPIs", id: "slide-30" },
 ];
 
 export default function TableOfContents() {

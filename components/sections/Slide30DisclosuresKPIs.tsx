@@ -1,0 +1,238 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Section from "@/components/Section";
+
+// Reusable placeholder components
+const LabelBox = ({
+  label,
+  delay,
+}: {
+  label: string;
+  delay: number;
+}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -10 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ delay, duration: 0.4, ease: "easeOut" }}
+      className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-4 text-center"
+    >
+      <span className="text-zinc-500 text-xs md:text-sm font-medium">
+        {label}
+      </span>
+    </motion.div>
+  );
+};
+
+const BulletListBox = ({
+  label,
+  items,
+  delay,
+}: {
+  label: string;
+  items: string[];
+  delay: number;
+}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -10 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ delay, duration: 0.4, ease: "easeOut" }}
+      className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-6"
+    >
+      <div className="space-y-3">
+        <p className="text-zinc-500 text-xs md:text-sm font-medium mb-4">
+          {label}
+        </p>
+        {items.map((item, index) => (
+          <div key={index} className="flex items-start gap-2">
+            <span className="text-white/40 text-sm">•</span>
+            <span className="text-white/70 text-xs md:text-sm">{item}</span>
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  );
+};
+
+export default function Slide30DisclosuresKPIs() {
+  return (
+    <Section id="slide-30" className="bg-black">
+      <div className="relative w-full min-h-screen">
+        {/* Top-Right Logo Placeholder (Vercel) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
+        >
+          <span className="text-zinc-600 text-xs">VERCEL</span>
+        </motion.div>
+
+        {/* Main Content */}
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+          {/* Header Section */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-12"
+          >
+            Disclosures and KPIs to support model building blocks
+          </motion.h1>
+
+          {/* Revenue Header with A/B Markers */}
+          <div className="mb-8 md:mb-12">
+            <div className="relative flex items-center justify-center">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                className="w-full max-w-5xl border-2 border-zinc-700 rounded-full bg-zinc-900/30 p-4 text-center"
+              >
+                <span className="text-zinc-500 text-sm md:text-base">
+                  REVENUE_HEADER_PLACEHOLDER
+                </span>
+              </motion.div>
+
+              {/* A Marker */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+                className="absolute left-[15%] -bottom-8 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
+              >
+                A
+              </motion.div>
+
+              {/* B Marker */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+                className="absolute right-[15%] -bottom-8 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
+              >
+                B
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-16">
+            {/* LEFT COLUMN - User-Based Framework (Path A) */}
+            <div className="space-y-6">
+              {/* Q Label */}
+              <LabelBox
+                label="DISCLOSURE_FRAMEWORK_Q_LABEL_PLACEHOLDER"
+                delay={0.9}
+              />
+
+              {/* Q Support Metrics */}
+              <BulletListBox
+                label="Q_SUPPORT_METRICS_PLACEHOLDER"
+                items={[
+                  "Number of Free Users",
+                  "Number of Paying Users¹",
+                  "Number of Paying Users by Persona",
+                ]}
+                delay={1.0}
+              />
+
+              {/* P Label */}
+              <LabelBox
+                label="DISCLOSURE_FRAMEWORK_P_LABEL_PLACEHOLDER"
+                delay={1.1}
+              />
+
+              {/* P Support Metrics */}
+              <BulletListBox
+                label="P_SUPPORT_METRICS_PLACEHOLDER"
+                items={[
+                  "Mix of Users by Pricing Tier / License Type / Persona",
+                  "Average Number of Products per User",
+                  "ARPU",
+                ]}
+                delay={1.2}
+              />
+            </div>
+
+            {/* RIGHT COLUMN - Customer-Centric Framework (Path B) */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: 1.3, duration: 0.5 }}
+              className="border-2 border-dashed border-yellow-600/60 rounded-xl p-6 bg-yellow-900/5 space-y-6"
+            >
+              {/* Q Label */}
+              <LabelBox
+                label="DISCLOSURE_FRAMEWORK_Q_LABEL_PLACEHOLDER_RIGHT"
+                delay={1.4}
+              />
+
+              {/* Q Support - Customer-Centric */}
+              <BulletListBox
+                label="Q_SUPPORT_CUSTOMER_CENTRIC_PLACEHOLDER"
+                items={[
+                  "Number of Customers¹",
+                  'Discussion of "base" customers subset',
+                  "Number of Customers over [$X]¹",
+                ]}
+                delay={1.5}
+              />
+
+              {/* P Support - Customer-Centric */}
+              <BulletListBox
+                label="P_SUPPORT_CUSTOMER_CENTRIC_PLACEHOLDER"
+                items={[
+                  "Net Dollar Retention¹",
+                  "Gross Dollar Retention",
+                  "Average Revenue per Customer >[$X]",
+                  "Mix of Business by Pricing Tier",
+                  "Number of Customers with >[X] Products",
+                ]}
+                delay={1.6}
+              />
+            </motion.div>
+          </div>
+
+          {/* Footer Highlight Text */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 1.7, duration: 0.5 }}
+            className="mt-6 flex justify-center lg:justify-end"
+          >
+            <p className="text-yellow-500 text-sm md:text-base font-medium">
+              Most common approach for public software companies
+            </p>
+          </motion.div>
+
+          {/* Bottom-Left Footnote */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.8, duration: 0.5 }}
+            className="mt-12"
+          >
+            <p className="text-white/40 text-xs">
+              ¹ Key ongoing metric.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Page Number - Bottom-Right */}
+        <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70">
+          30
+        </div>
+      </div>
+    </Section>
+  );
+}

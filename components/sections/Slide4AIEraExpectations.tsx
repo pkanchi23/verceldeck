@@ -110,7 +110,7 @@ export default function Slide4AIEraExpectations() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-2xl md:text-3xl font-light text-white/70"
+          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
           4
         </motion.div>

@@ -30,6 +30,7 @@ import Slide34CustomerThresholdsV2 from "@/components/sections/Slide34CustomerTh
 import Slide35CustomerThresholdsFocus from "@/components/sections/Slide35CustomerThresholdsFocus";
 import Slide36RoadshowMetrics from "@/components/sections/Slide36RoadshowMetrics";
 import Slide37RoadshowMetricsV2 from "@/components/sections/Slide37RoadshowMetricsV2";
+import Slide38AtlassianMessaging from "@/components/sections/Slide38AtlassianMessaging";
 
 export default function HomePage() {
   return (
@@ -66,6 +67,7 @@ export default function HomePage() {
       <Slide35CustomerThresholdsFocus />
       <Slide36RoadshowMetrics />
       <Slide37RoadshowMetricsV2 />
+      <Slide38AtlassianMessaging />
     </main>
   );
 }

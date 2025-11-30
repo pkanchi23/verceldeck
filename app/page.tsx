@@ -18,6 +18,7 @@ import Slide21BuildersNewEra from "@/components/sections/Slide21BuildersNewEra";
 import Slide22FastAINative from "@/components/sections/Slide22FastAINative";
 import Slide24NextLayerAbstraction from "@/components/sections/Slide24NextLayerAbstraction";
 import Slide25PlatformCompanies from "@/components/sections/Slide25PlatformCompanies";
+import Slide26ModelBuildFramework from "@/components/sections/Slide26ModelBuildFramework";
 
 export default function HomePage() {
   return (
@@ -42,6 +43,7 @@ export default function HomePage() {
       <Slide22FastAINative />
       <Slide24NextLayerAbstraction />
       <Slide25PlatformCompanies />
+      <Slide26ModelBuildFramework />
     </main>
   );
 }

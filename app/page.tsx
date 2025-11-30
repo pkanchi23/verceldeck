@@ -5,6 +5,7 @@ import Slide4AIEraExpectations from "@/components/sections/Slide4AIEraExpectatio
 import Slide5AIStillUnfinished from "@/components/sections/Slide5AIStillUnfinished";
 import Slide6SoWhatIsGoingOn from "@/components/sections/Slide6SoWhatIsGoingOn";
 import Slide7StackParadigm from "@/components/sections/Slide7StackParadigm";
+import Slide8InterfaceStrategic from "@/components/sections/Slide8InterfaceStrategic";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Slide5AIStillUnfinished />
       <Slide6SoWhatIsGoingOn />
       <Slide7StackParadigm />
+      <Slide8InterfaceStrategic />
     </main>
   );
 }

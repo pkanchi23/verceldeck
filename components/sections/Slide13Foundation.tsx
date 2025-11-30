@@ -1,0 +1,181 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Section from "@/components/Section";
+
+const categories = [
+  "SaaS Boom",
+  "API Economy",
+  "Marketplaces",
+  "AI Native",
+  "AI Boom",
+  "Agent Economy",
+  "Personalized UX at Scale",
+];
+
+// Left pyramid (AWS) - smaller, 4 rows
+const leftPyramidRows = [
+  { count: 7, delay: 0 },      // Base row
+  { count: 5, delay: 0.15 },   // Row 2
+  { count: 3, delay: 0.3 },    // Row 3
+  { count: 1, delay: 0.45 },   // Top row
+];
+
+// Right pyramid (Vercel) - larger, 5 rows
+const rightPyramidRows = [
+  { count: 9, delay: 0 },      // Base row
+  { count: 7, delay: 0.15 },   // Row 2
+  { count: 5, delay: 0.3 },    // Row 3
+  { count: 3, delay: 0.45 },   // Row 4
+  { count: 1, delay: 0.6 },    // Top row
+];
+
+export default function Slide13Foundation() {
+  return (
+    <Section id="slide-13" className="bg-black">
+      <div className="relative w-full min-h-screen">
+        {/* Top-Right Logo Placeholder (Vercel) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
+        />
+
+        {/* Main Content Container */}
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+          {/* Header Section */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-12 md:mb-16"
+          >
+            The foundation of an entirely new product and ecosystem
+          </motion.h1>
+
+          {/* Top Category Labels Row */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10 mb-16 md:mb-20"
+          >
+            {categories.map((category) => (
+              <div key={category} className="flex flex-col items-center">
+                <p className="text-white text-sm md:text-base lg:text-lg font-semibold whitespace-nowrap mb-1">
+                  {category}
+                </p>
+                <div className="w-full h-[2px] bg-white" />
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Bottom Two Pyramids */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 max-w-6xl mx-auto">
+            {/* Left Pyramid (AWS) */}
+            <div className="flex flex-col items-center gap-3">
+              {/* Pyramid Rows (bottom to top) */}
+              <div className="flex flex-col-reverse items-center gap-3">
+                {leftPyramidRows.map((row, rowIndex) => (
+                  <motion.div
+                    key={rowIndex}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                      delay: 0.6 + row.delay,
+                      duration: 0.5,
+                      ease: "easeOut",
+                    }}
+                    className="flex gap-3 justify-center"
+                  >
+                    {Array.from({ length: row.count }).map((_, boxIndex) => (
+                      <div
+                        key={boxIndex}
+                        className="w-12 h-12 md:w-14 md:h-14 border border-white rounded bg-transparent"
+                      />
+                    ))}
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* AWS Base */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
+                className="w-full max-w-[400px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2"
+              >
+                <p className="text-white text-sm md:text-base font-semibold">
+                  [ AWS BASE ]
+                </p>
+              </motion.div>
+            </div>
+
+            {/* Right Pyramid (Vercel) */}
+            <div className="flex flex-col items-center gap-3">
+              {/* Pyramid Rows (bottom to top) */}
+              <div className="flex flex-col-reverse items-center gap-3">
+                {rightPyramidRows.map((row, rowIndex) => (
+                  <motion.div
+                    key={rowIndex}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                      delay: 0.6 + row.delay,
+                      duration: 0.5,
+                      ease: "easeOut",
+                    }}
+                    className="flex gap-3 justify-center"
+                  >
+                    {Array.from({ length: row.count }).map((_, boxIndex) => (
+                      <div
+                        key={boxIndex}
+                        className="w-12 h-12 md:w-14 md:h-14 border border-white rounded bg-transparent"
+                      />
+                    ))}
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Vercel Base */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
+                className="w-full max-w-[500px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2"
+              >
+                <p className="text-white text-sm md:text-base font-semibold">
+                  [ VERCEL BASE ]
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
+        />
+
+        {/* Page Number - Bottom-Right */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
+        >
+          13
+        </motion.div>
+      </div>
+    </Section>
+  );
+}

@@ -19,6 +19,7 @@ import Slide22FastAINative from "@/components/sections/Slide22FastAINative";
 import Slide24NextLayerAbstraction from "@/components/sections/Slide24NextLayerAbstraction";
 import Slide25PlatformCompanies from "@/components/sections/Slide25PlatformCompanies";
 import Slide26ModelBuildFramework from "@/components/sections/Slide26ModelBuildFramework";
+import Slide27IllustrativeFramework from "@/components/sections/Slide27IllustrativeFramework";
 
 export default function HomePage() {
   return (
@@ -44,6 +45,7 @@ export default function HomePage() {
       <Slide24NextLayerAbstraction />
       <Slide25PlatformCompanies />
       <Slide26ModelBuildFramework />
+      <Slide27IllustrativeFramework />
     </main>
   );
 }

@@ -7,14 +7,23 @@ const cards = [
   {
     title: "Customers",
     description: "Customers want personalized, real-time, intelligent interfaces",
+    glowColor: "cyan", // Neon turquoise
+    borderHoverClass: "hover:border-cyan-400",
+    glowClass: "hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]",
   },
   {
     title: "Developers (Builders)",
     description: "Developers (Builders) want abstraction, instant deploys and AI-native workflows",
+    glowColor: "pink", // Neon pink
+    borderHoverClass: "hover:border-pink-400",
+    glowClass: "hover:shadow-[0_0_30px_rgba(236,72,153,0.6)]",
   },
   {
     title: "Enterprises",
     description: "Enterprises want agility without compromising security & control",
+    glowColor: "yellow", // Neon yellow
+    borderHoverClass: "hover:border-yellow-400",
+    glowClass: "hover:shadow-[0_0_30px_rgba(250,204,21,0.6)]",
   },
 ];
 
@@ -61,7 +70,13 @@ export default function Slide4AIEraExpectations() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-                className="border border-zinc-700 rounded-xl md:rounded-2xl p-6 md:p-8 lg:p-10 flex flex-col h-full"
+                className={`
+                  border border-zinc-700 rounded-xl md:rounded-2xl p-6 md:p-8 lg:p-10
+                  flex flex-col h-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  ${card.borderHoverClass}
+                  ${card.glowClass}
+                `}
               >
                 {/* Title */}
                 <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">

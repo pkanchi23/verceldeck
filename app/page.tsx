@@ -4,6 +4,7 @@ import Slide3Agenda from "@/components/sections/Slide3Agenda";
 import Slide4AIEraExpectations from "@/components/sections/Slide4AIEraExpectations";
 import Slide5AIStillUnfinished from "@/components/sections/Slide5AIStillUnfinished";
 import Slide6SoWhatIsGoingOn from "@/components/sections/Slide6SoWhatIsGoingOn";
+import Slide7StackParadigm from "@/components/sections/Slide7StackParadigm";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Slide4AIEraExpectations />
       <Slide5AIStillUnfinished />
       <Slide6SoWhatIsGoingOn />
+      <Slide7StackParadigm />
     </main>
   );
 }

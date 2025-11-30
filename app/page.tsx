@@ -7,6 +7,7 @@ import Slide6SoWhatIsGoingOn from "@/components/sections/Slide6SoWhatIsGoingOn";
 import Slide7StackParadigm from "@/components/sections/Slide7StackParadigm";
 import Slide8InterfaceStrategic from "@/components/sections/Slide8InterfaceStrategic";
 import Slide9VercelAICloud from "@/components/sections/Slide9VercelAICloud";
+import Slide11VercelCloudInside from "@/components/sections/Slide11VercelCloudInside";
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
       <Slide7StackParadigm />
       <Slide8InterfaceStrategic />
       <Slide9VercelAICloud />
+      <Slide11VercelCloudInside />
     </main>
   );
 }

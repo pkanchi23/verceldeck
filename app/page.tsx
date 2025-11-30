@@ -12,6 +12,7 @@ import Slide12InfrastructureLayers from "@/components/sections/Slide12Infrastruc
 import Slide13Foundation from "@/components/sections/Slide13Foundation";
 import Slide14AImoment from "@/components/sections/Slide14AImoment";
 import Slide17Differentiation from "@/components/sections/Slide17Differentiation";
+import Slide18MarketSpend from "@/components/sections/Slide18MarketSpend";
 
 export default function HomePage() {
   return (
@@ -30,6 +31,7 @@ export default function HomePage() {
       <Slide13Foundation />
       <Slide14AImoment />
       <Slide17Differentiation />
+      <Slide18MarketSpend />
     </main>
   );
 }

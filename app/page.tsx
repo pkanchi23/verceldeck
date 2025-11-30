@@ -20,6 +20,7 @@ import Slide24NextLayerAbstraction from "@/components/sections/Slide24NextLayerA
 import Slide25PlatformCompanies from "@/components/sections/Slide25PlatformCompanies";
 import Slide26ModelBuildFramework from "@/components/sections/Slide26ModelBuildFramework";
 import Slide27IllustrativeFramework from "@/components/sections/Slide27IllustrativeFramework";
+import Slide28GrowthAlgorithm from "@/components/sections/Slide28GrowthAlgorithm";
 
 export default function HomePage() {
   return (
@@ -46,6 +47,7 @@ export default function HomePage() {
       <Slide25PlatformCompanies />
       <Slide26ModelBuildFramework />
       <Slide27IllustrativeFramework />
+      <Slide28GrowthAlgorithm />
     </main>
   );
 }

@@ -8,6 +8,7 @@ import Slide7StackParadigm from "@/components/sections/Slide7StackParadigm";
 import Slide8InterfaceStrategic from "@/components/sections/Slide8InterfaceStrategic";
 import Slide9VercelAICloud from "@/components/sections/Slide9VercelAICloud";
 import Slide11VercelCloudInside from "@/components/sections/Slide11VercelCloudInside";
+import Slide12InfrastructureLayers from "@/components/sections/Slide12InfrastructureLayers";
 
 export default function HomePage() {
   return (
@@ -22,6 +23,7 @@ export default function HomePage() {
       <Slide8InterfaceStrategic />
       <Slide9VercelAICloud />
       <Slide11VercelCloudInside />
+      <Slide12InfrastructureLayers />
     </main>
   );
 }

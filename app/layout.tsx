@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans, GeistMono } from "geist/font";
 import "./globals.css";
+import TableOfContents from "@/components/TableOfContents";
 
 export const metadata: Metadata = {
   title: "VercelDeck - Interactive PDF Experience",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} antialiased bg-black text-slate-100`}
       >
+        <TableOfContents />
         {children}
       </body>
     </html>

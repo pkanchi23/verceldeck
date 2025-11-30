@@ -67,7 +67,7 @@ const FunnelStage = ({ stage }: { stage: FunnelStage }) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay: stage.delay, duration: 0.5, ease: "easeOut" }}
       className="flex flex-col items-center"
     >
@@ -79,7 +79,7 @@ const FunnelStage = ({ stage }: { stage: FunnelStage }) => {
       {/* Funnel Shape Placeholder */}
       <div className="relative w-full max-w-[180px] md:max-w-[200px] mb-4">
         <div
-          className="border-2 border-white/40 bg-zinc-900/30 rounded-lg p-4 md:p-6 min-h-[280px] md:min-h-[320px] flex items-center justify-center"
+          className="border-2 border-white/40 bg-zinc-900/30 rounded-lg p-4 md:p-6 h-[320px] md:h-[360px] flex items-center justify-center"
           style={{
             clipPath: "polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%)",
           }}
@@ -181,7 +181,7 @@ export default function Slide28GrowthAlgorithm() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 1.8, duration: 0.6 }}
             className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-4 md:p-6 text-center"
           >

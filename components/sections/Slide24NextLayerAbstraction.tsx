@@ -15,7 +15,7 @@ const ColumnPlaceholder = ({
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className="w-full aspect-square border-2 border-zinc-600 rounded-lg bg-zinc-900/30 flex items-center justify-center"
     >
@@ -38,7 +38,7 @@ const ValuePlaceholder = ({
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className="text-center mt-4 md:mt-6"
     >
@@ -61,7 +61,7 @@ const LabelPlaceholder = ({
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className="text-center mt-2 md:mt-3"
     >
@@ -84,7 +84,7 @@ const ArrowPlaceholder = ({
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className="hidden lg:flex items-center justify-center px-4"
     >
@@ -138,7 +138,7 @@ export default function Slide24NextLayerAbstraction() {
             {/* Column 2 */}
             <div className="flex flex-col">
               <ColumnPlaceholder label="COLUMN_PLACEHOLDER_2" delay={0.4} />
-              <ValuePlaceholder value="VALUE_PLACEHOLDER_2" delay={0.5} />
+              <ValuePlaceholder value="~$2 Trillion" delay={0.5} />
               <LabelPlaceholder
                 label="Backend Cloud Infrastructure"
                 delay={0.6}
@@ -161,7 +161,7 @@ export default function Slide24NextLayerAbstraction() {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.3, duration: 0.4 }}
               className="text-zinc-500 text-2xl"
             >
@@ -169,6 +169,17 @@ export default function Slide24NextLayerAbstraction() {
             </motion.div>
           </div>
         </div>
+
+        {/* Page Number - Bottom-Right */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 1.1, duration: 0.4 }}
+          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
+        >
+          24
+        </motion.div>
       </div>
     </Section>
   );

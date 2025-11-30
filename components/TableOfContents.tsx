@@ -10,7 +10,7 @@ interface Slide {
 }
 
 const slides: Slide[] = [
-  { number: 1, title: "Hero", id: "slide-1" },
+  { number: 1, title: "Title", id: "slide-1" },
   { number: 2, title: "Context", id: "slide-2" },
   { number: 3, title: "Agenda", id: "slide-3" },
   { number: 4, title: "AI Era Expectations", id: "slide-4" },
@@ -38,6 +38,12 @@ const slides: Slide[] = [
   { number: 31, title: "What Do Most Companies Disclose at IPO?", id: "slide-31" },
   { number: 32, title: "Deep Dive Into Model Builds", id: "slide-32" },
   { number: 33, title: "Customer Thresholds", id: "slide-33" },
+  { number: 34, title: "Customer Thresholds V2", id: "slide-34" },
+  { number: 35, title: "Customer Thresholds Focus", id: "slide-35" },
+  { number: 36, title: "Roadshow Metrics Disclosures", id: "slide-36" },
+  { number: 37, title: "Roadshow Metrics Disclosures V2", id: "slide-37" },
+  { number: 38, title: "Atlassian Messaging", id: "slide-38" },
+  { number: 39, title: "Disclaimer", id: "slide-39" },
 ];
 
 export default function TableOfContents() {

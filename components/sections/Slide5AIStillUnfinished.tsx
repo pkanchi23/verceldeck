@@ -54,7 +54,7 @@ export default function Slide5AIStillUnfinished() {
               className="absolute top-6 right-4 md:top-6 md:right-16 max-w-xs"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               animate={{ y: [0, -6, 0], x: [0, 4, 0] }}
               transition={{
                 opacity: { duration: 0.6, delay: 0.4 },
@@ -75,7 +75,7 @@ export default function Slide5AIStillUnfinished() {
               className="absolute top-1/2 right-4 md:right-16 -translate-y-1/2 max-w-xs"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               animate={{ y: [0, -8, 0], x: [0, -4, 0] }}
               transition={{
                 opacity: { duration: 0.6, delay: 0.5 },
@@ -96,7 +96,7 @@ export default function Slide5AIStillUnfinished() {
               className="absolute bottom-8 right-4 md:bottom-10 md:right-16 max-w-xs"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               animate={{ y: [0, -5, 0], x: [0, 3, 0] }}
               transition={{
                 opacity: { duration: 0.6, delay: 0.6 },
@@ -117,7 +117,7 @@ export default function Slide5AIStillUnfinished() {
               className="absolute top-1/3 left-4 md:left-14 max-w-xs"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               animate={{ y: [0, -7, 0], x: [0, 5, 0] }}
               transition={{
                 opacity: { duration: 0.6, delay: 0.7 },
@@ -138,7 +138,7 @@ export default function Slide5AIStillUnfinished() {
               className="absolute bottom-10 left-4 md:bottom-12 md:left-14 max-w-xs"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               animate={{ y: [0, -6, 0], x: [0, -3, 0] }}
               transition={{
                 opacity: { duration: 0.6, delay: 0.8 },

@@ -6,7 +6,7 @@ import Section from "@/components/Section";
 export default function Slide8InterfaceStrategic() {
   return (
     <Section id="slide-8" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -169,137 +169,18 @@ export default function Slide8InterfaceStrategic() {
               </motion.div>
             </div>
 
-            {/* Center Column - 3-Tier Pyramid (50% width) */}
-            <div className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 w-[50%]">
-              {/* Top Tier - Front End */}
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="relative mx-auto mb-3"
-                style={{
-                  width: '60%',
-                  height: '120px',
-                }}
-              >
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: 'linear-gradient(135deg, #71717a 0%, #52525b 100%)',
-                    transform: 'perspective(400px) rotateX(5deg)',
-                    clipPath: 'polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%)',
-                  }}
-                >
-                  {/* Icon placeholder */}
-                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full border border-white/40 flex items-center justify-center">
-                    <div className="w-4 h-4 border border-white/60" />
-                  </div>
-                  {/* Tier label */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-                    <p className="text-white font-semibold text-sm md:text-base whitespace-nowrap">Front End</p>
-                  </div>
-                </div>
-                {/* Right-side capabilities */}
-                <div className="absolute right-[-110px] top-1/2 -translate-y-1/2 space-y-2">
-                  <div className="border border-zinc-600 rounded-full px-3 py-1.5 bg-black/20 w-[160px] h-[36px] flex items-center justify-center">
-                    <p className="text-white text-xs whitespace-nowrap">UI/UX</p>
-                  </div>
-                  <div className="border border-zinc-600 rounded-full px-3 py-1.5 bg-black/20 w-[180px] h-[36px] flex items-center justify-center">
-                    <p className="text-white text-xs whitespace-nowrap">Authentication / Authorization</p>
-                  </div>
-                  <div className="border border-zinc-600 rounded-full px-3 py-1.5 bg-black/20 w-[180px] h-[36px] flex items-center justify-center">
-                    <p className="text-white text-xs whitespace-nowrap">Integration & Messaging</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Middle Tier - Back End */}
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="relative mx-auto mb-3"
-                style={{
-                  width: '75%',
-                  height: '120px',
-                }}
-              >
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: 'linear-gradient(135deg, #52525b 0%, #3f3f46 100%)',
-                    transform: 'perspective(400px) rotateX(5deg)',
-                    clipPath: 'polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%)',
-                  }}
-                >
-                  {/* Icon placeholder */}
-                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full border border-white/40 flex items-center justify-center">
-                    <div className="w-3 h-3 rounded-full border-2 border-white/60" />
-                  </div>
-                  {/* Tier label */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-                    <p className="text-white font-semibold text-sm md:text-base whitespace-nowrap">Back End</p>
-                  </div>
-                </div>
-                {/* Right-side capabilities */}
-                <div className="absolute right-[-110px] top-1/2 -translate-y-1/2 space-y-2">
-                  <div className="border border-zinc-600 rounded-full px-3 py-1.5 bg-black/20 w-[160px] h-[36px] flex items-center justify-center">
-                    <p className="text-white text-xs whitespace-nowrap">Business Logic</p>
-                  </div>
-                  <div className="border border-zinc-600 rounded-full px-3 py-1.5 bg-black/20 w-[160px] h-[36px] flex items-center justify-center">
-                    <p className="text-white text-xs whitespace-nowrap">API Layer</p>
-                  </div>
-                  <div className="border border-zinc-600 rounded-full px-3 py-1.5 bg-black/20 w-[160px] h-[36px] flex items-center justify-center">
-                    <p className="text-white text-xs whitespace-nowrap">Monitoring</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Bottom Tier - Infrastructure */}
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="relative mx-auto"
-                style={{
-                  width: '90%',
-                  height: '120px',
-                }}
-              >
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: 'linear-gradient(135deg, #3f3f46 0%, #27272a 100%)',
-                    transform: 'perspective(400px) rotateX(5deg)',
-                    clipPath: 'polygon(6% 0%, 94% 0%, 100% 100%, 0% 100%)',
-                  }}
-                >
-                  {/* Icon placeholder */}
-                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full border border-white/40 flex items-center justify-center">
-                    <div className="w-4 h-2 border border-white/60 rounded-sm" />
-                  </div>
-                  {/* Tier label */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-                    <p className="text-white font-semibold text-sm md:text-base whitespace-nowrap">Infrastructure</p>
-                  </div>
-                </div>
-                {/* Right-side capabilities */}
-                <div className="absolute right-[-110px] top-1/2 -translate-y-1/2 space-y-2">
-                  <div className="border border-zinc-600 rounded-full px-3 py-1.5 bg-black/20 w-[160px] h-[36px] flex items-center justify-center">
-                    <p className="text-white text-xs whitespace-nowrap">DevOps Pipeline</p>
-                  </div>
-                  <div className="border border-zinc-600 rounded-full px-3 py-1.5 bg-black/20 w-[160px] h-[36px] flex items-center justify-center">
-                    <p className="text-white text-xs whitespace-nowrap">Runtime</p>
-                  </div>
-                  <div className="border border-zinc-600 rounded-full px-3 py-1.5 bg-black/20 w-[160px] h-[36px] flex items-center justify-center">
-                    <p className="text-white text-xs whitespace-nowrap">Data Storage</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
+            {/* Center Column - Placeholder Box */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2"
+            >
+              <div className="w-[400px] h-[400px] border-2 border-zinc-700 rounded-lg bg-zinc-900/20 flex items-center justify-center">
+                <span className="text-zinc-600 text-sm">DIAGRAM_PLACEHOLDER</span>
+              </div>
+            </motion.div>
 
             {/* Right Column - Explanatory Panel */}
             <motion.div

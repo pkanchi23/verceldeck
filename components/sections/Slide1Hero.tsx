@@ -10,7 +10,7 @@ export default function Slide1Hero() {
         {/* Grid Container - 95% of viewport, centered */}
         <div className="relative w-[95vw] h-[95vh] max-w-[1800px]">
           {/* Grid Background Overlay */}
-          <div
+          {/* <div
             className="absolute inset-0"
             style={{
               backgroundImage: `
@@ -19,7 +19,7 @@ export default function Slide1Hero() {
               `,
               backgroundSize: 'calc(100% / 6) calc(100% / 4)',
             }}
-          />
+          /> */}
 
           {/* Title Block - positioned in upper-left quadrant */}
           <div className="absolute top-[calc(100%/4*1.5)] left-[calc(100%/6*1)] z-10">
@@ -38,7 +38,7 @@ export default function Slide1Hero() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-lg md:text-xl lg:text-2xl text-white font-normal mt-16 md:mt-20"
             >
-              September 2025
+              December 2025
             </motion.p>
           </div>
 
@@ -63,6 +63,36 @@ export default function Slide1Hero() {
               backgroundColor: 'transparent',
             }}
           />
+
+          {/* Bottom-Middle "Made with" text */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 1 }}
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-2 text-white/70 text-sm"
+          >
+            <span>Made with</span>
+            <motion.span
+              animate={{
+                textShadow: [
+                  "0 0 8px rgba(255, 255, 255, 0.4)",
+                  "0 0 16px rgba(255, 255, 255, 0.6)",
+                  "0 0 8px rgba(255, 255, 255, 0.4)",
+                ],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              ❤️
+            </motion.span>
+            <span>on</span>
+            <div className="w-[80px] h-[24px] border border-white/20 rounded flex items-center justify-center">
+              <span className="text-xs text-white/50">VERCEL</span>
+            </div>
+          </motion.div>
         </div>
 
         {/* Page Number - outside grid, bottom-right of viewport */}

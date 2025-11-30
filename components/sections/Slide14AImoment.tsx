@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import Section from "@/components/Section";
+import { useState } from "react";
 
 export default function Slide14AImoment() {
+  const [hoveredQuadrant, setHoveredQuadrant] = useState<number | null>(null);
   return (
     <Section id="slide-14" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -35,7 +37,7 @@ export default function Slide14AImoment() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-white text-sm md:text-base font-medium text-right"
               >
@@ -46,7 +48,7 @@ export default function Slide14AImoment() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="absolute left-0 top-1/2 -translate-y-1/2 origin-center"
                 style={{ transform: 'translateY(-50%) rotate(-90deg)', whiteSpace: 'nowrap' }}
@@ -60,7 +62,7 @@ export default function Slide14AImoment() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
                 className="text-white text-sm md:text-base font-medium text-right"
               >
@@ -68,51 +70,84 @@ export default function Slide14AImoment() {
               </motion.div>
             </div>
 
-            {/* Main Graph Placeholder */}
+            {/* Main Graph Placeholder - 2x2 Grid */}
             <motion.div
               initial={{ opacity: 0, scale: 0.97 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="relative w-full aspect-[4/3] border-2 border-white rounded-2xl bg-zinc-900/20 flex items-center justify-center"
+              className="relative w-full aspect-[4/3] border-2 border-white rounded-2xl bg-zinc-900/20 p-8 grid grid-cols-2 grid-rows-2 gap-6"
             >
-              {/* Center placeholder label */}
-              <p className="text-zinc-500 text-base md:text-lg font-medium">
-                [ QUADRANT GRAPH PLACEHOLDER ]
-              </p>
-
-              {/* Category Labels Inside Graph (Text Only) */}
-              {/* Top-left quadrant: Hyperscalers */}
+              {/* Top-left quadrant: Hyperscalers (White glow) */}
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+                onMouseEnter={() => setHoveredQuadrant(0)}
+                onMouseLeave={() => setHoveredQuadrant(null)}
+                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300"
+                style={{
+                  boxShadow: hoveredQuadrant === 0
+                    ? "0 0 30px rgba(255, 255, 255, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.1)"
+                    : "0 0 10px rgba(255, 255, 255, 0.2)",
+                }}
+              >
+                <p className="text-white text-sm md:text-base font-semibold">Hyperscalers</p>
+              </motion.div>
+
+              {/* Top-right quadrant: Vercel (Neon pink glow) */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.7, duration: 0.6 }}
+                onMouseEnter={() => setHoveredQuadrant(1)}
+                onMouseLeave={() => setHoveredQuadrant(null)}
+                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300"
+                style={{
+                  boxShadow: hoveredQuadrant === 1
+                    ? "0 0 30px rgba(236, 72, 153, 0.7), inset 0 0 20px rgba(236, 72, 153, 0.15)"
+                    : "0 0 10px rgba(236, 72, 153, 0.2)",
+                }}
+              >
+                <p className="text-white text-sm md:text-base font-semibold">Vercel</p>
+              </motion.div>
+
+              {/* Bottom-left quadrant: (Turquoise glow) */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                onMouseEnter={() => setHoveredQuadrant(2)}
+                onMouseLeave={() => setHoveredQuadrant(null)}
+                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300"
+                style={{
+                  boxShadow: hoveredQuadrant === 2
+                    ? "0 0 30px rgba(20, 184, 166, 0.7), inset 0 0 20px rgba(20, 184, 166, 0.15)"
+                    : "0 0 10px rgba(20, 184, 166, 0.2)",
+                }}
+              >
+                <p className="text-white text-sm md:text-base font-semibold">PLACEHOLDER</p>
+              </motion.div>
+
+              {/* Bottom-right quadrant: IDEs, Vibe tools (Neon yellow glow) */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.9, duration: 0.6 }}
-                className="absolute top-[20%] left-[20%] text-white text-sm md:text-base font-semibold"
+                onMouseEnter={() => setHoveredQuadrant(3)}
+                onMouseLeave={() => setHoveredQuadrant(null)}
+                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300"
+                style={{
+                  boxShadow: hoveredQuadrant === 3
+                    ? "0 0 30px rgba(234, 179, 8, 0.7), inset 0 0 20px rgba(234, 179, 8, 0.15)"
+                    : "0 0 10px rgba(234, 179, 8, 0.2)",
+                }}
               >
-                Hyperscalers
-              </motion.div>
-
-              {/* Top-right quadrant: Vercel */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ delay: 1.0, duration: 0.6 }}
-                className="absolute top-[20%] right-[20%] text-white text-sm md:text-base font-semibold"
-              >
-                Vercel
-              </motion.div>
-
-              {/* Bottom-right quadrant: IDEs, Vibe tools */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ delay: 1.1, duration: 0.6 }}
-                className="absolute bottom-[20%] right-[20%] text-white text-sm md:text-base font-semibold"
-              >
-                IDEs, Vibe tools
+                <p className="text-white text-sm md:text-base font-semibold">IDEs, Vibe tools</p>
               </motion.div>
             </motion.div>
 
@@ -122,7 +157,7 @@ export default function Slide14AImoment() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
                 className="text-white text-sm md:text-base font-medium"
               >
@@ -133,7 +168,7 @@ export default function Slide14AImoment() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.85, duration: 0.6 }}
                 className="text-white text-sm md:text-base font-medium"
               >
@@ -144,7 +179,7 @@ export default function Slide14AImoment() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.9, duration: 0.6 }}
                 className="text-white text-sm md:text-base font-medium"
               >

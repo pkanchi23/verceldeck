@@ -33,7 +33,7 @@ const vercelFeatures = [
 export default function Slide17Differentiation() {
   return (
     <Section id="slide-17" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -55,9 +55,9 @@ export default function Slide17Differentiation() {
           </motion.h1>
 
           {/* Two-Column Structure */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
             {/* Left Column - Vercel Section */}
-            <div className="border border-white rounded-2xl p-8 md:p-10">
+            <div className="border border-white rounded-2xl p-8 md:p-10 flex flex-col">
               {/* Title and Logo Placeholder */}
               <div className="flex flex-col items-center mb-8">
                 <h2 className="text-white font-bold text-2xl md:text-3xl mb-4">
@@ -77,7 +77,7 @@ export default function Slide17Differentiation() {
                     key={feature.title}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.5 }}
                     transition={{
                       delay: 0.4 + index * 0.15,
                       duration: 0.5,
@@ -106,9 +106,9 @@ export default function Slide17Differentiation() {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.3, duration: 0.6 }}
-              className="border-2 border-red-500 rounded-2xl p-8 md:p-10"
+              className="border-2 border-red-500 rounded-2xl p-8 md:p-10 flex flex-col"
             >
               {/* Title */}
               <h2 className="text-red-500 font-bold text-2xl md:text-3xl mb-8">
@@ -116,12 +116,12 @@ export default function Slide17Differentiation() {
               </h2>
 
               {/* Subsections */}
-              <div className="space-y-8">
+              <div className="space-y-8 flex-1 flex flex-col justify-around">
                 {/* 1. Hyperscalers */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   transition={{ delay: 1.4, duration: 0.5 }}
                   className="flex gap-4"
                 >
@@ -149,7 +149,7 @@ export default function Slide17Differentiation() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   transition={{ delay: 1.5, duration: 0.5 }}
                   className="flex gap-4"
                 >
@@ -176,7 +176,7 @@ export default function Slide17Differentiation() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.5 }}
                   transition={{ delay: 1.6, duration: 0.5 }}
                   className="flex gap-4"
                 >

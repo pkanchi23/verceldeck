@@ -15,7 +15,7 @@ const LabelBox = ({
     <motion.div
       initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-4 text-center"
     >
@@ -39,7 +39,7 @@ const BulletListBox = ({
     <motion.div
       initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-6"
     >
@@ -61,7 +61,7 @@ const BulletListBox = ({
 export default function Slide30DisclosuresKPIs() {
   return (
     <Section id="slide-30" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -90,7 +90,7 @@ export default function Slide30DisclosuresKPIs() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
                 className="w-full max-w-5xl border-2 border-zinc-700 rounded-full bg-zinc-900/30 p-4 text-center"
               >
@@ -103,7 +103,7 @@ export default function Slide30DisclosuresKPIs() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
                 className="absolute left-[15%] -bottom-8 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
               >
@@ -114,7 +114,7 @@ export default function Slide30DisclosuresKPIs() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
                 className="absolute right-[15%] -bottom-8 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
               >
@@ -166,7 +166,7 @@ export default function Slide30DisclosuresKPIs() {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.3, duration: 0.5 }}
               className="border-2 border-dashed border-yellow-600/60 rounded-xl p-6 bg-yellow-900/5 space-y-6"
             >
@@ -206,7 +206,7 @@ export default function Slide30DisclosuresKPIs() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 1.7, duration: 0.5 }}
             className="mt-6 flex justify-center lg:justify-end"
           >

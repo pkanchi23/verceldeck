@@ -6,7 +6,7 @@ import Section from "@/components/Section";
 export default function Slide7StackParadigm() {
   return (
     <Section id="slide-7" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -91,7 +91,7 @@ export default function Slide7StackParadigm() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.8, duration: 0.5 }}
               className="absolute left-[5%] top-[calc(50%-180px)] z-30"
             >
@@ -113,7 +113,7 @@ export default function Slide7StackParadigm() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.0, duration: 0.5 }}
               className="absolute left-[5%] top-[50%] -translate-y-1/2 z-30"
             >
@@ -135,7 +135,7 @@ export default function Slide7StackParadigm() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.2, duration: 0.5 }}
               className="absolute left-[5%] top-[calc(50%+180px)] z-30"
             >
@@ -158,7 +158,7 @@ export default function Slide7StackParadigm() {
             <motion.div
               initial={{ x: 200, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.9, duration: 0.6, ease: "easeOut" }}
               className="absolute left-1/2 top-[calc(50%-90px)] -translate-x-1/2 w-[33.75%] h-[70px] z-20"
               style={{
@@ -177,7 +177,7 @@ export default function Slide7StackParadigm() {
             <motion.div
               initial={{ x: 200, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 2.1, duration: 0.6, ease: "easeOut" }}
               className="absolute left-1/2 top-[calc(50%+90px)] -translate-x-1/2 w-[33.75%] h-[70px] z-20"
               style={{
@@ -197,7 +197,7 @@ export default function Slide7StackParadigm() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 2.5, duration: 0.6 }}
               className="absolute top-[calc(50%-220px)] right-[8%] z-30"
             >
@@ -210,7 +210,7 @@ export default function Slide7StackParadigm() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 2.7, duration: 0.6 }}
               className="absolute top-[calc(50%-90px)] right-[8%] -translate-y-1/2 z-30"
             >
@@ -228,7 +228,7 @@ export default function Slide7StackParadigm() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 2.9, duration: 0.6 }}
               className="absolute top-[calc(50%+90px)] right-[8%] -translate-y-1/2 z-30"
             >

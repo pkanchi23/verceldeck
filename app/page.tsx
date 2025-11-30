@@ -26,6 +26,12 @@ import Slide30DisclosuresKPIs from "@/components/sections/Slide30DisclosuresKPIs
 import Slide31DisclosureIPO from "@/components/sections/Slide31DisclosureIPO";
 import Slide32DeepDiveComps from "@/components/sections/Slide32DeepDiveComps";
 import Slide33CustomerThresholds from "@/components/sections/Slide33CustomerThresholds";
+import Slide34CustomerThresholdsV2 from "@/components/sections/Slide34CustomerThresholdsV2";
+import Slide35CustomerThresholdsFocus from "@/components/sections/Slide35CustomerThresholdsFocus";
+import Slide36RoadshowMetrics from "@/components/sections/Slide36RoadshowMetrics";
+import Slide37RoadshowMetricsV2 from "@/components/sections/Slide37RoadshowMetricsV2";
+import Slide38AtlassianMessaging from "@/components/sections/Slide38AtlassianMessaging";
+import Slide39Disclaimer from "@/components/sections/Slide39Disclaimer";
 
 export default function HomePage() {
   return (
@@ -58,6 +64,12 @@ export default function HomePage() {
       <Slide31DisclosureIPO />
       <Slide32DeepDiveComps />
       <Slide33CustomerThresholds />
+      <Slide34CustomerThresholdsV2 />
+      <Slide35CustomerThresholdsFocus />
+      <Slide36RoadshowMetrics />
+      <Slide37RoadshowMetricsV2 />
+      <Slide38AtlassianMessaging />
+      <Slide39Disclaimer />
     </main>
   );
 }

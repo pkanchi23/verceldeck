@@ -34,7 +34,7 @@ export default function Slide31DisclosureIPO() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
               className="w-[80%] md:w-[85%] h-[400px] md:h-[500px] lg:h-[600px] border border-white rounded-lg flex items-center justify-center bg-transparent"
             >

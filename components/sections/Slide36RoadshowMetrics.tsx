@@ -30,32 +30,32 @@ export default function Slide36RoadshowMetrics() {
         </div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16">
           {/* Title */}
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-12 md:mb-16">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 md:mb-8">
             Key components of roadshow / analyst day metrics disclosures
           </h1>
 
           {/* Main Grid Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-6">
             {/* Left Column - Category Boxes */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               {leftCategories.map((category) => (
                 <div
                   key={category.number}
-                  className="border border-white rounded-lg p-6 bg-transparent"
+                  className="border border-white rounded-lg p-4 bg-transparent"
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-3">
                     {/* Circle Number */}
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-white bg-black flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-white bg-black flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">
                         {category.number}
                       </span>
                     </div>
 
                     {/* Section Title */}
                     <div className="flex-1">
-                      <p className="text-white font-medium text-sm md:text-base">
+                      <p className="text-white font-medium text-xs md:text-sm">
                         {category.title}
                       </p>
                     </div>
@@ -65,22 +65,22 @@ export default function Slide36RoadshowMetrics() {
             </div>
 
             {/* Right Side - Example Blocks (2x2 Grid) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {examples.map((example, index) => (
                 <div
                   key={index}
-                  className="border border-white rounded-lg p-6 bg-transparent flex flex-col items-center"
+                  className="border border-white rounded-lg p-4 bg-transparent flex flex-col items-center"
                 >
                   {/* Logo Placeholder */}
-                  <div className="w-full h-[40px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-6">
-                    <span className="text-zinc-500 text-xs">
+                  <div className="w-full h-[30px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-4">
+                    <span className="text-zinc-500 text-[10px]">
                       {example.company}_LOGO
                     </span>
                   </div>
 
                   {/* Image Placeholder */}
                   <div className="w-full aspect-[4/3] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center">
-                    <span className="text-zinc-500 text-sm">
+                    <span className="text-zinc-500 text-xs">
                       IMAGE_PLACEHOLDER
                     </span>
                   </div>
@@ -90,7 +90,7 @@ export default function Slide36RoadshowMetrics() {
           </div>
 
           {/* Footer Footnote */}
-          <div className="mt-12">
+          <div className="mt-6">
             <p className="text-white/40 text-xs">FOOTNOTE_PLACEHOLDER</p>
           </div>
         </div>

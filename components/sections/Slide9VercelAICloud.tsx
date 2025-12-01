@@ -16,14 +16,14 @@ export default function Slide9VercelAICloud() {
         />
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-16">
           {/* Header Section */}
-          <div className="mb-12 md:mb-16">
+          <div className="mb-8 md:mb-10">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3"
             >
               Enter the Vercel AI cloud
             </motion.h1>
@@ -32,7 +32,7 @@ export default function Slide9VercelAICloud() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-lg md:text-xl text-white font-normal"
+              className="text-base md:text-lg text-white font-normal"
             >
               A new platform for the AI-native loop
             </motion.p>
@@ -44,7 +44,7 @@ export default function Slide9VercelAICloud() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="w-[50%] mx-auto mb-16 md:mb-20 mt-8 md:mt-12"
+            className="w-[50%] mx-auto mb-10 md:mb-12 mt-6 md:mt-8"
           >
             <div className="aspect-[16/9] border-2 border-zinc-700 rounded-2xl bg-zinc-900/40 flex items-center justify-center">
               <p className="text-zinc-400 text-base md:text-lg">
@@ -54,14 +54,14 @@ export default function Slide9VercelAICloud() {
           </motion.div>
 
           {/* Bottom Three Component Boxes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
             {/* Box 1 - Design → Deploy → Monitor → Evolve */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-center gap-4"
+              className="border border-white rounded-2xl p-4 md:p-5 bg-black/40 flex items-center gap-3"
               style={{
                 boxShadow: "0 0 20px rgba(255, 255, 255, 0.15)",
               }}

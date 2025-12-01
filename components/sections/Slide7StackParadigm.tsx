@@ -16,27 +16,27 @@ export default function Slide7StackParadigm() {
         />
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-16">
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-16 md:mb-20"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-12"
           >
             The stack wasn't built for this paradigm
           </motion.h1>
 
           {/* Central Stack Visualization */}
-          <div className="relative w-full max-w-6xl mx-auto min-h-[600px] md:min-h-[700px] flex items-center justify-center">
+          <div className="relative w-full max-w-6xl mx-auto min-h-[450px] md:min-h-[500px] flex items-center justify-center">
             {/* Center Column - Stack Slabs (40-50% width, centered) */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] space-y-12 z-10">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] space-y-8 z-10">
               {/* Slab 1: ORCHESTRATION */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="relative w-[75%] h-[140px] mx-auto"
+                className="relative w-[75%] h-[100px] mx-auto"
                 style={{
                   background: 'linear-gradient(135deg, #4a5568 0%, #2d3748 100%)',
                   transform: 'perspective(600px) rotateX(5deg)',
@@ -54,7 +54,7 @@ export default function Slide7StackParadigm() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className="relative w-[75%] h-[140px] mx-auto"
+                className="relative w-[75%] h-[100px] mx-auto"
                 style={{
                   background: 'linear-gradient(135deg, #4a5568 0%, #2d3748 100%)',
                   transform: 'perspective(600px) rotateX(5deg)',
@@ -72,7 +72,7 @@ export default function Slide7StackParadigm() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                className="relative w-[75%] h-[140px] mx-auto"
+                className="relative w-[75%] h-[100px] mx-auto"
                 style={{
                   background: 'linear-gradient(135deg, #4a5568 0%, #2d3748 100%)',
                   transform: 'perspective(600px) rotateX(5deg)',

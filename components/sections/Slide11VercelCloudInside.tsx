@@ -18,7 +18,7 @@ const iconLabels = [
 
 export default function Slide11VercelCloudInside() {
   // Calculate positions for icons around the circle
-  const radius = 280; // radius for icon placement
+  const radius = 220; // radius for icon placement
   const iconCount = iconLabels.length;
 
   return (
@@ -33,14 +33,14 @@ export default function Slide11VercelCloudInside() {
         />
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16">
           {/* Header Section */}
-          <div className="mb-8 md:mb-12">
+          <div className="mb-6 md:mb-8">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3"
             >
               What's inside the Vercel cloud
             </motion.h1>
@@ -49,14 +49,14 @@ export default function Slide11VercelCloudInside() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-base md:text-lg text-white font-normal"
+              className="text-sm md:text-base text-white font-normal"
             >
               From prompt to production, every primitive reimagined for the AI era
             </motion.p>
           </div>
 
           {/* Central Circular System Diagram */}
-          <div className="relative w-full max-w-6xl mx-auto h-[700px] md:h-[800px] flex items-center justify-center">
+          <div className="relative w-full max-w-6xl mx-auto h-[520px] md:h-[580px] flex items-center justify-center">
             {/* Purple Glow Background */}
             <div
               className="absolute inset-0 flex items-center justify-center"
@@ -73,7 +73,7 @@ export default function Slide11VercelCloudInside() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
-                className="absolute w-[600px] h-[600px] rounded-full border-2 border-purple-500/30"
+                className="absolute w-[480px] h-[480px] rounded-full border-2 border-purple-500/30"
               />
 
               {/* Middle Ring */}
@@ -82,7 +82,7 @@ export default function Slide11VercelCloudInside() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
-                className="absolute w-[400px] h-[400px] rounded-full border border-purple-500/20"
+                className="absolute w-[320px] h-[320px] rounded-full border border-purple-500/20"
               />
 
               {/* Inner Ring */}
@@ -91,7 +91,7 @@ export default function Slide11VercelCloudInside() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
-                className="absolute w-[200px] h-[200px] rounded-full border border-purple-500/20"
+                className="absolute w-[160px] h-[160px] rounded-full border border-purple-500/20"
               />
 
               {/* Central Vercel Triangle Placeholder */}
@@ -150,12 +150,12 @@ export default function Slide11VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.6, duration: 0.6 }}
-              className="absolute top-[8%] left-[2%] w-[220px] border border-white/30 rounded-xl p-6 bg-zinc-900/80"
+              className="absolute top-[6%] left-[2%] w-[180px] border border-white/30 rounded-xl p-4 bg-zinc-900/80"
             >
-              <h3 className="text-white font-bold text-sm mb-3">Compute & Deployment</h3>
-              <ul className="space-y-2 text-white text-xs">
+              <h3 className="text-white font-bold text-xs mb-2">Compute & Deployment</h3>
+              <ul className="space-y-1 text-white text-[10px]">
                 <li className="flex items-center gap-2">
-                  <div className="w-3 h-3 border border-white/40 rounded-sm flex-shrink-0" />
+                  <div className="w-2 h-2 border border-white/40 rounded-sm flex-shrink-0" />
                   <span>Vercel Agent</span>
                 </li>
                 <li>• Fluid Compute with Active CPU pricing</li>
@@ -168,12 +168,12 @@ export default function Slide11VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.7, duration: 0.6 }}
-              className="absolute top-[8%] right-[2%] w-[220px] border border-pink-500/40 rounded-xl p-6 bg-zinc-900/80"
+              className="absolute top-[6%] right-[2%] w-[180px] border border-pink-500/40 rounded-xl p-4 bg-zinc-900/80"
             >
-              <h3 className="font-bold text-sm mb-3" style={{ color: "#FF32FF" }}>
+              <h3 className="font-bold text-xs mb-2" style={{ color: "#FF32FF" }}>
                 AI & Personalization
               </h3>
-              <ul className="space-y-2 text-white text-xs">
+              <ul className="space-y-1 text-white text-[10px]">
                 <li>• AI Gateway</li>
                 <li>• Rolling releases</li>
                 <li>• Micro-frontend support</li>
@@ -187,12 +187,12 @@ export default function Slide11VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.8, duration: 0.6 }}
-              className="absolute bottom-[8%] left-[2%] w-[220px] border border-yellow-500/40 rounded-xl p-6 bg-zinc-900/80"
+              className="absolute bottom-[6%] left-[2%] w-[180px] border border-yellow-500/40 rounded-xl p-4 bg-zinc-900/80"
             >
-              <h3 className="font-bold text-sm mb-3" style={{ color: "#F9D65C" }}>
+              <h3 className="font-bold text-xs mb-2" style={{ color: "#F9D65C" }}>
                 Security / Reliability
               </h3>
-              <ul className="space-y-2 text-white text-xs">
+              <ul className="space-y-1 text-white text-[10px]">
                 <li>• BotID (w/ Kasada)</li>
                 <li>• Real-time DDoS mitigation</li>
                 <li>• Web Application Firewall</li>
@@ -205,12 +205,12 @@ export default function Slide11VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.9, duration: 0.6 }}
-              className="absolute bottom-[8%] right-[2%] w-[220px] border border-teal-500/40 rounded-xl p-6 bg-zinc-900/80"
+              className="absolute bottom-[6%] right-[2%] w-[180px] border border-teal-500/40 rounded-xl p-4 bg-zinc-900/80"
             >
-              <h3 className="font-bold text-sm mb-3" style={{ color: "#58F0D0" }}>
+              <h3 className="font-bold text-xs mb-2" style={{ color: "#58F0D0" }}>
                 Dev Tooling and Insights
               </h3>
-              <ul className="space-y-2 text-white text-xs">
+              <ul className="space-y-1 text-white text-[10px]">
                 <li>• Vercel Sandbox</li>
                 <li>• Leading frontend dev frameworks</li>
                 <li>• Web Analytics for Docs & Products teams</li>

@@ -49,19 +49,19 @@ export default function Slide12InfrastructureLayers() {
         />
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-16">
           {/* Header Section */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-16 md:mb-20"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-12"
           >
             Setting up a new class of infrastructure
           </motion.h1>
 
           {/* Vertical Layer Stack */}
-          <div className="space-y-4 md:space-y-6 max-w-6xl mx-auto">
+          <div className="space-y-3 md:space-y-4 max-w-6xl mx-auto">
             {layers.map((layer, index) => (
               <motion.div
                 key={layer.heading}
@@ -73,18 +73,18 @@ export default function Slide12InfrastructureLayers() {
                   duration: 0.6,
                   ease: "easeOut",
                 }}
-                className="rounded-2xl md:rounded-3xl p-8 md:p-10 flex flex-col items-center justify-center text-center min-h-[120px] md:min-h-[140px]"
+                className="rounded-2xl md:rounded-3xl p-5 md:p-6 flex flex-col items-center justify-center text-center min-h-[80px] md:min-h-[90px]"
                 style={{
                   background: layer.bgColor,
                 }}
               >
                 {/* Heading */}
-                <h2 className="text-white font-bold text-xl md:text-2xl lg:text-3xl mb-2 md:mb-3">
+                <h2 className="text-white font-bold text-lg md:text-xl lg:text-2xl mb-1 md:mb-2">
                   {layer.heading}
                 </h2>
 
                 {/* Subtext */}
-                <p className="text-white text-sm md:text-base lg:text-lg font-normal opacity-90">
+                <p className="text-white text-xs md:text-sm lg:text-base font-normal opacity-90">
                   {layer.subtext}
                 </p>
               </motion.div>

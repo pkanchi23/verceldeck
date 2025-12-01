@@ -20,59 +20,59 @@ export default function Slide38AtlassianMessaging() {
         </div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16">
           {/* Title */}
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-12 md:mb-16">
+          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 md:mb-8">
             Atlassian&apos;s long-term opportunity <br />
             messaging and key building blocks
           </h1>
 
           {/* Main Grid Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6">
             {/* Left Column */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               {/* Logo Placeholder */}
-              <div className="flex justify-center mb-6">
-                <div className="w-[180px] h-[50px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center">
-                  <span className="text-zinc-500 text-xs">
+              <div className="flex justify-center mb-4">
+                <div className="w-[140px] h-[36px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center">
+                  <span className="text-zinc-500 text-[10px]">
                     ATLASSIAN_LOGO
                   </span>
                 </div>
               </div>
 
               {/* Quote Box 1 */}
-              <div className="border border-white rounded-lg p-6 bg-transparent">
-                <div className="text-zinc-500 text-sm leading-relaxed">
+              <div className="border border-white rounded-lg p-4 bg-transparent">
+                <div className="text-zinc-500 text-xs leading-relaxed">
                   TEXT_BLOCK_PLACEHOLDER_1
                 </div>
               </div>
 
               {/* Quote Box 2 */}
-              <div className="border border-white rounded-lg p-6 bg-transparent">
-                <div className="text-zinc-500 text-sm leading-relaxed">
+              <div className="border border-white rounded-lg p-4 bg-transparent">
+                <div className="text-zinc-500 text-xs leading-relaxed">
                   TEXT_BLOCK_PLACEHOLDER_2
                 </div>
               </div>
             </div>
 
             {/* Right Column - Five Sections */}
-            <div className="space-y-4">
+            <div className="space-y-3">
               {rightSections.map((section) => (
                 <div
                   key={section.id}
-                  className="border border-white rounded-lg p-5 bg-transparent"
+                  className="border border-white rounded-lg p-3 bg-transparent"
                 >
                   {/* Section Title */}
-                  <h3 className="text-white font-bold text-base md:text-lg mb-3">
+                  <h3 className="text-white font-bold text-sm md:text-base mb-2">
                     {section.title}
                   </h3>
 
                   {/* Bullet List Placeholder */}
-                  <div className="space-y-2">
+                  <div className="space-y-1">
                     {[1, 2, 3].map((bullet) => (
                       <div key={bullet} className="flex items-start gap-2">
-                        <span className="text-white/40 text-sm">•</span>
-                        <span className="text-zinc-500 text-sm">
+                        <span className="text-white/40 text-xs">•</span>
+                        <span className="text-zinc-500 text-xs">
                           BULLET_LIST_PLACEHOLDER_{section.id}_{bullet}
                         </span>
                       </div>
@@ -84,7 +84,7 @@ export default function Slide38AtlassianMessaging() {
           </div>
 
           {/* Footer Footnote */}
-          <div className="mt-12">
+          <div className="mt-6">
             <p className="text-white/40 text-xs">FOOTNOTE_PLACEHOLDER</p>
           </div>
         </div>

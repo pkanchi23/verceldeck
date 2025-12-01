@@ -67,30 +67,25 @@ export default function Slide1Hero() {
           {/* Bottom-Middle "Made with" text */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 1 }}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-2 text-white/70 text-sm"
+            animate={{
+              opacity: 1,
+              filter: [
+                "drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))",
+                "drop-shadow(0 0 16px rgba(255, 255, 255, 0.9))",
+                "drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))",
+              ],
+            }}
+            transition={{
+              opacity: { delay: 0.8, duration: 1 },
+              filter: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+            }}
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-2 text-white text-sm"
           >
             <span>Made with</span>
-            <motion.span
-              animate={{
-                textShadow: [
-                  "0 0 8px rgba(255, 255, 255, 0.4)",
-                  "0 0 16px rgba(255, 255, 255, 0.6)",
-                  "0 0 8px rgba(255, 255, 255, 0.4)",
-                ],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              ❤️
-            </motion.span>
-            <span>on</span>
-            <div className="w-[80px] h-[24px] border border-white/20 rounded flex items-center justify-center">
-              <span className="text-xs text-white/50">VERCEL</span>
+            <span>❤️</span>
+            <span>and V0, Deployed with</span>
+            <div className="w-[80px] h-[24px] border border-white/40 rounded flex items-center justify-center">
+              <span className="text-xs text-white">VERCEL</span>
             </div>
           </motion.div>
         </div>

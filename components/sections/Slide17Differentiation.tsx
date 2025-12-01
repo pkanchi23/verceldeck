@@ -43,35 +43,30 @@ export default function Slide17Differentiation() {
         />
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+        <div className="max-w-[90rem] mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-12">
           {/* Header */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 md:mb-16"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-4"
           >
             Vercel's differentiation
           </motion.h1>
 
           {/* Two-Column Structure */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
             {/* Left Column - Vercel Section */}
-            <div className="border border-white rounded-2xl p-8 md:p-10 flex flex-col">
-              {/* Title and Logo Placeholder */}
-              <div className="flex flex-col items-center mb-8">
-                <h2 className="text-white font-bold text-2xl md:text-3xl mb-4">
+            <div className="border border-white rounded-2xl p-3 md:p-4 flex flex-col">
+              {/* Title */}
+              <div className="flex flex-col items-center mb-2">
+                <h2 className="text-white font-bold text-2xl md:text-3xl">
                   Vercel
                 </h2>
-                <div className="w-24 h-24 border border-white rounded-lg bg-transparent flex items-center justify-center">
-                  <p className="text-white text-xs text-center px-2">
-                    [ VERCEL LOGO ]
-                  </p>
-                </div>
               </div>
 
               {/* 6 Feature Rows */}
-              <div className="space-y-4">
+              <div className="space-y-2">
                 {vercelFeatures.map((feature, index) => (
                   <motion.div
                     key={feature.title}
@@ -83,14 +78,14 @@ export default function Slide17Differentiation() {
                       duration: 0.5,
                       ease: "easeOut",
                     }}
-                    className="border border-white rounded-xl p-4 md:p-5 flex gap-4"
+                    className="border border-white rounded-xl p-2 md:p-3 flex gap-3"
                   >
                     {/* Icon Placeholder */}
-                    <div className="flex-shrink-0 w-12 h-12 border border-white rounded bg-transparent" />
+                    <div className="flex-shrink-0 w-10 h-10 border border-white rounded bg-transparent" />
 
                     {/* Text Block */}
                     <div className="flex-1">
-                      <h3 className="text-white font-bold text-sm md:text-base mb-1">
+                      <h3 className="text-white font-bold text-sm md:text-base mb-0.5">
                         {feature.title}
                       </h3>
                       <p className="text-white text-xs md:text-sm font-light opacity-90">
@@ -108,15 +103,15 @@ export default function Slide17Differentiation() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.3, duration: 0.6 }}
-              className="border-2 border-red-500 rounded-2xl p-8 md:p-10 flex flex-col"
+              className="border-2 border-red-500 rounded-2xl p-3 md:p-4 flex flex-col"
             >
               {/* Title */}
-              <h2 className="text-red-500 font-bold text-2xl md:text-3xl mb-8">
+              <h2 className="text-red-500 font-bold text-2xl md:text-3xl mb-4">
                 Others
               </h2>
 
               {/* Subsections */}
-              <div className="space-y-8 flex-1 flex flex-col justify-around">
+              <div className="space-y-2 flex-1 flex flex-col justify-around">
                 {/* 1. Hyperscalers */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -126,18 +121,18 @@ export default function Slide17Differentiation() {
                   className="flex gap-4"
                 >
                   {/* Icon Placeholder */}
-                  <div className="flex-shrink-0 w-16 h-16 border border-red-400 rounded-lg bg-transparent flex items-center justify-center">
-                    <p className="text-red-400 text-xs text-center px-1">
+                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center">
+                    <p className="text-red-400 text-[10px] text-center px-1">
                       [ HYPERSCALER ]
                     </p>
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-white font-bold text-lg md:text-xl mb-3">
+                    <h3 className="text-white font-bold text-lg md:text-xl mb-1">
                       Hyperscalers
                     </h3>
-                    <ul className="space-y-2 text-white text-sm md:text-base">
+                    <ul className="space-y-1 text-white text-sm md:text-base">
                       <li>• Ops-first platforms designed for generalized compute</li>
                       <li>• AI workloads require complex provisioning and DevOps effort</li>
                       <li>• Developer experience is an afterthought</li>
@@ -154,18 +149,18 @@ export default function Slide17Differentiation() {
                   className="flex gap-4"
                 >
                   {/* Logo Placeholder */}
-                  <div className="flex-shrink-0 w-16 h-16 border border-red-400 rounded-lg bg-transparent flex items-center justify-center">
-                    <p className="text-red-400 text-xs text-center px-1">
+                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center">
+                    <p className="text-red-400 text-[10px] text-center px-1">
                       [ CLOUDFLARE ]
                     </p>
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-white font-bold text-lg md:text-xl mb-3">
+                    <h3 className="text-white font-bold text-lg md:text-xl mb-1">
                       Cloudflare
                     </h3>
-                    <ul className="space-y-2 text-white text-sm md:text-base">
+                    <ul className="space-y-1 text-white text-sm md:text-base">
                       <li>• Strong edge network, but limited in AI-native orchestration and developer-first workflows</li>
                       <li>• Lacks deep inference integration and frontend/backend fusion</li>
                     </ul>
@@ -181,18 +176,18 @@ export default function Slide17Differentiation() {
                   className="flex gap-4"
                 >
                   {/* Icon Placeholder */}
-                  <div className="flex-shrink-0 w-16 h-16 border border-red-400 rounded-lg bg-transparent flex items-center justify-center">
-                    <p className="text-red-400 text-xs text-center px-1">
+                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center">
+                    <p className="text-red-400 text-[10px] text-center px-1">
                       [ VIBE TOOLS ]
                     </p>
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-white font-bold text-lg md:text-xl mb-3">
+                    <h3 className="text-white font-bold text-lg md:text-xl mb-1">
                       Vibe Coding Tools
                     </h3>
-                    <ul className="space-y-2 text-white text-sm md:text-base">
+                    <ul className="space-y-1 text-white text-sm md:text-base">
                       <li>• Great for prototyping but not scalable for enterprise-grade, globally distributed applications</li>
                     </ul>
                   </div>

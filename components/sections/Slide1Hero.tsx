@@ -79,14 +79,28 @@ export default function Slide1Hero() {
               opacity: { delay: 0.8, duration: 1 },
               filter: { duration: 2, repeat: Infinity, ease: "easeInOut" },
             }}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-2 text-white text-sm"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-3 text-white text-lg md:text-xl"
           >
             <span>Made with</span>
             <span>❤️</span>
-            <span>and V0, Deployed with</span>
-            <div className="w-[80px] h-[24px] border border-white/40 rounded flex items-center justify-center">
-              <span className="text-xs text-white">VERCEL</span>
-            </div>
+            <span>and V0. Deployed with</span>
+            <motion.div
+              animate={{
+                boxShadow: [
+                  "0 0 0px rgba(255, 255, 255, 0)",
+                  "0 0 20px rgba(255, 255, 255, 0.8)",
+                  "0 0 0px rgba(255, 255, 255, 0)"
+                ]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="w-20 h-10 border border-white/40 rounded flex items-center justify-center bg-black"
+            >
+              <span className="text-xs font-bold text-white tracking-widest">Vercel</span>
+            </motion.div>
           </motion.div>
         </div>
 

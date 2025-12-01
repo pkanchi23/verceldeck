@@ -55,13 +55,13 @@ export default function Slide18MarketSpend() {
         />
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">
           {/* Header */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 md:mb-16"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 md:mb-10"
           >
             Abstracting away existing market spend…
           </motion.h1>
@@ -72,10 +72,10 @@ export default function Slide18MarketSpend() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="w-full max-w-4xl mx-auto mb-12 md:mb-16"
+            className="w-full max-w-4xl mx-auto mb-8 md:mb-10"
           >
             <div
-              className="aspect-[16/9] border-2 border-white rounded-2xl bg-black flex items-center justify-center"
+              className="h-[300px] md:h-[350px] border-2 border-white rounded-2xl bg-black flex items-center justify-center"
               style={{
                 boxShadow: "0 0 40px rgba(255, 255, 255, 0.1)",
               }}

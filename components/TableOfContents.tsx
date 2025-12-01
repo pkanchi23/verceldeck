@@ -48,6 +48,14 @@ const slides: Slide[] = [
 
 export default function TableOfContents() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showHint, setShowHint] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowHint(false);
+    }, 6000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -77,22 +85,28 @@ export default function TableOfContents() {
   return (
     <>
       {/* Keyboard Shortcut Hint */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="fixed bottom-6 left-6 z-40 bg-zinc-900/80 backdrop-blur-sm border border-zinc-700 rounded-lg px-4 py-2 text-xs text-white/60"
-      >
-        Press{" "}
-        <kbd className="px-2 py-1 bg-zinc-800 rounded border border-zinc-600 text-white/80 font-mono">
-          {navigator?.platform?.includes("Mac") ? "⌘" : "Ctrl"}
-        </kbd>{" "}
-        +{" "}
-        <kbd className="px-2 py-1 bg-zinc-800 rounded border border-zinc-600 text-white/80 font-mono">
-          K
-        </kbd>{" "}
-        for navigation
-      </motion.div>
+      {/* Keyboard Shortcut Hint */}
+      <AnimatePresence>
+        {showHint && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="fixed top-6 left-6 z-40 bg-zinc-900/80 backdrop-blur-sm border border-zinc-700 rounded-lg px-4 py-2 text-xs text-white/60"
+          >
+            Press{" "}
+            <kbd className="px-2 py-1 bg-zinc-800 rounded border border-zinc-600 text-white/80 font-mono">
+              {navigator?.platform?.includes("Mac") ? "⌘" : "Ctrl"}
+            </kbd>{" "}
+            +{" "}
+            <kbd className="px-2 py-1 bg-zinc-800 rounded border border-zinc-600 text-white/80 font-mono">
+              K
+            </kbd>{" "}
+            for navigation
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Overlay */}
       <AnimatePresence>

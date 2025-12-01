@@ -3,10 +3,13 @@
 import { motion } from "framer-motion";
 import Section from "@/components/Section";
 
-const categories = [
+const awsCategories = [
   "SaaS Boom",
   "API Economy",
   "Marketplaces",
+];
+
+const vercelCategories = [
   "AI Native",
   "AI Boom",
   "Agent Economy",
@@ -43,7 +46,7 @@ export default function Slide13Foundation() {
         />
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+        <div className="w-full px-4 md:px-8 pt-16 md:pt-20 pb-24">
           {/* Header Section */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -54,106 +57,130 @@ export default function Slide13Foundation() {
             The foundation of an entirely new product and ecosystem
           </motion.h1>
 
-          {/* Top Category Labels Row */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10 mb-16 md:mb-20"
-          >
-            {categories.map((category) => (
-              <div key={category} className="flex flex-col items-center">
-                <p className="text-white text-sm md:text-base lg:text-lg font-semibold whitespace-nowrap mb-1">
-                  {category}
-                </p>
-                <div className="w-full h-[2px] bg-white" />
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Bottom Two Pyramids */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 max-w-6xl mx-auto items-end">
-            {/* Left Pyramid (AWS) */}
-            <div className="flex flex-col items-center gap-3 justify-end">
-              {/* Pyramid Rows (bottom to top) */}
-              <div className="flex flex-col-reverse items-center gap-3">
-                {leftPyramidRows.map((row, rowIndex) => (
-                  <motion.div
-                    key={rowIndex}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{
-                      delay: 0.6 + row.delay,
-                      duration: 0.5,
-                      ease: "easeOut",
-                    }}
-                    className="flex gap-3 justify-center"
-                  >
-                    {Array.from({ length: row.count }).map((_, boxIndex) => (
-                      <div
-                        key={boxIndex}
-                        className="w-12 h-12 md:w-14 md:h-14 border border-white rounded bg-transparent"
-                      />
-                    ))}
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* AWS Base */}
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-4 md:gap-8 lg:gap-12 w-full mx-auto">
+            {/* Left Column (AWS) */}
+            <div className="flex flex-col items-center gap-8 justify-between w-full">
+              {/* AWS Categories */}
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
-                className="w-full max-w-[400px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2"
+                transition={{ delay: 0.4, duration: 0.8 }}
+                className="flex flex-wrap justify-center gap-4 md:gap-6 mb-4"
               >
-                <p className="text-white text-sm md:text-base font-semibold">
-                  [ AWS BASE ]
-                </p>
+                {awsCategories.map((category) => (
+                  <div key={category} className="flex flex-col items-center">
+                    <p className="text-white text-sm md:text-base lg:text-lg font-semibold whitespace-nowrap mb-1">
+                      {category}
+                    </p>
+                    <div className="w-full h-[2px] bg-white" />
+                  </div>
+                ))}
               </motion.div>
+
+              {/* Left Pyramid (AWS) */}
+              <div className="flex flex-col items-center gap-3 w-full">
+                {/* Pyramid Rows (bottom to top) */}
+                <div className="flex flex-col-reverse items-center gap-3">
+                  {leftPyramidRows.map((row, rowIndex) => (
+                    <motion.div
+                      key={rowIndex}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.5 }}
+                      transition={{
+                        delay: 0.6 + row.delay,
+                        duration: 0.5,
+                        ease: "easeOut",
+                      }}
+                      className="flex gap-3 justify-center"
+                    >
+                      {Array.from({ length: row.count }).map((_, boxIndex) => (
+                        <div
+                          key={boxIndex}
+                          className="w-12 h-12 md:w-14 md:h-14 border border-white rounded bg-transparent"
+                        />
+                      ))}
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* AWS Base */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
+                  className="w-full max-w-[1200px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2"
+                >
+                  <p className="text-white text-sm md:text-base font-semibold">
+                    [ AWS BASE ]
+                  </p>
+                </motion.div>
+              </div>
             </div>
 
-            {/* Right Pyramid (Vercel) */}
-            <div className="flex flex-col items-center gap-3 justify-end">
-              {/* Pyramid Rows (bottom to top) */}
-              <div className="flex flex-col-reverse items-center gap-3">
-                {rightPyramidRows.map((row, rowIndex) => (
-                  <motion.div
-                    key={rowIndex}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{
-                      delay: 0.6 + row.delay,
-                      duration: 0.5,
-                      ease: "easeOut",
-                    }}
-                    className="flex gap-3 justify-center"
-                  >
-                    {Array.from({ length: row.count }).map((_, boxIndex) => (
-                      <div
-                        key={boxIndex}
-                        className="w-12 h-12 md:w-14 md:h-14 border border-white rounded bg-transparent"
-                      />
-                    ))}
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Vercel Base */}
+            {/* Right Column (Vercel) */}
+            <div className="flex flex-col items-center gap-8 justify-between w-full">
+              {/* Vercel Categories */}
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
-                className="w-full max-w-[500px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2"
+                transition={{ delay: 0.4, duration: 0.8 }}
+                className="flex flex-nowrap justify-center gap-2 md:gap-4 mb-4"
               >
-                <p className="text-white text-sm md:text-base font-semibold">
-                  [ VERCEL BASE ]
-                </p>
+                {vercelCategories.map((category) => (
+                  <div key={category} className="flex flex-col items-center">
+                    <p className="text-white text-sm md:text-base lg:text-lg font-semibold whitespace-nowrap mb-1">
+                      {category}
+                    </p>
+                    <div className="w-full h-[2px] bg-white" />
+                  </div>
+                ))}
               </motion.div>
+
+              {/* Right Pyramid (Vercel) */}
+              <div className="flex flex-col items-center gap-3 w-full">
+                {/* Pyramid Rows (bottom to top) */}
+                <div className="flex flex-col-reverse items-center gap-3">
+                  {rightPyramidRows.map((row, rowIndex) => (
+                    <motion.div
+                      key={rowIndex}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.5 }}
+                      transition={{
+                        delay: 0.6 + row.delay,
+                        duration: 0.5,
+                        ease: "easeOut",
+                      }}
+                      className="flex gap-3 justify-center"
+                    >
+                      {Array.from({ length: row.count }).map((_, boxIndex) => (
+                        <div
+                          key={boxIndex}
+                          className="w-12 h-12 md:w-14 md:h-14 border border-white rounded bg-transparent"
+                        />
+                      ))}
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Vercel Base */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
+                  className="w-full max-w-[1728px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2"
+                >
+                  <p className="text-white text-sm md:text-base font-semibold">
+                    [ VERCEL BASE ]
+                  </p>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>

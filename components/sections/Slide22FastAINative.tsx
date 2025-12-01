@@ -153,12 +153,12 @@ export default function Slide22FastAINative() {
         </div>
 
         {/* Bottom-Left Logo Placeholder (Vercel) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6">
+        <div className="absolute bottom-16 left-4 md:bottom-20 md:left-6">
           <CornerLogoPlaceholder delay={1.1} label="VERCEL" />
         </div>
 
         {/* Bottom-Right Logo Placeholder (V0) */}
-        <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6">
+        <div className="absolute bottom-16 right-4 md:bottom-20 md:right-6">
           <CornerLogoPlaceholder delay={1.2} label="V0" />
         </div>
 
@@ -168,7 +168,7 @@ export default function Slide22FastAINative() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 1.3, duration: 0.4 }}
-          className="absolute bottom-16 right-4 md:bottom-20 md:right-6 text-sm md:text-base font-light text-white/70"
+          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
           22
         </motion.div>

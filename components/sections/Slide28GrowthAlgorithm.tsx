@@ -79,7 +79,7 @@ const FunnelStage = ({ stage }: { stage: FunnelStage }) => {
       {/* Funnel Shape Placeholder */}
       <div className="relative w-full max-w-[140px] md:max-w-[160px] mb-3">
         <div
-          className="border-2 border-white/40 bg-zinc-900/30 rounded-lg p-3 md:p-4 h-[240px] md:h-[260px] flex items-center justify-center"
+          className="border-2 border-white/40 bg-zinc-900/30 rounded-lg p-3 md:p-4 h-[320px] md:h-[380px] flex items-center justify-center"
           style={{
             clipPath: "polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%)",
           }}
@@ -88,7 +88,7 @@ const FunnelStage = ({ stage }: { stage: FunnelStage }) => {
             {stage.items.map((item, index) => (
               <div
                 key={index}
-                className="text-white/80 text-xs md:text-sm flex items-center justify-center gap-2"
+                className="text-white/80 text-sm md:text-base flex items-center justify-center gap-2"
               >
                 <span className="text-white/40">•</span>
                 <span>{item}</span>
@@ -99,7 +99,7 @@ const FunnelStage = ({ stage }: { stage: FunnelStage }) => {
       </div>
 
       {/* Caption */}
-      <p className="text-white/60 text-[10px] md:text-xs text-center max-w-[140px] md:max-w-[160px] leading-relaxed whitespace-pre-line">
+      <p className="text-white/60 text-xs md:text-sm text-center max-w-[140px] md:max-w-[160px] leading-relaxed whitespace-pre-line">
         {stage.caption}
       </p>
     </motion.div>
@@ -146,9 +146,9 @@ export default function Slide28GrowthAlgorithm() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-4 md:pt-8 pb-16">
           {/* Header Section */}
-          <div className="mb-6 md:mb-8">
+          <div className="mb-8 md:mb-12">
             {/* Main Title */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -164,14 +164,14 @@ export default function Slide28GrowthAlgorithm() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-sm md:text-base lg:text-lg font-medium text-white/80 text-center"
+              className="text-sm md:text-base lg:text-lg font-medium text-white/80 text-left"
             >
               From Idea → Prototype → Deployed App → Scaled Enterprise Adoption
             </motion.h2>
           </div>
 
           {/* Five Funnel Stages */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-4 md:mb-8">
             {stages.map((stage) => (
               <FunnelStage key={stage.id} stage={stage} />
             ))}
@@ -199,6 +199,16 @@ export default function Slide28GrowthAlgorithm() {
           className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
           28
+        </motion.div>
+
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
+        >
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
         </motion.div>
       </div>
     </Section>

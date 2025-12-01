@@ -9,7 +9,10 @@ const companies = [
     id: 1,
     name: "STRIPE",
     category: "Digital Payments",
-    people: ["Patrick Collison — Co-founder and CEO", "John Collison — Co-founder and President"],
+    people: [
+      { name: "Patrick Collison", title: "Co-founder and CEO" },
+      { name: "John Collison", title: "Co-founder and President" },
+    ],
     photoLabel: "PHOTO_PLACEHOLDER_PATRICK_JOHN",
     delay: 0.0,
     highlight: false,
@@ -18,36 +21,36 @@ const companies = [
     id: 2,
     name: "OPENAI",
     category: "Intelligence",
-    people: ["Sam Altman — Co-founder and CEO"],
+    people: [{ name: "Sam Altman", title: "Co-founder and CEO" }],
     photoLabel: "PHOTO_PLACEHOLDER_SAM",
-    delay: 0.1,
+    delay: 0.4,
     highlight: false,
   },
   {
     id: 3,
     name: "DATABRICKS",
     category: "Data",
-    people: ["Ali Ghodsi — Co-founder and CEO"],
+    people: [{ name: "Ali Ghodsi", title: "Co-founder and CEO" }],
     photoLabel: "PHOTO_PLACEHOLDER_ALI",
-    delay: 0.2,
+    delay: 0.8,
     highlight: false,
   },
   {
     id: 4,
     name: "NVIDIA",
     category: "Compute",
-    people: ["Jensen Huang — Founder, President and CEO"],
+    people: [{ name: "Jensen Huang", title: "Founder, President and CEO" }],
     photoLabel: "PHOTO_PLACEHOLDER_JENSEN",
-    delay: 0.3,
+    delay: 1.2,
     highlight: false,
   },
   {
     id: 5,
     name: "VERCEL",
     category: "AI cloud",
-    people: ["Guillermo Rauch — Co-founder and CEO"],
+    people: [{ name: "Guillermo Rauch", title: "Co-founder and CEO" }],
     photoLabel: "PHOTO_PLACEHOLDER_GUILLERMO",
-    delay: 0.4,
+    delay: 1.6,
     highlight: true,
   },
 ];
@@ -63,7 +66,7 @@ const CompanyCard = ({
 }: {
   name: string;
   category: string;
-  people: string[];
+  people: { name: string; title: string }[];
   photoLabel: string;
   delay: number;
   highlight: boolean;
@@ -73,18 +76,33 @@ const CompanyCard = ({
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay: delay + 0.5, duration: 0.5, ease: "easeOut" }}
-      className="flex-1 min-w-[200px] max-w-[280px]"
+      transition={{ delay: delay + 0.5, duration: 1.0, ease: "easeOut" }}
+      className="flex-1 min-w-[240px] max-w-[340px]"
     >
-      <div
-        className={`h-full rounded-xl p-6 flex flex-col items-center ${
-          highlight
-            ? "border-2 border-teal-500"
-            : "border border-white"
-        }`}
+      <motion.div
+        className={`h-full rounded-xl p-6 flex flex-col items-center ${highlight ? "border-2 border-teal-500" : "border border-white"
+          }`}
         style={{
           backgroundColor: "#0a0a0a",
-          boxShadow: highlight ? "0 0 40px rgba(20, 184, 166, 0.6), 0 0 80px rgba(20, 184, 166, 0.3)" : "none",
+          boxShadow: highlight
+            ? "0 0 40px rgba(20, 184, 166, 0.6), 0 0 80px rgba(20, 184, 166, 0.3)"
+            : "none",
+        }}
+        animate={
+          highlight
+            ? {
+              boxShadow: [
+                "0 0 20px rgba(20, 184, 166, 0.4), 0 0 40px rgba(20, 184, 166, 0.2)",
+                "0 0 40px rgba(20, 184, 166, 0.8), 0 0 80px rgba(20, 184, 166, 0.4)",
+                "0 0 20px rgba(20, 184, 166, 0.4), 0 0 40px rgba(20, 184, 166, 0.2)",
+              ],
+            }
+            : {}
+        }
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
         }}
       >
         {/* Logo Placeholder */}
@@ -93,7 +111,7 @@ const CompanyCard = ({
         </div>
 
         {/* Category Pill */}
-        <div className="px-4 py-1.5 bg-zinc-800/50 border border-zinc-700 rounded-full mb-6">
+        <div className="px-4 py-1.5 bg-zinc-800/50 border border-zinc-700 rounded-md mb-6">
           <span className="text-white text-xs font-medium">{category}</span>
         </div>
 
@@ -103,14 +121,19 @@ const CompanyCard = ({
           <div className="flex gap-3 mb-4">
             {people.map((person, index) => (
               <div key={index} className="flex flex-col items-center">
-                <div className="w-20 h-20 border border-zinc-700 rounded-lg bg-zinc-900/30 flex items-center justify-center mb-2">
+                <div className="w-24 h-24 border border-zinc-700 rounded-lg bg-zinc-900/30 flex items-center justify-center mb-4">
                   <span className="text-zinc-600 text-[9px] text-center px-1">
                     PHOTO_{index + 1}
                   </span>
                 </div>
-                <p className="text-white/90 text-xs font-light text-center max-w-[80px] leading-tight">
-                  {person}
-                </p>
+                <div className="text-center max-w-[150px]">
+                  <p className="text-white font-medium text-[10px] md:text-xs leading-tight">
+                    {person.name}
+                  </p>
+                  <p className="text-white/70 text-[10px] md:text-xs font-light leading-tight mt-0.5">
+                    {person.title}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -125,17 +148,19 @@ const CompanyCard = ({
             {/* People Info */}
             <div className="text-center space-y-1">
               {people.map((person, index) => (
-                <p
-                  key={index}
-                  className="text-white/90 text-xs md:text-sm font-light leading-relaxed"
-                >
-                  {person}
-                </p>
+                <div key={index} className="text-center">
+                  <p className="text-white font-medium text-[10px] md:text-xs leading-tight">
+                    {person.name}
+                  </p>
+                  <p className="text-white/70 text-[10px] md:text-xs font-light leading-tight mt-0.5">
+                    {person.title}
+                  </p>
+                </div>
               ))}
             </div>
           </>
         )}
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

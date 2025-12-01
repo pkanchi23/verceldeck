@@ -18,13 +18,13 @@ export default function Slide14AImoment() {
         />
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-24">
           {/* Header Section */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 md:mb-16"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-8"
           >
             The only platform built for this AI moment
           </motion.h1>
@@ -76,7 +76,7 @@ export default function Slide14AImoment() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="relative w-full aspect-[4/3] border-2 border-white rounded-2xl bg-zinc-900/20 p-8 grid grid-cols-2 grid-rows-2 gap-6"
+              className="relative w-full aspect-[21/9] border-2 border-white rounded-2xl bg-zinc-900/20 p-8 grid grid-cols-2 grid-rows-2 gap-6"
             >
               {/* Top-left quadrant: Hyperscalers (White glow) */}
               <motion.div

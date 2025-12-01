@@ -61,7 +61,7 @@ export default function Slide12InfrastructureLayers() {
           </motion.h1>
 
           {/* Vertical Layer Stack */}
-          <div className="space-y-3 md:space-y-4 max-w-6xl mx-auto">
+          <div className="space-y-2 md:space-y-2.5 max-w-6xl mx-auto">
             {layers.map((layer, index) => (
               <motion.div
                 key={layer.heading}
@@ -73,13 +73,13 @@ export default function Slide12InfrastructureLayers() {
                   duration: 0.6,
                   ease: "easeOut",
                 }}
-                className="rounded-2xl md:rounded-3xl p-5 md:p-6 flex flex-col items-center justify-center text-center min-h-[80px] md:min-h-[90px]"
+                className="rounded-2xl md:rounded-3xl p-3 md:p-4 flex flex-col items-center justify-center text-center min-h-[55px] md:min-h-[65px]"
                 style={{
                   background: layer.bgColor,
                 }}
               >
                 {/* Heading */}
-                <h2 className="text-white font-bold text-lg md:text-xl lg:text-2xl mb-1 md:mb-2">
+                <h2 className="text-white font-bold text-lg md:text-xl lg:text-2xl mb-0.5 md:mb-1">
                   {layer.heading}
                 </h2>
 

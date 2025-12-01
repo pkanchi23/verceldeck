@@ -86,7 +86,7 @@ const ArrowPlaceholder = ({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
-      className="hidden lg:flex items-center justify-center px-4"
+      className="flex items-center justify-center px-4"
     >
       <div className="w-16 h-16 border border-zinc-600 rounded bg-zinc-900/30 flex items-center justify-center">
         <span className="text-zinc-500 text-xs">{label}</span>
@@ -124,7 +124,8 @@ export default function Slide24NextLayerAbstraction() {
 
         {/* Three-Column Layout */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr_auto_1fr] gap-8 lg:gap-4 items-center">
+          {/* Mobile Layout */}
+          <div className="flex flex-col gap-8 lg:hidden">
             {/* Column 1 */}
             <div className="flex flex-col">
               <ColumnPlaceholder label="COLUMN_PLACEHOLDER_1" delay={0.0} />
@@ -132,8 +133,7 @@ export default function Slide24NextLayerAbstraction() {
               <LabelPlaceholder label="Hardware" delay={0.2} />
             </div>
 
-            {/* Arrow 1 */}
-            <ArrowPlaceholder label="ARROW_1" delay={0.3} />
+            {/* Arrow 1 (Hidden on mobile as per original design, or add if needed) */}
 
             {/* Column 2 */}
             <div className="flex flex-col">
@@ -146,11 +146,49 @@ export default function Slide24NextLayerAbstraction() {
             </div>
 
             {/* Arrow 2 */}
-            <ArrowPlaceholder label="ARROW_2" delay={0.7} />
 
             {/* Column 3 */}
             <div className="flex flex-col">
               <ColumnPlaceholder label="COLUMN_PLACEHOLDER_3" delay={0.8} />
+              <ValuePlaceholder value="$???" delay={0.9} />
+              <LabelPlaceholder label="Frontend Cloud" delay={1.0} />
+            </div>
+          </div>
+
+          {/* Desktop Layout */}
+          <div className="hidden lg:grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-4">
+            {/* Row 1: Placeholders and Arrows (Vertically Centered) */}
+            <div className="flex items-center justify-center">
+              <ColumnPlaceholder label="COLUMN_PLACEHOLDER_1" delay={0.0} />
+            </div>
+            <div className="flex items-center justify-center">
+              <ArrowPlaceholder label="ARROW_1" delay={0.3} />
+            </div>
+            <div className="flex items-center justify-center">
+              <ColumnPlaceholder label="COLUMN_PLACEHOLDER_2" delay={0.4} />
+            </div>
+            <div className="flex items-center justify-center">
+              <ArrowPlaceholder label="ARROW_2" delay={0.7} />
+            </div>
+            <div className="flex items-center justify-center">
+              <ColumnPlaceholder label="COLUMN_PLACEHOLDER_3" delay={0.8} />
+            </div>
+
+            {/* Row 2: Details (Values + Labels) */}
+            <div className="flex flex-col">
+              <ValuePlaceholder value="~$900bn" delay={0.1} />
+              <LabelPlaceholder label="Hardware" delay={0.2} />
+            </div>
+            <div>{/* Spacer under Arrow 1 */}</div>
+            <div className="flex flex-col">
+              <ValuePlaceholder value="~$2 Trillion" delay={0.5} />
+              <LabelPlaceholder
+                label="Backend Cloud Infrastructure"
+                delay={0.6}
+              />
+            </div>
+            <div>{/* Spacer under Arrow 2 */}</div>
+            <div className="flex flex-col">
               <ValuePlaceholder value="$???" delay={0.9} />
               <LabelPlaceholder label="Frontend Cloud" delay={1.0} />
             </div>

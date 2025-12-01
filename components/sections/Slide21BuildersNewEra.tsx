@@ -16,9 +16,9 @@ export default function Slide21BuildersNewEra() {
         />
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">
           {/* Header Section */}
-          <div className="mb-12 md:mb-16">
+          <div className="mb-6 md:mb-10">
             {/* Main Title */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -42,13 +42,13 @@ export default function Slide21BuildersNewEra() {
           </div>
 
           {/* Central Content Area - Large Placeholder for Stairs Logo Scene */}
-          <div className="flex items-center justify-center py-8 md:py-12">
+          <div className="flex items-center justify-center py-4 md:py-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-              className="w-[75%] md:w-[80%] aspect-[16/10] border border-white rounded-lg flex items-center justify-center bg-transparent"
+              className="w-[75%] md:w-[80%] aspect-[21/9] border border-white rounded-lg flex items-center justify-center bg-transparent"
             >
               <p className="text-white/60 text-base md:text-lg font-light text-center">
                 stairs logo scene

@@ -50,8 +50,7 @@ export default function Slide29CustomerThresholdsV2() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-6 bg-transparent"
-              style={{ minHeight: "400px" }}
+              className="flex-1 lg:w-[40%] border border-white rounded-lg p-6 bg-transparent h-[400px] md:h-[500px] lg:h-[600px]"
             >
               {/* Cloudflare Logo Placeholder at Top */}
               <div className="flex flex-col items-center h-full">
@@ -74,8 +73,7 @@ export default function Slide29CustomerThresholdsV2() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-6 bg-transparent"
-              style={{ minHeight: "400px" }}
+              className="flex-1 lg:w-[40%] border border-white rounded-lg p-6 bg-transparent h-[400px] md:h-[500px] lg:h-[600px]"
             >
               {/* Figma Logo Placeholder at Top */}
               <div className="flex flex-col items-center h-full">

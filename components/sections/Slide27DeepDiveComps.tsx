@@ -50,8 +50,7 @@ export default function Slide27DeepDiveComps() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-4 bg-transparent"
-              style={{ minHeight: "200px" }}
+              className="flex-1 lg:w-[40%] border border-white rounded-lg p-4 bg-transparent h-[400px] md:h-[500px] lg:h-[600px]"
             >
               {/* Datadog Logo Placeholder at Top */}
               <div className="flex flex-col items-center h-full">
@@ -74,8 +73,7 @@ export default function Slide27DeepDiveComps() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-4 bg-transparent"
-              style={{ minHeight: "200px" }}
+              className="flex-1 lg:w-[40%] border border-white rounded-lg p-4 bg-transparent h-[400px] md:h-[500px] lg:h-[600px]"
             >
               {/* CrowdStrike Logo Placeholder at Top */}
               <div className="flex flex-col items-center h-full">

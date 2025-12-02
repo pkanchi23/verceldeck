@@ -74,7 +74,7 @@ export default function Slide25DisclosuresKPIs() {
 
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-2 md:pt-4 pb-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-24">
           {/* Header Section */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -125,7 +125,7 @@ export default function Slide25DisclosuresKPIs() {
           </div>
 
           {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 mt-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-16">
             {/* LEFT COLUMN - User-Based Framework (Path A) */}
             <div className="space-y-2">
               {/* Q Label */}

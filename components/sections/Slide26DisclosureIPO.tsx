@@ -36,7 +36,7 @@ export default function Slide26DisclosureIPO() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-              className="w-[80%] md:w-[85%] h-[200px] md:h-[250px] lg:h-[300px] border border-white rounded-lg flex items-center justify-center bg-transparent"
+              className="w-[80%] md:w-[85%] h-[400px] md:h-[500px] lg:h-[600px] border border-white rounded-lg flex items-center justify-center bg-transparent"
             >
               <p className="text-white/60 text-base md:text-lg font-light text-center">
                 DISCLOSURE_TABLE_PLACEHOLDER

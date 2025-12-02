@@ -43,8 +43,7 @@ export default function Slide28CustomerThresholds() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent"
-              style={{ minHeight: "90px" }}
+              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent h-[400px] md:h-[500px] lg:h-[600px]"
             >
               {/* monday.com Logo Placeholder at Top */}
               <div className="flex flex-col items-center h-full">
@@ -64,8 +63,7 @@ export default function Slide28CustomerThresholds() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent"
-              style={{ minHeight: "150px" }}
+              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent h-[400px] md:h-[500px] lg:h-[600px]"
             >
               {/* GitLab Logo Placeholder at Top */}
               <div className="flex flex-col items-center h-full">

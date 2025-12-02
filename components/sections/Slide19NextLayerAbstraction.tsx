@@ -95,9 +95,9 @@ const ArrowPlaceholder = ({
   );
 };
 
-export default function Slide24NextLayerAbstraction() {
+export default function Slide19NextLayerAbstraction() {
   return (
-    <Section id="slide-24" className="bg-black">
+    <Section id="slide-19" className="bg-black">
       <div className="relative w-full min-h-screen">
         {/* Header Section */}
         <div className="flex items-start justify-between px-6 md:px-12 pt-16 md:pt-20 mb-12 md:mb-16">
@@ -208,6 +208,11 @@ export default function Slide24NextLayerAbstraction() {
           </div>
         </div>
 
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+        </div>
+
         {/* Page Number - Bottom-Right */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -216,7 +221,7 @@ export default function Slide24NextLayerAbstraction() {
           transition={{ delay: 1.1, duration: 0.4 }}
           className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
-          24
+          19
         </motion.div>
       </div>
     </Section>

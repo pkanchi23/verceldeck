@@ -42,9 +42,9 @@ const TimesIcon = ({ delay }: { delay: number }) => {
   );
 };
 
-export default function Slide29BuildingBlocks() {
+export default function Slide24BuildingBlocks() {
   return (
-    <Section id="slide-29" className="bg-black">
+    <Section id="slide-24" className="bg-black">
       <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
@@ -57,7 +57,7 @@ export default function Slide29BuildingBlocks() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-24">
           {/* Header Section */}
           <div className="mb-8 md:mb-12">
             {/* Main Title */}
@@ -128,7 +128,7 @@ export default function Slide29BuildingBlocks() {
               <PlaceholderBox
                 label="P*Q_ONGOING_LABEL_PLACEHOLDER"
                 delay={0.9}
-                className="h-16"
+                className="h-12"
               />
 
               {/* A2. Ongoing P*Q Boxes */}
@@ -136,13 +136,13 @@ export default function Slide29BuildingBlocks() {
                 <PlaceholderBox
                   label="PAID_USERS_PLACEHOLDER"
                   delay={1.0}
-                  className="h-20"
+                  className="h-14"
                 />
                 <TimesIcon delay={1.1} />
                 <PlaceholderBox
                   label="ARPU_PLACEHOLDER"
                   delay={1.2}
-                  className="h-20"
+                  className="h-14"
                 />
               </div>
 
@@ -150,7 +150,7 @@ export default function Slide29BuildingBlocks() {
               <PlaceholderBox
                 label="USER_CENTRIC_DISCLOSURE_PLACEHOLDER"
                 delay={1.3}
-                className="h-24"
+                className="h-16"
               />
 
               {/* A4. P*Q Longer-Term */}
@@ -158,13 +158,13 @@ export default function Slide29BuildingBlocks() {
                 <PlaceholderBox
                   label="TARGET_PAID_USERS_PLACEHOLDER"
                   delay={1.4}
-                  className="h-20"
+                  className="h-14"
                 />
                 <TimesIcon delay={1.5} />
                 <PlaceholderBox
                   label="ARPU_PLACEHOLDER"
                   delay={1.6}
-                  className="h-20"
+                  className="h-14"
                 />
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function Slide29BuildingBlocks() {
               <PlaceholderBox
                 label="P*Q_ONGOING_LABEL_PLACEHOLDER_RIGHT"
                 delay={1.8}
-                className="h-16"
+                className="h-12"
               />
 
               {/* B2. Ongoing P*Q Boxes */}
@@ -189,13 +189,13 @@ export default function Slide29BuildingBlocks() {
                 <PlaceholderBox
                   label="NUM_CUSTOMERS_PLACEHOLDER"
                   delay={1.9}
-                  className="h-20"
+                  className="h-14"
                 />
                 <TimesIcon delay={2.0} />
                 <PlaceholderBox
                   label="ARPC_PLACEHOLDER"
                   delay={2.1}
-                  className="h-20 overflow-hidden"
+                  className="h-14 overflow-hidden"
                 />
               </div>
 
@@ -203,7 +203,7 @@ export default function Slide29BuildingBlocks() {
               <PlaceholderBox
                 label="CUSTOMER_CENTRIC_DISCLOSURE_PLACEHOLDER"
                 delay={2.2}
-                className="h-24"
+                className="h-16"
               />
 
               {/* B4. P*Q Longer-Term */}
@@ -211,13 +211,13 @@ export default function Slide29BuildingBlocks() {
                 <PlaceholderBox
                   label="TARGET_NUM_CUSTOMERS_PLACEHOLDER"
                   delay={2.3}
-                  className="h-20"
+                  className="h-14"
                 />
                 <TimesIcon delay={2.4} />
                 <PlaceholderBox
                   label="ARPC_PLACEHOLDER"
                   delay={2.5}
-                  className="h-20 overflow-hidden"
+                  className="h-14 overflow-hidden"
                 />
               </div>
             </motion.div>
@@ -237,6 +237,11 @@ export default function Slide29BuildingBlocks() {
           </motion.div>
         </div>
 
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+        </div>
+
         {/* Page Number - Bottom-Right */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -244,7 +249,7 @@ export default function Slide29BuildingBlocks() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
-          29
+          24
         </motion.div>
       </div>
     </Section>

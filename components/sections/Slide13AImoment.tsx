@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import Section from "@/components/Section";
 import { useState } from "react";
 
-export default function Slide14AImoment() {
+export default function Slide13AImoment() {
   const [hoveredQuadrant, setHoveredQuadrant] = useState<number | null>(null);
   return (
-    <Section id="slide-14" className="bg-black">
+    <Section id="slide-13" className="bg-black">
       <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
@@ -197,6 +197,11 @@ export default function Slide14AImoment() {
           className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
         />
 
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+        </div>
+
         {/* Page Number - Bottom-Right */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -204,7 +209,7 @@ export default function Slide14AImoment() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
-          14
+          13
         </motion.div>
       </div>
     </Section>

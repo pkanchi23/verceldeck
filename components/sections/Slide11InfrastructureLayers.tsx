@@ -36,9 +36,9 @@ const layers = [
   },
 ];
 
-export default function Slide12InfrastructureLayers() {
+export default function Slide11InfrastructureLayers() {
   return (
-    <Section id="slide-12" className="bg-black">
+    <Section id="slide-11" className="bg-black">
       <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
@@ -100,6 +100,11 @@ export default function Slide12InfrastructureLayers() {
           className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
         />
 
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+        </div>
+
         {/* Page Number - Bottom-Right */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -107,7 +112,7 @@ export default function Slide12InfrastructureLayers() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
-          12
+          11
         </motion.div>
       </div>
     </Section>

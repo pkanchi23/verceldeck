@@ -22,7 +22,7 @@ export default function Slide36RoadshowMetrics() {
   ];
 
   return (
-    <Section id="slide-36" className="bg-black">
+    <Section id="slide-31" className="bg-black">
       <div className="relative w-full min-h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <div className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
@@ -30,7 +30,7 @@ export default function Slide36RoadshowMetrics() {
         </div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-16">
           {/* Title */}
           <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 md:mb-8">
             Key components of roadshow / analyst day metrics disclosures
@@ -43,7 +43,7 @@ export default function Slide36RoadshowMetrics() {
               {leftCategories.map((category) => (
                 <div
                   key={category.number}
-                  className="border border-white rounded-lg p-4 bg-transparent"
+                  className="h-[120px] border border-white rounded-lg p-4 bg-transparent flex flex-col justify-center"
                 >
                   <div className="flex items-start gap-3">
                     {/* Circle Number */}
@@ -72,14 +72,14 @@ export default function Slide36RoadshowMetrics() {
                   className="border border-white rounded-lg p-4 bg-transparent flex flex-col items-center"
                 >
                   {/* Logo Placeholder */}
-                  <div className="w-full h-[30px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-4">
+                  <div className="w-full h-[30px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-3">
                     <span className="text-zinc-500 text-[10px]">
                       {example.company}_LOGO
                     </span>
                   </div>
 
                   {/* Image Placeholder */}
-                  <div className="w-full aspect-[4/3] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center">
+                  <div className="w-full h-[150px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center">
                     <span className="text-zinc-500 text-xs">
                       IMAGE_PLACEHOLDER
                     </span>
@@ -95,9 +95,14 @@ export default function Slide36RoadshowMetrics() {
           </div>
         </div>
 
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+        </div>
+
         {/* Page Number - Bottom-Right */}
         <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70">
-          36
+          31
         </div>
       </div>
     </Section>

@@ -58,11 +58,13 @@ export default function Slide1Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="absolute bottom-0 left-0 w-[140px] h-[40px] border border-white/20 rounded"
+            className="absolute bottom-0 left-0 w-[140px] h-[40px] border border-white/20 rounded flex items-center justify-center"
             style={{
               backgroundColor: 'transparent',
             }}
-          />
+          >
+            <span className="text-white/40 text-xs">GOLDMAN SACHS</span>
+          </motion.div>
 
           {/* Bottom-Middle "Made with" text */}
           <motion.div

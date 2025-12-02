@@ -124,9 +124,9 @@ const BackgroundIcon = ({ x, y, delay }: { x: string; y: string; delay: number }
   );
 };
 
-export default function Slide28GrowthAlgorithm() {
+export default function Slide23GrowthAlgorithm() {
   return (
-    <Section id="slide-28" className="bg-black">
+    <Section id="slide-23" className="bg-black">
       <div className="relative w-full min-h-screen overflow-hidden">
         {/* Background Icons */}
         <BackgroundIcon x="10%" y="20%" delay={0.2} />
@@ -191,6 +191,11 @@ export default function Slide28GrowthAlgorithm() {
           </motion.div>
         </div>
 
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+        </div>
+
         {/* Page Number - Bottom-Right */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -198,7 +203,7 @@ export default function Slide28GrowthAlgorithm() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
-          28
+          23
         </motion.div>
 
         {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}

@@ -33,9 +33,9 @@ const rightPyramidRows = [
   { count: 1, delay: 0.6 },    // Top row
 ];
 
-export default function Slide13Foundation() {
+export default function Slide12Foundation() {
   return (
-    <Section id="slide-13" className="bg-black">
+    <Section id="slide-12" className="bg-black">
       <div className="relative w-full min-h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
@@ -193,6 +193,11 @@ export default function Slide13Foundation() {
           className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
         />
 
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+        </div>
+
         {/* Page Number - Bottom-Right */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -200,7 +205,7 @@ export default function Slide13Foundation() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
-          13
+          12
         </motion.div>
       </div>
     </Section>

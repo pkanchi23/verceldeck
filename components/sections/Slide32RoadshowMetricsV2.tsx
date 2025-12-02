@@ -2,7 +2,7 @@
 
 import Section from "@/components/Section";
 
-export default function Slide37RoadshowMetricsV2() {
+export default function Slide32RoadshowMetricsV2() {
   const leftCategories = [
     {
       number: 3,
@@ -43,7 +43,7 @@ export default function Slide37RoadshowMetricsV2() {
               {leftCategories.map((category) => (
                 <div
                   key={category.number}
-                  className="border border-white rounded-lg p-4 bg-transparent"
+                  className="h-[120px] border border-white rounded-lg p-4 bg-transparent flex flex-col justify-center"
                 >
                   <div className="flex items-start gap-3">
                     {/* Circle Number */}
@@ -72,14 +72,14 @@ export default function Slide37RoadshowMetricsV2() {
                   className="border border-white rounded-lg p-4 bg-transparent flex flex-col items-center"
                 >
                   {/* Logo Placeholder */}
-                  <div className="w-full h-[30px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-4">
+                  <div className="w-full h-[30px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-3">
                     <span className="text-zinc-500 text-[10px]">
                       {example.company}_LOGO
                     </span>
                   </div>
 
                   {/* Image Placeholder */}
-                  <div className="w-full aspect-[4/3] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center">
+                  <div className="w-full h-[150px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center">
                     <span className="text-zinc-500 text-xs">
                       IMAGE_PLACEHOLDER
                     </span>
@@ -95,9 +95,14 @@ export default function Slide37RoadshowMetricsV2() {
           </div>
         </div>
 
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+        </div>
+
         {/* Page Number - Bottom-Right */}
         <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70">
-          37
+          32
         </div>
       </div>
     </Section>

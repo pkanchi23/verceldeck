@@ -17,9 +17,9 @@ const LabelBox = ({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
-      className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-4 text-center"
+      className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-1 text-center"
     >
-      <span className="text-zinc-500 text-xs md:text-sm font-medium">
+      <span className="text-zinc-500 text-[10px] md:text-xs font-medium">
         {label}
       </span>
     </motion.div>
@@ -41,16 +41,16 @@ const BulletListBox = ({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
-      className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-6"
+      className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-2"
     >
-      <div className="space-y-3">
-        <p className="text-zinc-500 text-xs md:text-sm font-medium mb-4">
+      <div className="space-y-0.5">
+        <p className="text-zinc-500 text-[10px] md:text-xs font-medium mb-2">
           {label}
         </p>
         {items.map((item, index) => (
-          <div key={index} className="flex items-start gap-2">
-            <span className="text-white/40 text-sm">•</span>
-            <span className="text-white/70 text-xs md:text-sm">{item}</span>
+          <div key={index} className="flex items-start gap-1.5">
+            <span className="text-white/40 text-xs">•</span>
+            <span className="text-white/70 text-[10px] md:text-xs">{item}</span>
           </div>
         ))}
       </div>
@@ -58,9 +58,9 @@ const BulletListBox = ({
   );
 };
 
-export default function Slide30DisclosuresKPIs() {
+export default function Slide25DisclosuresKPIs() {
   return (
-    <Section id="slide-30" className="bg-black">
+    <Section id="slide-25" className="bg-black">
       <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
@@ -72,27 +72,28 @@ export default function Slide30DisclosuresKPIs() {
           <span className="text-zinc-600 text-xs">VERCEL</span>
         </motion.div>
 
+
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-2 md:pt-4 pb-16">
           {/* Header Section */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-12"
+            className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 md:mb-2"
           >
             Disclosures and KPIs to support model building blocks
           </motion.h1>
 
           {/* Revenue Header with A/B Markers */}
-          <div className="mb-8 md:mb-12">
+          <div className="mb-1 md:mb-2">
             <div className="relative flex items-center justify-center">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                className="w-full max-w-5xl border-2 border-zinc-700 rounded-full bg-zinc-900/30 p-4 text-center"
+                className="w-full max-w-5xl border-2 border-zinc-700 rounded-full bg-zinc-900/30 p-2 text-center"
               >
                 <span className="text-zinc-500 text-sm md:text-base">
                   REVENUE_HEADER_PLACEHOLDER
@@ -124,9 +125,9 @@ export default function Slide30DisclosuresKPIs() {
           </div>
 
           {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 mt-2">
             {/* LEFT COLUMN - User-Based Framework (Path A) */}
-            <div className="space-y-6">
+            <div className="space-y-2">
               {/* Q Label */}
               <LabelBox
                 label="DISCLOSURE_FRAMEWORK_Q_LABEL_PLACEHOLDER"
@@ -168,7 +169,7 @@ export default function Slide30DisclosuresKPIs() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.3, duration: 0.5 }}
-              className="border-2 border-dashed border-yellow-600/60 rounded-xl p-6 bg-yellow-900/5 space-y-6"
+              className="border-2 border-dashed border-yellow-600/60 rounded-xl p-4 bg-yellow-900/5 space-y-1"
             >
               {/* Q Label */}
               <LabelBox
@@ -228,9 +229,14 @@ export default function Slide30DisclosuresKPIs() {
           </motion.div>
         </div>
 
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+        </div>
+
         {/* Page Number - Bottom-Right */}
         <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70">
-          30
+          25
         </div>
       </div>
     </Section>

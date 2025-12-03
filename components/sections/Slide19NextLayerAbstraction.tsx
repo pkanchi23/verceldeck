@@ -165,21 +165,86 @@ export default function Slide19NextLayerAbstraction() {
 
           {/* Desktop Layout */}
           <div className="hidden lg:grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-4">
-            {/* Row 1: Placeholders and Arrows (Vertically Centered) */}
+            {/* Row 1: Images and Arrows (Vertically Centered) */}
             <div className="flex items-center justify-center">
-              <ColumnPlaceholder label="COLUMN_PLACEHOLDER_1" delay={0.0} />
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.0, duration: 0.4, ease: "easeOut" }}
+                className="w-full aspect-square relative max-w-[300px]"
+              >
+                <Image
+                  src="/Slide 19 Sections.png/Next Layer of Abstraction.png-1.png"
+                  alt="Hardware"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
             </div>
             <div className="flex items-center justify-center">
-              <ArrowPlaceholder label="ARROW_1" delay={0.3} />
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
+                className="w-16 h-16 relative"
+              >
+                <Image
+                  src="/Slide 19 Sections.png/Transition Arrows.png"
+                  alt="Arrow"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
             </div>
             <div className="flex items-center justify-center">
-              <ColumnPlaceholder label="COLUMN_PLACEHOLDER_2" delay={0.4} />
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.4, duration: 0.4, ease: "easeOut" }}
+                className="w-full aspect-square relative max-w-[300px]"
+              >
+                <Image
+                  src="/Slide 19 Sections.png/Next Layer of Abstraction.png-2.png"
+                  alt="Backend Cloud"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
             </div>
             <div className="flex items-center justify-center">
-              <ArrowPlaceholder label="ARROW_2" delay={0.7} />
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.7, duration: 0.4, ease: "easeOut" }}
+                className="w-16 h-16 relative"
+              >
+                <Image
+                  src="/Slide 19 Sections.png/Transition Arrows.png"
+                  alt="Arrow"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
             </div>
             <div className="flex items-center justify-center">
-              <ColumnPlaceholder label="COLUMN_PLACEHOLDER_3" delay={0.8} />
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.8, duration: 0.4, ease: "easeOut" }}
+                className="w-full aspect-square relative max-w-[300px]"
+              >
+                <Image
+                  src="/Slide 19 Sections.png/Next Layer of Abstraction.png-3.png"
+                  alt="Frontend Cloud"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
             </div>
 
             {/* Row 2: Details (Values + Labels) */}
@@ -236,9 +301,8 @@ export default function Slide19NextLayerAbstraction() {
         {/* Page Number - Bottom-Right */}
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 1.1, duration: 0.4 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
           className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
           19

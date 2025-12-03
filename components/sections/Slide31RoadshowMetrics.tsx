@@ -53,11 +53,11 @@ export default function Slide36RoadshowMetrics() {
           {/* Main Grid Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-6">
             {/* Left Column - Category Boxes */}
-            <div className="space-y-4">
+            <div className="space-y-4 flex flex-col justify-center">
               {leftCategories.map((category) => (
                 <div
                   key={category.number}
-                  className="h-[120px] border border-white rounded-lg p-4 bg-transparent flex flex-col justify-center"
+                  className="h-[144px] border border-white rounded-lg p-4 bg-transparent flex flex-col justify-center"
                 >
                   <div className="flex items-start gap-3">
                     {/* Circle Number */}
@@ -79,11 +79,11 @@ export default function Slide36RoadshowMetrics() {
             </div>
 
             {/* Right Side - Example Blocks (2x2 Grid) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 content-center">
               {examples.map((example, index) => (
                 <div
                   key={index}
-                  className="border border-white rounded-lg p-4 bg-transparent flex flex-col items-center"
+                  className="border border-white rounded-lg p-4 bg-transparent flex flex-col items-center h-[144px]"
                 >
                   {/* Logo Placeholder */}
                   <div className="w-full h-[30px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-3">

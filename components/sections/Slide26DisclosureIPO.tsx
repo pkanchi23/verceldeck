@@ -37,18 +37,21 @@ export default function Slide26DisclosureIPO() {
             What do most companies disclose at IPO?
           </motion.h1>
 
-          {/* Large Centered Disclosure Table Placeholder */}
+          {/* Large Centered Disclosure Table */}
           <div className="flex items-center justify-center py-4 md:py-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-              className="w-[80%] md:w-[85%] h-[400px] md:h-[500px] lg:h-[600px] border border-white rounded-lg flex items-center justify-center bg-transparent"
+              className="w-full h-[350px] md:h-[400px] lg:h-[450px] relative"
             >
-              <p className="text-white/60 text-base md:text-lg font-light text-center">
-                DISCLOSURE_TABLE_PLACEHOLDER
-              </p>
+              <Image
+                src="/Slide 26 Disclosures/Disclosures Table.png"
+                alt="Disclosure Table"
+                fill
+                className="object-contain"
+              />
             </motion.div>
           </div>
         </div>
@@ -58,7 +61,7 @@ export default function Slide26DisclosureIPO() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="absolute bottom-16 left-4 md:bottom-16 md:left-6"
+          className="absolute bottom-20 left-4 md:bottom-20 md:left-6"
         >
           <p className="text-white/40 text-xs">
             FOOTNOTE_PLACEHOLDER

@@ -5,13 +5,15 @@ import { useState } from "react";
 import Image from "next/image";
 import Section from "@/components/Section";
 
-// Reusable animated placeholder component
-const AnimatedPlaceholder = ({
-  text,
+// Reusable animated image component for words
+const AnimatedWordImage = ({
+  src,
+  alt,
   delay,
   withHover = false,
 }: {
-  text: string;
+  src: string;
+  alt: string;
   delay: number;
   withHover?: boolean;
 }) => {
@@ -25,12 +27,19 @@ const AnimatedPlaceholder = ({
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       onMouseEnter={() => withHover && setIsHovered(true)}
       onMouseLeave={() => withHover && setIsHovered(false)}
-      className="inline-block px-3 py-1 border border-white/40 rounded bg-transparent transition-all duration-200"
+      className="inline-block relative transition-all duration-200"
       style={{
-        boxShadow: isHovered ? "0 0 20px rgba(255, 255, 255, 0.4)" : "none",
+        width: "180px",
+        height: "60px",
+        filter: isHovered ? "drop-shadow(0 0 20px rgba(255, 255, 255, 0.4))" : "none",
       }}
     >
-      <span className="text-white font-bold">{text}</span>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-contain"
+      />
     </motion.span>
   );
 };
@@ -56,12 +65,16 @@ const AnimatedText = ({
   );
 };
 
-// Reusable logo placeholder component
-const LogoPlaceholder = ({
+// Reusable logo component
+const LogoImage = ({
+  src,
+  alt,
   delay,
-  width = 120,
-  height = 40,
+  width = 140,
+  height = 45,
 }: {
+  src: string;
+  alt: string;
   delay: number;
   width?: number;
   height?: number;
@@ -72,19 +85,28 @@ const LogoPlaceholder = ({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
-      className="inline-block border border-white/30 rounded bg-transparent ml-3"
+      className="inline-block relative ml-3"
       style={{ width: `${width}px`, height: `${height}px` }}
-    />
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-contain"
+      />
+    </motion.div>
   );
 };
 
-// Static corner logo placeholder
-const CornerLogoPlaceholder = ({
+// Static corner logo
+const CornerLogo = ({
+  src,
+  alt,
   delay,
-  label,
 }: {
+  src: string;
+  alt: string;
   delay: number;
-  label: string;
 }) => {
   return (
     <motion.div
@@ -92,9 +114,14 @@ const CornerLogoPlaceholder = ({
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
-      className="border border-zinc-700 rounded bg-transparent flex items-center justify-center w-[120px] h-[40px]"
+      className="relative w-[120px] h-[40px]"
     >
-      <span className="text-white/30 text-xs">{label}</span>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-contain"
+      />
     </motion.div>
   );
 };
@@ -124,13 +151,24 @@ export default function Slide18FastAINative() {
               <span className="text-white font-bold">If its</span>
             </AnimatedText>
 
-            <AnimatedPlaceholder text="FAST" delay={0.1} withHover={true} />
+            <AnimatedWordImage
+              src="/Slide 18 Word Images/Fast.png"
+              alt="Fast"
+              delay={0.1}
+              withHover={true}
+            />
 
             <AnimatedText delay={0.2}>
               <span className="text-white font-bold">its on</span>
             </AnimatedText>
 
-            <LogoPlaceholder delay={0.3} width={140} height={45} />
+            <LogoImage
+              src="/Vercel Logo.svg"
+              alt="Vercel"
+              delay={0.3}
+              width={140}
+              height={45}
+            />
           </div>
 
           {/* Line 2 */}
@@ -139,8 +177,9 @@ export default function Slide18FastAINative() {
               <span className="text-white font-bold">and if its</span>
             </AnimatedText>
 
-            <AnimatedPlaceholder
-              text="AI-NATIVE"
+            <AnimatedWordImage
+              src="/Slide 18 Word Images/AI-Native.png"
+              alt="AI-Native"
               delay={0.55}
               withHover={true}
             />
@@ -149,38 +188,35 @@ export default function Slide18FastAINative() {
               <span className="text-white font-bold">its on</span>
             </AnimatedText>
 
-            <LogoPlaceholder delay={0.75} width={140} height={45} />
-          </div>
-        </div>
-
-        {/* Bottom-Left Logo Placeholder (Vercel) */}
-        <div className="absolute bottom-16 left-4 md:bottom-20 md:left-6">
-          <CornerLogoPlaceholder delay={1.1} label="VERCEL" />
-        </div>
-
-        {/* Bottom-Right Logo Placeholder (V0) */}
-        <div className="absolute bottom-16 right-4 md:bottom-20 md:right-6">
-          <CornerLogoPlaceholder delay={1.2} label="V0" />
-        </div>
-
-        {/* Bottom-Left Logo (Goldman Sachs) */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
-        >
-          <div className="relative w-full h-full">
-            <Image
-              src="/Goldman Sachs Logo.svg"
-              alt="Goldman Sachs Logo"
-              fill
-              className="object-contain object-left"
+            <LogoImage
+              src="/v0 Logo.svg"
+              alt="v0"
+              delay={0.75}
+              width={140}
+              height={45}
             />
           </div>
-        </motion.div>
+        </div>
 
-        {/* Page Number - Bottom-Right */}
+        {/* Bottom-Left Logo (Vercel) */}
+        <div className="absolute bottom-16 left-4 md:bottom-20 md:left-6">
+          <CornerLogo
+            src="/Vercel Logo.svg"
+            alt="Vercel"
+            delay={1.1}
+          />
+        </div>
+
+        {/* Bottom-Right Logo (v0) */}
+        <div className="absolute bottom-16 right-4 md:bottom-20 md:right-6">
+          <CornerLogo
+            src="/v0 Logo.svg"
+            alt="v0"
+            delay={1.2}
+          />
+        </div>
+
+        {/* Page Number - Bottom-Right (lower position) */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

@@ -45,11 +45,11 @@ export default function Slide33AtlassianMessaging() {
           <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6">
             {/* Left Column */}
             <div className="space-y-4">
-              {/* Logo Placeholder */}
+              {/* Atlassian Logo */}
               <div className="flex justify-center mb-4">
-                <div className="w-[140px] h-[36px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center">
-                  <span className="text-zinc-500 text-[10px]">
-                    ATLASSIAN_LOGO
+                <div className="w-[180px] h-[48px] flex items-center justify-center">
+                  <span className="text-white text-2xl font-bold tracking-wide">
+                    Atlassian
                   </span>
                 </div>
               </div>

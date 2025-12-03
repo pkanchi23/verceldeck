@@ -17,21 +17,25 @@ const vercelCategories = [
   "Personalized UX at Scale",
 ];
 
+// Generate logo paths
+const awsLogos = Array.from({ length: 22 }, (_, i) => `/Slide 12 Building Pyramid From Base/Square Logos/AWS Base Logos.png/Picture1.png-${i + 1}.png`);
+const vercelLogos = Array.from({ length: 33 }, (_, i) => `/Slide 12 Building Pyramid From Base/Square Logos/Vercel Base Logos.png/Vercel Base Logos.png-${i + 1}.png`);
+
 // Left pyramid (AWS) - smaller, 4 rows
 const leftPyramidRows = [
-  { count: 7, delay: 0 },      // Base row
-  { count: 5, delay: 0.15 },   // Row 2
-  { count: 3, delay: 0.3 },    // Row 3
-  { count: 1, delay: 0.45 },   // Top row
+  { count: 7, delay: 0, startIndex: 0 },      // Base row
+  { count: 5, delay: 0.15, startIndex: 7 },   // Row 2
+  { count: 3, delay: 0.3, startIndex: 12 },    // Row 3
+  { count: 1, delay: 0.45, startIndex: 15 },   // Top row
 ];
 
 // Right pyramid (Vercel) - larger, 5 rows
 const rightPyramidRows = [
-  { count: 9, delay: 0 },      // Base row
-  { count: 7, delay: 0.15 },   // Row 2
-  { count: 5, delay: 0.3 },    // Row 3
-  { count: 3, delay: 0.45 },   // Row 4
-  { count: 1, delay: 0.6 },    // Top row
+  { count: 9, delay: 0, startIndex: 0 },      // Base row
+  { count: 7, delay: 0.15, startIndex: 9 },   // Row 2
+  { count: 5, delay: 0.3, startIndex: 16 },    // Row 3
+  { count: 3, delay: 0.45, startIndex: 21 },   // Row 4
+  { count: 1, delay: 0.6, startIndex: 24 },    // Top row
 ];
 
 export default function Slide12Foundation() {
@@ -92,7 +96,7 @@ export default function Slide12Foundation() {
               {/* Left Pyramid (AWS) */}
               <div className="flex flex-col items-center gap-3 w-full">
                 {/* Pyramid Rows (bottom to top) */}
-                <div className="flex flex-col-reverse items-center gap-3">
+                <div className="flex flex-col-reverse items-center gap-1">
                   {leftPyramidRows.map((row, rowIndex) => (
                     <motion.div
                       key={rowIndex}
@@ -104,14 +108,26 @@ export default function Slide12Foundation() {
                         duration: 0.5,
                         ease: "easeOut",
                       }}
-                      className="flex gap-3 justify-center"
+                      className="flex gap-1 justify-center"
                     >
-                      {Array.from({ length: row.count }).map((_, boxIndex) => (
-                        <div
-                          key={boxIndex}
-                          className="w-12 h-12 md:w-14 md:h-14 border border-white rounded bg-transparent"
-                        />
-                      ))}
+                      {Array.from({ length: row.count }).map((_, boxIndex) => {
+                        const logoSrc = awsLogos[row.startIndex + boxIndex];
+                        return (
+                          <div
+                            key={boxIndex}
+                            className="relative w-14 h-14 md:w-[68px] md:h-[68px] rounded bg-transparent overflow-hidden"
+                          >
+                            {logoSrc && (
+                              <Image
+                                src={logoSrc}
+                                alt={`AWS Logo ${row.startIndex + boxIndex}`}
+                                fill
+                                className="object-contain p-1"
+                              />
+                            )}
+                          </div>
+                        );
+                      })}
                     </motion.div>
                   ))}
                 </div>
@@ -168,12 +184,24 @@ export default function Slide12Foundation() {
                       }}
                       className="flex gap-3 justify-center"
                     >
-                      {Array.from({ length: row.count }).map((_, boxIndex) => (
-                        <div
-                          key={boxIndex}
-                          className="w-12 h-12 md:w-14 md:h-14 border border-white rounded bg-transparent"
-                        />
-                      ))}
+                      {Array.from({ length: row.count }).map((_, boxIndex) => {
+                        const logoSrc = vercelLogos[row.startIndex + boxIndex];
+                        return (
+                          <div
+                            key={boxIndex}
+                            className="relative w-12 h-12 md:w-14 md:h-14 border border-white rounded bg-transparent overflow-hidden p-1"
+                          >
+                            {logoSrc && (
+                              <Image
+                                src={logoSrc}
+                                alt={`Vercel Logo ${row.startIndex + boxIndex}`}
+                                fill
+                                className="object-contain p-1"
+                              />
+                            )}
+                          </div>
+                        );
+                      })}
                     </motion.div>
                   ))}
                 </div>

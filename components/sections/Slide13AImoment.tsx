@@ -155,7 +155,7 @@ export default function Slide13AImoment() {
               >
                 <div className="relative w-full h-full">
                   <Image
-                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-3.png"
+                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-4.png"
                     alt="Tools and Platforms"
                     fill
                     className="object-contain"
@@ -180,7 +180,7 @@ export default function Slide13AImoment() {
               >
                 <div className="relative w-full h-full">
                   <Image
-                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-4.png"
+                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-3.png"
                     alt="IDEs and Vibe tools"
                     fill
                     className="object-contain"

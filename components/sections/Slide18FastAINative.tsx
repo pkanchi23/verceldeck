@@ -130,7 +130,7 @@ export default function Slide18FastAINative() {
   return (
     <Section id="slide-18" className="bg-black">
       <div className="relative w-full h-screen flex items-center justify-center">
-        {/* Triangle Graphic Placeholder - Background */}
+        {/* Triangle Graphic - Background */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -138,8 +138,13 @@ export default function Slide18FastAINative() {
           transition={{ delay: 0.95, duration: 0.4, ease: "easeOut" }}
           className="absolute inset-0 flex items-center justify-center z-0"
         >
-          <div className="w-[200px] md:w-[280px] h-[160px] md:h-[220px] border border-white/30 rounded bg-transparent flex items-center justify-center">
-            <span className="text-white/40 text-sm">Triangle Mark</span>
+          <div className="relative w-[200px] md:w-[280px] h-[160px] md:h-[220px]">
+            <Image
+              src="/Slide 18 Billboard/Vercel billboard Logo.svg"
+              alt="Vercel Billboard Logo"
+              fill
+              className="object-contain"
+            />
           </div>
         </motion.div>
 
@@ -152,7 +157,7 @@ export default function Slide18FastAINative() {
             </AnimatedText>
 
             <AnimatedWordImage
-              src="/Slide 18 Word Images/Fast.png"
+              src="/Slide 18 Billboard/Fast Billboard.png"
               alt="Fast"
               delay={0.1}
               withHover={true}
@@ -178,7 +183,7 @@ export default function Slide18FastAINative() {
             </AnimatedText>
 
             <AnimatedWordImage
-              src="/Slide 18 Word Images/AI-Native.png"
+              src="/Slide 18 Billboard/AI-Native Billboard.png"
               alt="AI-Native"
               delay={0.55}
               withHover={true}

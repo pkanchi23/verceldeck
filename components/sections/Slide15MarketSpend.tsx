@@ -9,37 +9,58 @@ const marketCategories = [
     label: "CDN / Edge",
     tam: "$37B",
     cagr: "'23–'28 CAGR: 15%",
-    logos: ["CLOUDFLARE", "AKAMAI", "FASTLY"],
+    logos: [
+      { name: "CLOUDFLARE", file: "Cloudflare Logo.png" },
+      { name: "AKAMAI", file: "Akamai Logo.png" },
+      { name: "FASTLY", file: "Fastly Logo.png" },
+    ],
   },
   {
     label: "Serverless Compute",
     tam: "$18B",
     cagr: "'23–'28 CAGR: 16%",
-    logos: ["AWS LAMBDA", "AZURE FUNCTIONS"],
+    logos: [
+      { name: "AWS LAMBDA", file: "AWS Lambda Functions.png" },
+      { name: "AZURE FUNCTIONS", file: "Azure Functions.png" },
+    ],
   },
   {
     label: "DevOps Software Tools",
     tam: "$23B",
     cagr: "'23–'28 CAGR: 16%",
-    logos: ["GITHUB", "GITLAB", "CIRCLECI"],
+    logos: [
+      { name: "GITHUB", file: "Github Logo.png" },
+      { name: "GITLAB", file: "Gitlab logo.png" },
+      { name: "CIRCLECI", file: "CirlceCI Logo.png" },
+    ],
   },
   {
     label: "Observability",
     tam: "$48B",
     cagr: "'23–'28 CAGR: 11%",
-    logos: ["DATADOG", "DYNATRACE", "NEW RELIC"],
+    logos: [
+      { name: "DATADOG", file: "Datadog Logo.png" },
+      { name: "DYNATRACE", file: "Dynatrace Logo.png" },
+      { name: "NEW RELIC", file: "New Relic Logo.png" },
+    ],
   },
   {
     label: "Software Design",
     tam: "$33B",
     cagr: "",
-    logos: ["FIGMA", "ADOBE"],
+    logos: [
+      { name: "FIGMA", file: "Figma Logo.png" },
+      { name: "ADOBE", file: "Adobe Logo.png" },
+    ],
   },
   {
     label: "AI Coding",
     tam: "$5B",
     cagr: "'24–'29 CAGR: 23%",
-    logos: ["CURSOR", "REPLIT"],
+    logos: [
+      { name: "CURSOR", file: "Cursor Logo.png" },
+      { name: "REPLIT", file: "Replit Logo.png" },
+    ],
   },
 ];
 
@@ -143,13 +164,13 @@ export default function Slide15MarketSpend() {
                 >
                   {category.logos.map((logo) => (
                     <div
-                      key={logo}
+                      key={logo.name}
                       className="w-10 h-10 border border-white/60 rounded bg-transparent flex items-center justify-center relative p-1"
-                      title={logo}
+                      title={logo.name}
                     >
                       <Image
-                        src={`/Slide 15 Logos/${logo.replace(/\s+/g, '_')}_LOGO.png`}
-                        alt={logo}
+                        src={`/Slide 15 Existing Market Spend Logos.png/${logo.file}`}
+                        alt={logo.name}
                         fill
                         className="object-contain p-1"
                       />

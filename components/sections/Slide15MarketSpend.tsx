@@ -76,7 +76,7 @@ export default function Slide15MarketSpend() {
             Abstracting away existing market spend…
           </motion.h1>
 
-          {/* Central Cloud Box Placeholder */}
+          {/* Central Cloud Box */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -85,14 +85,19 @@ export default function Slide15MarketSpend() {
             className="w-full max-w-4xl mx-auto mb-8 md:mb-10"
           >
             <div
-              className="h-[200px] md:h-[240px] border-2 border-white rounded-2xl bg-black flex items-center justify-center"
+              className="h-[200px] md:h-[240px] border-2 border-white rounded-2xl bg-black flex items-center justify-center relative"
               style={{
                 boxShadow: "0 0 40px rgba(255, 255, 255, 0.1)",
               }}
             >
-              <p className="text-white text-base md:text-lg">
-                [ VERCEL CLOUD GRAPHIC PLACEHOLDER ]
-              </p>
+              <div className="relative w-full h-full p-6">
+                <Image
+                  src="/Slide 15 Vercel Cloud Graphic/Vercel Cloud Graphic.png"
+                  alt="Vercel Cloud"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           </motion.div>
 
@@ -128,7 +133,7 @@ export default function Slide15MarketSpend() {
                   </p>
                 )}
 
-                {/* Logo Placeholders */}
+                {/* Company Logos */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -139,12 +144,15 @@ export default function Slide15MarketSpend() {
                   {category.logos.map((logo) => (
                     <div
                       key={logo}
-                      className="w-10 h-10 border border-white/60 rounded bg-transparent flex items-center justify-center"
+                      className="w-10 h-10 border border-white/60 rounded bg-transparent flex items-center justify-center relative p-1"
                       title={logo}
                     >
-                      <p className="text-white/40 text-[6px] text-center leading-tight px-1">
-                        {logo}
-                      </p>
+                      <Image
+                        src={`/Slide 15 Logos/${logo.replace(/\s+/g, '_')}_LOGO.png`}
+                        alt={logo}
+                        fill
+                        className="object-contain p-1"
+                      />
                     </div>
                   ))}
                 </motion.div>

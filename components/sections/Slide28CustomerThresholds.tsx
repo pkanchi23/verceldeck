@@ -58,16 +58,16 @@ export default function Slide28CustomerThresholds() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent h-[400px] md:h-[500px] lg:h-[600px]"
+              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent h-[360px] md:h-[450px] lg:h-[540px]"
             >
-              {/* monday.com Logo Placeholder at Top */}
               <div className="flex flex-col items-center h-full">
-
-                {/* Main Section Placeholder */}
-                <div className="flex-1 flex items-center justify-center">
-                  <span className="text-zinc-500 text-sm text-center">
-                    MONDAY_SECTION_PLACEHOLDER
-                  </span>
+                <div className="flex-1 flex items-center justify-center w-full relative">
+                  <Image
+                    src="/Model Builds/Model Build MNDY.png"
+                    alt="Monday.com Model"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -78,16 +78,16 @@ export default function Slide28CustomerThresholds() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent h-[400px] md:h-[500px] lg:h-[600px]"
+              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent h-[360px] md:h-[450px] lg:h-[540px]"
             >
-              {/* GitLab Logo Placeholder at Top */}
               <div className="flex flex-col items-center h-full">
-
-                {/* Main Section Placeholder */}
-                <div className="flex-1 flex items-center justify-center">
-                  <span className="text-zinc-500 text-sm text-center">
-                    GITLAB_SECTION_PLACEHOLDER
-                  </span>
+                <div className="flex-1 flex items-center justify-center w-full relative">
+                  <Image
+                    src="/Model Builds/Model Build GLTB.png"
+                    alt="GitLab Model"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
               </div>
             </motion.div>

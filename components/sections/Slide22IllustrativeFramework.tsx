@@ -34,18 +34,8 @@ const ChartBlock = ({
           />
         </div>
 
-        {/* Q2 Bar with Arrow */}
+        {/* Q2 Bar */}
         <div className="flex flex-col items-center relative h-28 md:h-32 justify-end">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.6, duration: 0.3, type: "spring" }}
-            className="absolute -top-6 text-lg"
-            style={{ color }}
-          >
-            ↑
-          </motion.div>
           <motion.div
             initial={{ height: 0 }}
             whileInView={{ height: "7rem" }}
@@ -191,7 +181,7 @@ export default function Slide22IllustrativeFramework() {
                 transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
                 className="absolute top-1/2 -translate-y-1/2"
               >
-                <div className="w-16 h-16 border border-zinc-600 rounded bg-zinc-900/30 flex items-center justify-center">
+                <div className="w-16 h-16 border border-zinc-600 rounded bg-black flex items-center justify-center">
                   <span className="text-white text-2xl">→</span>
                 </div>
               </motion.div>

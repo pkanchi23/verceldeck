@@ -58,19 +58,16 @@ export default function Slide27DeepDiveComps() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-4 bg-transparent h-[400px] md:h-[500px] lg:h-[600px]"
+              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent h-[360px] md:h-[450px] lg:h-[540px]"
             >
-              {/* Datadog Logo Placeholder at Top */}
               <div className="flex flex-col items-center h-full">
-                <div className="w-[120px] h-[40px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-3">
-                  <span className="text-zinc-500 text-xs">DATADOG_LOGO</span>
-                </div>
-
-                {/* Main Section Placeholder */}
-                <div className="flex-1 flex items-center justify-center">
-                  <span className="text-zinc-500 text-sm text-center">
-                    DATADOG_SECTION_PLACEHOLDER
-                  </span>
+                <div className="flex-1 flex items-center justify-center w-full relative">
+                  <Image
+                    src="/Model Builds/Model Build DDOG.png"
+                    alt="Datadog Model"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -81,19 +78,16 @@ export default function Slide27DeepDiveComps() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-4 bg-transparent h-[400px] md:h-[500px] lg:h-[600px]"
+              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent h-[360px] md:h-[450px] lg:h-[540px]"
             >
-              {/* CrowdStrike Logo Placeholder at Top */}
               <div className="flex flex-col items-center h-full">
-                <div className="w-[120px] h-[40px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-3">
-                  <span className="text-zinc-500 text-xs">CROWDSTRIKE_LOGO</span>
-                </div>
-
-                {/* Main Section Placeholder */}
-                <div className="flex-1 flex items-center justify-center">
-                  <span className="text-zinc-500 text-sm text-center">
-                    CROWDSTRIKE_SECTION_PLACEHOLDER
-                  </span>
+                <div className="flex-1 flex items-center justify-center w-full relative">
+                  <Image
+                    src="/Model Builds/Model Build CRWD.png"
+                    alt="CrowdStrike Model"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
               </div>
             </motion.div>

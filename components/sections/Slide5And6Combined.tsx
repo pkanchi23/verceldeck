@@ -74,10 +74,10 @@ export default function Slide5And6Combined() {
                         </div>
 
                         {/* Main Visual Area */}
-                        <div className="relative mt-10 md:mt-16 w-full max-w-[90%] mx-auto h-[600px] md:h-[700px]">
+                        <div className="relative -mt-20 md:-mt-24 w-full max-w-[100%] mx-auto h-[1020px] md:h-[1190px]">
                             {/* Central Cube Graphic */}
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="relative w-full h-full">
+                                <div className="relative w-[170%] h-[170%]">
                                     <Image
                                         src="/Slide 5/Slide 5 Background Graphic.png"
                                         alt="AI Graphic"

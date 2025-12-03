@@ -54,7 +54,7 @@ export default function Slide9VercelAICloud() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="w-[50%] mx-auto mb-10 md:mb-12 mt-6 md:mt-8"
+            className="w-[40%] mx-auto mb-10 md:mb-12 mt-6 md:mt-8"
           >
             <div className="relative aspect-[16/9]">
               <Image
@@ -74,7 +74,7 @@ export default function Slide9VercelAICloud() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-center gap-3"
+              className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-start gap-3"
               style={{
                 boxShadow: "0 0 20px rgba(255, 255, 255, 0.15)",
               }}

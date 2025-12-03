@@ -184,11 +184,16 @@ export default function Slide12Foundation() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
-                  className="w-full max-w-[1728px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2"
+                  className="w-full max-w-[1728px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2 px-8"
                 >
-                  <p className="text-white text-sm md:text-base font-semibold">
-                    [ VERCEL BASE ]
-                  </p>
+                  <div className="relative w-[160px] h-[50px]">
+                    <Image
+                      src="/Vercel Logo.svg"
+                      alt="Vercel"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </motion.div>
               </div>
             </div>

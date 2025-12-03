@@ -8,26 +8,32 @@ const vercelFeatures = [
   {
     title: "Fluid compute dynamic",
     description: "Per-request shifting CPU, GPU matching cost to workload intent with provisioning",
+    icon: "Fluid_Compute_Icon.png",
   },
   {
     title: "Ephemeral yet stateful",
     description: "UI micro-frontends that spin up on demand, pull from AI-generated content",
+    icon: "Ephemeral_Icon.png",
   },
   {
     title: "Inference at the edge",
     description: "Co-locating model execution with user proximity (no latency)",
+    icon: "Inference_Icon.png",
   },
   {
     title: "AI-native scaling primitives",
     description: "Burst capacity for unpredictable model call patterns",
+    icon: "AI_Scaling_Icon.png",
   },
   {
     title: "Seamless developer experience abstraction",
     description: "Composable building blocks, so developers (builders) can focus on shipping not infrastructure",
+    icon: "Developer_Experience_Icon.png",
   },
   {
     title: "Economic wedge",
     description: "Fine-grained pricing that makes AI features viable at scale vs. hyperscalers' grids designed for generic use",
+    icon: "Economic_Icon.png",
   },
 ];
 
@@ -90,8 +96,15 @@ export default function Slide14Differentiation() {
                     }}
                     className="border border-white rounded-xl p-2 md:p-3 flex gap-3"
                   >
-                    {/* Icon Placeholder */}
-                    <div className="flex-shrink-0 w-10 h-10 border border-white rounded bg-transparent" />
+                    {/* Icon */}
+                    <div className="flex-shrink-0 w-10 h-10 border border-white rounded bg-transparent relative">
+                      <Image
+                        src={`/Slide 14 Icons/${feature.icon}`}
+                        alt={feature.title}
+                        fill
+                        className="object-contain p-1"
+                      />
+                    </div>
 
                     {/* Text Block */}
                     <div className="flex-1">
@@ -130,11 +143,14 @@ export default function Slide14Differentiation() {
                   transition={{ delay: 1.4, duration: 0.5 }}
                   className="flex gap-4"
                 >
-                  {/* Icon Placeholder */}
-                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center">
-                    <p className="text-red-400 text-[10px] text-center px-1">
-                      [ HYPERSCALER ]
-                    </p>
+                  {/* Icon */}
+                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center relative">
+                    <Image
+                      src="/Slide 14 Icons/Hyperscaler_Icon.png"
+                      alt="Hyperscaler"
+                      fill
+                      className="object-contain p-1"
+                    />
                   </div>
 
                   {/* Content */}
@@ -158,11 +174,14 @@ export default function Slide14Differentiation() {
                   transition={{ delay: 1.5, duration: 0.5 }}
                   className="flex gap-4"
                 >
-                  {/* Logo Placeholder */}
-                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center">
-                    <p className="text-red-400 text-[10px] text-center px-1">
-                      [ CLOUDFLARE ]
-                    </p>
+                  {/* Logo */}
+                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center relative">
+                    <Image
+                      src="/Slide 14 Icons/Cloudflare_Logo.png"
+                      alt="Cloudflare"
+                      fill
+                      className="object-contain p-1"
+                    />
                   </div>
 
                   {/* Content */}
@@ -185,11 +204,14 @@ export default function Slide14Differentiation() {
                   transition={{ delay: 1.6, duration: 0.5 }}
                   className="flex gap-4"
                 >
-                  {/* Icon Placeholder */}
-                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center">
-                    <p className="text-red-400 text-[10px] text-center px-1">
-                      [ VIBE TOOLS ]
-                    </p>
+                  {/* Icon */}
+                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center relative">
+                    <Image
+                      src="/Slide 14 Icons/Vibe_Tools_Icon.png"
+                      alt="Vibe Tools"
+                      fill
+                      className="object-contain p-1"
+                    />
                   </div>
 
                   {/* Content */}

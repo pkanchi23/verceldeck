@@ -110,7 +110,7 @@ export default function Slide24BuildingBlocks() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
-                className="absolute left-[15%] -bottom-8 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
+                className="absolute left-[25%] -translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
               >
                 A
               </motion.div>
@@ -121,7 +121,7 @@ export default function Slide24BuildingBlocks() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
-                className="absolute right-[15%] -bottom-8 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
+                className="absolute right-[25%] translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
               >
                 B
               </motion.div>
@@ -129,7 +129,7 @@ export default function Slide24BuildingBlocks() {
           </div>
 
           {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-20">
             {/* LEFT COLUMN - User-Centric Path (Section A) */}
             <div className="space-y-6">
               {/* A1. Label */}
@@ -183,7 +183,8 @@ export default function Slide24BuildingBlocks() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.7, duration: 0.5 }}
-              className="border-2 border-dashed border-yellow-600/60 rounded-xl p-6 bg-yellow-900/5 space-y-6"
+              className="border-2 border-dashed rounded-xl p-6 space-y-6"
+              style={{ borderColor: "rgba(234, 179, 8, 0.6)", backgroundColor: "rgba(234, 179, 8, 0.03)" }}
             >
               {/* B1. Label */}
               <PlaceholderBox
@@ -237,9 +238,9 @@ export default function Slide24BuildingBlocks() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 2.6, duration: 0.5 }}
-            className="mt-6 flex justify-center lg:justify-end"
+            className="mt-6 flex justify-end"
           >
-            <p className="text-yellow-500 text-sm md:text-base font-medium">
+            <p className="text-sm md:text-base font-medium text-center" style={{ color: "#eab308" }}>
               Most common approach for public software companies
             </p>
           </motion.div>

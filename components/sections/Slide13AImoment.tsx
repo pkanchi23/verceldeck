@@ -96,14 +96,21 @@ export default function Slide13AImoment() {
                 transition={{ delay: 0.6, duration: 0.6 }}
                 onMouseEnter={() => setHoveredQuadrant(0)}
                 onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300"
+                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
                 style={{
                   boxShadow: hoveredQuadrant === 0
                     ? "0 0 30px rgba(255, 255, 255, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.1)"
                     : "0 0 10px rgba(255, 255, 255, 0.2)",
                 }}
               >
-                <p className="text-white text-sm md:text-base font-semibold">Hyperscalers</p>
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-1.png"
+                    alt="Hyperscalers"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </motion.div>
 
               {/* Top-right quadrant: Vercel (Neon pink glow) */}
@@ -114,14 +121,21 @@ export default function Slide13AImoment() {
                 transition={{ delay: 0.7, duration: 0.6 }}
                 onMouseEnter={() => setHoveredQuadrant(1)}
                 onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300"
+                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
                 style={{
                   boxShadow: hoveredQuadrant === 1
                     ? "0 0 30px rgba(236, 72, 153, 0.7), inset 0 0 20px rgba(236, 72, 153, 0.15)"
                     : "0 0 10px rgba(236, 72, 153, 0.2)",
                 }}
               >
-                <p className="text-white text-sm md:text-base font-semibold">Vercel</p>
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-2.png"
+                    alt="Vercel"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </motion.div>
 
               {/* Bottom-left quadrant: (Turquoise glow) */}
@@ -132,14 +146,21 @@ export default function Slide13AImoment() {
                 transition={{ delay: 0.8, duration: 0.6 }}
                 onMouseEnter={() => setHoveredQuadrant(2)}
                 onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300"
+                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
                 style={{
                   boxShadow: hoveredQuadrant === 2
                     ? "0 0 30px rgba(20, 184, 166, 0.7), inset 0 0 20px rgba(20, 184, 166, 0.15)"
                     : "0 0 10px rgba(20, 184, 166, 0.2)",
                 }}
               >
-                <p className="text-white text-sm md:text-base font-semibold">PLACEHOLDER</p>
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-3.png"
+                    alt="Tools and Platforms"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </motion.div>
 
               {/* Bottom-right quadrant: IDEs, Vibe tools (Neon yellow glow) */}
@@ -150,14 +171,21 @@ export default function Slide13AImoment() {
                 transition={{ delay: 0.9, duration: 0.6 }}
                 onMouseEnter={() => setHoveredQuadrant(3)}
                 onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300"
+                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
                 style={{
                   boxShadow: hoveredQuadrant === 3
                     ? "0 0 30px rgba(234, 179, 8, 0.7), inset 0 0 20px rgba(234, 179, 8, 0.15)"
                     : "0 0 10px rgba(234, 179, 8, 0.2)",
                 }}
               >
-                <p className="text-white text-sm md:text-base font-semibold">IDEs, Vibe tools</p>
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-4.png"
+                    alt="IDEs and Vibe tools"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </motion.div>
             </motion.div>
 

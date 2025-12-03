@@ -77,26 +77,14 @@ const FunnelStage = ({ stage }: { stage: FunnelStage }) => {
         {stage.title}
       </h3>
 
-      {/* Funnel Shape Placeholder */}
-      <div className="relative w-full max-w-[140px] md:max-w-[160px] mb-3">
-        <div
-          className="border-2 border-white/40 bg-zinc-900/30 rounded-lg p-2 md:p-3 h-[240px] md:h-[280px] flex items-center justify-center"
-          style={{
-            clipPath: "polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%)",
-          }}
-        >
-          <div className="text-center space-y-1.5">
-            {stage.items.map((item, index) => (
-              <div
-                key={index}
-                className="text-white/80 text-xs md:text-sm flex items-center justify-center gap-1.5"
-              >
-                <span className="text-white/40">•</span>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Funnel Shape Image */}
+      <div className="relative w-full max-w-[140px] md:max-w-[160px] h-[240px] md:h-[280px] mb-3">
+        <Image
+          src={`/Slide 23 Funnel Sections.png/Funnel Sections.png-${stage.id}.png`}
+          alt={stage.title}
+          fill
+          className="object-contain"
+        />
       </div>
 
       {/* Caption */}

@@ -9,7 +9,7 @@ export default function Slide13AImoment() {
   const [hoveredQuadrant, setHoveredQuadrant] = useState<number | null>(null);
   return (
     <Section id="slide-13" className="bg-black">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full min-h-screen">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}

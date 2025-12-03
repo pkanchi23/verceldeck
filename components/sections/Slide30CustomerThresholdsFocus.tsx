@@ -16,7 +16,7 @@ export default function Slide30CustomerThresholdsFocus() {
   ];
 
   return (
-    <Section id="slide-35" className="bg-black">
+    <Section id="slide-30" className="bg-black">
       <div className="relative w-full h-screen">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
@@ -55,14 +55,14 @@ export default function Slide30CustomerThresholdsFocus() {
           {/* Main Layout Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-6 lg:gap-8">
             {/* Left Column - Big Placeholder */}
-            <div className="h-[500px] border border-zinc-700 rounded-lg bg-zinc-900/30 flex items-center justify-center">
+            <div className="h-[400px] border border-zinc-700 rounded-lg bg-zinc-900/30 flex items-center justify-center">
               <span className="text-zinc-600 text-sm font-mono">
                 BIG_RECTANGULAR_PLACEHOLDER
               </span>
             </div>
 
             {/* Right-Hand Callout Box */}
-            <div className="h-[500px] border border-white rounded-lg p-6 bg-transparent flex flex-col justify-center">
+            <div className="h-[400px] border border-white rounded-lg p-6 bg-transparent flex flex-col justify-center">
               <div className="mb-4">
                 <span className="text-zinc-500 text-sm font-medium">
                   CALLOUT_SECTION_TITLE_PLACEHOLDER

@@ -7,7 +7,7 @@ import Section from "@/components/Section";
 export default function Slide8InterfaceStrategic() {
   return (
     <Section id="slide-8" className="bg-black">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full min-h-screen">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -49,7 +49,7 @@ export default function Slide8InterfaceStrategic() {
           </div>
 
           {/* Main Diagram Area */}
-          <div className="relative w-full max-w-6xl mx-auto h-[600px] md:h-[700px]">
+          <div className="relative w-full max-w-6xl mx-auto h-[450px] md:h-[520px]">
             {/* Left Column - Diagonal Arrows */}
             <div className="absolute left-0 top-0 bottom-0 w-[140px] md:w-[180px]">
               {/* Arrow 1 - New AI Development Stack (closer to pyramid) */}

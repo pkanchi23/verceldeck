@@ -135,7 +135,7 @@ export default function Slide25DisclosuresKPIs() {
           {/* Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-16">
             {/* LEFT COLUMN - User-Based Framework (Path A) */}
-            <div className="space-y-2">
+            <div className="space-y-3">
               {/* Q Label */}
               <LabelBox
                 label="DISCLOSURE_FRAMEWORK_Q_LABEL_PLACEHOLDER"
@@ -177,7 +177,7 @@ export default function Slide25DisclosuresKPIs() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.3, duration: 0.5 }}
-              className="border-2 border-dashed border-yellow-600/60 rounded-xl p-4 bg-yellow-900/5 space-y-1"
+              className="border-2 border-dashed border-yellow-600/60 rounded-xl p-4 bg-yellow-900/5 space-y-2"
             >
               {/* Q Label */}
               <LabelBox

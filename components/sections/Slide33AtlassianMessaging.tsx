@@ -34,7 +34,7 @@ export default function Slide33AtlassianMessaging() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-20">
           {/* Title */}
           <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 md:mb-8">
             Atlassian&apos;s long-term opportunity <br />
@@ -55,14 +55,14 @@ export default function Slide33AtlassianMessaging() {
               </div>
 
               {/* Quote Box 1 */}
-              <div className="h-[350px] border border-white rounded-lg p-4 bg-transparent flex items-center justify-center">
+              <div className="h-[250px] border border-white rounded-lg p-4 bg-transparent flex items-center justify-center">
                 <div className="text-zinc-500 text-xs leading-relaxed text-center">
                   TEXT_BLOCK_PLACEHOLDER_1
                 </div>
               </div>
 
               {/* Quote Box 2 */}
-              <div className="h-[350px] border border-white rounded-lg p-4 bg-transparent flex items-center justify-center">
+              <div className="h-[250px] border border-white rounded-lg p-4 bg-transparent flex items-center justify-center">
                 <div className="text-zinc-500 text-xs leading-relaxed text-center">
                   TEXT_BLOCK_PLACEHOLDER_2
                 </div>
@@ -70,7 +70,7 @@ export default function Slide33AtlassianMessaging() {
             </div>
 
             {/* Right Column - Five Sections */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               {rightSections.map((section) => (
                 <div
                   key={section.id}

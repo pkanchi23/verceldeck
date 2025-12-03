@@ -40,7 +40,7 @@ const layers = [
 export default function Slide11InfrastructureLayers() {
   return (
     <Section id="slide-11" className="bg-black">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full min-h-screen">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}

@@ -46,7 +46,7 @@ const marketCategories = [
 export default function Slide15MarketSpend() {
   return (
     <Section id="slide-15" className="bg-black">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full min-h-screen">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -85,7 +85,7 @@ export default function Slide15MarketSpend() {
             className="w-full max-w-4xl mx-auto mb-8 md:mb-10"
           >
             <div
-              className="h-[300px] md:h-[350px] border-2 border-white rounded-2xl bg-black flex items-center justify-center"
+              className="h-[200px] md:h-[240px] border-2 border-white rounded-2xl bg-black flex items-center justify-center"
               style={{
                 boxShadow: "0 0 40px rgba(255, 255, 255, 0.1)",
               }}

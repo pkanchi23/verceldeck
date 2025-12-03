@@ -80,16 +80,16 @@ const FunnelStage = ({ stage }: { stage: FunnelStage }) => {
       {/* Funnel Shape Placeholder */}
       <div className="relative w-full max-w-[140px] md:max-w-[160px] mb-3">
         <div
-          className="border-2 border-white/40 bg-zinc-900/30 rounded-lg p-3 md:p-4 h-[320px] md:h-[380px] flex items-center justify-center"
+          className="border-2 border-white/40 bg-zinc-900/30 rounded-lg p-2 md:p-3 h-[240px] md:h-[280px] flex items-center justify-center"
           style={{
             clipPath: "polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%)",
           }}
         >
-          <div className="text-center space-y-2">
+          <div className="text-center space-y-1.5">
             {stage.items.map((item, index) => (
               <div
                 key={index}
-                className="text-white/80 text-sm md:text-base flex items-center justify-center gap-2"
+                className="text-white/80 text-xs md:text-sm flex items-center justify-center gap-1.5"
               >
                 <span className="text-white/40">•</span>
                 <span>{item}</span>
@@ -154,9 +154,9 @@ export default function Slide23GrowthAlgorithm() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-4 md:pt-8 pb-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-6 md:pt-10 pb-16">
           {/* Header Section */}
-          <div className="mb-8 md:mb-12">
+          <div className="mb-6 md:mb-8">
             {/* Main Title */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}

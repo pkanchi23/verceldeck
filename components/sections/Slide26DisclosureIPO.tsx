@@ -58,7 +58,7 @@ export default function Slide26DisclosureIPO() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="absolute bottom-4 left-4 md:bottom-6 md:left-6"
+          className="absolute bottom-16 left-4 md:bottom-16 md:left-6"
         >
           <p className="text-white/40 text-xs">
             FOOTNOTE_PLACEHOLDER

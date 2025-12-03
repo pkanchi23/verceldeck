@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 
 interface FunnelStage {
@@ -79,16 +80,16 @@ const FunnelStage = ({ stage }: { stage: FunnelStage }) => {
       {/* Funnel Shape Placeholder */}
       <div className="relative w-full max-w-[140px] md:max-w-[160px] mb-3">
         <div
-          className="border-2 border-white/40 bg-zinc-900/30 rounded-lg p-3 md:p-4 h-[320px] md:h-[380px] flex items-center justify-center"
+          className="border-2 border-white/40 bg-zinc-900/30 rounded-lg p-2 md:p-3 h-[240px] md:h-[280px] flex items-center justify-center"
           style={{
             clipPath: "polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%)",
           }}
         >
-          <div className="text-center space-y-2">
+          <div className="text-center space-y-1.5">
             {stage.items.map((item, index) => (
               <div
                 key={index}
-                className="text-white/80 text-sm md:text-base flex items-center justify-center gap-2"
+                className="text-white/80 text-xs md:text-sm flex items-center justify-center gap-1.5"
               >
                 <span className="text-white/40">•</span>
                 <span>{item}</span>
@@ -135,20 +136,27 @@ export default function Slide23GrowthAlgorithm() {
         <BackgroundIcon x="70%" y="50%" delay={0.8} />
         <BackgroundIcon x="85%" y="25%" delay={1.0} />
 
-        {/* Top-Right Logo Placeholder (Vercel) */}
+        {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center z-10"
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end z-10"
         >
-          <span className="text-zinc-600 text-xs">VERCEL</span>
+          <div className="relative w-full h-full">
+            <Image
+              src="/Vercel Logo.svg"
+              alt="Vercel Logo"
+              fill
+              className="object-contain object-right"
+            />
+          </div>
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-4 md:pt-8 pb-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-6 md:pt-10 pb-16">
           {/* Header Section */}
-          <div className="mb-8 md:mb-12">
+          <div className="mb-6 md:mb-8">
             {/* Main Title */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -191,10 +199,22 @@ export default function Slide23GrowthAlgorithm() {
           </motion.div>
         </div>
 
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
-        </div>
+        {/* Bottom-Left Logo (Goldman Sachs) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Goldman Sachs Logo.svg"
+              alt="Goldman Sachs Logo"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+        </motion.div>
 
         {/* Page Number - Bottom-Right */}
         <motion.div
@@ -204,16 +224,6 @@ export default function Slide23GrowthAlgorithm() {
           className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
           23
-        </motion.div>
-
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
-        >
-          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
         </motion.div>
       </div>
     </Section>

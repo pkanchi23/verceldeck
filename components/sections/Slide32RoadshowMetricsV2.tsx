@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 
 export default function Slide32RoadshowMetricsV2() {
@@ -24,10 +26,22 @@ export default function Slide32RoadshowMetricsV2() {
   return (
     <Section id="slide-37" className="bg-black">
       <div className="relative w-full min-h-screen">
-        {/* Top-Right Logo Placeholder (Vercel) */}
-        <div className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">VERCEL</span>
-        </div>
+        {/* Top-Right Logo (Vercel) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Vercel Logo.svg"
+              alt="Vercel Logo"
+              fill
+              className="object-contain object-right"
+            />
+          </div>
+        </motion.div>
 
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16">
@@ -95,10 +109,22 @@ export default function Slide32RoadshowMetricsV2() {
           </div>
         </div>
 
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
-        </div>
+        {/* Bottom-Left Logo (Goldman Sachs) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Goldman Sachs Logo.svg"
+              alt="Goldman Sachs Logo"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+        </motion.div>
 
         {/* Page Number - Bottom-Right */}
         <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70">

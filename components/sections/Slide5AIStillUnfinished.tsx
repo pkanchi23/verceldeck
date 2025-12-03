@@ -1,19 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 
 export default function Slide5AIStillUnfinished() {
   return (
     <Section id="slide-5" className="bg-black">
       <div className="relative w-full min-h-screen">
-        {/* Top-Right Logo Placeholder (Vercel) */}
+        {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
-        />
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Vercel Logo.svg"
+              alt="Vercel Logo"
+              fill
+              className="object-contain object-right"
+            />
+          </div>
+        </motion.div>
 
         {/* Main Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24">
@@ -39,14 +49,16 @@ export default function Slide5AIStillUnfinished() {
           </div>
 
           {/* This block mirrors the original slide: central AI cube graphic with surrounding problem labels.
-              The placeholder box should be replaced with the actual graphic, while the red labels stay as animated text. */}
+              The red labels stay as animated text. */}
           <div className="relative mt-10 md:mt-16 w-full max-w-6xl mx-auto h-[420px] md:h-[480px]">
-            {/* TODO: Replace this placeholder box with the actual AI cube graphic (SVG/image) matching the deck. */}
-            {/* Central Cube Graphic Placeholder */}
-            <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] md:w-[320px] aspect-[4/3] border border-zinc-700/70 rounded-xl bg-zinc-900/40 flex items-center justify-center">
-              <p className="text-xs md:text-sm text-zinc-400 text-center px-4">
-                AI graphic placeholder
-              </p>
+            {/* Central AI Graphic */}
+            <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] md:w-[320px] aspect-[4/3]">
+              <Image
+                src="/Slide 5/Slide 5 Background Graphic.png"
+                alt="AI Graphic"
+                fill
+                className="object-contain"
+              />
             </div>
 
             {/* Red Label 1: Top-Right - "Data Siloed" */}
@@ -156,18 +168,22 @@ export default function Slide5AIStillUnfinished() {
           </div>
         </div>
 
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        {/* Bottom-Left Logo (Goldman Sachs) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
-        />
-
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
-        </div>
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Goldman Sachs Logo.svg"
+              alt="Goldman Sachs Logo"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+        </motion.div>
 
         {/* Page Number - Bottom-Right */}
         <motion.div

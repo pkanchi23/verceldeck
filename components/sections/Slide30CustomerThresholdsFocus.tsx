@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 
 export default function Slide30CustomerThresholdsFocus() {
@@ -14,12 +16,24 @@ export default function Slide30CustomerThresholdsFocus() {
   ];
 
   return (
-    <Section id="slide-35" className="bg-black">
+    <Section id="slide-30" className="bg-black">
       <div className="relative w-full h-screen">
-        {/* Top-Right Logo Placeholder (Vercel) */}
-        <div className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">VERCEL</span>
-        </div>
+        {/* Top-Right Logo (Vercel) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Vercel Logo.svg"
+              alt="Vercel Logo"
+              fill
+              className="object-contain object-right"
+            />
+          </div>
+        </motion.div>
 
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-24">
@@ -41,14 +55,14 @@ export default function Slide30CustomerThresholdsFocus() {
           {/* Main Layout Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-6 lg:gap-8">
             {/* Left Column - Big Placeholder */}
-            <div className="h-[500px] border border-zinc-700 rounded-lg bg-zinc-900/30 flex items-center justify-center">
+            <div className="h-[400px] border border-zinc-700 rounded-lg bg-zinc-900/30 flex items-center justify-center">
               <span className="text-zinc-600 text-sm font-mono">
                 BIG_RECTANGULAR_PLACEHOLDER
               </span>
             </div>
 
             {/* Right-Hand Callout Box */}
-            <div className="h-[500px] border border-white rounded-lg p-6 bg-transparent flex flex-col justify-center">
+            <div className="h-[400px] border border-white rounded-lg p-6 bg-transparent flex flex-col justify-center">
               <div className="mb-4">
                 <span className="text-zinc-500 text-sm font-medium">
                   CALLOUT_SECTION_TITLE_PLACEHOLDER
@@ -73,10 +87,22 @@ export default function Slide30CustomerThresholdsFocus() {
           </div>
         </div>
 
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
-        </div>
+        {/* Bottom-Left Logo (Goldman Sachs) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Goldman Sachs Logo.svg"
+              alt="Goldman Sachs Logo"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+        </motion.div>
 
         {/* Page Number - Bottom-Right */}
         <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70">

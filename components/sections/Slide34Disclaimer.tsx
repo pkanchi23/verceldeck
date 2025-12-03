@@ -1,26 +1,40 @@
 "use client";
 
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 
 export default function Slide34Disclaimer() {
   return (
     <Section id="slide-34" className="bg-black">
       <div className="relative w-full h-screen">
-        {/* Top-Right Logo Placeholder (Vercel) */}
-        <div className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">VERCEL</span>
-        </div>
+        {/* Top-Right Logo (Vercel) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Vercel Logo.svg"
+              alt="Vercel Logo"
+              fill
+              className="object-contain object-right"
+            />
+          </div>
+        </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">
           {/* Title */}
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-12 md:mb-16">
             Disclaimer
           </h1>
 
           {/* Body Text Area - Full Width Disclaimer Placeholder */}
-          <div className="max-w-full whitespace-pre-line">
-            <p className="text-white/60 text-[11px] leading-relaxed">
+          <div className="max-w-full whitespace-pre-line max-h-[calc(100vh-250px)] overflow-y-auto">
+            <p className="text-white/60 text-[10px] leading-relaxed">
               These materials have been prepared by Goldman Sachs on a confidential basis for presentation solely to Vercel, Inc. (the "Company") in connection with an informational presentation which Goldman Sachs is making to senior management, at the Company’s invitation. These materials and Goldman Sachs’ presentation relating to these materials (collectively, the “Presentation”) may not be disclosed to any third party or circulated or referred to publicly or used for or relied upon for any other purpose without the prior written consent of Goldman Sachs.  The Presentation was not prepared with a view to public disclosure or to conform to any disclosure standards under any state, federal or international securities laws or other laws, rules or regulations, and Goldman Sachs does not take any responsibility for the use of the Presentation by persons other than those set forth above. Notwithstanding anything in this Presentation to the contrary, the Company may disclose to any person the US federal income and state income tax treatment and tax structure of any transaction described herein and all materials of any kind (including tax opinions and other tax analyses) that are provided to the Company relating to such tax treatment and tax structure, without Goldman Sachs imposing any limitation of any kind. The Presentation has been prepared by the Investment Banking Division of Goldman Sachs and is not a product of its research department.
               <br />
               <br />
@@ -38,15 +52,22 @@ export default function Slide34Disclaimer() {
           </div>
         </div>
 
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">GS_LOGO_PLACEHOLDER</span>
-        </div>
-
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
-        </div>
+        {/* Bottom-Left Logo (Goldman Sachs) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Goldman Sachs Logo.svg"
+              alt="Goldman Sachs Logo"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+        </motion.div>
 
         {/* Page Number - Bottom-Right */}
         <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70">

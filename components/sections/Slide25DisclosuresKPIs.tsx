@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 
 // Reusable placeholder components
@@ -62,14 +63,21 @@ export default function Slide25DisclosuresKPIs() {
   return (
     <Section id="slide-25" className="bg-black">
       <div className="relative w-full h-screen">
-        {/* Top-Right Logo Placeholder (Vercel) */}
+        {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
         >
-          <span className="text-zinc-600 text-xs">VERCEL</span>
+          <div className="relative w-full h-full">
+            <Image
+              src="/Vercel Logo.svg"
+              alt="Vercel Logo"
+              fill
+              className="object-contain object-right"
+            />
+          </div>
         </motion.div>
 
 
@@ -127,7 +135,7 @@ export default function Slide25DisclosuresKPIs() {
           {/* Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-16">
             {/* LEFT COLUMN - User-Based Framework (Path A) */}
-            <div className="space-y-2">
+            <div className="space-y-3">
               {/* Q Label */}
               <LabelBox
                 label="DISCLOSURE_FRAMEWORK_Q_LABEL_PLACEHOLDER"
@@ -169,7 +177,7 @@ export default function Slide25DisclosuresKPIs() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.3, duration: 0.5 }}
-              className="border-2 border-dashed border-yellow-600/60 rounded-xl p-4 bg-yellow-900/5 space-y-1"
+              className="border-2 border-dashed border-yellow-600/60 rounded-xl p-4 bg-yellow-900/5 space-y-2"
             >
               {/* Q Label */}
               <LabelBox
@@ -229,10 +237,22 @@ export default function Slide25DisclosuresKPIs() {
           </motion.div>
         </div>
 
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
-        </div>
+        {/* Bottom-Left Logo (Goldman Sachs) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Goldman Sachs Logo.svg"
+              alt="Goldman Sachs Logo"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+        </motion.div>
 
         {/* Page Number - Bottom-Right */}
         <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70">

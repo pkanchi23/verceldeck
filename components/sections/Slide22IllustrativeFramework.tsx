@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 
 // Chart Block Component
@@ -134,10 +135,17 @@ export default function Slide22IllustrativeFramework() {
             <span className="underline">Illustrative</span> long-term framework
           </h1>
 
-          {/* Top-Right Logo Placeholder (Vercel) */}
-          <div className="hidden md:flex w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent items-center justify-center flex-shrink-0 ml-6">
-            <span className="text-zinc-600 text-xs">VERCEL</span>
-          </div>
+          {/* Top-Right Logo (Vercel) */}
+          <motion.div className="hidden md:flex w-[140px] h-[40px] items-center justify-end flex-shrink-0 ml-6">
+            <div className="relative w-full h-full">
+              <Image
+                src="/Vercel Logo.svg"
+                alt="Vercel Logo"
+                fill
+                className="object-contain object-right"
+              />
+            </div>
+          </motion.div>
         </div>
 
         {/* Main Content */}
@@ -240,10 +248,22 @@ export default function Slide22IllustrativeFramework() {
           </div>
         </div>
 
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
-        </div>
+        {/* Bottom-Left Logo (Goldman Sachs) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Goldman Sachs Logo.svg"
+              alt="Goldman Sachs Logo"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+        </motion.div>
 
         {/* Page Number - Bottom-Right */}
         <motion.div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70">

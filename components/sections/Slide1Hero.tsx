@@ -69,7 +69,7 @@ export default function Slide1Hero() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/Goldman Sachs LOGO.svg"
+                src="/Goldman Sachs Logo.svg"
                 alt="Goldman Sachs Logo"
                 fill
                 className="object-contain object-left"

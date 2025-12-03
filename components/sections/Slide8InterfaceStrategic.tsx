@@ -97,12 +97,7 @@ export default function Slide8InterfaceStrategic() {
                   </defs>
                 </svg>
                 {/* Label text */}
-                <div
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-white text-xs md:text-sm font-medium"
-                  style={{ transform: 'translate(-50%, -50%) rotate(-65deg)', width: '200px' }}
-                >
-                  The new AI development stack
-                </div>
+
               </motion.div>
 
               {/* Arrow 2 - Traditional Development Stack (farther left) */}
@@ -160,12 +155,7 @@ export default function Slide8InterfaceStrategic() {
                   </defs>
                 </svg>
                 {/* Label text */}
-                <div
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-zinc-400 text-xs md:text-sm font-medium"
-                  style={{ transform: 'translate(-50%, -50%) rotate(-65deg)', width: '220px' }}
-                >
-                  The traditional development stack
-                </div>
+
               </motion.div>
             </div>
 
@@ -227,6 +217,11 @@ export default function Slide8InterfaceStrategic() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
         />
+
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+        </div>
 
         {/* Page Number - Bottom-Right */}
         <motion.div

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 
 export default function Slide1Hero() {
@@ -47,22 +48,34 @@ export default function Slide1Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="absolute top-0 right-0 w-[140px] h-[40px] border border-white/20 rounded"
-            style={{
-              backgroundColor: 'transparent',
-            }}
-          />
+            className="absolute top-0 right-0 w-[140px] h-[40px] flex items-center justify-end"
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src="/Vercel Logo.svg"
+                alt="Vercel Logo"
+                fill
+                className="object-contain object-right"
+              />
+            </div>
+          </motion.div>
 
           {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="absolute bottom-0 left-0 w-[140px] h-[40px] border border-white/20 rounded"
-            style={{
-              backgroundColor: 'transparent',
-            }}
-          />
+            className="absolute bottom-0 left-0 w-[140px] h-[40px] flex items-center justify-start"
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src="/Goldman Sachs LOGO.svg"
+                alt="Goldman Sachs Logo"
+                fill
+                className="object-contain object-left"
+              />
+            </div>
+          </motion.div>
 
           {/* Bottom-Middle "Made with" text */}
           <motion.div
@@ -83,24 +96,24 @@ export default function Slide1Hero() {
           >
             <span>Made with</span>
             <span>❤️</span>
-            <span>and V0. Deployed with</span>
-            <motion.div
-              animate={{
-                boxShadow: [
-                  "0 0 0px rgba(255, 255, 255, 0)",
-                  "0 0 20px rgba(255, 255, 255, 0.8)",
-                  "0 0 0px rgba(255, 255, 255, 0)"
-                ]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="w-20 h-10 border border-white/40 rounded flex items-center justify-center bg-black"
-            >
-              <span className="text-xs font-bold text-white tracking-widest">Vercel</span>
-            </motion.div>
+            <span>and</span>
+            <div className="relative w-8 h-8 -mx-1">
+              <Image
+                src="/V0 Logo.svg"
+                alt="v0"
+                fill
+                className="object-contain scale-125"
+              />
+            </div>
+            <span>. Deployed with</span>
+            <div className="relative w-24 h-12">
+              <Image
+                src="/Vercel Logo.svg"
+                alt="Vercel"
+                fill
+                className="object-contain"
+              />
+            </div>
           </motion.div>
         </div>
 

@@ -212,7 +212,9 @@ export default function Slide5And6Combined() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.9, duration: 0.8 }}
                         className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
-                    />
+                    >
+                        <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+                    </motion.div>
 
                     {/* Page Number - Bottom-Right */}
                     <motion.div

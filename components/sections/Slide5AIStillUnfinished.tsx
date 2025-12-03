@@ -164,6 +164,11 @@ export default function Slide5AIStillUnfinished() {
           className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
         />
 
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
+          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+        </div>
+
         {/* Page Number - Bottom-Right */}
         <motion.div
           initial={{ opacity: 0 }}

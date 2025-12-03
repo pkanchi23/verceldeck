@@ -1,19 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 
 const iconLabels = [
-  "Serverless Compute",
-  "Logic",
-  "Personalization",
-  "CI/CD",
-  "Analytics",
-  "DevOps Software",
-  "Observability",
-  "Global Scale",
-  "Security",
-  "Edge Storage",
+  { label: "Serverless Compute", image: "/Slide 10 Circle SVGs/Serverless Compute.png" },
+  { label: "Logic", image: "/Slide 10 Circle SVGs/Logic SVG.png" },
+  { label: "Personalization", image: "/Slide 10 Circle SVGs/Personalization SVG.png" },
+  { label: "CI/CD", image: "/Slide 10 Circle SVGs/CI and CD.png" },
+  { label: "Analytics", image: "/Slide 10 Circle SVGs/Analytics SVG.png" },
+  { label: "DevOps Software", image: "/Slide 10 Circle SVGs/DevOps Software.png" },
+  { label: "Observability", image: "/Slide 10 Circle SVGs/Observability SVG.png" },
+  { label: "Global Scale", image: "/Slide 10 Circle SVGs/globe.svg" },
+  { label: "Security", image: "/Slide 10 Circle SVGs/Security SVG.png" },
+  { label: "Edge Storage", image: "/Slide 10 Circle SVGs/Edge Storage.png" },
 ];
 
 export default function Slide10VercelCloudInside() {
@@ -24,13 +25,22 @@ export default function Slide10VercelCloudInside() {
   return (
     <Section id="slide-10" className="bg-black">
       <div className="relative w-full h-screen">
-        {/* Top-Right Logo Placeholder (Vercel) */}
+        {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
-        />
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Vercel Logo.svg"
+              alt="Vercel Logo"
+              fill
+              className="object-contain object-right"
+            />
+          </div>
+        </motion.div>
 
         {/* Main Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16">
@@ -106,14 +116,14 @@ export default function Slide10VercelCloudInside() {
               </motion.div>
 
               {/* Icon Placeholders around Outer Ring */}
-              {iconLabels.map((label, index) => {
+              {iconLabels.map((item, index) => {
                 const angle = (index / iconCount) * 2 * Math.PI - Math.PI / 2; // Start from top
                 const x = Math.cos(angle) * radius;
                 const y = Math.sin(angle) * radius;
 
                 return (
                   <motion.div
-                    key={label}
+                    key={item.label}
                     initial={{ opacity: 0, scale: 0.9, x: x * 0.8, y: y * 0.8 }}
                     whileInView={{ opacity: 1, scale: 1, x, y }}
                     viewport={{ once: true, amount: 0.5 }}
@@ -130,12 +140,17 @@ export default function Slide10VercelCloudInside() {
                   >
                     <div className="relative -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
                       {/* Icon Box */}
-                      <div className="w-12 h-12 border border-purple-400/60 rounded-lg bg-purple-900/20 flex items-center justify-center mb-2">
-                        <div className="w-6 h-6 border border-purple-300/60 rounded" />
+                      <div className="relative w-12 h-12 mb-2">
+                        <Image
+                          src={item.image}
+                          alt={item.label}
+                          fill
+                          className="object-contain"
+                        />
                       </div>
                       {/* Label */}
                       <p className="text-white text-xs text-center whitespace-nowrap max-w-[100px]">
-                        {label}
+                        {item.label}
                       </p>
                     </div>
                   </motion.div>
@@ -219,18 +234,22 @@ export default function Slide10VercelCloudInside() {
           </div>
         </div>
 
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        {/* Bottom-Left Logo (Goldman Sachs) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
-        />
-
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
-        </div>
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Goldman Sachs Logo.svg"
+              alt="Goldman Sachs Logo"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+        </motion.div>
 
         {/* Page Number - Bottom-Right */}
         <motion.div

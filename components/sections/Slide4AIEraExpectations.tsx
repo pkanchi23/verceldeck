@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 
 const cards = [
@@ -10,6 +11,7 @@ const cards = [
     glowColor: "cyan", // Neon turquoise
     borderHoverClass: "hover:border-cyan-400",
     glowClass: "hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]",
+    imageSrc: "/Slide 4 SVGs/AI Era SVG 1.svg",
   },
   {
     title: "Developers (Builders)",
@@ -17,6 +19,7 @@ const cards = [
     glowColor: "pink", // Neon pink
     borderHoverClass: "hover:border-pink-400",
     glowClass: "hover:shadow-[0_0_30px_rgba(236,72,153,0.6)]",
+    imageSrc: "/Slide 4 SVGs/AI Era SVG 2.svg",
   },
   {
     title: "Enterprises",
@@ -24,6 +27,7 @@ const cards = [
     glowColor: "yellow", // Neon yellow
     borderHoverClass: "hover:border-yellow-400",
     glowClass: "hover:shadow-[0_0_30px_rgba(250,204,21,0.6)]",
+    imageSrc: "/Slide 4 SVGs/AI Era SVG 3.svg",
   },
 ];
 
@@ -31,13 +35,22 @@ export default function Slide4AIEraExpectations() {
   return (
     <Section id="slide-4" className="bg-black">
       <div className="relative w-full min-h-screen">
-        {/* Top-Right Logo Placeholder (Vercel) */}
+        {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
-        />
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Vercel Logo.svg"
+              alt="Vercel Logo"
+              fill
+              className="object-contain object-right"
+            />
+          </div>
+        </motion.div>
 
         {/* Main Content Container */}
         <div className="max-w-[1800px] mx-auto px-8 md:px-16 pt-12 md:pt-16 pb-20">
@@ -88,27 +101,38 @@ export default function Slide4AIEraExpectations() {
                   {card.description}
                 </p>
 
-                {/* Icon Placeholder */}
+                {/* Icon */}
                 <div className="mt-auto flex justify-center">
-                  <div className="w-24 h-24 md:w-28 md:h-28 border border-zinc-700 rounded flex items-center justify-center" />
+                  <div className="relative w-24 h-24 md:w-28 md:h-28">
+                    <Image
+                      src={card.imageSrc}
+                      alt={card.title}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        {/* Bottom-Left Logo (Goldman Sachs) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
-          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
-        />
-
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
-        </div>
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Goldman Sachs Logo.svg"
+              alt="Goldman Sachs Logo"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+        </motion.div>
 
         {/* Page Number - Bottom-Right */}
         <motion.div

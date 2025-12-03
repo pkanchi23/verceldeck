@@ -1,19 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/Section";
 
 export default function Slide8InterfaceStrategic() {
   return (
     <Section id="slide-8" className="bg-black">
       <div className="relative w-full h-screen">
-        {/* Top-Right Logo Placeholder (Vercel) */}
+        {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
-        />
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Vercel Logo.svg"
+              alt="Vercel Logo"
+              fill
+              className="object-contain object-right"
+            />
+          </div>
+        </motion.div>
 
         {/* Main Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-24">
@@ -159,7 +169,7 @@ export default function Slide8InterfaceStrategic() {
               </motion.div>
             </div>
 
-            {/* Center Column - Placeholder Box */}
+            {/* Center Column - Pyramid Diagram */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -167,8 +177,13 @@ export default function Slide8InterfaceStrategic() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2"
             >
-              <div className="w-[400px] h-[400px] border-2 border-zinc-700 rounded-lg bg-zinc-900/20 flex items-center justify-center">
-                <span className="text-zinc-600 text-sm">DIAGRAM_PLACEHOLDER</span>
+              <div className="relative w-[400px] h-[400px]">
+                <Image
+                  src="/Slide 8 Pyramid/Pyramid.png"
+                  alt="Interface Strategic Pyramid"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </motion.div>
 
@@ -210,18 +225,22 @@ export default function Slide8InterfaceStrategic() {
           </div>
         </div>
 
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        {/* Bottom-Left Logo (Goldman Sachs) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
-        />
-
-        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
-          <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
-        </div>
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Goldman Sachs Logo.svg"
+              alt="Goldman Sachs Logo"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+        </motion.div>
 
         {/* Page Number - Bottom-Right */}
         <motion.div

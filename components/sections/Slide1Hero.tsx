@@ -43,40 +43,6 @@ export default function Slide1Hero() {
             </motion.p>
           </div>
 
-          {/* Top-Right Logo Placeholder (Vercel) */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="absolute top-0 right-0 w-[140px] h-[40px] flex items-center justify-end"
-          >
-            <div className="relative w-full h-full">
-              <Image
-                src="/Vercel Logo.svg"
-                alt="Vercel Logo"
-                fill
-                className="object-contain object-right"
-              />
-            </div>
-          </motion.div>
-
-          {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="absolute bottom-0 left-0 w-[140px] h-[40px] flex items-center justify-start"
-          >
-            <div className="relative w-full h-full">
-              <Image
-                src="/Goldman Sachs Logo.svg"
-                alt="Goldman Sachs Logo"
-                fill
-                className="object-contain object-left"
-              />
-            </div>
-          </motion.div>
-
           {/* Bottom-Middle "Made with" text */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -95,8 +61,6 @@ export default function Slide1Hero() {
             className="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-3 text-white text-lg md:text-xl"
           >
             <span>Made with</span>
-            <span>❤️</span>
-            <span>and</span>
             <div className="relative w-8 h-8 -mx-1">
               <Image
                 src="/V0 Logo.svg"
@@ -117,12 +81,46 @@ export default function Slide1Hero() {
           </motion.div>
         </div>
 
+        {/* Top-Right Logo Placeholder (Vercel) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Vercel Logo.svg"
+              alt="Vercel Logo"
+              fill
+              className="object-contain object-right"
+            />
+          </div>
+        </motion.div>
+
+        {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
+        >
+          <div className="relative w-full h-full">
+            <Image
+              src="/Goldman Sachs Logo.svg"
+              alt="Goldman Sachs Logo"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+        </motion.div>
+
         {/* Page Number - outside grid, bottom-right of viewport */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
-          className="absolute bottom-6 right-6 text-sm md:text-base font-light text-white/60"
+          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
         >
           1
         </motion.div>

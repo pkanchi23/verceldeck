@@ -116,7 +116,7 @@ export default function Slide7StackParadigm() {
               </motion.div>
               {/* Connector line */}
               <div className="absolute top-1/2 -right-12 w-10 h-px bg-red-500" />
-              <div className="absolute top-1/2 -right-13 w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
+              <div className="absolute top-1/2 -right-[3.25rem] w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
             </motion.div>
 
             {/* Red Callout 2 - Siloed, unbundled */}
@@ -138,7 +138,7 @@ export default function Slide7StackParadigm() {
               </motion.div>
               {/* Connector line */}
               <div className="absolute top-1/2 -right-12 w-10 h-px bg-red-500" />
-              <div className="absolute top-1/2 -right-13 w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
+              <div className="absolute top-1/2 -right-[3.25rem] w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
             </motion.div>
 
             {/* Red Callout 3 - CPU centric */}
@@ -160,7 +160,7 @@ export default function Slide7StackParadigm() {
               </motion.div>
               {/* Connector line */}
               <div className="absolute top-1/2 -right-12 w-10 h-px bg-red-500" />
-              <div className="absolute top-1/2 -right-13 w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
+              <div className="absolute top-1/2 -right-[3.25rem] w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
             </motion.div>
 
             {/* Pink Wedges - AI Agents and LLMs (z-20) */}
@@ -231,7 +231,7 @@ export default function Slide7StackParadigm() {
               </div>
               {/* Connector line */}
               <div className="absolute top-1/2 -left-12 w-10 h-px bg-pink-400" />
-              <div className="absolute top-1/2 -left-13 w-2 h-2 rounded-full bg-pink-400 -translate-y-1/2" />
+              <div className="absolute top-1/2 -left-[3.25rem] w-2 h-2 rounded-full bg-pink-400 -translate-y-1/2" />
             </motion.div>
 
             {/* Pink Callout 2 - LLMS */}
@@ -249,7 +249,7 @@ export default function Slide7StackParadigm() {
               </div>
               {/* Connector line */}
               <div className="absolute top-1/2 -left-12 w-10 h-px bg-pink-400" />
-              <div className="absolute top-1/2 -left-13 w-2 h-2 rounded-full bg-pink-400 -translate-y-1/2" />
+              <div className="absolute top-1/2 -left-[3.25rem] w-2 h-2 rounded-full bg-pink-400 -translate-y-1/2" />
             </motion.div>
           </div>
         </div>

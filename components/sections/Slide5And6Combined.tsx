@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function Slide5And6Combined() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -32,13 +33,22 @@ export default function Slide5And6Combined() {
 
             <div className="sticky top-0 h-screen overflow-hidden">
                 <div className="relative w-full h-full">
-                    {/* Top-Right Logo Placeholder (Vercel) */}
+                    {/* Top-Right Logo (Vercel) */}
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
-                        className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
-                    />
+                        className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
+                    >
+                        <div className="relative w-full h-full">
+                            <Image
+                                src="/Vercel Logo.svg"
+                                alt="Vercel Logo"
+                                fill
+                                className="object-contain object-right"
+                            />
+                        </div>
+                    </motion.div>
 
                     {/* Main Content Container - Shared Layout */}
                     <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24">
@@ -64,12 +74,18 @@ export default function Slide5And6Combined() {
                         </div>
 
                         {/* Main Visual Area */}
-                        <div className="relative mt-10 md:mt-16 w-full max-w-6xl mx-auto h-[420px] md:h-[480px]">
-                            {/* Central Cube Graphic Placeholder (Static) */}
-                            <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] md:w-[320px] aspect-[4/3] border border-zinc-700/70 rounded-xl bg-zinc-900/40 flex items-center justify-center">
-                                <p className="text-xs md:text-sm text-zinc-400 text-center px-4">
-                                    AI graphic placeholder
-                                </p>
+                        <div className="relative mt-10 md:mt-16 w-full max-w-[90%] mx-auto h-[600px] md:h-[700px]">
+                            {/* Central Cube Graphic */}
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="relative w-full h-full">
+                                    <Image
+                                        src="/Slide 5/Slide 5 Background Graphic.png"
+                                        alt="AI Graphic"
+                                        fill
+                                        className="object-contain"
+                                        priority
+                                    />
+                                </div>
                             </div>
 
                             {/* SLIDE 5 CONTENT: Red Floating Text Boxes */}
@@ -206,14 +222,21 @@ export default function Slide5And6Combined() {
                         </div>
                     </div>
 
-                    {/* Bottom-Left Logo Placeholder (Goldman Sachs) */}
+                    {/* Bottom-Left Logo (Goldman Sachs) */}
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.9, duration: 0.8 }}
-                        className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center"
+                        className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
                     >
-                        <span className="text-zinc-600 text-xs">GOLDMAN SACHS</span>
+                        <div className="relative w-full h-full">
+                            <Image
+                                src="/Goldman Sachs Logo.svg"
+                                alt="Goldman Sachs Logo"
+                                fill
+                                className="object-contain object-left"
+                            />
+                        </div>
                     </motion.div>
 
                     {/* Page Number - Bottom-Right */}

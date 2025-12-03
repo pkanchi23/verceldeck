@@ -10,7 +10,7 @@ const cards = [
     description: "Customers want personalized, real-time, intelligent interfaces",
     glowColor: "cyan", // Neon turquoise
     borderHoverClass: "hover:border-cyan-400",
-    glowClass: "hover:shadow-[0_0_30px_rgba(34,211,238,0.6)]",
+    glowClass: "hover:shadow-[0_0_60px_rgba(34,211,238,0.6)]",
     imageSrc: "/Slide 4 SVGs/AI Era SVG 1.svg",
   },
   {
@@ -18,7 +18,7 @@ const cards = [
     description: "Developers (Builders) want abstraction, instant deploys and AI-native workflows",
     glowColor: "pink", // Neon pink
     borderHoverClass: "hover:border-pink-400",
-    glowClass: "hover:shadow-[0_0_30px_rgba(236,72,153,0.6)]",
+    glowClass: "hover:shadow-[0_0_60px_rgba(236,72,153,0.6)]",
     imageSrc: "/Slide 4 SVGs/AI Era SVG 2.svg",
   },
   {
@@ -26,7 +26,7 @@ const cards = [
     description: "Enterprises want agility without compromising security & control",
     glowColor: "yellow", // Neon yellow
     borderHoverClass: "hover:border-yellow-400",
-    glowClass: "hover:shadow-[0_0_30px_rgba(250,204,21,0.6)]",
+    glowClass: "hover:shadow-[0_0_60px_rgba(250,204,21,0.6)]",
     imageSrc: "/Slide 4 SVGs/AI Era SVG 3.svg",
   },
 ];

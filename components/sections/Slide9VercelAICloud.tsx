@@ -74,7 +74,7 @@ export default function Slide9VercelAICloud() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="border border-white rounded-2xl p-4 md:p-5 bg-black/40 flex items-center gap-3"
+              className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-center gap-3"
               style={{
                 boxShadow: "0 0 20px rgba(255, 255, 255, 0.15)",
               }}

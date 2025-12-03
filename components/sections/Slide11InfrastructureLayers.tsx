@@ -8,32 +8,32 @@ const layers = [
   {
     heading: "Ecosystem & Enterprise",
     subtext: "Marketplace  •  Governance  •  Compliance  •  Observability",
-    bgColor: "linear-gradient(135deg, #2d3748 0%, #1a202c 100%)",
+    bgColor: "linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)",
   },
   {
     heading: "Inference Primitives",
     subtext: "Multi Modal Edge Inference  •  Adaptive Compute  •  Model Routine",
-    bgColor: "linear-gradient(135deg, #374151 0%, #1f2937 100%)",
+    bgColor: "linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)",
   },
   {
     heading: "Machine Learning Pipelines",
     subtext: "Ingestion  •  Training Orchestration  •  Evaluation",
-    bgColor: "linear-gradient(135deg, #4b5563 0%, #374151 100%)",
+    bgColor: "linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%)",
   },
   {
     heading: "AI Agent Infrastructure",
     subtext: "State Management  •  Tool Registry  •  Multi-Agent Routine",
-    bgColor: "linear-gradient(135deg, #6b7280 0%, #4b5563 100%)",
+    bgColor: "linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%)",
   },
   {
     heading: "Durable Orchestration",
     subtext: "Workflows  •  Event-Driven DAGs  •  TBU in the Loop",
-    bgColor: "linear-gradient(135deg, #9ca3af 0%, #6b7280 100%)",
+    bgColor: "linear-gradient(135deg, #5a5a5a 0%, #4a4a4a 100%)",
   },
   {
     heading: "Execution Fabric",
     subtext: "Fluid Compute  •  Global Edge  •  AI Gateway",
-    bgColor: "linear-gradient(135deg, #d1d5db 0%, #9ca3af 100%)",
+    bgColor: "linear-gradient(135deg, #6a6a6a 0%, #5a5a5a 100%)",
   },
 ];
 
@@ -83,7 +83,7 @@ export default function Slide11InfrastructureLayers() {
                   duration: 0.6,
                   ease: "easeOut",
                 }}
-                className="rounded-2xl md:rounded-3xl p-3 md:p-4 flex flex-col items-center justify-center text-center min-h-[55px] md:min-h-[65px]"
+                className="p-3 md:p-4 flex flex-col items-center justify-center text-center min-h-[45px] md:min-h-[52px]"
                 style={{
                   background: layer.bgColor,
                 }}

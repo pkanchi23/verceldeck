@@ -26,7 +26,7 @@ export default function Slide17BuildersNewEra() {
         </motion.div>
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24 flex flex-col h-full">
           {/* Header Section */}
           <div className="mb-6 md:mb-10">
             {/* Main Title */}
@@ -51,18 +51,21 @@ export default function Slide17BuildersNewEra() {
             </motion.h2>
           </div>
 
-          {/* Central Content Area - Large Placeholder for Stairs Logo Scene */}
-          <div className="flex items-center justify-center py-4 md:py-8">
+          {/* Central Content Area - Stairs Logo Scene */}
+          <div className="flex items-center justify-center py-4 md:py-8 flex-1">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-              className="w-[75%] md:w-[80%] aspect-[21/9] border border-white rounded-lg flex items-center justify-center bg-transparent"
+              className="w-full h-full max-h-[500px] relative"
             >
-              <p className="text-white/60 text-base md:text-lg font-light text-center">
-                stairs logo scene
-              </p>
+              <Image
+                src="/Slide 17 Steps/Steps Logo Picture.png"
+                alt="Builders of the new era"
+                fill
+                className="object-contain"
+              />
             </motion.div>
           </div>
         </div>

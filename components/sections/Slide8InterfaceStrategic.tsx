@@ -26,7 +26,7 @@ export default function Slide8InterfaceStrategic() {
         </motion.div>
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-16">
           {/* Title and Subtitle */}
           <div className="mb-12 md:mb-16">
             <motion.h1
@@ -49,7 +49,7 @@ export default function Slide8InterfaceStrategic() {
           </div>
 
           {/* Main Diagram Area */}
-          <div className="relative w-full max-w-6xl mx-auto h-[450px] md:h-[520px]">
+          <div className="relative w-full max-w-6xl mx-auto h-[600px] md:h-[650px]">
             {/* Left Column - Diagonal Arrows */}
             <div className="absolute left-0 top-0 bottom-0 w-[140px] md:w-[180px]">
               {/* Arrow 1 - New AI Development Stack (closer to pyramid) */}
@@ -175,9 +175,9 @@ export default function Slide8InterfaceStrategic() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2"
+              className="absolute left-[16%] top-[50%] -translate-x-1/2 -translate-y-1/2"
             >
-              <div className="relative w-[400px] h-[400px]">
+              <div className="relative w-[700px] h-[700px]">
                 <Image
                   src="/Slide 8 Pyramid/Pyramid.png"
                   alt="Interface Strategic Pyramid"
@@ -193,9 +193,9 @@ export default function Slide8InterfaceStrategic() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: 1.2, duration: 0.6 }}
-              className="absolute right-0 top-1/2 -translate-y-1/2 w-[300px] md:w-[340px]"
+              className="absolute right-0 top-1/2 -translate-y-1/2 w-[300px] md:w-[340px] h-[600px]"
             >
-              <div className="border border-zinc-700 rounded-2xl p-6 md:p-8 bg-zinc-900/40">
+              <div className="border border-zinc-700 rounded-2xl p-6 md:p-8 bg-zinc-900/40 h-full flex flex-col justify-center">
                 {/* Bullet 1 */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}

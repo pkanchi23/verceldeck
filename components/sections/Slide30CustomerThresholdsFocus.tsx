@@ -15,7 +15,7 @@ export default function Slide30CustomerThresholdsFocus() {
 
   return (
     <Section id="slide-35" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <div className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] border border-zinc-700 rounded bg-transparent flex items-center justify-center">
           <span className="text-zinc-600 text-xs">VERCEL</span>

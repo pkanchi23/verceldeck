@@ -6,7 +6,7 @@ import Section from "@/components/Section";
 export default function Slide26DisclosureIPO() {
   return (
     <Section id="slide-26" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo Placeholder (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}

@@ -8,10 +8,10 @@ const iconLabels = [
   { label: "Logic", image: "/Slide 10 Circle SVGs/Logic SVG.png" },
   { label: "Personalization", image: "/Slide 10 Circle SVGs/Personalization SVG.png" },
   { label: "CI/CD", image: "/Slide 10 Circle SVGs/CI and CD.png" },
-  { label: "Analytics", image: "/Slide 10 Circle SVGs/Analytics SVG.png" },
-  { label: "DevOps Software", image: "/Slide 10 Circle SVGs/DevOps Software.png" },
+  { label: "Analytics", image: "/Slide 10 Circle SVGs/Analytics.svg" },
+  { label: "DevOps Software", image: "/Slide 10 Circle SVGs/DevOps.svg" },
   { label: "Observability", image: "/Slide 10 Circle SVGs/Observability SVG.png" },
-  { label: "Global Scale", image: "/Slide 10 Circle SVGs/globe.svg" },
+  { label: "Global Scale", image: "/Slide 10 Circle SVGs/globe.png" },
   { label: "Security", image: "/Slide 10 Circle SVGs/Security SVG.png" },
   { label: "Edge Storage", image: "/Slide 10 Circle SVGs/Edge Storage.png" },
   { label: "Serverless Compute", image: "/Slide 10 Circle SVGs/Serverless Compute.png" },
@@ -66,12 +66,12 @@ export default function Slide10VercelCloudInside() {
           </div>
 
           {/* Central Circular System Diagram */}
-          <div className="relative w-full max-w-6xl mx-auto h-[520px] md:h-[580px] flex items-center justify-center">
+          <div className="relative w-full max-w-6xl mx-auto h-[540px] md:h-[600px] flex items-center justify-center">
             {/* Purple Glow Background */}
             <div
               className="absolute inset-0 flex items-center justify-center"
               style={{
-                background: "radial-gradient(circle at center, rgba(147, 51, 234, 0.15) 0%, transparent 60%)",
+                background: "radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 60%)",
               }}
             />
 
@@ -110,9 +110,9 @@ export default function Slide10VercelCloudInside() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.7, duration: 0.8 }}
-                className="absolute w-[80px] h-[80px] border border-white/40 rounded-lg flex items-center justify-center bg-zinc-900/60"
+                className="absolute w-[80px] h-[80px] flex items-center justify-center"
               >
-                <div className="w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-b-[28px] border-b-white/60" />
+                <div className="w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-b-[28px] border-b-white" />
               </motion.div>
 
               {/* Icon Placeholders around Outer Ring */}
@@ -165,13 +165,15 @@ export default function Slide10VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.6, duration: 0.6 }}
-              className="absolute top-[6%] left-[2%] w-[360px] border border-white/30 rounded-xl p-8 bg-zinc-900/80"
+              className="absolute top-[0%] left-[0%] w-[290px] h-[240px] border border-white/30 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
             >
               <h3 className="text-white font-bold text-xl mb-4">Compute & Deployment</h3>
               <ul className="space-y-2 text-white text-base">
                 <li className="flex items-center gap-2">
-                  <div className="w-4 h-4 border border-white/40 rounded-sm flex-shrink-0" />
-                  <span>Vercel Agent</span>
+                  <div className="relative w-12 h-12 flex-shrink-0">
+                    <Image src="/Vercel Logo.svg" alt="Vercel" fill className="object-contain" />
+                  </div>
+                  <span>Agent</span>
                 </li>
                 <li>• Fluid Compute with Active CPU pricing</li>
               </ul>
@@ -183,16 +185,16 @@ export default function Slide10VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.7, duration: 0.6 }}
-              className="absolute top-[6%] right-[2%] w-[360px] border border-pink-500/40 rounded-xl p-8 bg-zinc-900/80"
+              className="absolute top-[0%] right-[0%] w-[290px] h-[240px] border border-pink-500/40 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
             >
               <h3 className="font-bold text-xl mb-4" style={{ color: "#FF32FF" }}>
                 AI & Personalization
               </h3>
-              <ul className="space-y-2 text-white text-base">
+              <ul className="space-y-2 text-base" style={{ color: "#FF32FF" }}>
                 <li>• AI Gateway</li>
                 <li>• Rolling releases</li>
                 <li>• Micro-frontend support</li>
-                <li>• VO Agent Showcase</li>
+                <li>• V0 Agent Showcase</li>
               </ul>
             </motion.div>
 
@@ -202,12 +204,12 @@ export default function Slide10VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.8, duration: 0.6 }}
-              className="absolute bottom-[6%] left-[2%] w-[360px] border border-yellow-500/40 rounded-xl p-8 bg-zinc-900/80"
+              className="absolute bottom-[4%] left-[0%] w-[290px] h-[240px] border border-yellow-500/40 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
             >
               <h3 className="font-bold text-xl mb-4" style={{ color: "#F9D65C" }}>
                 Security / Reliability
               </h3>
-              <ul className="space-y-2 text-white text-base">
+              <ul className="space-y-2 text-base" style={{ color: "#F9D65C" }}>
                 <li>• BotID (w/ Kasada)</li>
                 <li>• Real-time DDoS mitigation</li>
                 <li>• Web Application Firewall</li>
@@ -220,13 +222,18 @@ export default function Slide10VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.9, duration: 0.6 }}
-              className="absolute bottom-[6%] right-[2%] w-[360px] border border-teal-500/40 rounded-xl p-8 bg-zinc-900/80"
+              className="absolute bottom-[4%] right-[0%] w-[290px] h-[240px] border border-teal-500/40 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
             >
               <h3 className="font-bold text-xl mb-4" style={{ color: "#58F0D0" }}>
                 Dev Tooling and Insights
               </h3>
-              <ul className="space-y-2 text-white text-base">
-                <li>• Vercel Sandbox</li>
+              <ul className="space-y-1 text-base" style={{ color: "#58F0D0" }}>
+                <li className="flex items-center gap-2">
+                  <div className="relative w-12 h-12 flex-shrink-0">
+                    <Image src="/Vercel Logo.svg" alt="Vercel" fill className="object-contain" />
+                  </div>
+                  <span>Sandbox</span>
+                </li>
                 <li>• Leading frontend dev frameworks</li>
                 <li>• Web Analytics for Docs & Products teams</li>
               </ul>

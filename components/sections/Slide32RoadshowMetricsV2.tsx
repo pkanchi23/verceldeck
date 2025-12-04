@@ -24,7 +24,7 @@ export default function Slide32RoadshowMetricsV2() {
   ];
 
   return (
-    <Section id="slide-37" className="bg-black">
+    <Section id="slide-32" className="bg-black">
       <div className="relative w-full min-h-screen">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
@@ -51,55 +51,93 @@ export default function Slide32RoadshowMetricsV2() {
           </h1>
 
           {/* Main Grid Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-6">
-            {/* Left Column - Category Boxes */}
-            <div className="space-y-4 flex flex-col justify-center">
-              {leftCategories.map((category) => (
-                <div
-                  key={category.number}
-                  className="h-[144px] border border-white rounded-lg p-4 bg-transparent flex flex-col justify-center"
-                >
-                  <div className="flex items-start gap-3">
-                    {/* Circle Number */}
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-white bg-black flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">
-                        {category.number}
-                      </span>
-                    </div>
-
-                    {/* Section Title */}
-                    <div className="flex-1">
-                      <p className="text-white font-medium text-xs md:text-sm">
-                        {category.title}
-                      </p>
-                    </div>
+          <div className="space-y-6 mt-24 md:mt-32">
+            {/* Row 1: Multi-Product Adoption */}
+            <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-6 items-center">
+              {/* Left Box */}
+              <div className="h-[120px] border border-white/40 rounded-lg p-4 bg-transparent flex flex-col justify-center">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-white bg-black flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">3</span>
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-white font-medium text-xs md:text-sm">
+                      Multi-Product Adoption
+                    </p>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Right Side Examples */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* CrowdStrike */}
+                <div className="rounded-lg bg-transparent flex flex-col items-center h-[200px] relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                  <div className="w-full h-full relative">
+                    <Image
+                      src="/Slide 31-32 Key Roadshow Components/Key Roadshow Component CRWD.png"
+                      alt="CrowdStrike Metric"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Datadog */}
+                <div className="rounded-lg bg-transparent flex flex-col items-center h-[200px] relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                  <div className="w-full h-full relative">
+                    <Image
+                      src="/Slide 31-32 Key Roadshow Components/Key Roadshow Component DDOG 2.png"
+                      alt="Datadog Metric"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Right Side - Example Blocks (2x2 Grid) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 content-center">
-              {examples.map((example, index) => (
-                <div
-                  key={index}
-                  className="border border-white rounded-lg p-4 bg-transparent flex flex-col items-center h-[144px]"
-                >
-                  {/* Logo Placeholder */}
-                  <div className="w-full h-[30px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-3">
-                    <span className="text-zinc-500 text-[10px]">
-                      {example.company}_LOGO
-                    </span>
+            {/* Row 2: ARR / Customer Breakdown by Tier */}
+            <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-6 items-center">
+              {/* Left Box */}
+              <div className="h-[120px] border border-white/40 rounded-lg p-4 bg-transparent flex flex-col justify-center">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-white bg-black flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">4</span>
                   </div>
-
-                  {/* Image Placeholder */}
-                  <div className="w-full h-[150px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center">
-                    <span className="text-zinc-500 text-xs">
-                      IMAGE_PLACEHOLDER
-                    </span>
+                  <div className="flex-1">
+                    <p className="text-white font-medium text-xs md:text-sm">
+                      ARR / Customer Breakdown by Tier
+                    </p>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Right Side Examples */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* GitLab */}
+                <div className="rounded-lg bg-transparent flex flex-col items-center h-[200px] relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                  <div className="w-full h-full relative">
+                    <Image
+                      src="/Slide 31-32 Key Roadshow Components/Key Roadshow Component GTLB 2.png"
+                      alt="GitLab Metric"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Atlassian */}
+                <div className="rounded-lg bg-transparent flex flex-col items-center h-[200px] relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                  <div className="w-full h-full relative">
+                    <Image
+                      src="/Slide 31-32 Key Roadshow Components/Key Roadshow Component TEAM 2.png"
+                      alt="Atlassian Metric"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

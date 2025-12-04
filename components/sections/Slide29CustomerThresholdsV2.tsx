@@ -26,7 +26,7 @@ export default function Slide29CustomerThresholdsV2() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-4 md:pt-6 pb-24">
           {/* Header Section */}
           <div className="mb-12 md:mb-16">
             {/* Main Title */}
@@ -58,7 +58,7 @@ export default function Slide29CustomerThresholdsV2() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent h-[360px] md:h-[450px] lg:h-[540px]"
+              className="flex-1 lg:w-[40%] bg-transparent p-0 border-none h-[360px] md:h-[450px] lg:h-[540px]"
             >
               <div className="flex flex-col items-center h-full">
                 <div className="flex-1 flex items-center justify-center w-full relative">
@@ -78,7 +78,7 @@ export default function Slide29CustomerThresholdsV2() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] border border-white rounded-lg p-2 bg-transparent h-[360px] md:h-[450px] lg:h-[540px]"
+              className="flex-1 lg:w-[40%] bg-transparent p-0 border-none h-[360px] md:h-[450px] lg:h-[540px]"
             >
               <div className="flex flex-col items-center h-full">
                 <div className="flex-1 flex items-center justify-center w-full relative">

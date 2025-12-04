@@ -3,19 +3,17 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
-import { useState } from "react";
 
 export default function Slide13AImoment() {
-  const [hoveredQuadrant, setHoveredQuadrant] = useState<number | null>(null);
   return (
     <Section id="slide-13" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
+          className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end z-20"
         >
           <div className="relative w-full h-full">
             <Image
@@ -28,202 +26,37 @@ export default function Slide13AImoment() {
         </motion.div>
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24 flex flex-col h-full pointer-events-none">
           {/* Header Section */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-8"
-          >
-            The only platform built for this AI moment
-          </motion.h1>
-
-          {/* Main Graph Region with Axis Labels */}
-          <div className="relative max-w-6xl mx-auto">
-            {/* Left Axis Labels (Vertical) */}
-            <div className="absolute left-0 top-0 bottom-0 w-[100px] md:w-[140px] flex flex-col justify-between -translate-x-full pr-6 md:pr-8">
-              {/* Top label */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="text-white text-sm md:text-base font-medium text-right"
-              >
-                Complete Platform
-              </motion.div>
-
-              {/* Middle label (rotated) */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="absolute left-0 top-1/2 -translate-y-1/2 origin-center"
-                style={{ transform: 'translateY(-50%) rotate(-90deg)', whiteSpace: 'nowrap' }}
-              >
-                <p className="text-white text-sm md:text-base font-medium">
-                  AI-Native Full Stack Delivery
-                </p>
-              </motion.div>
-
-              {/* Bottom label */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-                className="text-white text-sm md:text-base font-medium text-right"
-              >
-                Partial / Fragmented
-              </motion.div>
-            </div>
-
-            {/* Main Graph Placeholder - 2x2 Grid */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.97 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="relative w-full aspect-[21/9] border-2 border-white rounded-2xl bg-zinc-900/20 p-8 grid grid-cols-2 grid-rows-2 gap-6"
+          <div className="mb-8 md:mb-12 pointer-events-auto">
+            {/* Main Title (Formatted to match Slide 12) */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white"
             >
-              {/* Top-left quadrant: Hyperscalers (White glow) */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                onMouseEnter={() => setHoveredQuadrant(0)}
-                onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
-                style={{
-                  boxShadow: hoveredQuadrant === 0
-                    ? "0 0 30px rgba(255, 255, 255, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.1)"
-                    : "0 0 10px rgba(255, 255, 255, 0.2)",
-                }}
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-1.png"
-                    alt="Hyperscalers"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </motion.div>
+              The only platform built for this AI moment
+            </motion.h1>
+          </div>
 
-              {/* Top-right quadrant: Vercel (Neon pink glow) */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-                onMouseEnter={() => setHoveredQuadrant(1)}
-                onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
-                style={{
-                  boxShadow: hoveredQuadrant === 1
-                    ? "0 0 30px rgba(236, 72, 153, 0.7), inset 0 0 20px rgba(236, 72, 153, 0.15)"
-                    : "0 0 10px rgba(236, 72, 153, 0.2)",
-                }}
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-2.png"
-                    alt="Vercel"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </motion.div>
-
-              {/* Bottom-left quadrant: (Turquoise glow) */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                onMouseEnter={() => setHoveredQuadrant(2)}
-                onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
-                style={{
-                  boxShadow: hoveredQuadrant === 2
-                    ? "0 0 30px rgba(20, 184, 166, 0.7), inset 0 0 20px rgba(20, 184, 166, 0.15)"
-                    : "0 0 10px rgba(20, 184, 166, 0.2)",
-                }}
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-3.png"
-                    alt="Tools and Platforms"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </motion.div>
-
-              {/* Bottom-right quadrant: IDEs, Vibe tools (Neon yellow glow) */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.9, duration: 0.6 }}
-                onMouseEnter={() => setHoveredQuadrant(3)}
-                onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
-                style={{
-                  boxShadow: hoveredQuadrant === 3
-                    ? "0 0 30px rgba(234, 179, 8, 0.7), inset 0 0 20px rgba(234, 179, 8, 0.15)"
-                    : "0 0 10px rgba(234, 179, 8, 0.2)",
-                }}
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/Slide 13 Graph Quadrants.png/Graph Quadrants.png-4.png"
-                    alt="IDEs and Vibe tools"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </motion.div>
+          {/* Central Content Area - Entire Graph */}
+          <div className="flex items-center justify-center py-4 md:py-8 flex-1 -mt-12 pointer-events-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 1.2 }}
+              whileInView={{ opacity: 1, scale: 1.1 }} // Increased scale to 1.1
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+              className="relative"
+            >
+              <Image
+                src="/Slide 13 Graph Quadrants.png/Entire Graph.png"
+                alt="AI Moment Graph"
+                width={1000}
+                height={1000}
+                className="w-auto h-auto max-w-full max-h-[600px] object-contain"
+              />
             </motion.div>
-
-            {/* Bottom Axis Labels (Horizontal) */}
-            <div className="flex justify-between mt-6 md:mt-8 px-4 md:px-8">
-              {/* Left label */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                className="text-white text-sm md:text-base font-medium"
-              >
-                Infrastructure First
-              </motion.div>
-
-              {/* Center label */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.85, duration: 0.6 }}
-                className="text-white text-sm md:text-base font-medium"
-              >
-                Where the Idea Starts
-              </motion.div>
-
-              {/* Right label */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.9, duration: 0.6 }}
-                className="text-white text-sm md:text-base font-medium"
-              >
-                Idea First
-              </motion.div>
-            </div>
           </div>
         </div>
 

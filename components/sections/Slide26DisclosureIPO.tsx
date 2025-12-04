@@ -38,13 +38,13 @@ export default function Slide26DisclosureIPO() {
           </motion.h1>
 
           {/* Large Centered Disclosure Table */}
-          <div className="flex items-center justify-center py-4 md:py-6">
+          <div className="flex items-center justify-center py-4 md:py-6 relative z-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-              className="w-full h-[350px] md:h-[400px] lg:h-[450px] relative"
+              className="w-full h-[600px] md:h-[720px] lg:h-[840px] relative -mt-40"
             >
               <Image
                 src="/Slide 26 Disclosures/Disclosures Table.png"

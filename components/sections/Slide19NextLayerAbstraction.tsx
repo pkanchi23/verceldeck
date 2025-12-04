@@ -133,19 +133,59 @@ export default function Slide19NextLayerAbstraction() {
         {/* Three-Column Layout */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
           {/* Mobile Layout */}
-          <div className="flex flex-col gap-8 lg:hidden">
+          <div className="flex flex-col gap-8 lg:hidden items-center">
             {/* Column 1 */}
-            <div className="flex flex-col">
-              <ColumnPlaceholder label="COLUMN_PLACEHOLDER_1" delay={0.0} />
+            <div className="flex flex-col items-center w-full max-w-[300px]">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.0, duration: 0.6 }}
+                className="w-full aspect-square relative"
+              >
+                <Image
+                  src="/Slide 19 Sections.png/Next Layer of Abstraction.png-1.png"
+                  alt="Hardware"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
               <ValuePlaceholder value="~$900bn" delay={0.1} />
               <LabelPlaceholder label="Hardware" delay={0.2} />
             </div>
 
-            {/* Arrow 1 (Hidden on mobile as per original design, or add if needed) */}
+            {/* Arrow 1 */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.3, duration: 0.4 }}
+              className="w-12 h-12 relative rotate-90"
+            >
+              <Image
+                src="/Slide 19 Sections.png/Transition Arrows.png"
+                alt="Arrow"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
 
             {/* Column 2 */}
-            <div className="flex flex-col">
-              <ColumnPlaceholder label="COLUMN_PLACEHOLDER_2" delay={0.4} />
+            <div className="flex flex-col items-center w-full max-w-[300px]">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="w-full aspect-square relative"
+              >
+                <Image
+                  src="/Slide 19 Sections.png/Next Layer of Abstraction.png-2.png"
+                  alt="Backend Cloud"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
               <ValuePlaceholder value="~$2 Trillion" delay={0.5} />
               <LabelPlaceholder
                 label="Backend Cloud Infrastructure"
@@ -154,25 +194,52 @@ export default function Slide19NextLayerAbstraction() {
             </div>
 
             {/* Arrow 2 */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.7, duration: 0.4 }}
+              className="w-12 h-12 relative rotate-90"
+            >
+              <Image
+                src="/Slide 19 Sections.png/Transition Arrows.png"
+                alt="Arrow"
+                fill
+                className="object-contain"
+              />
+            </motion.div>
 
             {/* Column 3 */}
-            <div className="flex flex-col">
-              <ColumnPlaceholder label="COLUMN_PLACEHOLDER_3" delay={0.8} />
+            <div className="flex flex-col items-center w-full max-w-[300px]">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="w-full aspect-square relative"
+              >
+                <Image
+                  src="/Slide 19 Sections.png/Next Layer of Abstraction.png-3.png"
+                  alt="Frontend Cloud"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
               <ValuePlaceholder value="$???" delay={0.9} />
               <LabelPlaceholder label="Frontend Cloud" delay={1.0} />
             </div>
           </div>
 
           {/* Desktop Layout */}
-          <div className="hidden lg:grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-4">
+          <div className="hidden lg:grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-4 mt-12 md:mt-16">
             {/* Row 1: Images and Arrows (Vertically Centered) */}
             <div className="flex items-center justify-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.0, duration: 0.4, ease: "easeOut" }}
-                className="w-full aspect-square relative max-w-[300px]"
+                transition={{ delay: 0.0, duration: 1.0, ease: "easeOut" }}
+                className="w-full aspect-square relative max-w-[345px]"
               >
                 <Image
                   src="/Slide 19 Sections.png/Next Layer of Abstraction.png-1.png"
@@ -187,7 +254,7 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
+                transition={{ delay: 0.3, duration: 1.0, ease: "easeOut" }}
                 className="w-16 h-16 relative"
               >
                 <Image
@@ -203,8 +270,8 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.4, duration: 0.4, ease: "easeOut" }}
-                className="w-full aspect-square relative max-w-[300px]"
+                transition={{ delay: 0.4, duration: 1.0, ease: "easeOut" }}
+                className="w-full aspect-square relative max-w-[345px]"
               >
                 <Image
                   src="/Slide 19 Sections.png/Next Layer of Abstraction.png-2.png"
@@ -219,7 +286,7 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.7, duration: 0.4, ease: "easeOut" }}
+                transition={{ delay: 0.7, duration: 1.0, ease: "easeOut" }}
                 className="w-16 h-16 relative"
               >
                 <Image
@@ -235,8 +302,8 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.8, duration: 0.4, ease: "easeOut" }}
-                className="w-full aspect-square relative max-w-[300px]"
+                transition={{ delay: 0.8, duration: 1.0, ease: "easeOut" }}
+                className="w-full aspect-square relative max-w-[345px]"
               >
                 <Image
                   src="/Slide 19 Sections.png/Next Layer of Abstraction.png-3.png"

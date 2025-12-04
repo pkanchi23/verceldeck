@@ -52,13 +52,13 @@ export default function Slide17BuildersNewEra() {
           </div>
 
           {/* Central Content Area - Stairs Logo Scene */}
-          <div className="flex items-center justify-center py-4 md:py-8 flex-1">
+          <div className="flex items-center justify-center py-4 md:py-8 flex-1 mt-8 md:mt-12">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 1.2 }}
+              whileInView={{ opacity: 1, scale: 1.2 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-              className="w-full h-full max-h-[500px] relative"
+              className="w-full h-full max-h-[850px] relative"
             >
               <Image
                 src="/Slide 17 Steps/Steps Logo Picture.png"

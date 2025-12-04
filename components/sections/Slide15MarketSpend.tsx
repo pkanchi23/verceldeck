@@ -9,37 +9,58 @@ const marketCategories = [
     label: "CDN / Edge",
     tam: "$37B",
     cagr: "'23–'28 CAGR: 15%",
-    logos: ["CLOUDFLARE", "AKAMAI", "FASTLY"],
+    logos: [
+      { name: "CLOUDFLARE", file: "Cloudflare Logo.png" },
+      { name: "AKAMAI", file: "Akamai Logo.png" },
+      { name: "FASTLY", file: "Fastly Logo.png" },
+    ],
   },
   {
     label: "Serverless Compute",
     tam: "$18B",
     cagr: "'23–'28 CAGR: 16%",
-    logos: ["AWS LAMBDA", "AZURE FUNCTIONS"],
+    logos: [
+      { name: "AWS LAMBDA", file: "AWS Lambda Functions.png" },
+      { name: "AZURE FUNCTIONS", file: "Azure Functions.png" },
+    ],
   },
   {
     label: "DevOps Software Tools",
     tam: "$23B",
     cagr: "'23–'28 CAGR: 16%",
-    logos: ["GITHUB", "GITLAB", "CIRCLECI"],
+    logos: [
+      { name: "GITHUB", file: "Github Logo.png" },
+      { name: "GITLAB", file: "Gitlab logo.png" },
+      { name: "CIRCLECI", file: "CirlceCI Logo.png" },
+    ],
   },
   {
     label: "Observability",
     tam: "$48B",
     cagr: "'23–'28 CAGR: 11%",
-    logos: ["DATADOG", "DYNATRACE", "NEW RELIC"],
+    logos: [
+      { name: "DATADOG", file: "Datadog Logo.png" },
+      { name: "DYNATRACE", file: "Dynatrace Logo.png" },
+      { name: "NEW RELIC", file: "New Relic Logo.png" },
+    ],
   },
   {
     label: "Software Design",
     tam: "$33B",
     cagr: "",
-    logos: ["FIGMA", "ADOBE"],
+    logos: [
+      { name: "FIGMA", file: "Figma Logo.png" },
+      { name: "ADOBE", file: "Adobe Logo.png" },
+    ],
   },
   {
     label: "AI Coding",
     tam: "$5B",
     cagr: "'24–'29 CAGR: 23%",
-    logos: ["CURSOR", "REPLIT"],
+    logos: [
+      { name: "CURSOR", file: "Cursor Logo.png" },
+      { name: "REPLIT", file: "Replit Logo.png" },
+    ],
   },
 ];
 
@@ -81,18 +102,19 @@ export default function Slide15MarketSpend() {
             initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="w-full max-w-4xl mx-auto mb-8 md:mb-10"
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="w-full max-w-3xl mx-auto mb-4 md:mb-8 mt-8 md:mt-12 relative z-20"
           >
             <div
-              className="h-[200px] md:h-[240px] border-2 border-white rounded-2xl bg-black flex items-center justify-center relative"
+              className="h-[240px] md:h-[300px] border-2 border-white rounded-2xl bg-black flex items-center justify-center relative"
               style={{
                 boxShadow: "0 0 40px rgba(255, 255, 255, 0.1)",
+                filter: "drop-shadow(0 0 30px rgba(255, 255, 255, 0.3))",
               }}
             >
-              <div className="relative w-full h-full p-6">
+              <div className="relative w-[80%] h-[80%]">
                 <Image
-                  src="/Slide 15 Vercel Cloud Graphic/Vercel Cloud Graphic.png"
+                  src="/Slide 9/Vercel Cloud.png"
                   alt="Vercel Cloud"
                   fill
                   className="object-contain"
@@ -102,62 +124,66 @@ export default function Slide15MarketSpend() {
           </motion.div>
 
           {/* Bottom Market Category Bars */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-6xl mx-auto mb-8">
-            {marketCategories.map((category, index) => (
-              <motion.div
-                key={category.label}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{
-                  delay: 0.8 + index * 0.12,
-                  duration: 0.5,
-                  ease: "easeOut",
-                }}
-                className="border border-white rounded-xl p-4 bg-black/40 flex flex-col items-center"
-              >
-                {/* Category Label */}
-                <h3 className="text-white text-sm md:text-base font-semibold mb-2 text-center min-h-[40px] flex items-center">
-                  {category.label}
-                </h3>
+          <div className="relative max-w-6xl mx-auto mb-8">
 
-                {/* TAM */}
-                <p className="text-white text-2xl md:text-3xl font-bold mb-1">
-                  {category.tam}
-                </p>
 
-                {/* CAGR */}
-                {category.cagr && (
-                  <p className="text-white text-xs md:text-sm mb-3 text-center opacity-80">
-                    {category.cagr}
-                  </p>
-                )}
-
-                {/* Company Logos */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 relative z-10">
+              {marketCategories.map((category, index) => (
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
+                  key={category.label}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
-                  transition={{ delay: 0.8 + index * 0.12 + 0.3, duration: 0.4 }}
-                  className="flex flex-wrap gap-2 justify-center mt-auto"
+                  transition={{
+                    delay: 0.8 + index * 0.12,
+                    duration: 0.5,
+                    ease: "easeOut",
+                  }}
+                  className="border border-white rounded-xl p-4 bg-black flex flex-col items-center"
                 >
-                  {category.logos.map((logo) => (
-                    <div
-                      key={logo}
-                      className="w-10 h-10 border border-white/60 rounded bg-transparent flex items-center justify-center relative p-1"
-                      title={logo}
-                    >
-                      <Image
-                        src={`/Slide 15 Logos/${logo.replace(/\s+/g, '_')}_LOGO.png`}
-                        alt={logo}
-                        fill
-                        className="object-contain p-1"
-                      />
-                    </div>
-                  ))}
+                  {/* Category Label */}
+                  <h3 className="text-white text-sm md:text-base font-semibold mb-2 text-center min-h-[40px] flex items-center">
+                    {category.label}
+                  </h3>
+
+                  {/* TAM */}
+                  <p className="text-white text-2xl md:text-3xl font-bold mb-1">
+                    {category.tam}
+                  </p>
+
+                  {/* CAGR */}
+                  {category.cagr && (
+                    <p className="text-white text-xs md:text-sm mb-3 text-center opacity-80">
+                      {category.cagr}
+                    </p>
+                  )}
+
+                  {/* Company Logos */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.8 + index * 0.12 + 0.3, duration: 0.4 }}
+                    className="flex flex-wrap gap-2 justify-center mt-auto"
+                  >
+                    {category.logos.map((logo) => (
+                      <div
+                        key={logo.name}
+                        className="w-10 h-10 border border-white/60 rounded bg-transparent flex items-center justify-center relative p-1"
+                        title={logo.name}
+                      >
+                        <Image
+                          src={`/Slide 15 Existing Market Spend Logos.png/${logo.file}`}
+                          alt={logo.name}
+                          fill
+                          className="object-contain p-1"
+                        />
+                      </div>
+                    ))}
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Footer Note Placeholder */}

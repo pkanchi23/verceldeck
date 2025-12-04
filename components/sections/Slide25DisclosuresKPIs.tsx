@@ -18,9 +18,9 @@ const LabelBox = ({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
-      className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-1 text-center"
+      className="border border-white rounded-lg bg-zinc-900/50 p-1.5 text-center"
     >
-      <span className="text-zinc-500 text-[10px] md:text-xs font-medium">
+      <span className="text-white text-[10px] md:text-xs font-medium">
         {label}
       </span>
     </motion.div>
@@ -42,16 +42,16 @@ const BulletListBox = ({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
-      className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-2"
+      className="border border-white rounded-lg bg-zinc-900/50 p-2"
     >
       <div className="space-y-0.5">
-        <p className="text-zinc-500 text-[10px] md:text-xs font-medium mb-2">
+        <p className="text-white text-[10px] md:text-xs font-medium mb-2">
           {label}
         </p>
         {items.map((item, index) => (
           <div key={index} className="flex items-start gap-1.5">
             <span className="text-white/40 text-xs">•</span>
-            <span className="text-white/70 text-[10px] md:text-xs">{item}</span>
+            <span className="text-white text-[10px] md:text-xs">{item}</span>
           </div>
         ))}
       </div>
@@ -88,22 +88,22 @@ export default function Slide25DisclosuresKPIs() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 md:mb-2"
+            className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-8 md:mb-12"
           >
             Disclosures and KPIs to support model building blocks
           </motion.h1>
 
           {/* Revenue Header with A/B Markers */}
-          <div className="mb-1 md:mb-2">
+          <div className="mb-8 md:mb-12">
             <div className="relative flex items-center justify-center">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                className="w-full max-w-5xl border-2 border-zinc-700 rounded-full bg-zinc-900/30 p-2 text-center"
+                className="w-full max-w-5xl border-2 border-white rounded-full bg-zinc-900/50 p-2 text-center"
               >
-                <span className="text-zinc-500 text-sm md:text-base">
+                <span className="text-white text-sm md:text-base font-bold">
                   REVENUE_HEADER_PLACEHOLDER
                 </span>
               </motion.div>
@@ -114,7 +114,7 @@ export default function Slide25DisclosuresKPIs() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
-                className="absolute left-[25%] -translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
+                className="absolute left-[25%] -translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-white border border-white flex items-center justify-center text-black text-sm font-bold"
               >
                 A
               </motion.div>
@@ -125,7 +125,7 @@ export default function Slide25DisclosuresKPIs() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
-                className="absolute right-[25%] translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-zinc-800 border border-zinc-600 flex items-center justify-center text-white text-sm font-bold"
+                className="absolute right-[25%] translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-white border border-white flex items-center justify-center text-black text-sm font-bold"
               >
                 B
               </motion.div>
@@ -135,7 +135,7 @@ export default function Slide25DisclosuresKPIs() {
           {/* Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-20">
             {/* LEFT COLUMN - User-Based Framework (Path A) */}
-            <div className="space-y-3">
+            <div className="space-y-6 pt-6 border-t-2 border-transparent">
               {/* Q Label */}
               <LabelBox
                 label="DISCLOSURE_FRAMEWORK_Q_LABEL_PLACEHOLDER"
@@ -172,58 +172,60 @@ export default function Slide25DisclosuresKPIs() {
             </div>
 
             {/* RIGHT COLUMN - Customer-Centric Framework (Path B) */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 1.3, duration: 0.5 }}
-              className="border-2 border-dashed rounded-xl p-4 space-y-2"
-              style={{ borderColor: "rgba(234, 179, 8, 0.6)", backgroundColor: "rgba(234, 179, 8, 0.03)" }}
-            >
-              {/* Q Label */}
-              <LabelBox
-                label="DISCLOSURE_FRAMEWORK_Q_LABEL_PLACEHOLDER_RIGHT"
-                delay={1.4}
-              />
+            <div className="flex flex-col gap-4">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 1.3, duration: 0.5 }}
+                className="border-2 border-dashed rounded-xl p-6 space-y-6"
+                style={{ borderColor: "rgba(234, 179, 8, 0.6)", backgroundColor: "rgba(234, 179, 8, 0.03)" }}
+              >
+                {/* Q Label */}
+                <LabelBox
+                  label="DISCLOSURE_FRAMEWORK_Q_LABEL_PLACEHOLDER_RIGHT"
+                  delay={1.4}
+                />
 
-              {/* Q Support - Customer-Centric */}
-              <BulletListBox
-                label="Q_SUPPORT_CUSTOMER_CENTRIC_PLACEHOLDER"
-                items={[
-                  "Number of Customers¹",
-                  'Discussion of "base" customers subset',
-                  "Number of Customers over [$X]¹",
-                ]}
-                delay={1.5}
-              />
+                {/* Q Support - Customer-Centric */}
+                <BulletListBox
+                  label="Q_SUPPORT_CUSTOMER_CENTRIC_PLACEHOLDER"
+                  items={[
+                    "Number of Customers¹",
+                    'Discussion of "base" customers subset',
+                    "Number of Customers over [$X]¹",
+                  ]}
+                  delay={1.5}
+                />
 
-              {/* P Support - Customer-Centric */}
-              <BulletListBox
-                label="P_SUPPORT_CUSTOMER_CENTRIC_PLACEHOLDER"
-                items={[
-                  "Net Dollar Retention¹",
-                  "Gross Dollar Retention",
-                  "Average Revenue per Customer >[$X]",
-                  "Mix of Business by Pricing Tier",
-                  "Number of Customers with >[X] Products",
-                ]}
-                delay={1.6}
-              />
-            </motion.div>
+                {/* P Support - Customer-Centric */}
+                <BulletListBox
+                  label="P_SUPPORT_CUSTOMER_CENTRIC_PLACEHOLDER"
+                  items={[
+                    "Net Dollar Retention¹",
+                    "Gross Dollar Retention",
+                    "Average Revenue per Customer >[$X]",
+                    "Mix of Business by Pricing Tier",
+                    "Number of Customers with >[X] Products",
+                  ]}
+                  delay={1.6}
+                />
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ delay: 1.7, duration: 0.5 }}
+                className="text-sm md:text-base font-medium text-center"
+                style={{ color: "#eab308" }}
+              >
+                Most common approach for public software companies
+              </motion.p>
+            </div>
           </div>
 
-          {/* Footer Highlight Text */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 1.7, duration: 0.5 }}
-            className="mt-6 flex justify-end"
-          >
-            <p className="text-sm md:text-base font-medium text-center" style={{ color: "#eab308" }}>
-              Most common approach for public software companies
-            </p>
-          </motion.div>
+
 
           {/* Bottom-Left Footnote */}
           <motion.div

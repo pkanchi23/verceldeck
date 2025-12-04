@@ -10,11 +10,11 @@ const companies = [
     id: 1,
     name: "STRIPE",
     category: "Digital Payments",
+    logo: "/Slide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-1.png",
     people: [
-      { name: "Patrick Collison", title: "Co-founder and CEO" },
-      { name: "John Collison", title: "Co-founder and President" },
+      { name: "Patrick Collison", title: "Co-founder and CEO", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-1.png" },
+      { name: "John Collison", title: "Co-founder and President", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-2.png" },
     ],
-    photoLabel: "PHOTO_PLACEHOLDER_PATRICK_JOHN",
     delay: 0.0,
     highlight: false,
   },
@@ -22,8 +22,8 @@ const companies = [
     id: 2,
     name: "OPENAI",
     category: "Intelligence",
-    people: [{ name: "Sam Altman", title: "Co-founder and CEO" }],
-    photoLabel: "PHOTO_PLACEHOLDER_SAM",
+    logo: "/Slide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-2.png",
+    people: [{ name: "Sam Altman", title: "Co-founder and CEO", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-3.png" }],
     delay: 0.4,
     highlight: false,
   },
@@ -31,8 +31,8 @@ const companies = [
     id: 3,
     name: "DATABRICKS",
     category: "Data",
-    people: [{ name: "Ali Ghodsi", title: "Co-founder and CEO" }],
-    photoLabel: "PHOTO_PLACEHOLDER_ALI",
+    logo: "/Slide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-3.png",
+    people: [{ name: "Ali Ghodsi", title: "Co-founder and CEO", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-4.png" }],
     delay: 0.8,
     highlight: false,
   },
@@ -40,8 +40,8 @@ const companies = [
     id: 4,
     name: "NVIDIA",
     category: "Compute",
-    people: [{ name: "Jensen Huang", title: "Founder, President and CEO" }],
-    photoLabel: "PHOTO_PLACEHOLDER_JENSEN",
+    logo: "/Slide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-4.png",
+    people: [{ name: "Jensen Huang", title: "Founder, President and CEO", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-5.png" }],
     delay: 1.2,
     highlight: false,
   },
@@ -49,8 +49,8 @@ const companies = [
     id: 5,
     name: "VERCEL",
     category: "AI cloud",
-    people: [{ name: "Guillermo Rauch", title: "Co-founder and CEO" }],
-    photoLabel: "PHOTO_PLACEHOLDER_GUILLERMO",
+    logo: "/Slide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-5.png",
+    people: [{ name: "Guillermo Rauch", title: "Co-founder and CEO", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-6.png" }],
     delay: 1.6,
     highlight: true,
   },
@@ -60,15 +60,15 @@ const companies = [
 const CompanyCard = ({
   name,
   category,
+  logo,
   people,
-  photoLabel,
   delay,
   highlight,
 }: {
   name: string;
   category: string;
-  people: { name: string; title: string }[];
-  photoLabel: string;
+  logo: string;
+  people: { name: string; title: string; photo: string }[];
   delay: number;
   highlight: boolean;
 }) => {
@@ -106,26 +106,34 @@ const CompanyCard = ({
           ease: "easeInOut",
         }}
       >
-        {/* Logo Placeholder */}
-        <div className="w-full h-16 border border-zinc-700 rounded bg-transparent flex items-center justify-center mb-6">
-          <span className="text-zinc-600 text-xs font-medium">{name}</span>
+        {/* Logo */}
+        <div className="w-full h-16 relative mb-6">
+          <Image
+            src={logo}
+            alt={`${name} Logo`}
+            fill
+            className="object-contain"
+          />
         </div>
 
         {/* Category Pill */}
         <div className="px-4 py-1.5 bg-zinc-800/50 border border-zinc-700 rounded-md mb-6">
-          <span className="text-white text-xs font-medium">{category}</span>
+          <span className="text-white text-sm font-bold">{category}</span>
         </div>
 
-        {/* Photo Placeholder(s) */}
+        {/* People */}
         {people.length > 1 ? (
           // Multiple people - show side by side
           <div className="flex gap-3 mb-4">
             {people.map((person, index) => (
               <div key={index} className="flex flex-col items-center">
-                <div className="w-24 h-24 border border-zinc-700 rounded-lg bg-zinc-900/30 flex items-center justify-center mb-4">
-                  <span className="text-zinc-600 text-[9px] text-center px-1">
-                    PHOTO_{index + 1}
-                  </span>
+                <div className="w-24 h-24 relative rounded-lg overflow-hidden mb-4 bg-zinc-900/30">
+                  <Image
+                    src={person.photo}
+                    alt={person.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="text-center max-w-[150px]">
                   <p className="text-white font-medium text-[10px] md:text-xs leading-tight">
@@ -141,10 +149,13 @@ const CompanyCard = ({
         ) : (
           // Single person
           <>
-            <div className="w-24 h-24 border border-zinc-700 rounded-lg bg-zinc-900/30 flex items-center justify-center mb-4">
-              <span className="text-zinc-600 text-[10px] text-center px-2">
-                {photoLabel}
-              </span>
+            <div className="w-24 h-24 relative rounded-lg overflow-hidden mb-4 bg-zinc-900/30">
+              <Image
+                src={people[0].photo}
+                alt={people[0].name}
+                fill
+                className="object-cover"
+              />
             </div>
             {/* People Info */}
             <div className="text-center space-y-1">
@@ -219,8 +230,8 @@ export default function Slide20PlatformCompanies() {
                 key={company.id}
                 name={company.name}
                 category={company.category}
+                logo={company.logo}
                 people={company.people}
-                photoLabel={company.photoLabel}
                 delay={company.delay}
                 highlight={company.highlight}
               />

@@ -13,13 +13,13 @@ export default function ScreenSizeWarning() {
             const width = window.innerWidth;
             const height = window.innerHeight;
 
-            // Thresholds for "standard laptop screen" with 20% margin of error
-            // Standard range: 1280-1920px width, 720-1200px height
-            // With 20% margin: 1024-2304px width, 576-1440px height
-            if (width < 1024 || height < 576) {
+            // Thresholds for "standard laptop screen" 
+            // Width: 20% margin (1024-2304px from standard 1280-1920px)
+            // Height: 10% margin (650-1300px from standard 720-1200px) - tighter spread
+            if (width < 1024 || height < 650) {
                 setShowWarning(true);
                 setWarningType('small');
-            } else if (width > 2304 || height > 1440) {
+            } else if (width > 2304 || height > 1300) {
                 setShowWarning(true);
                 setWarningType('large');
             }

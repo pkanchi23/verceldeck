@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function ScreenSizeWarning() {
     const [showWarning, setShowWarning] = useState(false);
+    const [warningType, setWarningType] = useState<'small' | 'large' | null>(null);
 
     useEffect(() => {
         // Check dimensions only on initial mount
@@ -12,11 +13,15 @@ export default function ScreenSizeWarning() {
             const width = window.innerWidth;
             const height = window.innerHeight;
 
-            // Thresholds for "traditional computer monitor"
-            // Width < 1024px (typically tablets/mobile)
-            // Height < 600px (very short screens)
-            if (width < 1024 || height < 600) {
+            // Thresholds for "standard laptop screen" with 20% margin of error
+            // Standard range: 1280-1920px width, 720-1200px height
+            // With 20% margin: 1024-2304px width, 576-1440px height
+            if (width < 1024 || height < 576) {
                 setShowWarning(true);
+                setWarningType('small');
+            } else if (width > 2304 || height > 1440) {
+                setShowWarning(true);
+                setWarningType('large');
             }
         };
 
@@ -27,9 +32,17 @@ export default function ScreenSizeWarning() {
         setShowWarning(false);
     };
 
+    const warningContent = warningType === 'small' ? {
+        title: 'Laptop Screen Recommended',
+        message: 'This experience is optimized for standard laptop displays.'
+    } : {
+        title: 'Screen Too Large',
+        message: 'This experience is optimized for standard laptop displays. Please use a laptop or reduce your browser window size.'
+    };
+
     return (
         <AnimatePresence>
-            {showWarning && (
+            {showWarning && warningContent && (
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -38,11 +51,10 @@ export default function ScreenSizeWarning() {
                 >
                     <div className="max-w-md space-y-6">
                         <h2 className="text-2xl font-bold text-white">
-                            Desktop View Recommended
+                            {warningContent.title}
                         </h2>
                         <p className="text-zinc-400">
-                            This experience is intended to be viewed on a traditional computer
-                            monitor.
+                            {warningContent.message}
                         </p>
                         <button
                             onClick={handleContinue}

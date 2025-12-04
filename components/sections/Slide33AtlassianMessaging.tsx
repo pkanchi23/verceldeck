@@ -47,10 +47,13 @@ export default function Slide33AtlassianMessaging() {
             <div className="space-y-4">
               {/* Atlassian Logo */}
               <div className="flex justify-center mb-4">
-                <div className="w-[180px] h-[48px] flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold tracking-wide">
-                    Atlassian
-                  </span>
+                <div className="relative w-[180px] h-[48px]">
+                  <Image
+                    src="/Atlassian Logo.png"
+                    alt="Atlassian Logo"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
               </div>
 

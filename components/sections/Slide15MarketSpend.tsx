@@ -109,11 +109,12 @@ export default function Slide15MarketSpend() {
               className="h-[200px] md:h-[240px] border-2 border-white rounded-2xl bg-black flex items-center justify-center relative"
               style={{
                 boxShadow: "0 0 40px rgba(255, 255, 255, 0.1)",
+                filter: "drop-shadow(0 0 30px rgba(255, 255, 255, 0.3))",
               }}
             >
               <div className="relative w-full h-full p-6">
                 <Image
-                  src="/Slide 15 Vercel Cloud Graphic/Vercel Cloud Graphic.png"
+                  src="/Slide 9/Vercel Cloud.png"
                   alt="Vercel Cloud"
                   fill
                   className="object-contain"

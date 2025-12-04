@@ -71,7 +71,7 @@ export default function Slide11InfrastructureLayers() {
           </motion.h1>
 
           {/* Vertical Layer Stack */}
-          <div className="space-y-2 md:space-y-2.5 max-w-6xl mx-auto">
+          <div className="space-y-2 md:space-y-2.5 max-w-[80rem] mx-auto">
             {layers.map((layer, index) => (
               <motion.div
                 key={layer.heading}
@@ -83,7 +83,7 @@ export default function Slide11InfrastructureLayers() {
                   duration: 0.6,
                   ease: "easeOut",
                 }}
-                className="p-3 md:p-4 flex flex-col items-center justify-center text-center min-h-[45px] md:min-h-[52px]"
+                className="p-3 md:p-4 flex flex-col items-center justify-center text-center min-h-[36px] md:min-h-[42px]"
                 style={{
                   background: layer.bgColor,
                 }}

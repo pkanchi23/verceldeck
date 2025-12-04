@@ -22,7 +22,7 @@ const PlaceholderBox = ({
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className={`border border-zinc-700 rounded-lg bg-zinc-900/30 p-4 flex items-center justify-center ${className}`}
     >
-      <span className="text-zinc-500 text-xs md:text-sm text-center">
+      <span className="text-white text-xs md:text-sm text-center">
         {label}
       </span>
     </motion.div>
@@ -99,7 +99,7 @@ export default function Slide24BuildingBlocks() {
                 transition={{ delay: 0.5, duration: 0.5 }}
                 className="w-full max-w-5xl border-2 border-zinc-700 rounded-full bg-zinc-900/30 p-4 text-center"
               >
-                <span className="text-zinc-500 text-sm md:text-base">
+                <span className="text-white text-sm md:text-base">
                   REVENUE_HEADER_PLACEHOLDER
                 </span>
               </motion.div>
@@ -229,21 +229,14 @@ export default function Slide24BuildingBlocks() {
                   className="h-14 overflow-hidden"
                 />
               </div>
+
+              <p className="text-sm md:text-base font-medium text-center mt-4" style={{ color: "#eab308" }}>
+                Most common approach for public software companies
+              </p>
             </motion.div>
           </div>
 
-          {/* Footer Highlight Text */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 2.6, duration: 0.5 }}
-            className="mt-6 flex justify-end"
-          >
-            <p className="text-sm md:text-base font-medium text-center" style={{ color: "#eab308" }}>
-              Most common approach for public software companies
-            </p>
-          </motion.div>
+
         </div>
 
         {/* Bottom-Left Logo (Goldman Sachs) */}

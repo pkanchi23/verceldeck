@@ -44,7 +44,7 @@ export default function Slide26DisclosureIPO() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-              className="w-full h-[350px] md:h-[400px] lg:h-[450px] relative"
+              className="w-full h-[500px] md:h-[600px] lg:h-[700px] relative"
             >
               <Image
                 src="/Slide 26 Disclosures/Disclosures Table.png"

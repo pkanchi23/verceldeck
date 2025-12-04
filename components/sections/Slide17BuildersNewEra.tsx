@@ -58,7 +58,7 @@ export default function Slide17BuildersNewEra() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-              className="w-full h-full max-h-[500px] relative"
+              className="w-full h-full max-h-[700px] relative"
             >
               <Image
                 src="/Slide 17 Steps/Steps Logo Picture.png"

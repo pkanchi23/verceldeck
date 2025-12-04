@@ -7,7 +7,7 @@ import Section from "@/components/Section";
 export default function Slide7StackParadigm() {
   return (
     <Section id="slide-7" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-screen overflow-hidden">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -26,73 +26,97 @@ export default function Slide7StackParadigm() {
         </motion.div>
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12 h-full flex flex-col">
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-12"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-4 text-center flex-shrink-0"
           >
             The stack wasn't built for this paradigm
           </motion.h1>
 
           {/* Central Stack Visualization */}
-          <div className="relative w-full max-w-6xl mx-auto min-h-[450px] md:min-h-[500px] flex items-center justify-center">
-            {/* Center Column - Stack Slabs (40-50% width, centered) */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] space-y-8 z-10">
-              {/* Slab 1: ORCHESTRATION */}
+          <div className="relative w-full max-w-6xl mx-auto flex-grow flex flex-col items-center justify-center">
+            {/* Stack Images Container */}
+            <div className="relative w-full md:w-[70%] flex flex-col items-center z-10 scale-[0.85] origin-center">
+
+              {/* 1. Orchestration (Top) */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="relative w-[75%] h-[100px] mx-auto"
-                style={{
-                  background: 'linear-gradient(135deg, #4a5568 0%, #2d3748 100%)',
-                  transform: 'perspective(600px) rotateX(5deg)',
-                }}
+                className="relative w-full h-[200px] md:h-[240px] z-50"
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white font-semibold text-base md:text-lg uppercase tracking-wide">
-                    ORCHESTRATION
-                  </span>
-                </div>
+                <Image
+                  src="/Slide 7 Platform Slide/Orchestration Platform.png"
+                  alt="Orchestration Platform"
+                  fill
+                  className="object-contain"
+                />
               </motion.div>
 
-              {/* Slab 2: DEVELOPER TOOLS */}
+              {/* 2. AI Agents (Slides in from right) */}
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
+                className="relative w-full h-[200px] md:h-[240px] -mt-32 md:-mt-40 z-40"
+              >
+                <Image
+                  src="/Slide 7 Platform Slide/AI Agents Platform.png"
+                  alt="AI Agents Platform"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
+
+              {/* 3. Developer Tools */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className="relative w-[75%] h-[100px] mx-auto"
-                style={{
-                  background: 'linear-gradient(135deg, #4a5568 0%, #2d3748 100%)',
-                  transform: 'perspective(600px) rotateX(5deg)',
-                }}
+                className="relative w-full h-[200px] md:h-[240px] -mt-32 md:-mt-40 z-30"
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white font-semibold text-base md:text-lg uppercase tracking-wide">
-                    DEVELOPER TOOLS
-                  </span>
-                </div>
+                <Image
+                  src="/Slide 7 Platform Slide/Developer Tools Platfornm.png"
+                  alt="Developer Tools Platform"
+                  fill
+                  className="object-contain"
+                />
               </motion.div>
 
-              {/* Slab 3: CORE INFRASTRUCTURE */}
+              {/* 4. LLMs (Slides in from right) */}
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1.6, duration: 0.8, ease: "easeOut" }}
+                className="relative w-full h-[200px] md:h-[240px] -mt-32 md:-mt-40 z-20"
+              >
+                <Image
+                  src="/Slide 7 Platform Slide/LLMs platform.png"
+                  alt="LLMs Platform"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
+
+              {/* 5. Core Infrastructure (Bottom) */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                className="relative w-[75%] h-[100px] mx-auto"
-                style={{
-                  background: 'linear-gradient(135deg, #4a5568 0%, #2d3748 100%)',
-                  transform: 'perspective(600px) rotateX(5deg)',
-                }}
+                className="relative w-full h-[200px] md:h-[240px] -mt-32 md:-mt-40 z-10"
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white font-semibold text-base md:text-lg uppercase tracking-wide">
-                    CORE INFRASTRUCTURE
-                  </span>
-                </div>
+                <Image
+                  src="/Slide 7 Platform Slide/Core Infrastructure Platform.png"
+                  alt="Core Infrastructure Platform"
+                  fill
+                  className="object-contain"
+                />
               </motion.div>
             </div>
 
@@ -103,20 +127,20 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-              className="absolute left-[5%] top-[calc(50%-180px)] z-30"
+              className="absolute left-[0%] md:left-[5%] top-[35%] z-30 hidden md:block"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}
                 transition={{ delay: 1.3, duration: 0.6, times: [0, 0.5, 1] }}
-                className="border-2 border-red-500 rounded-lg px-4 py-2 bg-black/60 min-w-[240px]"
+                className="border-2 border-red-500 rounded-lg px-4 py-2 bg-black/60 min-w-[200px]"
               >
-                <p className="text-red-500 text-sm md:text-base font-medium whitespace-nowrap">
+                <p className="text-red-500 text-sm font-medium whitespace-nowrap">
                   No native AI abstractions
                 </p>
               </motion.div>
               {/* Connector line */}
-              <div className="absolute top-1/2 -right-12 w-10 h-px bg-red-500" />
-              <div className="absolute top-1/2 -right-[3.25rem] w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
+              <div className="absolute top-1/2 -right-8 w-8 h-px bg-red-500" />
+              <div className="absolute top-1/2 -right-[2.25rem] w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
             </motion.div>
 
             {/* Red Callout 2 - Siloed, unbundled */}
@@ -125,20 +149,20 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.0, duration: 0.5 }}
-              className="absolute left-[5%] top-[50%] -translate-y-1/2 z-30"
+              className="absolute left-[0%] md:left-[5%] top-[50%] -translate-y-1/2 z-30 hidden md:block"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}
                 transition={{ delay: 1.5, duration: 0.6, times: [0, 0.5, 1] }}
-                className="border-2 border-red-500 rounded-lg px-4 py-2 bg-black/60 min-w-[240px] max-w-[280px]"
+                className="border-2 border-red-500 rounded-lg px-4 py-2 bg-black/60 min-w-[200px] max-w-[260px]"
               >
-                <p className="text-red-500 text-sm md:text-base font-medium">
+                <p className="text-red-500 text-sm font-medium">
                   Siloed, unbundled, slow feedback loops
                 </p>
               </motion.div>
               {/* Connector line */}
-              <div className="absolute top-1/2 -right-12 w-10 h-px bg-red-500" />
-              <div className="absolute top-1/2 -right-[3.25rem] w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
+              <div className="absolute top-1/2 -right-8 w-8 h-px bg-red-500" />
+              <div className="absolute top-1/2 -right-[2.25rem] w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
             </motion.div>
 
             {/* Red Callout 3 - CPU centric */}
@@ -147,59 +171,20 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.2, duration: 0.5 }}
-              className="absolute left-[5%] top-[calc(50%+180px)] z-30"
+              className="absolute left-[0%] md:left-[5%] top-[65%] z-30 hidden md:block"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}
                 transition={{ delay: 1.7, duration: 0.6, times: [0, 0.5, 1] }}
-                className="border-2 border-red-500 rounded-lg px-4 py-2 bg-black/60 min-w-[240px]"
+                className="border-2 border-red-500 rounded-lg px-4 py-2 bg-black/60 min-w-[200px]"
               >
-                <p className="text-red-500 text-sm md:text-base font-medium whitespace-nowrap">
+                <p className="text-red-500 text-sm font-medium whitespace-nowrap">
                   CPU centric
                 </p>
               </motion.div>
               {/* Connector line */}
-              <div className="absolute top-1/2 -right-12 w-10 h-px bg-red-500" />
-              <div className="absolute top-1/2 -right-[3.25rem] w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
-            </motion.div>
-
-            {/* Pink Wedges - AI Agents and LLMs (z-20) */}
-            {/* AI AGENTS Wedge - Between slab 1 and 2 */}
-            <motion.div
-              initial={{ x: 200, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 1.9, duration: 0.6, ease: "easeOut" }}
-              className="absolute left-1/2 top-[calc(50%-90px)] -translate-x-1/2 w-[33.75%] h-[70px] z-20"
-              style={{
-                background: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)',
-                transform: 'translateX(-50%) perspective(600px) rotateX(5deg)',
-              }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-white font-semibold text-base md:text-lg uppercase tracking-wide">
-                  AI AGENTS
-                </span>
-              </div>
-            </motion.div>
-
-            {/* LLMS Wedge - Between slab 2 and 3 */}
-            <motion.div
-              initial={{ x: 200, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 2.1, duration: 0.6, ease: "easeOut" }}
-              className="absolute left-1/2 top-[calc(50%+90px)] -translate-x-1/2 w-[33.75%] h-[70px] z-20"
-              style={{
-                background: 'linear-gradient(135deg, #ec4899 0%, #be185d 100%)',
-                transform: 'translateX(-50%) perspective(600px) rotateX(5deg)',
-              }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-white font-semibold text-base md:text-lg uppercase tracking-wide">
-                  LLMS
-                </span>
-              </div>
+              <div className="absolute top-1/2 -right-8 w-8 h-px bg-red-500" />
+              <div className="absolute top-1/2 -right-[2.25rem] w-2 h-2 rounded-full bg-red-500 -translate-y-1/2" />
             </motion.div>
 
             {/* Right Side - Pink Callouts (z-30) */}
@@ -208,8 +193,8 @@ export default function Slide7StackParadigm() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 2.5, duration: 0.6 }}
-              className="absolute top-[calc(50%-220px)] right-[8%] z-30"
+              transition={{ delay: 2.0, duration: 0.6 }}
+              className="absolute top-[15%] right-[5%] z-30 hidden md:block"
             >
               <p className="text-pink-400 font-semibold text-base md:text-lg">
                 The New AI Wedges
@@ -221,17 +206,17 @@ export default function Slide7StackParadigm() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 2.7, duration: 0.6 }}
-              className="absolute top-[calc(50%-90px)] right-[8%] -translate-y-1/2 z-30"
+              transition={{ delay: 2.2, duration: 0.6 }}
+              className="absolute top-[35%] right-[5%] -translate-y-1/2 z-30 hidden md:block"
             >
               <div className="border-2 border-pink-400 rounded-lg px-4 py-2 bg-black/60 max-w-[220px]">
-                <p className="text-white text-sm md:text-base">
+                <p className="text-white text-sm">
                   Dynamic, autonomous web workflows
                 </p>
               </div>
               {/* Connector line */}
-              <div className="absolute top-1/2 -left-12 w-10 h-px bg-pink-400" />
-              <div className="absolute top-1/2 -left-[3.25rem] w-2 h-2 rounded-full bg-pink-400 -translate-y-1/2" />
+              <div className="absolute top-1/2 -left-8 w-8 h-px bg-pink-400" />
+              <div className="absolute top-1/2 -left-[2.25rem] w-2 h-2 rounded-full bg-pink-400 -translate-y-1/2" />
             </motion.div>
 
             {/* Pink Callout 2 - LLMS */}
@@ -239,17 +224,17 @@ export default function Slide7StackParadigm() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 2.9, duration: 0.6 }}
-              className="absolute top-[calc(50%+90px)] right-[8%] -translate-y-1/2 z-30"
+              transition={{ delay: 2.4, duration: 0.6 }}
+              className="absolute top-[65%] right-[5%] -translate-y-1/2 z-30 hidden md:block"
             >
               <div className="border-2 border-pink-400 rounded-lg px-4 py-2 bg-black/60 max-w-[220px]">
-                <p className="text-white text-sm md:text-base">
+                <p className="text-white text-sm">
                   Context-aware, natural language apps
                 </p>
               </div>
               {/* Connector line */}
-              <div className="absolute top-1/2 -left-12 w-10 h-px bg-pink-400" />
-              <div className="absolute top-1/2 -left-[3.25rem] w-2 h-2 rounded-full bg-pink-400 -translate-y-1/2" />
+              <div className="absolute top-1/2 -left-8 w-8 h-px bg-pink-400" />
+              <div className="absolute top-1/2 -left-[2.25rem] w-2 h-2 rounded-full bg-pink-400 -translate-y-1/2" />
             </motion.div>
           </div>
         </div>

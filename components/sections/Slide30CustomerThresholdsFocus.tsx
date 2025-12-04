@@ -55,7 +55,7 @@ export default function Slide30CustomerThresholdsFocus() {
           {/* Main Layout Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-6 lg:gap-8">
             {/* Left Column - Customer Thresholds Table */}
-            <div className="h-[500px] border border-zinc-700 rounded-lg bg-zinc-900/30 flex items-center justify-center p-4 relative">
+            <div className="h-[500px] bg-transparent border-none flex items-center justify-center p-4 relative">
               <Image
                 src="/Slide 30 Customer Threshold/Customer Thresholds Table.png"
                 alt="Customer Thresholds Table"

@@ -28,7 +28,7 @@ export default function Slide13AImoment() {
         </motion.div>
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-12">
           {/* Header Section */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -86,7 +86,7 @@ export default function Slide13AImoment() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="relative w-full aspect-[21/9] border-2 border-white rounded-2xl bg-zinc-900/20 p-8 grid grid-cols-2 grid-rows-2 gap-6"
+              className="relative w-full aspect-[21/7] border-none bg-transparent p-0 grid grid-cols-2 grid-rows-2 gap-4"
             >
               {/* Top-left quadrant: Hyperscalers (White glow) */}
               <motion.div
@@ -96,12 +96,7 @@ export default function Slide13AImoment() {
                 transition={{ delay: 0.6, duration: 0.6 }}
                 onMouseEnter={() => setHoveredQuadrant(0)}
                 onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
-                style={{
-                  boxShadow: hoveredQuadrant === 0
-                    ? "0 0 30px rgba(255, 255, 255, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.1)"
-                    : "0 0 10px rgba(255, 255, 255, 0.2)",
-                }}
+                className="relative flex items-center justify-center p-2"
               >
                 <div className="relative w-full h-full">
                   <Image
@@ -121,12 +116,7 @@ export default function Slide13AImoment() {
                 transition={{ delay: 0.7, duration: 0.6 }}
                 onMouseEnter={() => setHoveredQuadrant(1)}
                 onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
-                style={{
-                  boxShadow: hoveredQuadrant === 1
-                    ? "0 0 30px rgba(236, 72, 153, 0.7), inset 0 0 20px rgba(236, 72, 153, 0.15)"
-                    : "0 0 10px rgba(236, 72, 153, 0.2)",
-                }}
+                className="relative flex items-center justify-center p-2"
               >
                 <div className="relative w-full h-full">
                   <Image
@@ -146,12 +136,7 @@ export default function Slide13AImoment() {
                 transition={{ delay: 0.8, duration: 0.6 }}
                 onMouseEnter={() => setHoveredQuadrant(2)}
                 onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
-                style={{
-                  boxShadow: hoveredQuadrant === 2
-                    ? "0 0 30px rgba(20, 184, 166, 0.7), inset 0 0 20px rgba(20, 184, 166, 0.15)"
-                    : "0 0 10px rgba(20, 184, 166, 0.2)",
-                }}
+                className="relative flex items-center justify-center p-2"
               >
                 <div className="relative w-full h-full">
                   <Image
@@ -171,12 +156,7 @@ export default function Slide13AImoment() {
                 transition={{ delay: 0.9, duration: 0.6 }}
                 onMouseEnter={() => setHoveredQuadrant(3)}
                 onMouseLeave={() => setHoveredQuadrant(null)}
-                className="relative border-2 border-zinc-600 rounded-lg bg-zinc-900/40 flex items-center justify-center transition-all duration-300 p-4"
-                style={{
-                  boxShadow: hoveredQuadrant === 3
-                    ? "0 0 30px rgba(234, 179, 8, 0.7), inset 0 0 20px rgba(234, 179, 8, 0.15)"
-                    : "0 0 10px rgba(234, 179, 8, 0.2)",
-                }}
+                className="relative flex items-center justify-center p-2"
               >
                 <div className="relative w-full h-full">
                   <Image

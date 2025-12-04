@@ -8,32 +8,32 @@ const vercelFeatures = [
   {
     title: "Fluid compute dynamic",
     description: "Per-request shifting CPU, GPU matching cost to workload intent with provisioning",
-    icon: "Fluid_Compute_Icon.png",
+    icon: "Slide 14 Icons.png-1.svg",
   },
   {
     title: "Ephemeral yet stateful",
     description: "UI micro-frontends that spin up on demand, pull from AI-generated content",
-    icon: "Ephemeral_Icon.png",
+    icon: "Slide 14 Icons.png-2.svg",
   },
   {
     title: "Inference at the edge",
     description: "Co-locating model execution with user proximity (no latency)",
-    icon: "Inference_Icon.png",
+    icon: "Slide 14 Icons.png-3.svg",
   },
   {
     title: "AI-native scaling primitives",
     description: "Burst capacity for unpredictable model call patterns",
-    icon: "AI_Scaling_Icon.png",
+    icon: "Slide 14 Icons.png-4.svg",
   },
   {
     title: "Seamless developer experience abstraction",
     description: "Composable building blocks, so developers (builders) can focus on shipping not infrastructure",
-    icon: "Developer_Experience_Icon.png",
+    icon: "Slide 14 Icons.png-5.svg",
   },
   {
     title: "Economic wedge",
     description: "Fine-grained pricing that makes AI features viable at scale vs. hyperscalers' grids designed for generic use",
-    icon: "Economic_Icon.png",
+    icon: "Slide 14 Icons.png-6.svg",
   },
 ];
 
@@ -99,7 +99,7 @@ export default function Slide14Differentiation() {
                     {/* Icon */}
                     <div className="flex-shrink-0 w-10 h-10 border border-white rounded bg-transparent relative">
                       <Image
-                        src={`/Slide 14 Icons/${feature.icon}`}
+                        src={`/Slide 14 Icons.png/${feature.icon}`}
                         alt={feature.title}
                         fill
                         className="object-contain p-1"

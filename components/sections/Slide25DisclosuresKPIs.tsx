@@ -20,7 +20,7 @@ const LabelBox = ({
       transition={{ delay, duration: 0.4, ease: "easeOut" }}
       className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-1 text-center"
     >
-      <span className="text-zinc-500 text-[10px] md:text-xs font-medium">
+      <span className="text-white text-[10px] md:text-xs font-medium">
         {label}
       </span>
     </motion.div>
@@ -45,7 +45,7 @@ const BulletListBox = ({
       className="border border-zinc-700 rounded-lg bg-zinc-900/30 p-2"
     >
       <div className="space-y-0.5">
-        <p className="text-zinc-500 text-[10px] md:text-xs font-medium mb-2">
+        <p className="text-white text-[10px] md:text-xs font-medium mb-2">
           {label}
         </p>
         {items.map((item, index) => (
@@ -82,7 +82,7 @@ export default function Slide25DisclosuresKPIs() {
 
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-4 md:pt-6 pb-24">
           {/* Header Section */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -103,7 +103,7 @@ export default function Slide25DisclosuresKPIs() {
                 transition={{ delay: 0.5, duration: 0.5 }}
                 className="w-full max-w-5xl border-2 border-zinc-700 rounded-full bg-zinc-900/30 p-2 text-center"
               >
-                <span className="text-zinc-500 text-sm md:text-base">
+                <span className="text-white text-sm md:text-base">
                   REVENUE_HEADER_PLACEHOLDER
                 </span>
               </motion.div>
@@ -133,7 +133,7 @@ export default function Slide25DisclosuresKPIs() {
           </div>
 
           {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mt-8">
             {/* LEFT COLUMN - User-Based Framework (Path A) */}
             <div className="space-y-3">
               {/* Q Label */}
@@ -209,21 +209,14 @@ export default function Slide25DisclosuresKPIs() {
                 ]}
                 delay={1.6}
               />
+
+              <p className="text-sm md:text-base font-medium text-center mt-4" style={{ color: "#eab308" }}>
+                Most common approach for public software companies
+              </p>
             </motion.div>
           </div>
 
-          {/* Footer Highlight Text */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 1.7, duration: 0.5 }}
-            className="mt-6 flex justify-end"
-          >
-            <p className="text-sm md:text-base font-medium text-center" style={{ color: "#eab308" }}>
-              Most common approach for public software companies
-            </p>
-          </motion.div>
+
 
           {/* Bottom-Left Footnote */}
           <motion.div

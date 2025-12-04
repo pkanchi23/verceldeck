@@ -29,8 +29,8 @@ const AnimatedWordImage = ({
       onMouseLeave={() => withHover && setIsHovered(false)}
       className="inline-block relative transition-all duration-200"
       style={{
-        width: "180px",
-        height: "60px",
+        width: "360px",
+        height: "120px",
         filter: isHovered ? "drop-shadow(0 0 20px rgba(255, 255, 255, 0.4))" : "none",
       }}
     >
@@ -197,7 +197,7 @@ export default function Slide18FastAINative() {
               src="/v0 Logo.svg"
               alt="v0"
               delay={0.75}
-              width={140}
+              width={100}
               height={45}
             />
           </div>

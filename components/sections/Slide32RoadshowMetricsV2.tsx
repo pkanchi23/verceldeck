@@ -24,7 +24,7 @@ export default function Slide32RoadshowMetricsV2() {
   ];
 
   return (
-    <Section id="slide-37" className="bg-black">
+    <Section id="slide-32" className="bg-black">
       <div className="relative w-full min-h-screen">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
@@ -57,7 +57,7 @@ export default function Slide32RoadshowMetricsV2() {
               {leftCategories.map((category) => (
                 <div
                   key={category.number}
-                  className="h-[144px] border border-white rounded-lg p-4 bg-transparent flex flex-col justify-center"
+                  className="h-[200px] border border-white rounded-lg p-4 bg-transparent flex flex-col justify-center"
                 >
                   <div className="flex items-start gap-3">
                     {/* Circle Number */}
@@ -83,7 +83,7 @@ export default function Slide32RoadshowMetricsV2() {
               {examples.map((example, index) => (
                 <div
                   key={index}
-                  className="border border-white rounded-lg p-4 bg-transparent flex flex-col items-center h-[144px]"
+                  className="border border-white rounded-lg p-4 bg-transparent flex flex-col items-center h-[200px]"
                 >
                   {/* Logo Placeholder */}
                   <div className="w-full h-[30px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-3">

@@ -56,7 +56,10 @@ export default function Slide9VercelAICloud() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="w-[40%] mx-auto mb-10 md:mb-12 mt-6 md:mt-8"
           >
-            <div className="relative aspect-[16/9]">
+            <div
+              className="relative aspect-[16/9]"
+              style={{ filter: "drop-shadow(0 0 30px rgba(255, 255, 255, 0.3))" }}
+            >
               <Image
                 src="/Slide 9/Vercel Cloud.png"
                 alt="Vercel AI Cloud"

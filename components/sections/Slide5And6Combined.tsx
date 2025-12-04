@@ -19,6 +19,9 @@ export default function Slide5And6Combined() {
     // We want it to fade in after Slide 5 starts fading out
     const slide6Opacity = useTransform(scrollYProgress, [0.55, 0.8], [0, 1]);
 
+    // Image opacity: 1 -> 0.6 for Slide 6
+    const imageOpacity = useTransform(scrollYProgress, [0.45, 0.6], [1, 0.6]);
+
     // Page number transition
     const pageNumber = useTransform(scrollYProgress, [0.49, 0.51], [5, 6]);
     const pageNumberOpacity = useTransform(scrollYProgress, [0.45, 0.5, 0.55], [1, 0, 1]);
@@ -53,7 +56,7 @@ export default function Slide5And6Combined() {
                     {/* Main Content Container - Shared Layout */}
                     <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24">
                         {/* Headline + Subheadline (Static) */}
-                        <div className="mb-10 md:mb-16">
+                        <div className="relative z-10 mb-6 md:mb-8">
                             <motion.h1
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -74,10 +77,10 @@ export default function Slide5And6Combined() {
                         </div>
 
                         {/* Main Visual Area */}
-                        <div className="relative -mt-20 md:-mt-24 w-full max-w-[100%] mx-auto h-[1020px] md:h-[1190px]">
+                        <div className="relative -mt-8 md:-mt-16 w-full max-w-[100%] mx-auto h-[60vh] md:h-[70vh]">
                             {/* Central Cube Graphic */}
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="relative w-[170%] h-[170%]">
+                            <motion.div style={{ opacity: imageOpacity }} className="absolute inset-0 flex items-center justify-center">
+                                <div className="relative w-[120%] h-[120%]">
                                     <Image
                                         src="/Slide 5/Slide 5 Background Graphic.png"
                                         alt="AI Graphic"
@@ -86,7 +89,7 @@ export default function Slide5And6Combined() {
                                         priority
                                     />
                                 </div>
-                            </div>
+                            </motion.div>
 
                             {/* SLIDE 5 CONTENT: Red Floating Text Boxes */}
                             <motion.div style={{ opacity: slide5Opacity }} className="absolute inset-0">
@@ -96,7 +99,7 @@ export default function Slide5And6Combined() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, amount: 0.5 }}
-                                    animate={{ y: [0, -6, 0], x: [0, 4, 0] }}
+                                    animate={{ y: [0, -12, 0], x: [0, 8, 0] }}
                                     transition={{
                                         opacity: { duration: 0.6, delay: 0.4 },
                                         y: { duration: 5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
@@ -117,7 +120,7 @@ export default function Slide5And6Combined() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, amount: 0.5 }}
-                                    animate={{ y: [0, -8, 0], x: [0, -4, 0] }}
+                                    animate={{ y: [0, -15, 0], x: [0, -8, 0] }}
                                     transition={{
                                         opacity: { duration: 0.6, delay: 0.5 },
                                         y: { duration: 6, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
@@ -138,7 +141,7 @@ export default function Slide5And6Combined() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, amount: 0.5 }}
-                                    animate={{ y: [0, -5, 0], x: [0, 3, 0] }}
+                                    animate={{ y: [0, -10, 0], x: [0, 6, 0] }}
                                     transition={{
                                         opacity: { duration: 0.6, delay: 0.6 },
                                         y: { duration: 4.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
@@ -159,7 +162,7 @@ export default function Slide5And6Combined() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, amount: 0.5 }}
-                                    animate={{ y: [0, -7, 0], x: [0, 5, 0] }}
+                                    animate={{ y: [0, -14, 0], x: [0, 10, 0] }}
                                     transition={{
                                         opacity: { duration: 0.6, delay: 0.7 },
                                         y: { duration: 5.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
@@ -180,7 +183,7 @@ export default function Slide5And6Combined() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, amount: 0.5 }}
-                                    animate={{ y: [0, -6, 0], x: [0, -3, 0] }}
+                                    animate={{ y: [0, -12, 0], x: [0, -6, 0] }}
                                     transition={{
                                         opacity: { duration: 0.6, delay: 0.8 },
                                         y: { duration: 4.8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
@@ -201,7 +204,7 @@ export default function Slide5And6Combined() {
                                 style={{ opacity: slide6Opacity }}
                                 className="absolute inset-0 pointer-events-none"
                             >
-                                <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full px-4">
+                                <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full px-4">
                                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center">
                                         <span className="text-red-400">So, What is </span>
                                         <span

@@ -138,11 +138,16 @@ export default function Slide12Foundation() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
-                  className="w-full max-w-[1200px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2"
+                  className="w-full max-w-[1200px] h-16 md:h-20 border-2 border-yellow-500 rounded-lg bg-yellow-500/10 flex items-center justify-center mt-2"
                 >
-                  <p className="text-white text-sm md:text-base font-semibold">
-                    [ AWS BASE ]
-                  </p>
+                  <div className="relative w-[100px] h-[40px]">
+                    <Image
+                      src="/Slide 12 Building Pyramid From Base/AWS logo.png"
+                      alt="AWS Base"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </motion.div>
               </div>
             </div>
@@ -170,7 +175,7 @@ export default function Slide12Foundation() {
               {/* Right Pyramid (Vercel) */}
               <div className="flex flex-col items-center gap-3 w-full">
                 {/* Pyramid Rows (bottom to top) */}
-                <div className="flex flex-col-reverse items-center gap-3">
+                <div className="flex flex-col-reverse items-center gap-1">
                   {rightPyramidRows.map((row, rowIndex) => (
                     <motion.div
                       key={rowIndex}
@@ -182,14 +187,14 @@ export default function Slide12Foundation() {
                         duration: 0.5,
                         ease: "easeOut",
                       }}
-                      className="flex gap-3 justify-center"
+                      className="flex gap-1 justify-center"
                     >
                       {Array.from({ length: row.count }).map((_, boxIndex) => {
                         const logoSrc = vercelLogos[row.startIndex + boxIndex];
                         return (
                           <div
                             key={boxIndex}
-                            className="relative w-12 h-12 md:w-14 md:h-14 border border-white rounded bg-transparent overflow-hidden p-1"
+                            className="relative w-14 h-14 md:w-[68px] md:h-[68px] rounded bg-transparent overflow-hidden"
                           >
                             {logoSrc && (
                               <Image

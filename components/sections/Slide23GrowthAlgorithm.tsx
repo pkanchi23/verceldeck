@@ -78,7 +78,7 @@ const FunnelStage = ({ stage }: { stage: FunnelStage }) => {
       </h3>
 
       {/* Funnel Shape Image */}
-      <div className="relative w-full max-w-[140px] md:max-w-[160px] h-[240px] md:h-[280px] mb-3">
+      <div className="relative w-full max-w-[140px] md:max-w-[160px] h-[340px] md:h-[400px] mb-3 border border-zinc-700 rounded-lg bg-zinc-900/30 p-2">
         <Image
           src={`/Slide 23 Funnel Sections.png/Funnel Sections.png-${stage.id}.png`}
           alt={stage.title}
@@ -88,7 +88,7 @@ const FunnelStage = ({ stage }: { stage: FunnelStage }) => {
       </div>
 
       {/* Caption */}
-      <p className="text-white/60 text-xs md:text-sm text-center max-w-[140px] md:max-w-[160px] leading-relaxed whitespace-pre-line">
+      <p className="text-white text-xs md:text-sm font-bold text-center max-w-[140px] md:max-w-[160px] leading-relaxed whitespace-pre-line">
         {stage.caption}
       </p>
     </motion.div>
@@ -179,7 +179,7 @@ export default function Slide23GrowthAlgorithm() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 1.8, duration: 0.6 }}
-            className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-4 md:p-6 text-center"
+            className="absolute bottom-16 left-4 md:left-6 bg-zinc-900/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-left max-w-md z-20"
           >
             <p className="text-white text-sm md:text-base lg:text-lg font-bold">
               Top of funnel grows fast. Platform monetization compounds are huge.

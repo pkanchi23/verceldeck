@@ -28,7 +28,7 @@ export default function Slide8InterfaceStrategic() {
         {/* Main Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-16">
           {/* Title and Subtitle */}
-          <div className="mb-12 md:mb-16">
+          <div className="mb-4 md:mb-6">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -175,7 +175,7 @@ export default function Slide8InterfaceStrategic() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="absolute left-[16%] top-[50%] -translate-x-1/2 -translate-y-1/2"
+              className="absolute left-[25%] top-[50%] -translate-x-1/2 -translate-y-1/2"
             >
               <div className="relative w-[700px] h-[700px]">
                 <Image

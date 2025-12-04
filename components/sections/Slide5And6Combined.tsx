@@ -36,22 +36,55 @@ export default function Slide5And6Combined() {
 
             <div className="sticky top-0 h-screen overflow-hidden">
                 <div className="relative w-full h-full">
-                    {/* Top-Right Logo (Vercel) */}
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3, duration: 0.8 }}
-                        className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end"
-                    >
-                        <div className="relative w-full h-full">
-                            <Image
-                                src="/Vercel Logo.svg"
-                                alt="Vercel Logo"
-                                fill
-                                className="object-contain object-right"
-                            />
+                    {/* Shared Layout Container for Logos/Page Number */}
+                    <div className="absolute inset-0 pointer-events-none z-50">
+                        <div className="w-full h-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 relative">
+                            {/* Top-Right Logo (Vercel) */}
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.3, duration: 0.8 }}
+                                className="absolute top-4 right-4 md:top-6 md:right-6 w-[140px] h-[40px] flex items-center justify-end pointer-events-auto"
+                            >
+                                <div className="relative w-full h-full">
+                                    <Image
+                                        src="/Vercel Logo.svg"
+                                        alt="Vercel Logo"
+                                        fill
+                                        className="object-contain object-right"
+                                    />
+                                </div>
+                            </motion.div>
+
+                            {/* Bottom-Left Logo (Goldman Sachs) */}
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.5, duration: 0.8 }}
+                                className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start pointer-events-auto"
+                            >
+                                <div className="relative w-full h-full">
+                                    <Image
+                                        src="/Goldman Sachs Logo.svg"
+                                        alt="Goldman Sachs Logo"
+                                        fill
+                                        className="object-contain object-left"
+                                    />
+                                </div>
+                            </motion.div>
+
+                            {/* Page Number - Bottom-Right */}
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.5, duration: 0.8 }}
+                                style={{ opacity: pageNumberOpacity }}
+                                className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70 pointer-events-auto"
+                            >
+                                <motion.span>{pageNumber}</motion.span>
+                            </motion.div>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Main Content Container - Shared Layout */}
                     <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24">
@@ -225,33 +258,6 @@ export default function Slide5And6Combined() {
                         </div>
                     </div>
 
-                    {/* Bottom-Left Logo (Goldman Sachs) */}
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.9, duration: 0.8 }}
-                        className="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-[140px] h-[40px] flex items-center justify-start"
-                    >
-                        <div className="relative w-full h-full">
-                            <Image
-                                src="/Goldman Sachs Logo.svg"
-                                alt="Goldman Sachs Logo"
-                                fill
-                                className="object-contain object-left"
-                            />
-                        </div>
-                    </motion.div>
-
-                    {/* Page Number - Bottom-Right */}
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 1.0, duration: 0.8 }}
-                        style={{ opacity: pageNumberOpacity }}
-                        className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
-                    >
-                        <motion.span>{pageNumber}</motion.span>
-                    </motion.div>
                 </div>
             </div>
         </div>

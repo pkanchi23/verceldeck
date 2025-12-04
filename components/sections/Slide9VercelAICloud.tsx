@@ -56,9 +56,20 @@ export default function Slide9VercelAICloud() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="w-[40%] mx-auto mb-10 md:mb-12 mt-6 md:mt-8"
           >
-            <div
+            <motion.div
               className="relative aspect-[16/9]"
-              style={{ filter: "drop-shadow(0 0 30px rgba(255, 255, 255, 0.3))" }}
+              animate={{
+                filter: [
+                  "drop-shadow(0 0 60px rgba(255, 255, 255, 0.4))",
+                  "drop-shadow(0 0 100px rgba(255, 255, 255, 0.6))",
+                  "drop-shadow(0 0 60px rgba(255, 255, 255, 0.4))",
+                ],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
             >
               <Image
                 src="/Slide 9/Vercel Cloud.png"
@@ -66,7 +77,7 @@ export default function Slide9VercelAICloud() {
                 fill
                 className="object-contain"
               />
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Bottom Three Component Boxes */}
@@ -77,14 +88,19 @@ export default function Slide9VercelAICloud() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-start gap-3"
+              className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-center gap-3"
               style={{
                 boxShadow: "0 0 20px rgba(255, 255, 255, 0.15)",
               }}
             >
-              {/* Icon Placeholder */}
-              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 border border-white/40 rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 md:w-7 md:h-7 border-2 border-white/60 rounded" />
+              {/* Icon */}
+              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 relative">
+                <Image
+                  src="/Slide 9/Design-> SVG.svg"
+                  alt="Design Icon"
+                  fill
+                  className="object-contain"
+                />
               </div>
 
               {/* Text */}
@@ -101,17 +117,19 @@ export default function Slide9VercelAICloud() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.7, duration: 0.6 }}
-              className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-start gap-4"
+              className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-center gap-4"
               style={{
                 boxShadow: "0 0 20px rgba(255, 255, 255, 0.15)",
               }}
             >
-              {/* Icon Placeholder */}
-              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 border border-white/40 rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 md:w-7 md:h-7">
-                  <div className="w-full h-3 border border-white/60 rounded-sm mb-1" />
-                  <div className="w-4 h-3 border border-white/60 rounded-full ml-auto" />
-                </div>
+              {/* Icon */}
+              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 relative">
+                <Image
+                  src="/Slide 9/Supports Natural Language.svg"
+                  alt="Natural Language Icon"
+                  fill
+                  className="object-contain"
+                />
               </div>
 
               {/* Text Block with Bullets */}
@@ -130,17 +148,19 @@ export default function Slide9VercelAICloud() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-start gap-4"
+              className="border border-white rounded-2xl p-6 md:p-8 bg-black/40 flex items-center gap-4"
               style={{
                 boxShadow: "0 0 20px rgba(255, 255, 255, 0.15)",
               }}
             >
-              {/* Icon Placeholder */}
-              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 border border-white/40 rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 md:w-7 md:h-7">
-                  <div className="w-3 h-4 border border-white/60 rounded-sm" />
-                  <div className="w-4 h-2 border border-white/60 ml-1 mt-0.5" />
-                </div>
+              {/* Icon */}
+              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 relative">
+                <Image
+                  src="/Slide 9/Developers Delight SVG.svg"
+                  alt="Developers Delight Icon"
+                  fill
+                  className="object-contain"
+                />
               </div>
 
               {/* Text Block with Bullets */}

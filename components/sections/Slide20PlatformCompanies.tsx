@@ -10,10 +10,10 @@ const companies = [
     id: 1,
     name: "STRIPE",
     category: "Digital Payments",
-    logo: "/SLide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-1.png",
+    logo: "/Slide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-1.png",
     people: [
-      { name: "Patrick Collison", title: "Co-founder and CEO", photo: "/SLide 20 Best in Class/Founder Pics/Founder Pics-1.png" },
-      { name: "John Collison", title: "Co-founder and President", photo: "/SLide 20 Best in Class/Founder Pics/Founder Pics-2.png" },
+      { name: "Patrick Collison", title: "Co-founder and CEO", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-1.png" },
+      { name: "John Collison", title: "Co-founder and President", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-2.png" },
     ],
     delay: 0.0,
     highlight: false,
@@ -22,8 +22,8 @@ const companies = [
     id: 2,
     name: "OPENAI",
     category: "Intelligence",
-    logo: "/SLide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-2.png",
-    people: [{ name: "Sam Altman", title: "Co-founder and CEO", photo: "/SLide 20 Best in Class/Founder Pics/Founder Pics-3.png" }],
+    logo: "/Slide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-2.png",
+    people: [{ name: "Sam Altman", title: "Co-founder and CEO", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-3.png" }],
     delay: 0.4,
     highlight: false,
   },
@@ -31,8 +31,8 @@ const companies = [
     id: 3,
     name: "DATABRICKS",
     category: "Data",
-    logo: "/SLide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-3.png",
-    people: [{ name: "Ali Ghodsi", title: "Co-founder and CEO", photo: "/SLide 20 Best in Class/Founder Pics/Founder Pics-4.png" }],
+    logo: "/Slide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-3.png",
+    people: [{ name: "Ali Ghodsi", title: "Co-founder and CEO", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-4.png" }],
     delay: 0.8,
     highlight: false,
   },
@@ -40,8 +40,8 @@ const companies = [
     id: 4,
     name: "NVIDIA",
     category: "Compute",
-    logo: "/SLide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-4.png",
-    people: [{ name: "Jensen Huang", title: "Founder, President and CEO", photo: "/SLide 20 Best in Class/Founder Pics/Founder Pics-5.png" }],
+    logo: "/Slide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-4.png",
+    people: [{ name: "Jensen Huang", title: "Founder, President and CEO", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-5.png" }],
     delay: 1.2,
     highlight: false,
   },
@@ -49,8 +49,8 @@ const companies = [
     id: 5,
     name: "VERCEL",
     category: "AI cloud",
-    logo: "/SLide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-5.png",
-    people: [{ name: "Guillermo Rauch", title: "Co-founder and CEO", photo: "/SLide 20 Best in Class/Founder Pics/Founder Pics-6.png" }],
+    logo: "/Slide 20 Best in Class/Company Logos.png/best in Class Startups Pics.png-5.png",
+    people: [{ name: "Guillermo Rauch", title: "Co-founder and CEO", photo: "/Slide 20 Best in Class/Founder Pics/Founder Pics-6.png" }],
     delay: 1.6,
     highlight: true,
   },
@@ -118,7 +118,7 @@ const CompanyCard = ({
 
         {/* Category Pill */}
         <div className="px-4 py-1.5 bg-zinc-800/50 border border-zinc-700 rounded-md mb-6">
-          <span className="text-white text-xs font-medium">{category}</span>
+          <span className="text-white text-sm font-bold">{category}</span>
         </div>
 
         {/* People */}

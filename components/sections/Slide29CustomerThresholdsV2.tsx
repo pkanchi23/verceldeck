@@ -26,7 +26,7 @@ export default function Slide29CustomerThresholdsV2() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-4 md:pt-6 pb-24">
           {/* Header Section */}
           <div className="mb-12 md:mb-16">
             {/* Main Title */}

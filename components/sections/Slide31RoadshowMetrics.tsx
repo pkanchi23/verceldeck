@@ -44,62 +44,100 @@ export default function Slide36RoadshowMetrics() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16">
           {/* Title */}
           <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 md:mb-8">
             Key components of roadshow / analyst day metrics disclosures
           </h1>
 
           {/* Main Grid Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-6">
-            {/* Left Column - Category Boxes */}
-            <div className="space-y-4 flex flex-col justify-center">
-              {leftCategories.map((category) => (
-                <div
-                  key={category.number}
-                  className="h-[200px] border border-white rounded-lg p-4 bg-transparent flex flex-col justify-center"
-                >
-                  <div className="flex items-start gap-3">
-                    {/* Circle Number */}
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-white bg-black flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">
-                        {category.number}
-                      </span>
-                    </div>
-
-                    {/* Section Title */}
-                    <div className="flex-1">
-                      <p className="text-white font-medium text-xs md:text-sm">
-                        {category.title}
-                      </p>
-                    </div>
+          <div className="space-y-6 mt-24 md:mt-32">
+            {/* Row 1: One-Time User / Engagement Metrics */}
+            <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-6 items-center">
+              {/* Left Box */}
+              <div className="h-[120px] border border-white/40 rounded-lg p-4 bg-transparent flex flex-col justify-center">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-white bg-black flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">1</span>
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-white font-medium text-xs md:text-sm">
+                      One-Time User / Engagement Metrics
+                    </p>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Right Side Examples */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Atlassian */}
+                <div className="rounded-lg bg-transparent flex flex-col items-center h-[200px] relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                  <div className="w-full h-full relative">
+                    <Image
+                      src="/Slide 31-32 Key Roadshow Components/Key Roadshow Component TEAM.png"
+                      alt="Atlassian Metric"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Slack */}
+                <div className="rounded-lg bg-transparent flex flex-col items-center h-[200px] relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                  <div className="w-full h-full relative">
+                    <Image
+                      src="/Slide 31-32 Key Roadshow Components/Key Roadshow Component Slack.png"
+                      alt="Slack Metric"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Right Side - Example Blocks (2x2 Grid) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 content-center">
-              {examples.map((example, index) => (
-                <div
-                  key={index}
-                  className="border border-white rounded-lg p-4 bg-transparent flex flex-col items-center h-[200px]"
-                >
-                  {/* Logo Placeholder */}
-                  <div className="w-full h-[30px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center mb-3">
-                    <span className="text-zinc-500 text-[10px]">
-                      {example.company}_LOGO
-                    </span>
+            {/* Row 2: Customers / Customers Over Threshold */}
+            <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-6 items-center">
+              {/* Left Box */}
+              <div className="h-[120px] border border-white/40 rounded-lg p-4 bg-transparent flex flex-col justify-center">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-white bg-black flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">2</span>
                   </div>
-
-                  {/* Image Placeholder */}
-                  <div className="w-full h-[150px] border border-zinc-700 rounded bg-zinc-900/30 flex items-center justify-center">
-                    <span className="text-zinc-500 text-xs">
-                      IMAGE_PLACEHOLDER
-                    </span>
+                  <div className="flex-1">
+                    <p className="text-white font-medium text-xs md:text-sm">
+                      Customers / Customers Over Threshold
+                    </p>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Right Side Examples */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* GitLab */}
+                <div className="rounded-lg bg-transparent flex flex-col items-center h-[200px] relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                  <div className="w-full h-full relative">
+                    <Image
+                      src="/Slide 31-32 Key Roadshow Components/Key Roadshow Component GTLB.png"
+                      alt="GitLab Metric"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Datadog */}
+                <div className="rounded-lg bg-transparent flex flex-col items-center h-[200px] relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                  <div className="w-full h-full relative">
+                    <Image
+                      src="/Slide 31-32 Key Roadshow Components/Key Roadshow Component DDOG.png"
+                      alt="Datadog Metric"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

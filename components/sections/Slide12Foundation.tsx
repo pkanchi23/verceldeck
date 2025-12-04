@@ -104,8 +104,8 @@ export default function Slide12Foundation() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.5 }}
                       transition={{
-                        delay: 0.6 + row.delay,
-                        duration: 0.5,
+                        delay: 1.0 + row.delay * 2,
+                        duration: 1.0,
                         ease: "easeOut",
                       }}
                       className="flex gap-1 justify-center"
@@ -183,8 +183,8 @@ export default function Slide12Foundation() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.5 }}
                       transition={{
-                        delay: 0.6 + row.delay,
-                        duration: 0.5,
+                        delay: 1.0 + row.delay * 2,
+                        duration: 1.0,
                         ease: "easeOut",
                       }}
                       className="flex gap-1 justify-center"

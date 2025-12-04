@@ -75,10 +75,15 @@ export default function Slide14Differentiation() {
             {/* Left Column - Vercel Section */}
             <div className="border border-white rounded-2xl p-3 md:p-4 flex flex-col">
               {/* Title */}
-              <div className="flex flex-col items-center mb-2">
-                <h2 className="text-white font-bold text-2xl md:text-3xl">
-                  Vercel
-                </h2>
+              <div className="flex flex-col items-center mb-4">
+                <div className="relative w-[120px] h-[30px]">
+                  <Image
+                    src="/Vercel Logo.svg"
+                    alt="Vercel"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
 
               {/* 6 Feature Rows */}
@@ -129,9 +134,11 @@ export default function Slide14Differentiation() {
               className="border-2 border-red-500 rounded-2xl p-3 md:p-4 flex flex-col"
             >
               {/* Title */}
-              <h2 className="text-red-500 font-bold text-2xl md:text-3xl mb-4">
-                Others
-              </h2>
+              <div className="flex flex-col items-center mb-4">
+                <h2 className="text-red-500 font-bold text-2xl md:text-3xl">
+                  Others
+                </h2>
+              </div>
 
               {/* Subsections */}
               <div className="space-y-2 flex-1 flex flex-col justify-around">
@@ -141,29 +148,16 @@ export default function Slide14Differentiation() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ delay: 1.4, duration: 0.5 }}
-                  className="flex gap-4"
+                  className="border border-red-500 rounded-xl p-2 md:p-3 flex flex-col gap-2 flex-1 justify-center"
                 >
-                  {/* Icon */}
-                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center relative">
-                    <Image
-                      src="/Slide 14 Icons/Hyperscaler_Icon.png"
-                      alt="Hyperscaler"
-                      fill
-                      className="object-contain p-1"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-white font-bold text-lg md:text-xl mb-1">
-                      Hyperscalers
-                    </h3>
-                    <ul className="space-y-1 text-white text-sm md:text-base">
-                      <li>• Ops-first platforms designed for generalized compute</li>
-                      <li>• AI workloads require complex provisioning and DevOps effort</li>
-                      <li>• Developer experience is an afterthought</li>
-                    </ul>
-                  </div>
+                  <h3 className="text-red-500 font-bold text-lg md:text-xl">
+                    Hyperscalers
+                  </h3>
+                  <ul className="space-y-1 text-red-400 text-sm md:text-base">
+                    <li>• Ops-first platforms designed for generalized compute</li>
+                    <li>• AI workloads require complex provisioning and DevOps effort</li>
+                    <li>• Developer experience is an afterthought</li>
+                  </ul>
                 </motion.div>
 
                 {/* 2. Cloudflare */}
@@ -172,28 +166,18 @@ export default function Slide14Differentiation() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ delay: 1.5, duration: 0.5 }}
-                  className="flex gap-4"
+                  className="border border-red-500 rounded-xl p-2 md:p-3 flex flex-col gap-2 flex-1 justify-center"
                 >
-                  {/* Logo */}
-                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center relative">
-                    <Image
-                      src="/Slide 14 Icons/Cloudflare_Logo.png"
-                      alt="Cloudflare"
-                      fill
-                      className="object-contain p-1"
-                    />
-                  </div>
+
 
                   {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-white font-bold text-lg md:text-xl mb-1">
-                      Cloudflare
-                    </h3>
-                    <ul className="space-y-1 text-white text-sm md:text-base">
-                      <li>• Strong edge network, but limited in AI-native orchestration and developer-first workflows</li>
-                      <li>• Lacks deep inference integration and frontend/backend fusion</li>
-                    </ul>
-                  </div>
+                  <h3 className="text-red-500 font-bold text-lg md:text-xl mb-1">
+                    Cloudflare
+                  </h3>
+                  <ul className="space-y-1 text-red-400 text-sm md:text-base">
+                    <li>• Strong edge network, but limited in AI-native orchestration</li>
+                    <li>• Lacks deep inference integration</li>
+                  </ul>
                 </motion.div>
 
                 {/* 3. Vibe Coding Tools */}
@@ -202,27 +186,14 @@ export default function Slide14Differentiation() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ delay: 1.6, duration: 0.5 }}
-                  className="flex gap-4"
+                  className="border border-red-500 rounded-xl p-2 md:p-3 flex flex-col gap-2 flex-1 justify-center"
                 >
-                  {/* Icon */}
-                  <div className="flex-shrink-0 w-12 h-12 border border-red-400 rounded-lg bg-transparent flex items-center justify-center relative">
-                    <Image
-                      src="/Slide 14 Icons/Vibe_Tools_Icon.png"
-                      alt="Vibe Tools"
-                      fill
-                      className="object-contain p-1"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-white font-bold text-lg md:text-xl mb-1">
-                      Vibe Coding Tools
-                    </h3>
-                    <ul className="space-y-1 text-white text-sm md:text-base">
-                      <li>• Great for prototyping but not scalable for enterprise-grade, globally distributed applications</li>
-                    </ul>
-                  </div>
+                  <h3 className="text-red-500 font-bold text-lg md:text-xl">
+                    Vibe Coding Tools
+                  </h3>
+                  <ul className="space-y-1 text-red-400 text-sm md:text-base">
+                    <li>• Great for prototyping but not scalable for enterprise-grade applications</li>
+                  </ul>
                 </motion.div>
               </div>
             </motion.div>

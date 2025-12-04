@@ -4,96 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
 
-interface FunnelStage {
-  id: number;
-  title: string;
-  items: string[];
-  caption: string;
-  delay: number;
-}
 
-const stages: FunnelStage[] = [
-  {
-    id: 1,
-    title: "Create Prototype",
-    items: ["V0 Templates", "Quick Starts"],
-    caption: "Inspiration becomes action instantly",
-    delay: 0.3,
-  },
-  {
-    id: 2,
-    title: "Build, Integrated AI",
-    items: ["AI SDK", "Edge Functions", "Next.JS, others", "Gateway"],
-    caption: "Apps assembled with AI-first logic, perfect frontend",
-    delay: 0.6,
-  },
-  {
-    id: 3,
-    title: "Deploy & Serve at Scale",
-    items: ["Edge Networks", "Blob Fluid Compute", "Observability", "Analytics"],
-    caption: "Apps go live instantly, usage begins to scale",
-    delay: 0.9,
-  },
-  {
-    id: 4,
-    title: "Collaborate, Expand Teams",
-    items: [
-      "Previews",
-      "Advanced Git Workflows",
-      "Edge Computing",
-      "Agent Teams",
-      "Rolling Releases",
-      "Micro Trends",
-    ],
-    caption: "More users join, complexity grows, higher tiers",
-    delay: 1.2,
-  },
-  {
-    id: 5,
-    title: "Enterprise Scale",
-    items: [
-      "SSO",
-      "Compliance & SCA Sandbox",
-      "DDoS Mitigation",
-      "Firewall",
-    ],
-    caption: "Security, governance, & scale readiness\nEnterprises commit",
-    delay: 1.5,
-  },
-];
-
-// Funnel Stage Component
-const FunnelStage = ({ stage }: { stage: FunnelStage }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay: stage.delay, duration: 0.5, ease: "easeOut" }}
-      className="flex flex-col items-center"
-    >
-      {/* Stage Title */}
-      <h3 className="text-white text-xs md:text-sm font-bold mb-3 text-center px-2">
-        {stage.title}
-      </h3>
-
-      {/* Funnel Shape Image */}
-      <div className="relative w-full max-w-[140px] md:max-w-[160px] h-[340px] md:h-[400px] mb-3 border border-zinc-700 rounded-lg bg-zinc-900/30 p-2">
-        <Image
-          src={`/Slide 23 Funnel Sections.png/Funnel Sections.png-${stage.id}.png`}
-          alt={stage.title}
-          fill
-          className="object-contain"
-        />
-      </div>
-
-      {/* Caption */}
-      <p className="text-white text-xs md:text-sm font-bold text-center max-w-[140px] md:max-w-[160px] leading-relaxed whitespace-pre-line">
-        {stage.caption}
-      </p>
-    </motion.div>
-  );
-};
 
 // Background Icon Component
 const BackgroundIcon = ({ x, y, delay }: { x: string; y: string; delay: number }) => {
@@ -144,7 +55,7 @@ export default function Slide23GrowthAlgorithm() {
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-6 md:pt-10 pb-16">
           {/* Header Section */}
-          <div className="mb-6 md:mb-8">
+          <div className="mb-6 md:mb-8 relative z-30">
             {/* Main Title */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -160,17 +71,22 @@ export default function Slide23GrowthAlgorithm() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-sm md:text-base lg:text-lg font-medium text-white/80 text-left"
+              className="text-sm md:text-base lg:text-lg font-bold text-white text-left"
             >
               From Idea → Prototype → Deployed App → Scaled Enterprise Adoption
             </motion.h2>
           </div>
 
-          {/* Five Funnel Stages */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-4 md:mb-8">
-            {stages.map((stage) => (
-              <FunnelStage key={stage.id} stage={stage} />
-            ))}
+          {/* Total Funnel Image */}
+          <div className="w-full flex justify-center mb-0 -mt-12 md:-mt-24 relative z-10">
+            <div className="relative w-full max-w-[1400px] h-[400px] md:h-[700px]">
+              <Image
+                src="/Slide 23 Funnel Sections.png/Total Funnel.png"
+                alt="Vercel Growth Funnel"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
 
           {/* Bottom Tagline */}
@@ -179,7 +95,7 @@ export default function Slide23GrowthAlgorithm() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 1.8, duration: 0.6 }}
-            className="absolute bottom-16 left-4 md:left-6 bg-zinc-900/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-left max-w-md z-20"
+            className="relative w-full -mt-24 bg-zinc-900/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-center z-20"
           >
             <p className="text-white text-sm md:text-base lg:text-lg font-bold">
               Top of funnel grows fast. Platform monetization compounds are huge.

@@ -6,7 +6,7 @@ import ScreenSizeWarning from "@/components/ScreenSizeWarning";
 
 export const metadata: Metadata = {
   title: "Vercel Materials",
-  description: "Interactive presentation deck for Vercel",
+  description: "Interactive presentation deck",
 };
 
 export default function RootLayout({

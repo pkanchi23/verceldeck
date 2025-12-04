@@ -231,7 +231,7 @@ export default function Slide19NextLayerAbstraction() {
           </div>
 
           {/* Desktop Layout */}
-          <div className="hidden lg:grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-4">
+          <div className="hidden lg:grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-4 mt-12 md:mt-16">
             {/* Row 1: Images and Arrows (Vertically Centered) */}
             <div className="flex items-center justify-center">
               <motion.div
@@ -239,7 +239,7 @@ export default function Slide19NextLayerAbstraction() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.0, duration: 1.0, ease: "easeOut" }}
-                className="w-full aspect-square relative max-w-[300px]"
+                className="w-full aspect-square relative max-w-[345px]"
               >
                 <Image
                   src="/Slide 19 Sections.png/Next Layer of Abstraction.png-1.png"
@@ -271,7 +271,7 @@ export default function Slide19NextLayerAbstraction() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.4, duration: 1.0, ease: "easeOut" }}
-                className="w-full aspect-square relative max-w-[300px]"
+                className="w-full aspect-square relative max-w-[345px]"
               >
                 <Image
                   src="/Slide 19 Sections.png/Next Layer of Abstraction.png-2.png"
@@ -303,7 +303,7 @@ export default function Slide19NextLayerAbstraction() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: 0.8, duration: 1.0, ease: "easeOut" }}
-                className="w-full aspect-square relative max-w-[300px]"
+                className="w-full aspect-square relative max-w-[345px]"
               >
                 <Image
                   src="/Slide 19 Sections.png/Next Layer of Abstraction.png-3.png"

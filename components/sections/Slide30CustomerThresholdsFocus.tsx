@@ -53,9 +53,9 @@ export default function Slide30CustomerThresholdsFocus() {
 
 
           {/* Main Layout Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_240px] gap-6 lg:gap-8">
             {/* Left Column - Customer Thresholds Table */}
-            <div className="h-[500px] bg-transparent border-none flex items-center justify-center p-4 relative">
+            <div className="h-[600px] bg-transparent border-none flex items-center justify-center p-4 relative">
               <Image
                 src="/Slide 30 Customer Threshold/Customer Thresholds Table.png"
                 alt="Customer Thresholds Table"
@@ -65,28 +65,44 @@ export default function Slide30CustomerThresholdsFocus() {
             </div>
 
             {/* Right-Hand Callout Box */}
-            <div className="h-[500px] border border-white rounded-lg p-6 bg-transparent flex flex-col justify-center">
+            <div className="h-[300px] self-center border border-white rounded-lg p-6 bg-transparent flex flex-col justify-center">
               <div className="mb-4">
-                <span className="text-zinc-500 text-sm font-medium">
-                  CALLOUT_SECTION_TITLE_PLACEHOLDER
+                <span className="text-white text-sm font-medium">
+                  Other Factors to Consider
                 </span>
               </div>
               <ul className="space-y-2">
-                {[1, 2, 3, 4].map((num) => (
-                  <li key={num} className="flex items-start gap-2">
-                    <span className="text-white/40 text-sm">•</span>
-                    <span className="text-zinc-500 text-xs">
-                      BULLET_PLACEHOLDER_{num}
-                    </span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-2">
+                  <span className="text-white/40 text-sm">•</span>
+                  <span className="text-white text-xs">
+                    Meaningful uptick in net expansion metrics
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-white/40 text-sm">•</span>
+                  <span className="text-white text-xs">
+                    Meaningful downtick in churn
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-white/40 text-sm">•</span>
+                  <span className="text-white text-xs">
+                    GTM / S&M alignment based on customer size / spend
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-white/40 text-sm">•</span>
+                  <span className="text-white text-xs">
+                    Meaningful uptick in user engagement
+                  </span>
+                </li>
               </ul>
             </div>
           </div>
 
           {/* Footer Footnote Placeholder */}
           <div className="mt-12">
-            <p className="text-white/40 text-xs">FOOTNOTE_PLACEHOLDER</p>
+            <p className="text-white/40 text-xs"></p>
           </div>
         </div>
 

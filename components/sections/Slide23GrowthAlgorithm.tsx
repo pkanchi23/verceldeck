@@ -94,7 +94,7 @@ export default function Slide23GrowthAlgorithm() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 1.8, duration: 0.6 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
             className="relative w-full -mt-24 bg-zinc-900/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-center z-20"
           >
             <p className="text-white text-sm md:text-base lg:text-lg font-bold">

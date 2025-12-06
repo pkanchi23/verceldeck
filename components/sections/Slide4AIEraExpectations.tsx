@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 import { useState, useEffect } from "react";
 
 const cards = [
@@ -65,26 +66,11 @@ export default function Slide4AIEraExpectations() {
 
         {/* Main Content Container */}
         <div className="max-w-[1800px] mx-auto px-8 md:px-16 pt-12 md:pt-16 pb-20">
-          {/* Headline + Subheadline */}
-          <div className="mb-12 md:mb-16">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-5"
-            >
-              The AI era has changed expectations
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-lg md:text-xl lg:text-2xl text-white font-normal"
-            >
-              Customers, developers & enterprises are all demanding more
-            </motion.p>
-          </div>
+          <SlideHeader
+            title="The AI era has changed expectations"
+            subtitle="Customers, developers & enterprises are all demanding more"
+            className="mb-12 md:mb-16"
+          />
 
           {/* Three-Column Feature Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

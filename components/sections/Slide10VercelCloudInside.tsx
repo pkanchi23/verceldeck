@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 const iconLabels = [
   { label: "Logic", image: "/Slide 10 Circle SVGs/Logic SVG.png" },
@@ -44,26 +45,11 @@ export default function Slide10VercelCloudInside() {
 
         {/* Main Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16">
-          {/* Header Section */}
-          <div className="mb-6 md:mb-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3"
-            >
-              What's inside the Vercel cloud
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-sm md:text-base text-white font-normal"
-            >
-              From prompt to production, every primitive reimagined for the AI era
-            </motion.p>
-          </div>
+          <SlideHeader
+            title="What's inside the Vercel cloud"
+            subtitle="From prompt to production, every primitive reimagined for the AI era"
+            className="mb-6 md:mb-8"
+          />
 
           {/* Central Circular System Diagram */}
           <div className="relative w-full max-w-6xl mx-auto h-[540px] md:h-[600px] flex items-center justify-center">

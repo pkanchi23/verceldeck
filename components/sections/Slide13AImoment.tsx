@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide13AImoment() {
   return (
@@ -27,18 +28,10 @@ export default function Slide13AImoment() {
 
         {/* Main Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24 flex flex-col h-full pointer-events-none">
-          {/* Header Section */}
-          <div className="mb-8 md:mb-12 pointer-events-auto">
-            {/* Main Title (Formatted to match Slide 12) */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white"
-            >
-              The only platform built for this AI moment
-            </motion.h1>
-          </div>
+          <SlideHeader
+            title="The only platform built for this AI moment"
+            className="mb-8 md:mb-12 pointer-events-auto"
+          />
 
           {/* Central Content Area - Entire Graph */}
           <div className="flex items-center justify-center py-4 md:py-8 flex-1 -mt-12 pointer-events-auto">

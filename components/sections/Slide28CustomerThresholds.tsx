@@ -101,7 +101,7 @@ export default function Slide28CustomerThresholds() {
             className="mt-12"
           >
             <p className="text-white/40 text-xs">
-              FOOTNOTE_PLACEHOLDER
+              Source: Public filings, IPO roadshow presentations, Goldman Sachs Investment Research
             </p>
           </motion.div>
         </div>

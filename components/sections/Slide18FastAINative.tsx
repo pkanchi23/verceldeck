@@ -37,7 +37,9 @@ const AnimatedWordImage = ({
       style={{
         width: `${width}px`,
         height: `${height}px`,
-        filter: isHovered ? "drop-shadow(0 0 20px rgba(255, 255, 255, 0.4))" : "none",
+        filter: isHovered
+          ? "drop-shadow(0 0 28px rgba(255, 255, 255, 0.75))"
+          : "none",
       }}
     >
       <Image
@@ -138,19 +140,36 @@ const CornerLogo = ({
 };
 
 export default function Slide18FastAINative() {
+  // Gentle pulsing glow for the triangle background
+  const trianglePulse = {
+    initial: { opacity: 0, filter: "drop-shadow(0 0 0px rgba(255,255,255,0))" },
+    animate: {
+      opacity: 1,
+      filter: "drop-shadow(0 0 32px rgba(255,255,255,0.6))",
+    },
+    transition: {
+      delay: 1.5,
+      duration: 0.9,
+      ease: "easeOut",
+    },
+  };
+
   return (
     <Section id="slide-18" className="bg-black">
       <div className="relative w-full h-screen flex items-center justify-center">
         {/* Triangle Graphic - Background */}
         <div className="absolute inset-0 flex items-center justify-center z-0 -mt-24">
-          <div className="relative w-[230px] md:w-[320px] h-[185px] md:h-[250px]">
+          <motion.div
+            {...trianglePulse}
+            className="relative w-[230px] md:w-[320px] h-[185px] md:h-[250px]"
+          >
             <Image
               src="/Slide 18 Billboard/Vercel billboard Logo.svg"
               alt="Vercel Billboard Logo"
               fill
               className="object-contain"
             />
-          </div>
+          </motion.div>
         </div>
 
         {/* Main Content Container */}

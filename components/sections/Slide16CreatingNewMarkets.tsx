@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide16CreatingNewMarkets() {
   const [hoveredTier, setHoveredTier] = useState<string | null>(null);
+  const [activeGlow, setActiveGlow] = useState<string | null>(null);
 
   const glowColors = {
     A: "#FFD54A", // Yellow
@@ -15,14 +17,30 @@ export default function Slide16CreatingNewMarkets() {
     D: "#FFFFFF", // White
   };
 
-  const getGlowStyle = (id: string, isHovered: boolean) => {
-    if (!isHovered) return {};
+  const getGlowStyle = (id: string, isHighlighted: boolean) => {
+    if (!isHighlighted) return {};
     const color = glowColors[id as keyof typeof glowColors];
     return {
       boxShadow: `0 0 20px ${color}, inset 0 0 10px ${color}40`,
       borderColor: color,
     };
   };
+
+  // On first load, pulse through A → B → C → D after load-in animations
+  useEffect(() => {
+    const sequence: Array<keyof typeof glowColors> = ["A", "B", "C", "D"];
+    const timers: Array<ReturnType<typeof setTimeout>> = [];
+    const baseDelay = 2600; // allow box load-ins to finish, plus extra pause
+    const step = 700;
+
+    sequence.forEach((id, index) => {
+      const start = baseDelay + index * step;
+      timers.push(setTimeout(() => setActiveGlow(id), start));
+      timers.push(setTimeout(() => setActiveGlow(null), start + 500));
+    });
+
+    return () => timers.forEach(clearTimeout);
+  }, []);
 
   return (
     <Section id="slide-16" className="bg-black text-white font-sans">
@@ -41,15 +59,10 @@ export default function Slide16CreatingNewMarkets() {
 
         {/* Main Content Container */}
         <div className="flex-1 flex flex-col px-12 pt-12 pb-12 max-w-[1600px] mx-auto w-full">
-          {/* Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-extrabold mb-8 tracking-wide"
-          >
-            ... and creating new markets
-          </motion.h1>
+          <SlideHeader
+            title="... and creating new markets"
+            className="mb-8"
+          />
 
           {/* Two-Column Layout */}
           <div className="flex flex-col lg:flex-row gap-16 h-full flex-1 items-center">
@@ -66,7 +79,7 @@ export default function Slide16CreatingNewMarkets() {
                   onMouseEnter={() => setHoveredTier("A")}
                   onMouseLeave={() => setHoveredTier(null)}
                   className="absolute bottom-0 left-0 w-full h-full border border-white bg-transparent z-10 transition-all duration-300"
-                  style={getGlowStyle("A", hoveredTier === "A")}
+                  style={getGlowStyle("A", hoveredTier === "A" || activeGlow === "A")}
                 >
                   <div className="absolute top-4 right-4 text-right">
                     <div className="text-5xl font-extrabold mb-1">1bn+</div>
@@ -82,7 +95,7 @@ export default function Slide16CreatingNewMarkets() {
                   onMouseEnter={(e) => { e.stopPropagation(); setHoveredTier("B"); }}
                   onMouseLeave={() => setHoveredTier(null)}
                   className="absolute bottom-0 left-0 w-[75%] h-[75%] border border-white border-l-0 border-b-0 bg-transparent z-20 transition-all duration-300"
-                  style={getGlowStyle("B", hoveredTier === "B")}
+                  style={getGlowStyle("B", hoveredTier === "B" || activeGlow === "B")}
                 >
                   <div className="absolute top-4 right-4 text-right">
                     <div className="text-4xl font-extrabold mb-1">100mm</div>
@@ -98,7 +111,7 @@ export default function Slide16CreatingNewMarkets() {
                   onMouseEnter={(e) => { e.stopPropagation(); setHoveredTier("C"); }}
                   onMouseLeave={() => setHoveredTier(null)}
                   className="absolute bottom-0 left-0 w-[50%] h-[50%] border border-white border-l-0 border-b-0 bg-transparent z-30 transition-all duration-300"
-                  style={getGlowStyle("C", hoveredTier === "C")}
+                  style={getGlowStyle("C", hoveredTier === "C" || activeGlow === "C")}
                 >
                   <div className="absolute top-4 right-4 text-right">
                     <div className="text-4xl font-extrabold mb-1">57mm+</div>
@@ -114,7 +127,7 @@ export default function Slide16CreatingNewMarkets() {
                   onMouseEnter={(e) => { e.stopPropagation(); setHoveredTier("D"); }}
                   onMouseLeave={() => setHoveredTier(null)}
                   className="absolute bottom-0 left-0 w-[25%] h-[25%] border border-white border-l-0 border-b-0 bg-transparent z-40 transition-all duration-300"
-                  style={getGlowStyle("D", hoveredTier === "D")}
+                  style={getGlowStyle("D", hoveredTier === "D" || activeGlow === "D")}
                 >
                   <div className="absolute top-4 right-4 text-right">
                     <div className="text-3xl font-extrabold mb-1">34mm+</div>
@@ -122,8 +135,8 @@ export default function Slide16CreatingNewMarkets() {
                   </div>
                 </motion.div>
 
-                {/* Markers Layer - Rendered on top of all boxes */}
-                <div className="absolute inset-0 z-50 pointer-events-none">
+                {/* Markers Layer - keep below global overlays (e.g. Cmd+K nav) */}
+                <div className="absolute inset-0 z-40 pointer-events-none">
                   {/* Marker A - Top-Left of 100% Box (Top of container) */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0 }}
@@ -131,8 +144,8 @@ export default function Slide16CreatingNewMarkets() {
                     transition={{ delay: 0.3, duration: 0.5 }}
                     className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-2 border-white flex items-center justify-center bg-black transition-all duration-300"
                     style={{
-                      borderColor: hoveredTier === "A" ? glowColors.A : "white",
-                      boxShadow: hoveredTier === "A" ? `0 0 15px ${glowColors.A}` : "none"
+                      borderColor: hoveredTier === "A" || activeGlow === "A" ? glowColors.A : "white",
+                      boxShadow: hoveredTier === "A" || activeGlow === "A" ? `0 0 15px ${glowColors.A}` : "none"
                     }}
                   >
                     <span className="text-xl font-bold text-white">A</span>
@@ -145,8 +158,8 @@ export default function Slide16CreatingNewMarkets() {
                     transition={{ delay: 0.5, duration: 0.5 }}
                     className="absolute left-0 top-[25%] -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-2 border-white flex items-center justify-center bg-black transition-all duration-300"
                     style={{
-                      borderColor: hoveredTier === "B" ? glowColors.B : "white",
-                      boxShadow: hoveredTier === "B" ? `0 0 15px ${glowColors.B}` : "none"
+                      borderColor: hoveredTier === "B" || activeGlow === "B" ? glowColors.B : "white",
+                      boxShadow: hoveredTier === "B" || activeGlow === "B" ? `0 0 15px ${glowColors.B}` : "none"
                     }}
                   >
                     <span className="text-xl font-bold text-white">B</span>
@@ -159,8 +172,8 @@ export default function Slide16CreatingNewMarkets() {
                     transition={{ delay: 0.7, duration: 0.5 }}
                     className="absolute left-0 top-[50%] -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-2 border-white flex items-center justify-center bg-black transition-all duration-300"
                     style={{
-                      borderColor: hoveredTier === "C" ? glowColors.C : "white",
-                      boxShadow: hoveredTier === "C" ? `0 0 15px ${glowColors.C}` : "none"
+                      borderColor: hoveredTier === "C" || activeGlow === "C" ? glowColors.C : "white",
+                      boxShadow: hoveredTier === "C" || activeGlow === "C" ? `0 0 15px ${glowColors.C}` : "none"
                     }}
                   >
                     <span className="text-xl font-bold text-white">C</span>
@@ -173,8 +186,8 @@ export default function Slide16CreatingNewMarkets() {
                     transition={{ delay: 0.9, duration: 0.5 }}
                     className="absolute left-0 top-[75%] -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-2 border-white flex items-center justify-center bg-black transition-all duration-300"
                     style={{
-                      borderColor: hoveredTier === "D" ? glowColors.D : "white",
-                      boxShadow: hoveredTier === "D" ? `0 0 15px ${glowColors.D}` : "none"
+                      borderColor: hoveredTier === "D" || activeGlow === "D" ? glowColors.D : "white",
+                      boxShadow: hoveredTier === "D" || activeGlow === "D" ? `0 0 15px ${glowColors.D}` : "none"
                     }}
                   >
                     <span className="text-xl font-bold text-white">D</span>
@@ -195,13 +208,13 @@ export default function Slide16CreatingNewMarkets() {
                 onMouseEnter={() => setHoveredTier("A")}
                 onMouseLeave={() => setHoveredTier(null)}
                 className="relative border border-white p-6 bg-transparent transition-all duration-300"
-                style={getGlowStyle("A", hoveredTier === "A")}
+                style={getGlowStyle("A", hoveredTier === "A" || activeGlow === "A")}
               >
                 <div
                   className="absolute left-[-20px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-2 border-white flex items-center justify-center bg-black transition-all duration-300"
                   style={{
-                    borderColor: hoveredTier === "A" ? glowColors.A : "white",
-                    boxShadow: hoveredTier === "A" ? `0 0 15px ${glowColors.A}` : "none"
+                    borderColor: hoveredTier === "A" || activeGlow === "A" ? glowColors.A : "white",
+                    boxShadow: hoveredTier === "A" || activeGlow === "A" ? `0 0 15px ${glowColors.A}` : "none"
                   }}
                 >
                   <span className="text-lg font-bold">A</span>
@@ -219,13 +232,13 @@ export default function Slide16CreatingNewMarkets() {
                 onMouseEnter={() => setHoveredTier("B")}
                 onMouseLeave={() => setHoveredTier(null)}
                 className="relative border border-white p-6 bg-transparent transition-all duration-300"
-                style={getGlowStyle("B", hoveredTier === "B")}
+                style={getGlowStyle("B", hoveredTier === "B" || activeGlow === "B")}
               >
                 <div
                   className="absolute left-[-20px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-2 border-white flex items-center justify-center bg-black transition-all duration-300"
                   style={{
-                    borderColor: hoveredTier === "B" ? glowColors.B : "white",
-                    boxShadow: hoveredTier === "B" ? `0 0 15px ${glowColors.B}` : "none"
+                    borderColor: hoveredTier === "B" || activeGlow === "B" ? glowColors.B : "white",
+                    boxShadow: hoveredTier === "B" || activeGlow === "B" ? `0 0 15px ${glowColors.B}` : "none"
                   }}
                 >
                   <span className="text-lg font-bold">B</span>
@@ -243,13 +256,13 @@ export default function Slide16CreatingNewMarkets() {
                 onMouseEnter={() => setHoveredTier("C")}
                 onMouseLeave={() => setHoveredTier(null)}
                 className="relative border border-white p-6 bg-transparent transition-all duration-300"
-                style={getGlowStyle("C", hoveredTier === "C")}
+                style={getGlowStyle("C", hoveredTier === "C" || activeGlow === "C")}
               >
                 <div
                   className="absolute left-[-20px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border-2 border-white flex items-center justify-center bg-black transition-all duration-300"
                   style={{
-                    borderColor: hoveredTier === "C" ? glowColors.C : "white",
-                    boxShadow: hoveredTier === "C" ? `0 0 15px ${glowColors.C}` : "none"
+                    borderColor: hoveredTier === "C" || activeGlow === "C" ? glowColors.C : "white",
+                    boxShadow: hoveredTier === "C" || activeGlow === "C" ? `0 0 15px ${glowColors.C}` : "none"
                   }}
                 >
                   <span className="text-lg font-bold">C</span>
@@ -306,4 +319,3 @@ export default function Slide16CreatingNewMarkets() {
     </Section>
   );
 }
-

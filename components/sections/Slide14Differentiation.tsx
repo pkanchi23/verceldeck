@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 const vercelFeatures = [
   {
@@ -60,15 +61,10 @@ export default function Slide14Differentiation() {
 
         {/* Main Content Container */}
         <div className="max-w-[90rem] mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-12">
-          {/* Header */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-4"
-          >
-            Vercel's differentiation
-          </motion.h1>
+          <SlideHeader
+            title="Vercel's differentiation"
+            className="mb-2 md:mb-4"
+          />
 
           {/* Two-Column Structure */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">

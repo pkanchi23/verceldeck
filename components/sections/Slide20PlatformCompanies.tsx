@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 // Card data structure
 const companies = [
@@ -200,28 +201,11 @@ export default function Slide20PlatformCompanies() {
 
         {/* Main Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-20 pb-24">
-          {/* Header Section */}
-          <div className="mb-12 md:mb-16">
-            {/* Main Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3"
-            >
-              The new breed of platform companies for the AI era
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-lg md:text-xl lg:text-2xl font-medium text-white/70"
-            >
-              Breaking the mold
-            </motion.h2>
-          </div>
+          <SlideHeader
+            title="The new breed of platform companies for the AI era"
+            subtitle="Breaking the mold"
+            className="mb-12 md:mb-16"
+          />
 
           {/* Five Company Cards Row */}
           <div className="flex flex-wrap lg:flex-nowrap gap-4 md:gap-6 justify-center items-stretch">

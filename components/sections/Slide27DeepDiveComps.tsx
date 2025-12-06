@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide27DeepDiveComps() {
   return (
@@ -27,28 +28,11 @@ export default function Slide27DeepDiveComps() {
 
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-4 md:pt-6 pb-24">
-          {/* Header Section */}
-          <div className="mb-4 md:mb-6">
-            {/* Main Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2"
-            >
-              Deep dive into model builds of key comps for Vercel
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-base md:text-lg lg:text-xl font-medium text-white/70"
-            >
-              Best-in-class multi-product companies
-            </motion.h2>
-          </div>
+          <SlideHeader
+            title="Deep dive into model builds of key comps for Vercel"
+            subtitle="Best-in-class multi-product companies"
+            className="mb-4 md:mb-6"
+          />
 
           {/* Two Side-by-Side Placeholder Boxes */}
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-[5%] items-stretch justify-center">
@@ -101,7 +85,7 @@ export default function Slide27DeepDiveComps() {
             className="mt-12"
           >
             <p className="text-white/40 text-xs">
-              FOOTNOTE_PLACEHOLDER
+              Source: Public filings, IPO roadshow presentations, Goldman Sachs Investment Research
             </p>
           </motion.div>
         </div>

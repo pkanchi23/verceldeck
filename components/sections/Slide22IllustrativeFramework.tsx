@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 // Chart Block Component
 const ChartBlock = ({
@@ -120,10 +121,10 @@ export default function Slide22IllustrativeFramework() {
       <div className="relative w-full min-h-screen">
         {/* Header Section */}
         <div className="flex items-start justify-between px-6 md:px-12 pt-16 md:pt-20 mb-8 md:mb-12">
-          {/* Title */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-            <span className="underline">Illustrative</span> long-term framework
-          </h1>
+          <SlideHeader
+            title={<><span className="underline">Illustrative</span> long-term framework</>}
+            className="max-w-4xl"
+          />
 
           {/* Top-Right Logo (Vercel) */}
           <motion.div className="hidden md:flex w-[140px] h-[40px] items-center justify-end flex-shrink-0 ml-6">

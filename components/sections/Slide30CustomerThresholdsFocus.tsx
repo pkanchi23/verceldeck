@@ -102,7 +102,9 @@ export default function Slide30CustomerThresholdsFocus() {
 
           {/* Footer Footnote Placeholder */}
           <div className="mt-12">
-            <p className="text-white/40 text-xs"></p>
+            <p className="text-white/40 text-xs">
+              Source: Public filings, IPO roadshow presentations, Goldman Sachs Investment Research; ¹ Defined as customers with $50k+ ARR.
+            </p>
           </div>
         </div>
 

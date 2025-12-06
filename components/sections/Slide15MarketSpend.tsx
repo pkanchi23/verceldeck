@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 const marketCategories = [
   {
@@ -87,15 +88,10 @@ export default function Slide15MarketSpend() {
 
         {/* Main Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">
-          {/* Header */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 md:mb-10"
-          >
-            Abstracting away existing market spend…
-          </motion.h1>
+          <SlideHeader
+            title="Abstracting away existing market spend…"
+            className="mb-8 md:mb-10"
+          />
 
           {/* Central Cloud Box */}
           <motion.div
@@ -184,6 +180,11 @@ export default function Slide15MarketSpend() {
                 </motion.div>
               ))}
             </div>
+          </div>
+
+          {/* Footnote */}
+          <div className="max-w-6xl mx-auto text-white/40 text-xs leading-relaxed">
+            Note: Figures show 2023 TAM. 1 IDC Worldwide Content Delivery Networks Forecast, 2024; IDC Worldwide Edge Enterprise Spending Forecast (excl. Infrastructure spend), 2024. 2 Markets and Markets Severless Computing Market Forecast, 2024. 3 IDC DevOps Software Tools Forecast, 2024. 4 Gartner IT Operations Management Software Forecast, 2024. 5 Figma S-1 filing. 6 Technavio Global AI Code Tools Market Forecast, 2025.
           </div>
 
           {/* Footer Note Placeholder */}

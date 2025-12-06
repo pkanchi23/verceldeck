@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide9VercelAICloud() {
   return (
@@ -27,26 +28,11 @@ export default function Slide9VercelAICloud() {
 
         {/* Main Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-16">
-          {/* Header Section */}
-          <div className="mb-8 md:mb-10">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3"
-            >
-              Enter the Vercel AI cloud
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-base md:text-lg text-white font-normal"
-            >
-              A new platform for the AI-native loop
-            </motion.p>
-          </div>
+          <SlideHeader
+            title="Enter the Vercel AI cloud"
+            subtitle="A new platform for the AI-native loop"
+            className="mb-8 md:mb-10"
+          />
 
           {/* Central Cloud Graphic */}
           <motion.div

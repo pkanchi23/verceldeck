@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 const awsCategories = [
   "SaaS Boom",
@@ -61,15 +62,10 @@ export default function Slide12Foundation() {
 
         {/* Main Content Container */}
         <div className="w-full px-4 md:px-8 pt-16 md:pt-20 pb-24">
-          {/* Header Section */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-12 md:mb-16"
-          >
-            The foundation of an entirely new product and ecosystem
-          </motion.h1>
+          <SlideHeader
+            title="The foundation of an entirely new product and ecosystem"
+            className="mb-12 md:mb-16"
+          />
 
           {/* Main Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-4 md:gap-8 lg:gap-12 w-full mx-auto">

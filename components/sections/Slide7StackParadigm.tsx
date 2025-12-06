@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide7StackParadigm() {
   return (
@@ -27,15 +28,10 @@ export default function Slide7StackParadigm() {
 
         {/* Main Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12 h-full flex flex-col">
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-left px-8 flex-shrink-0 mb-4"
-          >
-            The stack wasn't built for this paradigm
-          </motion.h1>
+          <SlideHeader
+            title="The stack wasn't built for this paradigm"
+            className="px-8 flex-shrink-0 mb-4"
+          />
 
           {/* Central Stack Visualization */}
           <div className="relative w-full max-w-6xl mx-auto flex-grow flex flex-col items-center justify-center">
@@ -127,7 +123,7 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-              className="absolute left-[0%] md:left-[5%] top-[16%] z-30 hidden md:block"
+              className="absolute left-[0%] md:left-[5%] top-[30%] z-30 hidden md:flex justify-end w-[260px]"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}
@@ -149,7 +145,7 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.0, duration: 0.5 }}
-              className="absolute left-[0%] md:left-[5%] top-[50%] -translate-y-1/2 z-30 hidden md:block"
+              className="absolute left-[0%] md:left-[5%] top-[50%] -translate-y-1/2 z-30 hidden md:flex justify-end w-[260px]"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}
@@ -171,7 +167,7 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.2, duration: 0.5 }}
-              className="absolute left-[0%] md:left-[5%] top-[72%] z-30 hidden md:block"
+              className="absolute left-[0%] md:left-[5%] top-[64%] z-30 hidden md:flex justify-end w-[260px]"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}
@@ -194,7 +190,7 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 4.8, duration: 0.6 }}
-              className="absolute top-[28%] right-[5%] -translate-y-1/2 z-30 hidden md:block"
+              className="absolute top-[28%] right-[8%] -translate-y-1/2 z-30 hidden md:block"
             >
               <p className="text-pink-400 font-semibold text-base md:text-lg">
                 The New AI Wedges

@@ -150,7 +150,7 @@ export default function Slide18FastAINative() {
     transition: {
       delay: 1.5,
       duration: 0.9,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   };
 

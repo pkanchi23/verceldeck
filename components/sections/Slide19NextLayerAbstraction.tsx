@@ -18,7 +18,7 @@ const ColumnPlaceholder = ({
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay, duration: 0.4, ease: "easeOut" }}
+      transition={{ delay, duration: 0.9, ease: "easeOut" }}
       className="w-full aspect-square border-2 border-zinc-600 rounded-lg bg-zinc-900/30 flex items-center justify-center"
     >
       <span className="text-zinc-500 text-sm md:text-base font-medium">
@@ -41,7 +41,7 @@ const ArrowPlaceholder = ({
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay, duration: 0.4, ease: "easeOut" }}
+      transition={{ delay, duration: 0.9, ease: "easeOut" }}
       className="flex items-center justify-center px-4"
     >
       <div className="w-16 h-16 border border-zinc-600 rounded bg-zinc-900/30 flex items-center justify-center">
@@ -90,7 +90,7 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.0, duration: 0.6 }}
+                transition={{ delay: 0.0, duration: 1.2 }}
                 className="w-full aspect-[3/4] relative"
               >
                 <Image
@@ -107,7 +107,7 @@ export default function Slide19NextLayerAbstraction() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
+              transition={{ delay: 0.3, duration: 0.9 }}
               className="w-12 h-12 relative rotate-90"
             >
               <Image
@@ -124,7 +124,7 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
+                transition={{ delay: 0.4, duration: 1.2 }}
                 className="w-full aspect-[3/4] relative"
               >
                 <Image
@@ -141,7 +141,7 @@ export default function Slide19NextLayerAbstraction() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 0.7, duration: 0.4 }}
+              transition={{ delay: 0.7, duration: 0.9 }}
               className="w-12 h-12 relative rotate-90"
             >
               <Image
@@ -158,7 +158,7 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
+                transition={{ delay: 0.8, duration: 1.2 }}
                 className="w-full aspect-[3/4] relative"
               >
                 <Image
@@ -179,7 +179,7 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.0, duration: 1.0, ease: "easeOut" }}
+                transition={{ delay: 0.0, duration: 1.4, ease: "easeOut" }}
                 className="w-full aspect-[2/3] relative max-w-[460px]"
               >
                 <Image
@@ -195,7 +195,7 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.3, duration: 1.0, ease: "easeOut" }}
+                transition={{ delay: 0.3, duration: 1.4, ease: "easeOut" }}
                 className="w-16 h-16 relative"
               >
                 <Image
@@ -211,7 +211,7 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.4, duration: 1.0, ease: "easeOut" }}
+                transition={{ delay: 0.4, duration: 1.4, ease: "easeOut" }}
                 className="w-full aspect-[2/3] relative max-w-[460px]"
               >
                 <Image
@@ -227,7 +227,7 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.7, duration: 1.0, ease: "easeOut" }}
+                transition={{ delay: 0.7, duration: 1.4, ease: "easeOut" }}
                 className="w-16 h-16 relative"
               >
                 <Image
@@ -243,7 +243,7 @@ export default function Slide19NextLayerAbstraction() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.8, duration: 1.0, ease: "easeOut" }}
+                transition={{ delay: 0.8, duration: 1.4, ease: "easeOut" }}
                 className="w-full aspect-[2/3] relative max-w-[460px]"
               >
                 <Image
@@ -263,7 +263,7 @@ export default function Slide19NextLayerAbstraction() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
+              transition={{ delay: 0.3, duration: 0.9 }}
               className="text-zinc-500 text-2xl"
             >
               ↓

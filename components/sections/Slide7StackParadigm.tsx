@@ -123,7 +123,7 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-              className="absolute left-[0%] md:left-[5%] top-[30%] z-30 hidden md:flex justify-end w-[260px]"
+            className="absolute left-[-2%] md:left-[0%] top-[30%] z-30 hidden md:flex justify-end w-[260px]"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}
@@ -145,7 +145,7 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.0, duration: 0.5 }}
-              className="absolute left-[0%] md:left-[5%] top-[50%] -translate-y-1/2 z-30 hidden md:flex justify-end w-[260px]"
+            className="absolute left-[-2%] md:left-[0%] top-[50%] -translate-y-1/2 z-30 hidden md:flex justify-end w-[260px]"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}
@@ -167,7 +167,7 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.2, duration: 0.5 }}
-              className="absolute left-[0%] md:left-[5%] top-[64%] z-30 hidden md:flex justify-end w-[260px]"
+            className="absolute left-[-2%] md:left-[0%] top-[64%] z-30 hidden md:flex justify-end w-[260px]"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}

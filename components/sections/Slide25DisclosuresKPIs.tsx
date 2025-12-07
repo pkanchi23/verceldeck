@@ -83,7 +83,7 @@ export default function Slide25DisclosuresKPIs() {
 
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-20">
           <SlideHeader
             title="Disclosures and KPIs to support model building blocks"
             className="mb-8 md:mb-12"
@@ -213,16 +213,11 @@ export default function Slide25DisclosuresKPIs() {
 
 
           {/* Bottom-Left Footnote */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.8, duration: 0.5 }}
-            className="mt-12"
-          >
+          <div className="-mt-4 mb-6">
             <p className="text-white/40 text-xs">
               ¹ Key ongoing metric.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Bottom-Left Logo (Goldman Sachs) */}

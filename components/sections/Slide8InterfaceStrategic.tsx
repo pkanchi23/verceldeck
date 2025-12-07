@@ -38,7 +38,7 @@ export default function Slide8InterfaceStrategic() {
             `}</style>
 
           {/* Main Content */}
-          <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto">
             <SlideHeader
               title="The interface has become strategic"
               subtitle="Where intent becomes execution"
@@ -199,7 +199,7 @@ export default function Slide8InterfaceStrategic() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.2 }}
                     transition={{ delay: 1.4, duration: 0.6 }}
-                    className="mb-6"
+                    className="mb-8"
                   >
                     <p className="text-white text-sm md:text-base leading-relaxed">
                       UIs now trigger intelligence and AI-native apps start with the front end not the backend

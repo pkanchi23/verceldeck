@@ -10,7 +10,7 @@ interface SlideHeaderProps {
 
 export default function SlideHeader({ title, subtitle, className = "" }: SlideHeaderProps) {
   return (
-    <div className={`mb-6 md:mb-8 ${className}`}>
+    <div className={`mt-4 mb-6 md:mb-8 ${className}`}>
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

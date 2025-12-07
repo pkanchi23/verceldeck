@@ -35,7 +35,7 @@ export default function Slide17BuildersNewEra() {
           />
 
           {/* Central Content Area - Stairs Logo Scene */}
-          <div className="flex items-center justify-center py-4 md:py-8 flex-1 mt-8 md:mt-12">
+          <div className="flex items-center justify-center py-4 md:py-8 flex-1 mt-4 md:mt-8">
             <motion.div
               initial={{ opacity: 0, scale: 1.2 }}
               whileInView={{ opacity: 1, scale: 1.2 }}

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide34Disclaimer() {
   return (
@@ -26,15 +27,12 @@ export default function Slide34Disclaimer() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">
-          {/* Title */}
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-12 md:mb-16">
-            Disclaimer
-          </h1>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-10 pb-12">
+          <SlideHeader title="Disclaimer" className="mb-10 md:mb-12" />
 
           {/* Body Text Area - Full Width Disclaimer Placeholder */}
-          <div className="max-w-5xl whitespace-pre-line max-h-[calc(100vh-220px)] overflow-y-auto">
-            <p className="text-white text-[11px] md:text-xs leading-relaxed">
+          <div className="max-w-7xl whitespace-pre-line">
+            <p className="text-white text-[9px] leading-relaxed md:text-[10px] md:leading-relaxed">
               These materials have been prepared by Goldman Sachs on a confidential basis for presentation solely to Vercel, Inc. (the "Company") in connection with an informational presentation which Goldman Sachs is making to senior management, at the Company’s invitation. These materials and Goldman Sachs’ presentation relating to these materials (collectively, the “Presentation”) may not be disclosed to any third party or circulated or referred to publicly or used for or relied upon for any other purpose without the prior written consent of Goldman Sachs.  The Presentation was not prepared with a view to public disclosure or to conform to any disclosure standards under any state, federal or international securities laws or other laws, rules or regulations, and Goldman Sachs does not take any responsibility for the use of the Presentation by persons other than those set forth above. Notwithstanding anything in this Presentation to the contrary, the Company may disclose to any person the US federal income and state income tax treatment and tax structure of any transaction described herein and all materials of any kind (including tax opinions and other tax analyses) that are provided to the Company relating to such tax treatment and tax structure, without Goldman Sachs imposing any limitation of any kind. The Presentation has been prepared by the Investment Banking Division of Goldman Sachs and is not a product of its research department.
               <br />
               <br />

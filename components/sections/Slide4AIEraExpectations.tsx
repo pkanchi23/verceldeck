@@ -65,11 +65,11 @@ export default function Slide4AIEraExpectations() {
         </motion.div>
 
         {/* Main Content Container */}
-        <div className="max-w-[1800px] mx-auto px-8 md:px-16 pt-12 md:pt-16 pb-20">
+        <div className="max-w-[1800px] mx-auto px-8 md:px-16 pt-12 md:pt-16 pb-20 flex flex-col">
           <SlideHeader
             title="The AI era has changed expectations"
             subtitle="Customers, developers & enterprises are all demanding more"
-            className="mb-12 md:mb-16"
+            className="mb-12 md:mb-16 text-left"
           />
 
           {/* Three-Column Feature Cards */}

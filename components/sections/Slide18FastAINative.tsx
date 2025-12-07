@@ -238,7 +238,7 @@ export default function Slide18FastAINative() {
           <CornerLogo
             src="/Vercel Logo.svg"
             alt="Vercel"
-            delay={1.1}
+            delay={2.0}
           />
         </div>
 
@@ -247,22 +247,16 @@ export default function Slide18FastAINative() {
           <CornerLogo
             src="/v0 Logo.svg"
             alt="v0"
-            delay={1.2}
+            delay={2.05}
             width={96}
             height={32}
           />
         </div>
 
         {/* Page Number - Bottom-Right (lower position) */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 1.3, duration: 0.4 }}
-          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
-        >
+        <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70">
           18
-        </motion.div>
+        </div>
       </div>
     </Section>
   );

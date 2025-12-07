@@ -61,14 +61,14 @@ export default function Slide12Foundation() {
         </motion.div>
 
         {/* Main Content Container */}
-        <div className="w-full px-4 md:px-8 pt-16 md:pt-20 pb-24">
+        <div className="w-full px-4 md:px-8 pt-10 md:pt-14 pb-14">
           <SlideHeader
             title="The foundation of an entirely new product and ecosystem"
             className="mb-12 md:mb-16"
           />
 
           {/* Main Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-4 md:gap-8 lg:gap-12 w-full mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-4 md:gap-8 lg:gap-10 w-full mx-auto">
             {/* Left Column (AWS) */}
             <div className="flex flex-col items-center gap-8 justify-between w-full">
               {/* AWS Categories */}
@@ -90,7 +90,7 @@ export default function Slide12Foundation() {
               </motion.div>
 
               {/* Left Pyramid (AWS) */}
-              <div className="flex flex-col items-center gap-3 w-full">
+              <div className="flex flex-col items-center gap-2 w-full">
                 {/* Pyramid Rows (bottom to top) */}
                 <div className="flex flex-col-reverse items-center gap-1">
                   {leftPyramidRows.map((row, rowIndex) => (
@@ -111,7 +111,7 @@ export default function Slide12Foundation() {
                         return (
                           <div
                             key={boxIndex}
-                            className="relative w-14 h-14 md:w-[68px] md:h-[68px] rounded bg-transparent overflow-hidden"
+                            className="relative w-11 h-11 md:w-13 md:h-13 rounded bg-transparent overflow-hidden"
                           >
                             {logoSrc && (
                               <Image
@@ -190,7 +190,7 @@ export default function Slide12Foundation() {
                         return (
                           <div
                             key={boxIndex}
-                            className="relative w-14 h-14 md:w-[68px] md:h-[68px] rounded bg-transparent overflow-hidden"
+                            className="relative w-13 h-13 md:w-16 md:h-16 rounded bg-transparent overflow-hidden"
                           >
                             {logoSrc && (
                               <Image
@@ -213,7 +213,7 @@ export default function Slide12Foundation() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
-                  className="w-full max-w-[1728px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2 px-8"
+                  className="w-full max-w-[1200px] h-12 md:h-16 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-1 px-6"
                 >
                   <div className="relative w-[160px] h-[50px]">
                     <Image

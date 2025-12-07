@@ -4,6 +4,7 @@ import "./globals.css";
 import TableOfContents from "@/components/TableOfContents";
 import ScreenSizeWarning from "@/components/ScreenSizeWarning";
 import AppGuard from "@/components/AppGuard";
+import SlideJump from "@/components/SlideJump";
 
 export const metadata: Metadata = {
   title: "Vercel Materials",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <AppGuard>
           <ScreenSizeWarning />
           <TableOfContents />
+          <SlideJump />
           {children}
         </AppGuard>
       </body>

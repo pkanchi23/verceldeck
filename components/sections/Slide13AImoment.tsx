@@ -34,20 +34,20 @@ export default function Slide13AImoment() {
           />
 
           {/* Central Content Area - Entire Graph */}
-          <div className="flex items-center justify-center py-4 md:py-8 flex-1 -mt-12 pointer-events-auto">
+          <div className="flex items-center justify-center py-4 md:py-8 flex-1 -mt-6 pointer-events-auto">
             <motion.div
               initial={{ opacity: 0, scale: 1.2 }}
               whileInView={{ opacity: 1, scale: 1.1 }} // Increased scale to 1.1
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-              className="relative"
+              className="relative max-h-[720px]"
             >
               <Image
                 src="/Slide 13 Graph Quadrants.png/Entire Graph.png"
                 alt="AI Moment Graph"
                 width={1000}
                 height={1000}
-                className="w-auto h-auto max-w-full max-h-[600px] object-contain"
+                className="w-auto h-auto max-w-full max-h-[720px] object-contain"
               />
             </motion.div>
           </div>

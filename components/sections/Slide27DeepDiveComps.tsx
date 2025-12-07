@@ -27,7 +27,7 @@ export default function Slide27DeepDiveComps() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-4 md:pt-6 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-6 md:pt-8 pb-40">
           <SlideHeader
             title="Deep dive into model builds of key comps for Vercel"
             subtitle="Best-in-class multi-product companies"
@@ -42,7 +42,7 @@ export default function Slide27DeepDiveComps() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] bg-transparent p-0 border-none h-[360px] md:h-[450px] lg:h-[540px]"
+              className="flex-1 lg:w-[40%] bg-transparent p-0 border-none h-[320px] md:h-[420px] lg:h-[500px]"
             >
               <div className="flex flex-col items-center h-full">
                 <div className="flex-1 flex items-center justify-center w-full relative">
@@ -62,7 +62,7 @@ export default function Slide27DeepDiveComps() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] bg-transparent p-0 border-none h-[360px] md:h-[450px] lg:h-[540px]"
+              className="flex-1 lg:w-[40%] bg-transparent p-0 border-none h-[320px] md:h-[420px] lg:h-[500px]"
             >
               <div className="flex flex-col items-center h-full">
                 <div className="flex-1 flex items-center justify-center w-full relative">
@@ -82,7 +82,7 @@ export default function Slide27DeepDiveComps() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.5 }}
-            className="mt-12"
+            className="mt-8 mb-6"
           >
             <p className="text-white/40 text-xs">
               Source: Public filings, IPO roadshow presentations, Goldman Sachs Investment Research

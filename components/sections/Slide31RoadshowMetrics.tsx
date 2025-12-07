@@ -143,7 +143,9 @@ export default function Slide36RoadshowMetrics() {
 
           {/* Footer Footnote */}
           <div className="mt-6">
-            <p className="text-white/40 text-xs">FOOTNOTE_PLACEHOLDER</p>
+            <p className="text-white/40 text-xs">
+            Source: Public filings, IPO roadshow presentations
+            </p>
           </div>
         </div>
 

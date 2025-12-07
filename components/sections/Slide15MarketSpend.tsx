@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 const marketCategories = [
   {
@@ -86,16 +87,11 @@ export default function Slide15MarketSpend() {
         </motion.div>
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">
-          {/* Header */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 md:mb-10"
-          >
-            Abstracting away existing market spend…
-          </motion.h1>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-18">
+          <SlideHeader
+            title="Abstracting away existing market spend…"
+            className="mb-8 md:mb-10"
+          />
 
           {/* Central Cloud Box */}
           <motion.div
@@ -103,7 +99,7 @@ export default function Slide15MarketSpend() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="w-full max-w-3xl mx-auto mb-4 md:mb-8 mt-8 md:mt-12 relative z-20"
+            className="w-full max-w-3xl mx-auto mb-4 md:mb-6 mt-6 md:mt-8 relative z-20"
           >
             <div
               className="h-[240px] md:h-[300px] border-2 border-white rounded-2xl bg-black flex items-center justify-center relative"
@@ -124,7 +120,7 @@ export default function Slide15MarketSpend() {
           </motion.div>
 
           {/* Bottom Market Category Bars */}
-          <div className="relative max-w-6xl mx-auto mb-8">
+          <div className="relative max-w-6xl mx-auto mb-6">
 
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 relative z-10">
@@ -186,11 +182,9 @@ export default function Slide15MarketSpend() {
             </div>
           </div>
 
-          {/* Footer Note Placeholder */}
-          <div className="text-center max-w-4xl mx-auto">
-            <p className="text-white text-xs opacity-40">
-              [ SMALL FOOTNOTE TEXT PLACEHOLDER — MULTI-LINE ALLOWED ]
-            </p>
+          {/* Footnote */}
+          <div className="max-w-6xl mx-auto text-white/40 text-[10px] leading-relaxed mt-4">
+            Note: Figures show 2023 TAM. 1 IDC Worldwide Content Delivery Networks Forecast, 2024; IDC Worldwide Edge Enterprise Spending Forecast (excl. Infrastructure spend), 2024. 2 Markets and Markets Severless Computing Market Forecast, 2024. 3 IDC DevOps Software Tools Forecast, 2024. 4 Gartner IT Operations Management Software Forecast, 2024. 5 Figma S-1 filing. 6 Technavio Global AI Code Tools Market Forecast, 2025.
           </div>
         </div>
 

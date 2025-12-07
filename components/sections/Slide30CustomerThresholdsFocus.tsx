@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide30CustomerThresholdsFocus() {
   const companies = ["FIGMA", "GITLAB", "MONDAY", "DATADOG", "CLOUDFLARE"];
@@ -36,26 +37,20 @@ export default function Slide30CustomerThresholdsFocus() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-6 md:pt-10 pb-20">
           {/* Header Section */}
-          <div className="mb-8 md:mb-12">
-            {/* Main Title */}
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">
-              What is the right customer &quot;thresholds&quot; to focus on?
-            </h1>
-
-            {/* Subtitle */}
-            <h2 className="text-base md:text-lg lg:text-xl font-medium text-white/70">
-              Company disclosures at IPO
-            </h2>
-          </div>
+          <SlideHeader
+            title='What is the right customer "thresholds" to focus on?'
+            subtitle="Company disclosures at IPO"
+            className="mb-8 md:mb-12 whitespace-nowrap"
+          />
 
 
 
           {/* Main Layout Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_240px] gap-6 lg:gap-8">
             {/* Left Column - Customer Thresholds Table */}
-            <div className="h-[600px] bg-transparent border-none flex items-center justify-center p-4 relative">
+            <div className="h-[500px] bg-transparent border-none flex items-center justify-center p-4 relative">
               <Image
                 src="/Slide 30 Customer Threshold/Customer Thresholds Table.png"
                 alt="Customer Thresholds Table"
@@ -74,25 +69,25 @@ export default function Slide30CustomerThresholdsFocus() {
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-white/40 text-sm">•</span>
-                  <span className="text-white text-xs">
+                  <span className="text-white text-sm">
                     Meaningful uptick in net expansion metrics
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-white/40 text-sm">•</span>
-                  <span className="text-white text-xs">
+                  <span className="text-white text-sm">
                     Meaningful downtick in churn
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-white/40 text-sm">•</span>
-                  <span className="text-white text-xs">
+                  <span className="text-white text-sm">
                     GTM / S&M alignment based on customer size / spend
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-white/40 text-sm">•</span>
-                  <span className="text-white text-xs">
+                  <span className="text-white text-sm">
                     Meaningful uptick in user engagement
                   </span>
                 </li>
@@ -100,9 +95,11 @@ export default function Slide30CustomerThresholdsFocus() {
             </div>
           </div>
 
-          {/* Footer Footnote Placeholder */}
-          <div className="mt-12">
-            <p className="text-white/40 text-xs"></p>
+          {/* Footer Footnote */}
+          <div className="-mt-6 mb-6">
+            <p className="text-white/40 text-xs">
+              Source: Public filings, IPO roadshow presentations, Goldman Sachs Investment Research; ¹ Defined as customers with $50k+ ARR.
+            </p>
           </div>
         </div>
 

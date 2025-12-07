@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 const iconLabels = [
   { label: "Logic", image: "/Slide 10 Circle SVGs/Logic SVG.png" },
@@ -43,30 +44,15 @@ export default function Slide10VercelCloudInside() {
         </motion.div>
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16">
-          {/* Header Section */}
-          <div className="mb-6 md:mb-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3"
-            >
-              What's inside the Vercel cloud
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-sm md:text-base text-white font-normal"
-            >
-              From prompt to production, every primitive reimagined for the AI era
-            </motion.p>
-          </div>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-12">
+          <SlideHeader
+            title="What's inside the Vercel cloud"
+            subtitle="From prompt to production, every primitive reimagined for the AI era"
+            className="mb-6 md:mb-8"
+          />
 
           {/* Central Circular System Diagram */}
-          <div className="relative w-full max-w-6xl mx-auto h-[540px] md:h-[600px] flex items-center justify-center">
+          <div className="relative w-full max-w-6xl mx-auto h-[480px] md:h-[520px] flex items-center justify-center">
             {/* Purple Glow Background */}
             <div
               className="absolute inset-0 flex items-center justify-center"
@@ -112,7 +98,7 @@ export default function Slide10VercelCloudInside() {
                 transition={{ delay: 0.7, duration: 0.8 }}
                 className="absolute w-[80px] h-[80px] flex items-center justify-center"
               >
-                <div className="w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-b-[28px] border-b-white" />
+                <div className="w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-b-[28px] border-b-white font-bold" />
               </motion.div>
 
               {/* Icon Placeholders around Outer Ring */}
@@ -165,7 +151,7 @@ export default function Slide10VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.6, duration: 0.6 }}
-              className="absolute top-[0%] left-[0%] w-[290px] h-[240px] border border-white/30 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
+              className="absolute top-[0%] left-[0%] w-[290px] h-[230px] border border-white/30 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
             >
               <h3 className="text-white font-bold text-xl mb-4">Compute & Deployment</h3>
               <ul className="space-y-2 text-white text-base">
@@ -185,7 +171,7 @@ export default function Slide10VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.7, duration: 0.6 }}
-              className="absolute top-[0%] right-[0%] w-[290px] h-[240px] border border-pink-500/40 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
+              className="absolute top-[0%] right-[0%] w-[290px] h-[230px] border border-pink-500/40 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
             >
               <h3 className="font-bold text-xl mb-4" style={{ color: "#FF32FF" }}>
                 AI & Personalization
@@ -204,7 +190,7 @@ export default function Slide10VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.8, duration: 0.6 }}
-              className="absolute bottom-[4%] left-[0%] w-[290px] h-[240px] border border-yellow-500/40 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
+              className="absolute bottom-[4%] left-[0%] w-[290px] h-[230px] border border-yellow-500/40 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
             >
               <h3 className="font-bold text-xl mb-4" style={{ color: "#F9D65C" }}>
                 Security / Reliability
@@ -222,7 +208,7 @@ export default function Slide10VercelCloudInside() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.9, duration: 0.6 }}
-              className="absolute bottom-[4%] right-[0%] w-[290px] h-[240px] border border-teal-500/40 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
+              className="absolute bottom-[4%] right-[0%] w-[290px] h-[230px] border border-teal-500/40 rounded-xl p-6 bg-zinc-900/80 flex flex-col"
             >
               <h3 className="font-bold text-xl mb-4" style={{ color: "#58F0D0" }}>
                 Dev Tooling and Insights

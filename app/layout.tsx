@@ -3,6 +3,8 @@ import { GeistSans, GeistMono } from "geist/font";
 import "./globals.css";
 import TableOfContents from "@/components/TableOfContents";
 import ScreenSizeWarning from "@/components/ScreenSizeWarning";
+import AppGuard from "@/components/AppGuard";
+import SlideJump from "@/components/SlideJump";
 
 export const metadata: Metadata = {
   title: "Vercel Materials",
@@ -19,9 +21,12 @@ export default function RootLayout({
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} antialiased bg-black text-slate-100`}
       >
-        <ScreenSizeWarning />
-        <TableOfContents />
-        {children}
+        <AppGuard>
+          <ScreenSizeWarning />
+          <TableOfContents />
+          <SlideJump />
+          {children}
+        </AppGuard>
       </body>
     </html>
   );

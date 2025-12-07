@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide8InterfaceStrategic() {
   return (
@@ -37,27 +38,12 @@ export default function Slide8InterfaceStrategic() {
             `}</style>
 
           {/* Main Content */}
-          <div className="max-w-7xl mx-auto">
-            {/* Title and Subtitle */}
-            <div className="mb-4 md:mb-6 relative z-20">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.8 }}
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3"
-              >
-                The interface has become strategic
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="text-lg md:text-xl text-white font-normal"
-              >
-                Where intent becomes execution
-              </motion.p>
-            </div>
+            <div className="max-w-7xl mx-auto">
+            <SlideHeader
+              title="The interface has become strategic"
+              subtitle="Where intent becomes execution"
+              className="mb-4 md:mb-6 relative z-20"
+            />
 
             {/* Main Diagram Area */}
             <div className="relative w-full max-w-6xl mx-auto h-[600px] md:h-[650px]">
@@ -213,7 +199,7 @@ export default function Slide8InterfaceStrategic() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.2 }}
                     transition={{ delay: 1.4, duration: 0.6 }}
-                    className="mb-6"
+                    className="mb-8"
                   >
                     <p className="text-white text-sm md:text-base leading-relaxed">
                       UIs now trigger intelligence and AI-native apps start with the front end not the backend

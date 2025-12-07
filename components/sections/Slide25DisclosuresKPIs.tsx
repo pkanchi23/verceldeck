@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 // Reusable placeholder components
 const LabelBox = ({
@@ -82,16 +83,11 @@ export default function Slide25DisclosuresKPIs() {
 
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-24">
-          {/* Header Section */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-8 md:mb-12"
-          >
-            Disclosures and KPIs to support model building blocks
-          </motion.h1>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-20">
+          <SlideHeader
+            title="Disclosures and KPIs to support model building blocks"
+            className="mb-8 md:mb-12"
+          />
 
           {/* Revenue Header with A/B Markers */}
           <div className="mb-8 md:mb-12">
@@ -103,9 +99,7 @@ export default function Slide25DisclosuresKPIs() {
                 transition={{ delay: 0.5, duration: 0.5 }}
                 className="w-full max-w-5xl border-2 border-white rounded-full bg-zinc-900/50 p-2 text-center"
               >
-                <span className="text-white text-sm md:text-base font-bold">
-                  REVENUE_HEADER_PLACEHOLDER
-                </span>
+                <span className="text-white text-sm md:text-base font-bold">Revenue</span>
               </motion.div>
 
               {/* A Marker */}
@@ -137,14 +131,11 @@ export default function Slide25DisclosuresKPIs() {
             {/* LEFT COLUMN - User-Based Framework (Path A) */}
             <div className="space-y-6 pt-6 border-t-2 border-transparent">
               {/* Q Label */}
-              <LabelBox
-                label="DISCLOSURE_FRAMEWORK_Q_LABEL_PLACEHOLDER"
-                delay={0.9}
-              />
+              <LabelBox label="Disclosure Framework to Support Q" delay={0.9} />
 
               {/* Q Support Metrics */}
               <BulletListBox
-                label="Q_SUPPORT_METRICS_PLACEHOLDER"
+                label=""
                 items={[
                   "Number of Free Users",
                   "Number of Paying Users¹",
@@ -154,14 +145,11 @@ export default function Slide25DisclosuresKPIs() {
               />
 
               {/* P Label */}
-              <LabelBox
-                label="DISCLOSURE_FRAMEWORK_P_LABEL_PLACEHOLDER"
-                delay={1.1}
-              />
+              <LabelBox label="Disclosure Framework to Support P" delay={1.1} />
 
               {/* P Support Metrics */}
               <BulletListBox
-                label="P_SUPPORT_METRICS_PLACEHOLDER"
+                label=""
                 items={[
                   "Mix of Users by Pricing Tier / License Type / Persona",
                   "Average Number of Products per User",
@@ -182,17 +170,14 @@ export default function Slide25DisclosuresKPIs() {
                 style={{ borderColor: "rgba(234, 179, 8, 0.6)", backgroundColor: "rgba(234, 179, 8, 0.03)" }}
               >
                 {/* Q Label */}
-                <LabelBox
-                  label="DISCLOSURE_FRAMEWORK_Q_LABEL_PLACEHOLDER_RIGHT"
-                  delay={1.4}
-                />
+                <LabelBox label="Disclosure Framework to Support Q" delay={1.4} />
 
                 {/* Q Support - Customer-Centric */}
                 <BulletListBox
-                  label="Q_SUPPORT_CUSTOMER_CENTRIC_PLACEHOLDER"
+                  label=""
                   items={[
                     "Number of Customers¹",
-                    'Discussion of "base" customers subset',
+                    "Discuss potential for subset of paying customers as “base” customers (e.g., customers $1k+ ARR or over X users)",
                     "Number of Customers over [$X]¹",
                   ]}
                   delay={1.5}
@@ -200,7 +185,7 @@ export default function Slide25DisclosuresKPIs() {
 
                 {/* P Support - Customer-Centric */}
                 <BulletListBox
-                  label="P_SUPPORT_CUSTOMER_CENTRIC_PLACEHOLDER"
+                  label=""
                   items={[
                     "Net Dollar Retention¹",
                     "Gross Dollar Retention",
@@ -228,16 +213,11 @@ export default function Slide25DisclosuresKPIs() {
 
 
           {/* Bottom-Left Footnote */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.8, duration: 0.5 }}
-            className="mt-12"
-          >
+          <div className="-mt-4 mb-6">
             <p className="text-white/40 text-xs">
               ¹ Key ongoing metric.
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* Bottom-Left Logo (Goldman Sachs) */}

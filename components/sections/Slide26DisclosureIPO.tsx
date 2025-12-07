@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide26DisclosureIPO() {
   return (
@@ -27,15 +28,10 @@ export default function Slide26DisclosureIPO() {
 
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-4 md:pt-6 pb-24">
-          {/* Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 md:mb-8"
-          >
-            What do most companies disclose at IPO?
-          </motion.h1>
+          <SlideHeader
+            title="What do most companies disclose at IPO?"
+            className="mb-6 md:mb-8"
+          />
 
           {/* Large Centered Disclosure Table */}
           <div className="flex items-center justify-center py-4 md:py-6 relative z-0">
@@ -47,7 +43,7 @@ export default function Slide26DisclosureIPO() {
               className="w-full h-[600px] md:h-[720px] lg:h-[840px] relative -mt-40"
             >
               <Image
-                src="/Slide 26 Disclosures/Disclosures Table.png"
+                src="/Slide 26 Disclosures/Disclosures Table v2.png"
                 alt="Disclosure Table"
                 fill
                 className="object-contain"
@@ -63,8 +59,8 @@ export default function Slide26DisclosureIPO() {
           transition={{ delay: 0.8, duration: 0.5 }}
           className="absolute bottom-20 left-4 md:bottom-20 md:left-6"
         >
-          <p className="text-white/40 text-xs">
-            FOOTNOTE_PLACEHOLDER
+          <p className="text-white/40 text-[10px] leading-relaxed">
+            Source: Public filings, IPO roadshow presentations; Note: A check represents either a range or a specific number is disclosed. ARR is checked even if the $ figure is not explicitly provided but can be approximated from other disclosure. RPO/Backlog and Billings are checked only if the figure is disclosed as a key business metric or Non-GAAP reconciliation. Sub-Segment of Total Paying Customers is checked if a company releases the number of customers for a specific product, customers that fall in a specific revenue/ARR/ACV bucket, Fortune 100 customers or active paying customer accounts. TAM reflects the total addressable market as of the IPO year, as disclosed by the company. A check represents either a range or specific number disclosed at the time of IPO. ¹ GitLab Total Paying Customers reflects “Base Customers” with $5k+ in ARR, which represents 90%+ of total ARR. ² CrowdStrike Total Paying Customers reflects “Subscription Customers”, which represents 95%+ of total revenue. ³ GitLab Sub-Segment of Total Paying Customers reflects customers with $100k+ and $1mm+ in ARR. 4 Slack disclosed % revenue derived from customers that upgraded from free to paid but not specific mix by tier.
           </p>
         </motion.div>
 

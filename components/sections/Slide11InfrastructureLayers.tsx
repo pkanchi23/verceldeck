@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 const layers = [
   {
@@ -59,19 +60,14 @@ export default function Slide11InfrastructureLayers() {
         </motion.div>
 
         {/* Main Content Container */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-16">
-          {/* Header Section */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-12"
-          >
-            Setting up a new class of infrastructure
-          </motion.h1>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-12">
+          <SlideHeader
+            title="Setting up a new class of infrastructure"
+            className="mb-8 md:mb-12"
+          />
 
           {/* Vertical Layer Stack */}
-          <div className="space-y-2 md:space-y-2.5 max-w-[80rem] mx-auto">
+          <div className="space-y-2 md:space-y-3 max-w-[80rem] mx-auto">
             {layers.map((layer, index) => (
               <motion.div
                 key={layer.heading}
@@ -83,7 +79,7 @@ export default function Slide11InfrastructureLayers() {
                   duration: 0.6,
                   ease: "easeOut",
                 }}
-                className="p-3 md:p-4 flex flex-col items-center justify-center text-center min-h-[36px] md:min-h-[42px]"
+                className="p-2 md:p-3 flex flex-col items-center justify-center text-center min-h-[28px] md:min-h-[34px]"
                 style={{
                   background: layer.bgColor,
                 }}

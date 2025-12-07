@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 const vercelFeatures = [
   {
@@ -59,21 +60,16 @@ export default function Slide14Differentiation() {
         </motion.div>
 
         {/* Main Content Container */}
-        <div className="max-w-[90rem] mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-12">
-          {/* Header */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-4"
-          >
-            Vercel's differentiation
-          </motion.h1>
+        <div className="max-w-[90rem] mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-10">
+          <SlideHeader
+            title="Vercel's differentiation"
+            className="mb-2 md:mb-4"
+          />
 
           {/* Two-Column Structure */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 items-stretch">
             {/* Left Column - Vercel Section */}
-            <div className="border border-white rounded-2xl p-3 md:p-4 flex flex-col">
+            <div className="border border-white rounded-2xl p-3 md:p-3.5 flex flex-col">
               {/* Title */}
               <div className="flex flex-col items-center mb-4">
                 <div className="relative w-[120px] h-[30px]">
@@ -99,7 +95,7 @@ export default function Slide14Differentiation() {
                       duration: 0.5,
                       ease: "easeOut",
                     }}
-                    className="border border-white rounded-xl p-2 md:p-3 flex gap-3"
+                    className="border border-white rounded-xl p-2 md:p-2.5 flex gap-3"
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0 w-10 h-10 border border-white rounded bg-transparent relative">
@@ -113,10 +109,10 @@ export default function Slide14Differentiation() {
 
                     {/* Text Block */}
                     <div className="flex-1">
-                      <h3 className="text-white font-bold text-sm md:text-base mb-0.5">
+                      <h3 className="text-white font-bold text-sm md:text-base mb-0.5 leading-tight">
                         {feature.title}
                       </h3>
-                      <p className="text-white text-xs md:text-sm font-light opacity-90">
+                      <p className="text-white text-xs md:text-sm font-light opacity-90 leading-snug">
                         {feature.description}
                       </p>
                     </div>
@@ -131,7 +127,7 @@ export default function Slide14Differentiation() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.3, duration: 0.6 }}
-              className="border-2 border-red-500 rounded-2xl p-3 md:p-4 flex flex-col"
+              className="border-2 border-red-500 rounded-2xl p-3 md:p-3.5 flex flex-col"
             >
               {/* Title */}
               <div className="flex flex-col items-center mb-4">

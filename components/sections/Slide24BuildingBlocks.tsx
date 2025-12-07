@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 // Reusable placeholder components
 const PlaceholderBox = ({
@@ -66,28 +67,11 @@ export default function Slide24BuildingBlocks() {
 
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-24">
-          {/* Header Section */}
-          <div className="mb-8 md:mb-12">
-            {/* Main Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3"
-            >
-              Building blocks for Vercel&apos;s model as a public company
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-base md:text-lg lg:text-xl font-medium text-white"
-            >
-              Different paths investors could take to evaluate P*Q for Vercel
-            </motion.h2>
-          </div>
+          <SlideHeader
+            title="Building blocks for Vercel's model as a public company"
+            subtitle="Different paths investors could take to evaluate P*Q for Vercel"
+            className="mb-8 md:mb-12"
+          />
 
           {/* Revenue Header with A/B Markers */}
           <div className="mb-8 md:mb-12">
@@ -100,7 +84,7 @@ export default function Slide24BuildingBlocks() {
                 className="w-full max-w-5xl border-2 border-white rounded-full bg-zinc-900/50 p-4 text-center"
               >
                 <span className="text-white text-sm md:text-base font-bold">
-                  REVENUE_HEADER_PLACEHOLDER
+                  Revenue
                 </span>
               </motion.div>
 
@@ -134,7 +118,7 @@ export default function Slide24BuildingBlocks() {
             <div className="space-y-6 pt-6 border-t-2 border-transparent">
               {/* A1. Label */}
               <PlaceholderBox
-                label="P*Q_ONGOING_LABEL_PLACEHOLDER"
+                label="P*Q Ongoing"
                 delay={0.9}
                 className="h-12"
               />
@@ -142,13 +126,13 @@ export default function Slide24BuildingBlocks() {
               {/* A2. Ongoing P*Q Boxes */}
               <div className="grid grid-cols-[1fr_auto_1fr] gap-3 items-center">
                 <PlaceholderBox
-                  label="PAID_USERS_PLACEHOLDER"
+                  label="Paid Users"
                   delay={1.0}
                   className="h-14"
                 />
                 <TimesIcon delay={1.1} />
                 <PlaceholderBox
-                  label="ARPU_PLACEHOLDER"
+                  label="ARPU"
                   delay={1.2}
                   className="h-14"
                 />
@@ -156,7 +140,7 @@ export default function Slide24BuildingBlocks() {
 
               {/* A3. Disclosure Framework */}
               <PlaceholderBox
-                label="USER_CENTRIC_DISCLOSURE_PLACEHOLDER"
+                label="User-Centric (Granular)"
                 delay={1.3}
                 className="h-16"
               />
@@ -164,13 +148,13 @@ export default function Slide24BuildingBlocks() {
               {/* A4. P*Q Longer-Term */}
               <div className="grid grid-cols-[1fr_auto_1fr] gap-3 items-center">
                 <PlaceholderBox
-                  label="TARGET_PAID_USERS_PLACEHOLDER"
+                  label="Target # of Paid Users"
                   delay={1.4}
                   className="h-14"
                 />
                 <TimesIcon delay={1.5} />
                 <PlaceholderBox
-                  label="ARPU_PLACEHOLDER"
+                  label="ARPU"
                   delay={1.6}
                   className="h-14"
                 />
@@ -189,7 +173,7 @@ export default function Slide24BuildingBlocks() {
               >
                 {/* B1. Label */}
                 <PlaceholderBox
-                  label="P*Q_ONGOING_LABEL_PLACEHOLDER_RIGHT"
+                  label="P*Q Ongoing"
                   delay={1.8}
                   className="h-12"
                 />
@@ -197,13 +181,13 @@ export default function Slide24BuildingBlocks() {
                 {/* B2. Ongoing P*Q Boxes */}
                 <div className="grid grid-cols-[1fr_auto_0.8fr] gap-3 items-center">
                   <PlaceholderBox
-                    label="NUM_CUSTOMERS_PLACEHOLDER"
+                    label="# of Customers"
                     delay={1.9}
                     className="h-14"
                   />
                   <TimesIcon delay={2.0} />
                   <PlaceholderBox
-                    label="ARPC_PLACEHOLDER"
+                    label="ARPC (Customers)"
                     delay={2.1}
                     className="h-14 overflow-hidden"
                   />
@@ -211,7 +195,7 @@ export default function Slide24BuildingBlocks() {
 
                 {/* B3. Disclosure Framework */}
                 <PlaceholderBox
-                  label="CUSTOMER_CENTRIC_DISCLOSURE_PLACEHOLDER"
+                  label="Customer-Centric (Aggregate)"
                   delay={2.2}
                   className="h-16"
                 />
@@ -219,13 +203,13 @@ export default function Slide24BuildingBlocks() {
                 {/* B4. P*Q Longer-Term */}
                 <div className="grid grid-cols-[1fr_auto_0.8fr] gap-3 items-center">
                   <PlaceholderBox
-                    label="TARGET_NUM_CUSTOMERS_PLACEHOLDER"
+                    label="Target # of Customers"
                     delay={2.3}
                     className="h-14"
                   />
                   <TimesIcon delay={2.4} />
                   <PlaceholderBox
-                    label="ARPC_PLACEHOLDER"
+                    label="ARPC"
                     delay={2.5}
                     className="h-14 overflow-hidden"
                   />

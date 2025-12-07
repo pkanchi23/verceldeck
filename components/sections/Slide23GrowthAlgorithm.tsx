@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 
 
@@ -53,33 +54,16 @@ export default function Slide23GrowthAlgorithm() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-6 md:pt-10 pb-16">
-          {/* Header Section */}
-          <div className="mb-6 md:mb-8 relative z-30">
-            {/* Main Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 text-left"
-            >
-              The Vercel Growth Algorithm
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-sm md:text-base lg:text-lg font-bold text-white text-left"
-            >
-              From Idea → Prototype → Deployed App → Scaled Enterprise Adoption
-            </motion.h2>
-          </div>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-6 md:pt-10 pb-12">
+          <SlideHeader
+            title="The Vercel Growth Algorithm"
+            subtitle="From Idea → Prototype → Deployed App → Scaled Enterprise Adoption"
+            className="mb-6 md:mb-8 relative z-30"
+          />
 
           {/* Total Funnel Image */}
-          <div className="w-full flex justify-center mb-0 -mt-12 md:-mt-24 relative z-10">
-            <div className="relative w-full max-w-[1400px] h-[400px] md:h-[700px]">
+          <div className="w-full flex justify-center mb-8 md:mb-12 -mt-4 md:-mt-10 relative z-10">
+            <div className="relative w-full max-w-[1000px] h-[280px] md:h-[480px]">
               <Image
                 src="/Slide 23 Funnel Sections.png/Total Funnel.png"
                 alt="Vercel Growth Funnel"
@@ -95,7 +79,7 @@ export default function Slide23GrowthAlgorithm() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="relative w-full -mt-24 bg-zinc-900/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-center z-20"
+            className="relative w-full -mt-16 md:-mt-14 bg-zinc-900/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-center z-20"
           >
             <p className="text-white text-sm md:text-base lg:text-lg font-bold">
               Top of funnel grows fast. Platform monetization compounds are huge.

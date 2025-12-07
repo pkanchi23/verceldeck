@@ -73,7 +73,7 @@ export default function Slide33AtlassianMessaging() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 h-full flex flex-col justify-center pb-20">
           {/* Title */}
           <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-6 md:mb-8">
             Atlassian&apos;s long-term opportunity messaging and key building blocks

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide28CustomerThresholds() {
   return (
@@ -26,29 +27,12 @@ export default function Slide28CustomerThresholds() {
         </motion.div>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-2 md:pt-4 pb-16">
-          {/* Header Section */}
-          <div className="mb-2 md:mb-3">
-            {/* Main Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2"
-            >
-              Deep dive into model builds of key comps for Vercel
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-base md:text-lg lg:text-xl font-medium text-white/70"
-            >
-              Best-in-class with certain customer thresholds
-            </motion.h2>
-          </div>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 pt-6 md:pt-8 pb-40">
+          <SlideHeader
+            title="Deep dive into model builds of key comps for Vercel"
+            subtitle="Best-in-class with certain customer thresholds"
+            className="mb-4 md:mb-6"
+          />
 
           {/* Two Side-by-Side Placeholder Boxes */}
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-[5%] items-stretch justify-center">
@@ -58,7 +42,7 @@ export default function Slide28CustomerThresholds() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] bg-transparent p-0 border-none h-[360px] md:h-[450px] lg:h-[540px]"
+              className="flex-1 lg:w-[40%] bg-transparent p-0 border-none h-[320px] md:h-[420px] lg:h-[500px]"
             >
               <div className="flex flex-col items-center h-full">
                 <div className="flex-1 flex items-center justify-center w-full relative">
@@ -78,7 +62,7 @@ export default function Slide28CustomerThresholds() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
-              className="flex-1 lg:w-[40%] bg-transparent p-0 border-none h-[360px] md:h-[450px] lg:h-[540px]"
+              className="flex-1 lg:w-[40%] bg-transparent p-0 border-none h-[320px] md:h-[420px] lg:h-[500px]"
             >
               <div className="flex flex-col items-center h-full">
                 <div className="flex-1 flex items-center justify-center w-full relative">
@@ -98,10 +82,10 @@ export default function Slide28CustomerThresholds() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.5 }}
-            className="mt-12"
+            className="mt-8 mb-6"
           >
             <p className="text-white/40 text-xs">
-              FOOTNOTE_PLACEHOLDER
+              Source: Public filings, IPO roadshow presentations, Goldman Sachs Investment Research
             </p>
           </motion.div>
         </div>

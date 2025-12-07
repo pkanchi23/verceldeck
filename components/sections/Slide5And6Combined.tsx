@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide5And6Combined() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -11,28 +12,26 @@ export default function Slide5And6Combined() {
         offset: ["start start", "end end"],
     });
 
-    // Slide 5 opacity: 1 -> 0
-    // We want it to stay visible for the first part, then fade out
-    const slide5Opacity = useTransform(scrollYProgress, [0.2, 0.45], [1, 0]);
+    // Slide 5 opacity: linger longer before easing out
+    const slide5Opacity = useTransform(scrollYProgress, [0.25, 0.6], [1, 0]);
 
-    // Slide 6 opacity: 0 -> 1
-    // We want it to fade in after Slide 5 starts fading out
-    const slide6Opacity = useTransform(scrollYProgress, [0.55, 0.8], [0, 1]);
+    // Slide 6 opacity: fade in later and over a longer range for smoother handoff
+    const slide6Opacity = useTransform(scrollYProgress, [0.55, 0.9], [0, 1]);
 
     // Image opacity: 1 -> 0.6 for Slide 6
-    const imageOpacity = useTransform(scrollYProgress, [0.45, 0.6], [1, 0.6]);
+    const imageOpacity = useTransform(scrollYProgress, [0.4, 0.75], [1, 0.6]);
 
     // Page number transition
-    const pageNumber = useTransform(scrollYProgress, [0.49, 0.51], [5, 6]);
+    const pageNumber = useTransform(scrollYProgress, [0.48, 0.52], [5, 6]);
     const pageNumberOpacity = useTransform(scrollYProgress, [0.45, 0.5, 0.55], [1, 0, 1]);
 
     return (
-        <div ref={containerRef} className="relative h-[175vh] bg-black">
+        <div ref={containerRef} className="relative h-[200vh] bg-black">
             {/* Anchor for Slide 5 navigation */}
             <div id="slide-5" className="absolute top-0 w-full h-px" />
 
             {/* Anchor for Slide 6 navigation - placed halfway */}
-            <div id="slide-6" className="absolute top-[35%] w-full h-px" />
+            <div id="slide-6" className="absolute top-[40%] w-full h-px" />
 
             <div className="sticky top-0 h-screen overflow-hidden">
                 <div className="relative w-full h-full">
@@ -89,25 +88,11 @@ export default function Slide5And6Combined() {
                     {/* Main Content Container - Shared Layout */}
                     <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24">
                         {/* Headline + Subheadline (Static) */}
-                        <div className="relative z-10 mb-6 md:mb-8">
-                            <motion.h1
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2, duration: 0.8 }}
-                                className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-5"
-                            >
-                                But AI still feels...unfinished
-                            </motion.h1>
-
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.3, duration: 0.8 }}
-                                className="text-lg md:text-xl text-white font-normal"
-                            >
-                                AI is transformative, but most teams struggle to ship with it
-                            </motion.p>
-                        </div>
+                        <SlideHeader
+                            title="But AI still feels...unfinished"
+                            subtitle="AI is transformative, but most teams struggle to ship with it"
+                            className="relative z-10 mb-6 md:mb-8"
+                        />
 
                         {/* Main Visual Area */}
                         <div className="relative -mt-8 md:-mt-16 w-full max-w-[100%] mx-auto h-[60vh] md:h-[70vh]">
@@ -134,7 +119,7 @@ export default function Slide5And6Combined() {
                                     viewport={{ once: true, amount: 0.5 }}
                                     animate={{ y: [0, -12, 0], x: [0, 8, 0] }}
                                     transition={{
-                                        opacity: { duration: 0.6, delay: 0.4 },
+                                        opacity: { duration: 0.6, delay: 0.35 },
                                         y: { duration: 5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
                                         x: { duration: 5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
                                     }}
@@ -155,7 +140,7 @@ export default function Slide5And6Combined() {
                                     viewport={{ once: true, amount: 0.5 }}
                                     animate={{ y: [0, -15, 0], x: [0, -8, 0] }}
                                     transition={{
-                                        opacity: { duration: 0.6, delay: 0.5 },
+                                        opacity: { duration: 0.6, delay: 0.45 },
                                         y: { duration: 6, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
                                         x: { duration: 6, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
                                     }}
@@ -176,7 +161,7 @@ export default function Slide5And6Combined() {
                                     viewport={{ once: true, amount: 0.5 }}
                                     animate={{ y: [0, -10, 0], x: [0, 6, 0] }}
                                     transition={{
-                                        opacity: { duration: 0.6, delay: 0.6 },
+                                        opacity: { duration: 0.6, delay: 0.55 },
                                         y: { duration: 4.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
                                         x: { duration: 4.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
                                     }}
@@ -197,7 +182,7 @@ export default function Slide5And6Combined() {
                                     viewport={{ once: true, amount: 0.5 }}
                                     animate={{ y: [0, -14, 0], x: [0, 10, 0] }}
                                     transition={{
-                                        opacity: { duration: 0.6, delay: 0.7 },
+                                        opacity: { duration: 0.6, delay: 0.15 },
                                         y: { duration: 5.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
                                         x: { duration: 5.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
                                     }}
@@ -218,7 +203,7 @@ export default function Slide5And6Combined() {
                                     viewport={{ once: true, amount: 0.5 }}
                                     animate={{ y: [0, -12, 0], x: [0, -6, 0] }}
                                     transition={{
-                                        opacity: { duration: 0.6, delay: 0.8 },
+                                        opacity: { duration: 0.6, delay: 0.25 },
                                         y: { duration: 4.8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
                                         x: { duration: 4.8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
                                     }}

@@ -37,7 +37,9 @@ const AnimatedWordImage = ({
       style={{
         width: `${width}px`,
         height: `${height}px`,
-        filter: isHovered ? "drop-shadow(0 0 20px rgba(255, 255, 255, 0.4))" : "none",
+        filter: isHovered
+          ? "drop-shadow(0 0 28px rgba(255, 255, 255, 0.75))"
+          : "none",
       }}
     >
       <Image
@@ -138,19 +140,36 @@ const CornerLogo = ({
 };
 
 export default function Slide18FastAINative() {
+  // Gentle pulsing glow for the triangle background
+  const trianglePulse = {
+    initial: { opacity: 0, filter: "drop-shadow(0 0 0px rgba(255,255,255,0))" },
+    animate: {
+      opacity: 1,
+      filter: "drop-shadow(0 0 32px rgba(255,255,255,0.6))",
+    },
+    transition: {
+      delay: 1.5,
+      duration: 0.9,
+      ease: "easeOut" as const,
+    },
+  };
+
   return (
     <Section id="slide-18" className="bg-black">
       <div className="relative w-full h-screen flex items-center justify-center">
         {/* Triangle Graphic - Background */}
         <div className="absolute inset-0 flex items-center justify-center z-0 -mt-24">
-          <div className="relative w-[230px] md:w-[320px] h-[185px] md:h-[250px]">
+          <motion.div
+            {...trianglePulse}
+            className="relative w-[230px] md:w-[320px] h-[185px] md:h-[250px]"
+          >
             <Image
               src="/Slide 18 Billboard/Vercel billboard Logo.svg"
               alt="Vercel Billboard Logo"
               fill
               className="object-contain"
             />
-          </div>
+          </motion.div>
         </div>
 
         {/* Main Content Container */}
@@ -219,7 +238,7 @@ export default function Slide18FastAINative() {
           <CornerLogo
             src="/Vercel Logo.svg"
             alt="Vercel"
-            delay={1.1}
+            delay={2.0}
           />
         </div>
 
@@ -228,22 +247,16 @@ export default function Slide18FastAINative() {
           <CornerLogo
             src="/v0 Logo.svg"
             alt="v0"
-            delay={1.2}
+            delay={2.05}
             width={96}
             height={32}
           />
         </div>
 
         {/* Page Number - Bottom-Right (lower position) */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 1.3, duration: 0.4 }}
-          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70"
-        >
+        <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-sm md:text-base font-light text-white/70">
           18
-        </motion.div>
+        </div>
       </div>
     </Section>
   );

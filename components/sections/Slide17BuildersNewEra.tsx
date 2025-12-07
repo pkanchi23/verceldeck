@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Section from "@/components/Section";
+import SlideHeader from "@/components/SlideHeader";
 
 export default function Slide17BuildersNewEra() {
   return (
@@ -27,32 +28,14 @@ export default function Slide17BuildersNewEra() {
 
         {/* Main Content Container */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24 flex flex-col h-full">
-          {/* Header Section */}
-          <div className="mb-6 md:mb-10">
-            {/* Main Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
-            >
-              The builders of the new era are here
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-lg md:text-xl lg:text-2xl font-medium text-white/80"
-            >
-              AI-natives, digital natives and enterprises are standardizing on
-              Vercel
-            </motion.h2>
-          </div>
+          <SlideHeader
+            title="The builders of the new era are here"
+            subtitle="AI-natives, digital natives and enterprises are standardizing on Vercel"
+            className="mb-6 md:mb-10"
+          />
 
           {/* Central Content Area - Stairs Logo Scene */}
-          <div className="flex items-center justify-center py-4 md:py-8 flex-1 mt-8 md:mt-12">
+          <div className="flex items-center justify-center py-4 md:py-8 flex-1 mt-4 md:mt-8">
             <motion.div
               initial={{ opacity: 0, scale: 1.2 }}
               whileInView={{ opacity: 1, scale: 1.2 }}

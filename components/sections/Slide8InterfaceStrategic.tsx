@@ -38,8 +38,8 @@ export default function Slide8InterfaceStrategic() {
           <div className="relative w-full max-w-6xl mx-auto h-[550px] md:h-[600px] flex-shrink-0">
             {/* Left Column - New AI Dev Stack Arrow */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 2.0, duration: 0.8 }}
               className="absolute left-[8%] top-[40%] -translate-y-1/2 z-10 w-[160px] md:w-[200px] h-[320px] md:h-[400px]"

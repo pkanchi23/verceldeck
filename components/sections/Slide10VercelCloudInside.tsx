@@ -38,13 +38,13 @@ const IconItem = ({ item, index, iconCount, radius, isHighlighted }: { item: any
         filter: "drop-shadow(0 0 0px transparent)",
         zIndex: 1
       }}
-      whileHover={{
+      whileHover={hasEntered ? {
         scale: 1.2,
         filter: `drop-shadow(0 0 15px ${item.glowColor})`,
         zIndex: 50,
         transition: { duration: 0.2, ease: "easeOut" }
-      }}
-      animate={isHighlighted ? {
+      } : undefined}
+      animate={hasEntered ? (isHighlighted ? {
         scale: 1.2,
         filter: `drop-shadow(0 0 15px ${item.glowColor})`,
         zIndex: 50,
@@ -54,7 +54,7 @@ const IconItem = ({ item, index, iconCount, radius, isHighlighted }: { item: any
         filter: "drop-shadow(0 0 0px transparent)",
         zIndex: 1,
         transition: { duration: 0.2, ease: "easeOut" }
-      }}
+      }) : undefined}
       viewport={{ once: true, amount: 0.5 }}
       transition={
         hasEntered

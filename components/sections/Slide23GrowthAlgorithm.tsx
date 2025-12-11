@@ -25,10 +25,13 @@ const BackgroundIcon = ({ x, y, delay }: { x: string; y: string; delay: number }
   );
 };
 
+import { useState } from "react";
+
 export default function Slide23GrowthAlgorithm() {
+  const [hasEntered, setHasEntered] = useState(false);
   return (
     <Section id="slide-23" className="bg-black">
-      <div className="relative w-full min-h-screen overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden">
         {/* Background Icons */}
         <BackgroundIcon x="10%" y="20%" delay={0.2} />
         <BackgroundIcon x="25%" y="60%" delay={0.4} />
@@ -77,9 +80,20 @@ export default function Slide23GrowthAlgorithm() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            whileHover={{
+              scale: 1.01,
+              boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)",
+              borderColor: "rgba(255, 255, 255, 0.5)",
+              transition: { duration: 0.1 }
+            }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="relative w-full -mt-16 md:-mt-14 bg-zinc-900/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-center z-20"
+            transition={
+              hasEntered
+                ? { duration: 0.1 }
+                : { delay: 0.8, duration: 0.6 }
+            }
+            onAnimationComplete={() => setHasEntered(true)}
+            className="relative w-full -mt-16 md:-mt-14 bg-zinc-900/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-center z-20 cursor-pointer transition-colors"
           >
             <p className="text-white text-sm md:text-base lg:text-lg font-bold">
               Top of funnel grows fast. Platform monetization compounds are huge.

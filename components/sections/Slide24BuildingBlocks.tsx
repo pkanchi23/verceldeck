@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Image from "next/image";
 import Section from "@/components/Section";
 import SlideHeader from "@/components/SlideHeader";
@@ -15,18 +16,85 @@ const PlaceholderBox = ({
   delay: number;
   className?: string;
 }) => {
+  const [hasEntered, setHasEntered] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: 1, x: 0 }}
+      whileHover={{
+        scale: 1.01,
+        boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)",
+        borderColor: "rgba(255, 255, 255, 0.5)",
+        transition: { duration: 0.1 }
+      }}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay, duration: 0.4, ease: "easeOut" }}
-      className={`border border-white rounded-lg bg-zinc-900/50 p-4 flex items-center justify-center ${className}`}
+      transition={
+        hasEntered
+          ? { duration: 0.1 }
+          : { delay, duration: 0.4, ease: "easeOut" }
+      }
+      onAnimationComplete={() => setHasEntered(true)}
+      className={`border border-white rounded-lg bg-zinc-900/50 p-4 flex items-center justify-center cursor-pointer transition-colors ${className}`}
     >
       <span className="text-white text-xs md:text-sm text-center font-medium">
         {label}
       </span>
     </motion.div>
+  );
+};
+
+// Revenue Header Component
+const RevenueHeader = () => {
+  const [hasEntered, setHasEntered] = useState(false);
+
+  return (
+    <div className="relative flex items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        whileHover={{
+          scale: 1.01,
+          boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)",
+          borderColor: "rgba(255, 255, 255, 0.5)",
+          transition: { duration: 0.1 }
+        }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={
+          hasEntered
+            ? { duration: 0.1 }
+            : { delay: 0.5, duration: 0.5 }
+        }
+        onAnimationComplete={() => setHasEntered(true)}
+        className="w-full max-w-5xl border-2 border-white rounded-full bg-zinc-900/50 p-4 text-center cursor-pointer transition-colors"
+      >
+        <span className="text-white text-sm md:text-base font-bold">
+          Revenue
+        </span>
+      </motion.div>
+
+      {/* A Marker */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.7, duration: 0.5 }}
+        className="absolute left-[25%] -translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-white border border-white flex items-center justify-center text-black text-sm font-bold"
+      >
+        A
+      </motion.div>
+
+      {/* B Marker */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.7, duration: 0.5 }}
+        className="absolute right-[25%] translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-white border border-white flex items-center justify-center text-black text-sm font-bold"
+      >
+        B
+      </motion.div>
+    </div>
   );
 };
 
@@ -47,7 +115,7 @@ const TimesIcon = ({ delay }: { delay: number }) => {
 export default function Slide24BuildingBlocks() {
   return (
     <Section id="slide-24" className="bg-black">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -75,41 +143,7 @@ export default function Slide24BuildingBlocks() {
 
           {/* Revenue Header with A/B Markers */}
           <div className="mb-8 md:mb-12">
-            <div className="relative flex items-center justify-center">
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-                className="w-full max-w-5xl border-2 border-white rounded-full bg-zinc-900/50 p-4 text-center"
-              >
-                <span className="text-white text-sm md:text-base font-bold">
-                  Revenue
-                </span>
-              </motion.div>
-
-              {/* A Marker */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-                className="absolute left-[25%] -translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-white border border-white flex items-center justify-center text-black text-sm font-bold"
-              >
-                A
-              </motion.div>
-
-              {/* B Marker */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-                className="absolute right-[25%] translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-white border border-white flex items-center justify-center text-black text-sm font-bold"
-              >
-                B
-              </motion.div>
-            </div>
+            <RevenueHeader />
           </div>
 
           {/* Two Column Layout */}

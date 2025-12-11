@@ -7,9 +7,9 @@ import Section from "@/components/Section";
 export default function Slide1Hero() {
   return (
     <Section id="slide-1" className="bg-black">
-      <div className="relative w-full h-screen flex items-center justify-center">
+      <div className="relative w-full h-full flex items-center justify-center">
         {/* Grid Container - 95% of viewport, centered */}
-        <div className="relative w-[95vw] h-[95vh] max-w-[1800px]">
+        <div className="relative w-[95%] h-[95%] max-w-[1800px]">
           {/* Grid Background Overlay */}
           {/* <div
             className="absolute inset-0"
@@ -45,39 +45,57 @@ export default function Slide1Hero() {
 
           {/* Bottom-Middle "Made with" text */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              filter: [
-                "drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))",
-                "drop-shadow(0 0 16px rgba(255, 255, 255, 0.9))",
-                "drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))",
-              ],
-            }}
-            transition={{
-              opacity: { delay: 0.8, duration: 1 },
-              filter: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-            }}
             className="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-3 text-white text-lg md:text-xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 1 }}
           >
             <span>Made with</span>
-            <div className="relative w-8 h-8 -mx-1">
+            <motion.div
+              animate={{
+                filter: [
+                  "drop-shadow(0 0 0px rgba(255, 255, 255, 0))",
+                  "drop-shadow(0 0 4px rgba(255, 255, 255, 0.2))",
+                  "drop-shadow(0 0 0px rgba(255, 255, 255, 0))",
+                ],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative w-8 h-8 -mx-1"
+            >
               <Image
                 src="/V0 Logo.svg"
                 alt="v0"
                 fill
                 className="object-contain scale-125"
               />
-            </div>
+            </motion.div>
             <span>. Deployed with</span>
-            <div className="relative w-24 h-12">
+            <motion.div
+              animate={{
+                filter: [
+                  "drop-shadow(0 0 0px rgba(255, 255, 255, 0))",
+                  "drop-shadow(0 0 4px rgba(255, 255, 255, 0.2))",
+                  "drop-shadow(0 0 0px rgba(255, 255, 255, 0))",
+                ],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative w-24 h-12"
+            >
               <Image
                 src="/Vercel Logo.svg"
                 alt="Vercel"
                 fill
                 className="object-contain"
               />
-            </div>
+            </motion.div>
           </motion.div>
         </div>
 
@@ -125,6 +143,6 @@ export default function Slide1Hero() {
           1
         </motion.div>
       </div>
-    </Section>
+    </Section >
   );
 }

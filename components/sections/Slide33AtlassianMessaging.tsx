@@ -54,7 +54,7 @@ export default function Slide33AtlassianMessaging() {
 
   return (
     <Section id="slide-33" className="bg-black">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}

@@ -8,7 +8,7 @@ import SlideHeader from "@/components/SlideHeader";
 export default function Slide28CustomerThresholds() {
   return (
     <Section id="slide-28" className="bg-black">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}

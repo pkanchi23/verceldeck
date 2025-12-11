@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Image from "next/image";
 import Section from "@/components/Section";
 import SlideHeader from "@/components/SlideHeader";
@@ -13,13 +14,26 @@ const LabelBox = ({
   label: string;
   delay: number;
 }) => {
+  const [hasEntered, setHasEntered] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: 1, x: 0 }}
+      whileHover={{
+        scale: 1.01,
+        boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)",
+        borderColor: "rgba(255, 255, 255, 0.5)",
+        transition: { duration: 0.1 }
+      }}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay, duration: 0.4, ease: "easeOut" }}
-      className="border border-white rounded-lg bg-zinc-900/50 p-1.5 text-center"
+      transition={
+        hasEntered
+          ? { duration: 0.1 }
+          : { delay, duration: 0.4, ease: "easeOut" }
+      }
+      onAnimationComplete={() => setHasEntered(true)}
+      className="border border-white rounded-lg bg-zinc-900/50 p-1.5 text-center cursor-pointer transition-colors"
     >
       <span className="text-white text-[10px] md:text-xs font-medium">
         {label}
@@ -37,13 +51,26 @@ const BulletListBox = ({
   items: string[];
   delay: number;
 }) => {
+  const [hasEntered, setHasEntered] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: 1, x: 0 }}
+      whileHover={{
+        scale: 1.01,
+        boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)",
+        borderColor: "rgba(255, 255, 255, 0.5)",
+        transition: { duration: 0.1 }
+      }}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay, duration: 0.4, ease: "easeOut" }}
-      className="border border-white rounded-lg bg-zinc-900/50 p-2"
+      transition={
+        hasEntered
+          ? { duration: 0.1 }
+          : { delay, duration: 0.4, ease: "easeOut" }
+      }
+      onAnimationComplete={() => setHasEntered(true)}
+      className="border border-white rounded-lg bg-zinc-900/50 p-2 cursor-pointer transition-colors"
     >
       <div className="space-y-0.5">
         <p className="text-white text-[10px] md:text-xs font-medium mb-2">
@@ -60,10 +87,62 @@ const BulletListBox = ({
   );
 };
 
+// Revenue Header Component
+const RevenueHeader = () => {
+  const [hasEntered, setHasEntered] = useState(false);
+
+  return (
+    <div className="relative flex items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        whileHover={{
+          scale: 1.01,
+          boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)",
+          borderColor: "rgba(255, 255, 255, 0.5)",
+          transition: { duration: 0.1 }
+        }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={
+          hasEntered
+            ? { duration: 0.1 }
+            : { delay: 0.5, duration: 0.5 }
+        }
+        onAnimationComplete={() => setHasEntered(true)}
+        className="w-full max-w-5xl border-2 border-white rounded-full bg-zinc-900/50 p-2 text-center cursor-pointer transition-colors"
+      >
+        <span className="text-white text-sm md:text-base font-bold">Revenue</span>
+      </motion.div>
+
+      {/* A Marker */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.7, duration: 0.5 }}
+        className="absolute left-[25%] -translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-white border border-white flex items-center justify-center text-black text-sm font-bold"
+      >
+        A
+      </motion.div>
+
+      {/* B Marker */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.7, duration: 0.5 }}
+        className="absolute right-[25%] translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-white border border-white flex items-center justify-center text-black text-sm font-bold"
+      >
+        B
+      </motion.div>
+    </div>
+  );
+};
+
 export default function Slide25DisclosuresKPIs() {
   return (
     <Section id="slide-25" className="bg-black">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -91,39 +170,7 @@ export default function Slide25DisclosuresKPIs() {
 
           {/* Revenue Header with A/B Markers */}
           <div className="mb-8 md:mb-12">
-            <div className="relative flex items-center justify-center">
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-                className="w-full max-w-5xl border-2 border-white rounded-full bg-zinc-900/50 p-2 text-center"
-              >
-                <span className="text-white text-sm md:text-base font-bold">Revenue</span>
-              </motion.div>
-
-              {/* A Marker */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-                className="absolute left-[25%] -translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-white border border-white flex items-center justify-center text-black text-sm font-bold"
-              >
-                A
-              </motion.div>
-
-              {/* B Marker */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-                className="absolute right-[25%] translate-x-1/2 -bottom-16 w-8 h-8 rounded-full bg-white border border-white flex items-center justify-center text-black text-sm font-bold"
-              >
-                B
-              </motion.div>
-            </div>
+            <RevenueHeader />
           </div>
 
           {/* Two Column Layout */}

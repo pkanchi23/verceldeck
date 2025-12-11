@@ -54,9 +54,9 @@ const ArrowPlaceholder = ({
 export default function Slide19NextLayerAbstraction() {
   return (
     <Section id="slide-19" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-full flex flex-col">
         {/* Header Section */}
-        <div className="flex items-start justify-between px-6 md:px-12 pt-16 md:pt-20 mb-12 md:mb-16">
+        <div className="flex items-start justify-between px-6 md:px-12 pt-16 md:pt-20 flex-shrink-0 z-10">
           <SlideHeader
             title="AI cloud for Vercel is the next layer of abstraction"
             className="max-w-4xl"
@@ -81,7 +81,7 @@ export default function Slide19NextLayerAbstraction() {
         </div>
 
         {/* Three-Column Layout */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 pb-24 flex flex-col justify-center min-h-[70vh]">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex-grow flex flex-col justify-center">
           {/* Mobile Layout */}
           <div className="flex flex-col gap-12 lg:hidden items-center justify-center">
             {/* Column 1 */}

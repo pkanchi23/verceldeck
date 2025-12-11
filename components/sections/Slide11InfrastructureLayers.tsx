@@ -13,7 +13,7 @@ const layers = [
   },
   {
     heading: "Inference Primitives",
-    subtext: "Multi Modal Edge Inference  •  Adaptive Compute  •  Model Routine",
+    subtext: "Multi Modal Edge Inference  •  Adaptive Compute  •  Model Routing",
     bgColor: "linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)",
   },
   {
@@ -23,12 +23,12 @@ const layers = [
   },
   {
     heading: "AI Agent Infrastructure",
-    subtext: "State Management  •  Tool Registry  •  Multi-Agent Routine",
+    subtext: "State Management  •  Tool Registry  •  Multi-Agent Routing",
     bgColor: "linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%)",
   },
   {
     heading: "Durable Orchestration",
-    subtext: "Workflows  •  Event-Driven DAGs  •  TBU in the Loop",
+    subtext: "Event Driven Workflows",
     bgColor: "linear-gradient(135deg, #5a5a5a 0%, #4a4a4a 100%)",
   },
   {
@@ -41,7 +41,7 @@ const layers = [
 export default function Slide11InfrastructureLayers() {
   return (
     <Section id="slide-11" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}

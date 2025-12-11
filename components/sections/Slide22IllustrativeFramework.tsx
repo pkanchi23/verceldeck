@@ -1,9 +1,46 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Image from "next/image";
 import Section from "@/components/Section";
 import SlideHeader from "@/components/SlideHeader";
+
+
+// Extracted Bar Component for state-based transitions
+const Bar = ({
+  targetHeight,
+  delay,
+  color,
+  colorClass
+}: {
+  targetHeight: string;
+  delay: number;
+  color: string;
+  colorClass: string;
+}) => {
+  const [hasEntered, setHasEntered] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ height: 0 }}
+      whileInView={{ height: targetHeight }}
+      whileHover={{
+        scale: 1.05,
+        boxShadow: `0 0 15px ${color}`,
+        transition: { duration: 0.2 }
+      }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={
+        hasEntered
+          ? { duration: 0.2 }
+          : { delay, duration: 0.8, ease: "easeOut" }
+      }
+      onAnimationComplete={() => setHasEntered(true)}
+      className={`w-12 md:w-16 ${colorClass} rounded-t cursor-pointer`}
+    />
+  );
+};
 
 // Chart Block Component
 const ChartBlock = ({
@@ -26,23 +63,21 @@ const ChartBlock = ({
       <div className="flex items-end gap-3 md:gap-4 mb-4">
         {/* Q1 Bar */}
         <div className="flex flex-col items-center h-28 md:h-32 justify-end">
-          <motion.div
-            initial={{ height: 0 }}
-            whileInView={{ height: "5rem" }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
-            className={`w-12 md:w-16 ${colorClass} rounded-t`}
+          <Bar
+            targetHeight="5rem"
+            delay={0.2}
+            color={color}
+            colorClass={colorClass}
           />
         </div>
 
         {/* Q2 Bar */}
         <div className="flex flex-col items-center relative h-28 md:h-32 justify-end">
-          <motion.div
-            initial={{ height: 0 }}
-            whileInView={{ height: "7rem" }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-            className={`w-12 md:w-16 ${colorClass} rounded-t`}
+          <Bar
+            targetHeight="7rem"
+            delay={0.4}
+            color={color}
+            colorClass={colorClass}
           />
         </div>
       </div>
@@ -57,8 +92,13 @@ const ChartBlock = ({
         </span>
       </div>
 
+
+
       {/* Metrics Table */}
-      <div className="w-full border border-zinc-700 rounded-lg overflow-hidden">
+      <motion.div
+        whileHover={{ boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)", borderColor: "rgba(255, 255, 255, 0.5)" }}
+        className="w-full border border-zinc-700 rounded-lg overflow-hidden cursor-pointer transition-colors"
+      >
         <table className="w-full text-xs">
           <tbody>
             <tr className="border-b border-zinc-800">
@@ -85,8 +125,8 @@ const ChartBlock = ({
             </tr>
           </tbody>
         </table>
-      </div>
-    </div>
+      </motion.div>
+    </div >
   );
 };
 
@@ -101,7 +141,10 @@ const RevenueRow = ({
   futureValue: string;
 }) => {
   return (
-    <div className="border border-zinc-700 rounded-lg p-3 md:p-4 mb-3">
+    <motion.div
+      whileHover={{ boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)", borderColor: "rgba(255, 255, 255, 0.5)" }}
+      className="border border-zinc-700 rounded-lg p-3 md:p-4 mb-3 cursor-pointer transition-colors"
+    >
       <div className="grid grid-cols-3 gap-4 items-center">
         <div className="text-white/80 text-xs md:text-sm">{label}</div>
         <div className="text-white text-xs md:text-sm text-center">
@@ -111,14 +154,14 @@ const RevenueRow = ({
           {futureValue}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default function Slide22IllustrativeFramework() {
   return (
     <Section id="slide-22" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-full">
         {/* Header Section */}
         <div className="flex items-start justify-between px-6 md:px-12 pt-16 md:pt-20 mb-8 md:mb-12">
           <SlideHeader
@@ -217,7 +260,7 @@ export default function Slide22IllustrativeFramework() {
               />
               <RevenueRow
                 label="Target % of Rev >[$50k]"
-                todayValue="50%"
+                todayValue="[50%]"
                 futureValue="[70%]"
               />
               <RevenueRow

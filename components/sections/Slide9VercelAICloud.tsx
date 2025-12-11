@@ -8,7 +8,7 @@ import SlideHeader from "@/components/SlideHeader";
 export default function Slide9VercelAICloud() {
   return (
     <Section id="slide-9" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}

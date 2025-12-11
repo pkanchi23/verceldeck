@@ -181,7 +181,7 @@ const CompanyCard = ({
 export default function Slide20PlatformCompanies() {
   return (
     <Section id="slide-20" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}

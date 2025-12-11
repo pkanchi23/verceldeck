@@ -18,7 +18,7 @@ export default function Slide30CustomerThresholdsFocus() {
 
   return (
     <Section id="slide-30" className="bg-black">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -50,17 +50,29 @@ export default function Slide30CustomerThresholdsFocus() {
           {/* Main Layout Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_240px] gap-6 lg:gap-8">
             {/* Left Column - Customer Thresholds Table */}
-            <div className="h-[500px] bg-transparent border-none flex items-center justify-center p-4 relative">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="h-[500px] bg-transparent border-none flex items-center justify-center p-4 relative"
+            >
               <Image
                 src="/Slide 30 Customer Threshold/Customer Thresholds Table.png"
                 alt="Customer Thresholds Table"
                 fill
                 className="object-contain p-4"
               />
-            </div>
+            </motion.div>
 
             {/* Right-Hand Callout Box */}
-            <div className="h-[300px] self-center border border-white rounded-lg p-6 bg-transparent flex flex-col justify-center">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8, duration: 0.6 }} // Starts after image finishes (0.2 + 0.6 = 0.8)
+              className="h-[300px] self-center border border-white rounded-lg p-6 bg-transparent flex flex-col justify-center"
+            >
               <div className="mb-4">
                 <span className="text-white text-sm font-medium">
                   Other Factors to Consider
@@ -92,7 +104,7 @@ export default function Slide30CustomerThresholdsFocus() {
                   </span>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
 
           {/* Footer Footnote */}

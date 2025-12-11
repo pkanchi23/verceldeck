@@ -5,6 +5,7 @@ import TableOfContents from "@/components/TableOfContents";
 import ScreenSizeWarning from "@/components/ScreenSizeWarning";
 import AppGuard from "@/components/AppGuard";
 import SlideJump from "@/components/SlideJump";
+import ScaleWrapper from "@/components/ScaleWrapper";
 
 export const metadata: Metadata = {
   title: "Vercel Materials",
@@ -17,16 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="h-full w-full overflow-hidden">
       <body
-        className={`${GeistSans.variable} ${GeistMono.variable} antialiased bg-black text-slate-100`}
+        className={`${GeistSans.variable} ${GeistMono.variable} antialiased bg-black text-slate-100 h-full w-full overflow-hidden m-0 p-0`}
       >
-        <AppGuard>
-          <ScreenSizeWarning />
-          <TableOfContents />
-          <SlideJump />
-          {children}
-        </AppGuard>
+        <TableOfContents />
+        <ScaleWrapper>
+          <AppGuard>
+            <SlideJump />
+            {children}
+          </AppGuard>
+        </ScaleWrapper>
       </body>
     </html>
   );

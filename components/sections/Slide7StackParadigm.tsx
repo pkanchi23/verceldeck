@@ -8,7 +8,7 @@ import SlideHeader from "@/components/SlideHeader";
 export default function Slide7StackParadigm() {
   return (
     <Section id="slide-7" className="bg-black">
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -58,7 +58,7 @@ export default function Slide7StackParadigm() {
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 2.5, duration: 1.5, ease: "easeOut" }}
+                transition={{ delay: 1.8, duration: 1.0, ease: "easeOut" }}
                 className="relative w-full h-[200px] md:h-[240px] -mt-32 md:-mt-40 z-40"
               >
                 <Image
@@ -89,7 +89,7 @@ export default function Slide7StackParadigm() {
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 3.0, duration: 1.5, ease: "easeOut" }}
+                transition={{ delay: 1.8, duration: 1.0, ease: "easeOut" }}
                 className="relative w-full h-[200px] md:h-[240px] -mt-32 md:-mt-40 z-20"
               >
                 <Image
@@ -123,7 +123,7 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-            className="absolute left-[-2%] md:left-[0%] top-[30%] z-30 hidden md:flex justify-end w-[260px]"
+              className="absolute left-[-2%] md:left-[0%] top-[30%] z-30 hidden md:flex justify-end w-[260px]"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}
@@ -145,7 +145,7 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.0, duration: 0.5 }}
-            className="absolute left-[-2%] md:left-[0%] top-[50%] -translate-y-1/2 z-30 hidden md:flex justify-end w-[260px]"
+              className="absolute left-[-2%] md:left-[0%] top-[50%] -translate-y-1/2 z-30 hidden md:flex justify-end w-[260px]"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}
@@ -167,7 +167,7 @@ export default function Slide7StackParadigm() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 1.2, duration: 0.5 }}
-            className="absolute left-[-2%] md:left-[0%] top-[64%] z-30 hidden md:flex justify-end w-[260px]"
+              className="absolute left-[-2%] md:left-[0%] top-[64%] z-30 hidden md:flex justify-end w-[260px]"
             >
               <motion.div
                 animate={{ scale: [1, 1.05, 1], opacity: [1, 0.8, 1] }}
@@ -189,11 +189,11 @@ export default function Slide7StackParadigm() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 4.8, duration: 0.6 }}
+              transition={{ delay: 4.4, duration: 0.6 }}
               className="absolute top-[28%] right-[8%] -translate-y-1/2 z-30 hidden md:block"
             >
               <p className="text-pink-400 font-semibold text-base md:text-lg">
-                The New AI Wedges
+                The New AI Platforms
               </p>
             </motion.div>
 
@@ -202,11 +202,11 @@ export default function Slide7StackParadigm() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 2.7, duration: 0.6 }}
+              transition={{ delay: 3.3, duration: 0.6 }}
               className="absolute top-[38%] right-[5%] -translate-y-1/2 z-30 hidden md:block"
             >
               <div className="border-2 border-pink-400 rounded-lg px-4 py-2 bg-black/60 max-w-[220px]">
-                <p className="text-white text-sm">
+                <p className="text-pink-400 text-sm">
                   Dynamic, autonomous web workflows
                 </p>
               </div>
@@ -220,11 +220,11 @@ export default function Slide7StackParadigm() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 3.2, duration: 0.6 }}
+              transition={{ delay: 3.3, duration: 0.6 }}
               className="absolute top-[61%] right-[5%] -translate-y-1/2 z-30 hidden md:block"
             >
               <div className="border-2 border-pink-400 rounded-lg px-4 py-2 bg-black/60 max-w-[220px]">
-                <p className="text-white text-sm">
+                <p className="text-pink-400 text-sm">
                   Context-aware, natural language apps
                 </p>
               </div>

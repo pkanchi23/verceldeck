@@ -9,31 +9,32 @@ export default function Slide5And6Combined() {
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
+        container: { current: typeof document !== "undefined" ? document.getElementById("main-scroll-container") : null } as any, // Cast to any to avoid strict typing issues with HTMLElement and RefObject mismatch if necessary, or better: create a ref effect
         offset: ["start start", "end end"],
     });
 
     // Slide 5 opacity: linger longer before easing out
     const slide5Opacity = useTransform(scrollYProgress, [0.25, 0.6], [1, 0]);
 
-    // Slide 6 opacity: fade in later and over a longer range for smoother handoff
-    const slide6Opacity = useTransform(scrollYProgress, [0.55, 0.9], [0, 1]);
+    // Slide 6 opacity: appear quickly (effectively no fade "effect", just appearance)
+    const slide6Opacity = useTransform(scrollYProgress, [0.55, 0.6], [0, 1]);
 
-    // Image opacity: 1 -> 0.6 for Slide 6
-    const imageOpacity = useTransform(scrollYProgress, [0.4, 0.75], [1, 0.6]);
+    // Image opacity: 1 -> 0.2 for Slide 6 (faint background)
+    const imageOpacity = useTransform(scrollYProgress, [0.4, 0.75], [1, 0.2]);
 
     // Page number transition
     const pageNumber = useTransform(scrollYProgress, [0.48, 0.52], [5, 6]);
     const pageNumberOpacity = useTransform(scrollYProgress, [0.45, 0.5, 0.55], [1, 0, 1]);
 
     return (
-        <div ref={containerRef} className="relative h-[200vh] bg-black">
+        <div ref={containerRef} className="relative h-[1660px] bg-black">
             {/* Anchor for Slide 5 navigation */}
             <div id="slide-5" className="absolute top-0 w-full h-px" />
 
             {/* Anchor for Slide 6 navigation - placed halfway */}
             <div id="slide-6" className="absolute top-[40%] w-full h-px" />
 
-            <div className="sticky top-0 h-screen overflow-hidden">
+            <div className="sticky top-0 h-[830px] overflow-hidden">
                 <div className="relative w-full h-full">
                     {/* Shared Layout Container for Logos/Page Number */}
                     <div className="absolute inset-0 pointer-events-none z-50">
@@ -86,7 +87,7 @@ export default function Slide5And6Combined() {
                     </div>
 
                     {/* Main Content Container - Shared Layout */}
-                    <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24">
+                    <div className="max-w-7xl mx-auto px-6 md:px-12 pt-16 md:pt-24 h-full">
                         {/* Headline + Subheadline (Static) */}
                         <SlideHeader
                             title="But AI still feels...unfinished"
@@ -95,7 +96,7 @@ export default function Slide5And6Combined() {
                         />
 
                         {/* Main Visual Area */}
-                        <div className="relative -mt-8 md:-mt-16 w-full max-w-[100%] mx-auto h-[60vh] md:h-[70vh]">
+                        <div className="relative top-[-5%] w-full max-w-[100%] mx-auto h-[70%] md:h-[85%]">
                             {/* Central Cube Graphic */}
                             <motion.div style={{ opacity: imageOpacity }} className="absolute inset-0 flex items-center justify-center">
                                 <div className="relative w-[120%] h-[120%]">
@@ -103,7 +104,11 @@ export default function Slide5And6Combined() {
                                         src="/Slide 5/Slide 5 Background Graphic.png"
                                         alt="AI Graphic"
                                         fill
-                                        className="object-contain"
+                                        className="object-contain mix-blend-screen"
+                                        style={{
+                                            maskImage: "radial-gradient(circle at center, black 30%, transparent 70%)",
+                                            WebkitMaskImage: "radial-gradient(circle at center, black 30%, transparent 70%)"
+                                        }}
                                         priority
                                     />
                                 </div>
@@ -222,29 +227,35 @@ export default function Slide5And6Combined() {
                                 style={{ opacity: slide6Opacity }}
                                 className="absolute inset-0 pointer-events-none"
                             >
-                                <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full px-4">
+                                <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full px-4">
                                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center">
                                         <span className="text-red-400">So, What is </span>
-                                        <span
+                                        <motion.span
                                             className="text-red-500 italic"
-                                            style={{
-                                                textShadow: `
-                          0 0 10px rgba(239, 68, 68, 0.6),
-                          0 0 20px rgba(239, 68, 68, 0.3)
-                        `,
+                                            animate={{
+                                                textShadow: [
+                                                    "0 0 10px rgba(239, 68, 68, 0.6), 0 0 20px rgba(239, 68, 68, 0.3)",
+                                                    "0 0 25px rgba(239, 68, 68, 1), 0 0 50px rgba(239, 68, 68, 0.8)",
+                                                    "0 0 10px rgba(239, 68, 68, 0.6), 0 0 20px rgba(239, 68, 68, 0.3)"
+                                                ]
+                                            }}
+                                            transition={{
+                                                duration: 2,
+                                                repeat: Infinity,
+                                                ease: "easeInOut"
                                             }}
                                         >
                                             Going On
-                                        </span>
+                                        </motion.span>
                                         <span className="text-white">?</span>
                                     </h2>
                                 </div>
                             </motion.div>
                         </div>
-                    </div>
+                    </div >
 
-                </div>
-            </div>
-        </div>
+                </div >
+            </div >
+        </div >
     );
 }

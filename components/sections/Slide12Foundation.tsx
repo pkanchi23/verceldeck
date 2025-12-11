@@ -42,7 +42,7 @@ const rightPyramidRows = [
 export default function Slide12Foundation() {
   return (
     <Section id="slide-12" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}

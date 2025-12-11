@@ -68,7 +68,7 @@ export default function Slide16CreatingNewMarkets() {
 
   return (
     <Section id="slide-16" className="bg-black text-white font-sans">
-      <div ref={containerRef} className="relative w-full min-h-[calc(100vh-60px)] overflow-hidden flex flex-col">
+      <div ref={containerRef} className="relative w-full h-full overflow-hidden flex flex-col">
         {/* Top-Right Logo (Vercel) */}
         <div className="absolute top-6 right-6 z-50">
           <div className="relative w-[120px] h-[30px]">

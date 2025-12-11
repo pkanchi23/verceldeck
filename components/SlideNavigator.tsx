@@ -13,15 +13,26 @@ export default function SlideNavigator() {
       e.preventDefault();
 
       const container = document.getElementById("main-scroll-container");
-      if (!container) return; // Should navigate relative to the main scroll container
+      if (!container) return;
 
-      // Get all slide elements (sections or divs used as anchors)
-      // Sort them by offsetTop to ensuring ordered navigation
+      // Helper to get offset relative to the scrolling container
+      const getOffsetTop = (element: HTMLElement, targetParent: HTMLElement) => {
+        let offset = 0;
+        let current = element;
+
+        while (current && current !== targetParent && targetParent.contains(current)) {
+          offset += current.offsetTop;
+          current = current.offsetParent as HTMLElement;
+        }
+        return offset;
+      };
+
+      // Get all slide elements and sort by calculated global offset
       const slides = Array.from(document.querySelectorAll('[id^="slide-"]'))
         .map(slide => ({
           id: slide.id,
           element: slide as HTMLElement,
-          offsetTop: (slide as HTMLElement).offsetTop
+          offsetTop: getOffsetTop(slide as HTMLElement, container)
         }))
         .sort((a, b) => a.offsetTop - b.offsetTop);
 
@@ -29,17 +40,14 @@ export default function SlideNavigator() {
 
       const currentScrollTop = container.scrollTop;
 
-      // Find the slide that is currently "active" / closest to the top
-      // We use a small threshold (e.g., 50px) to handle slight misalignments
-      // Iterate to find the last slide that has offsetTop <= currentScrollTop + buffer
+      // Find currently active slide (closest to top)
       let currentSlideIndex = 0;
       for (let i = 0; i < slides.length; i++) {
-        // If the slide's top is "above" or "at" the current scroll position (within a small margin)
-        // then it is a candidate for being the current slide.
+        // Find the last slide that starts at or above the current scroll position
         if (slides[i].offsetTop <= currentScrollTop + 10) {
           currentSlideIndex = i;
         } else {
-          break; // Since slides are sorted, once we pass the scroll point, we stop
+          break;
         }
       }
 

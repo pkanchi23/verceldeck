@@ -8,7 +8,7 @@ import SlideHeader from "@/components/SlideHeader";
 export default function Slide27DeepDiveComps() {
   return (
     <Section id="slide-27" className="bg-black">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -85,7 +85,7 @@ export default function Slide27DeepDiveComps() {
             className="mt-8 mb-6"
           >
             <p className="text-white/40 text-xs">
-              Source: Public filings, IPO roadshow presentations, Goldman Sachs Investment Research
+
             </p>
           </motion.div>
         </div>

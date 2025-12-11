@@ -7,9 +7,9 @@ import Section from "@/components/Section";
 export default function Slide2Context() {
   return (
     <Section id="slide-2" className="bg-black">
-      <div className="relative w-full h-screen flex items-center justify-center">
+      <div className="relative w-full h-full flex items-center justify-center">
         {/* Grid Container - 95% of viewport, centered */}
-        <div className="relative w-[95vw] h-[95vh] max-w-[1800px]">
+        <div className="relative w-[95%] h-[95%] max-w-[1800px]">
           {/* Grid Background Overlay - 6 columns x 4 rows */}
           {/* <div
             className="absolute inset-0"
@@ -31,7 +31,7 @@ export default function Slide2Context() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-16 md:mb-20"
             >
-              Table of Contents
+              Discussion Topics
             </motion.h1>
 
             {/* TOC Entries */}

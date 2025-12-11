@@ -15,7 +15,7 @@ export default function Slide16CreatingNewMarkets() {
 
   const glowColors = {
     A: "#FFD54A", // Yellow
-    B: "#FF41B4", // Pink
+    B: "#FE02F1", // Pink
     C: "#4FF2E4", // Turquoise
     D: "#FFFFFF", // White
   };
@@ -68,7 +68,7 @@ export default function Slide16CreatingNewMarkets() {
 
   return (
     <Section id="slide-16" className="bg-black text-white font-sans">
-      <div ref={containerRef} className="relative w-full min-h-[calc(100vh-60px)] overflow-hidden flex flex-col">
+      <div ref={containerRef} className="relative w-full h-full flex flex-col">
         {/* Top-Right Logo (Vercel) */}
         <div className="absolute top-6 right-6 z-50">
           <div className="relative w-[120px] h-[30px]">
@@ -308,7 +308,7 @@ export default function Slide16CreatingNewMarkets() {
               className="absolute bottom-6 left-[180px]"
             >
               <p className="text-white/40 text-xs">
-                Source: IDC, 2024 | Note: ¹ 2028 Estimates from IDC. ³ Estimates from Gartner.
+
               </p>
             </motion.div>
 

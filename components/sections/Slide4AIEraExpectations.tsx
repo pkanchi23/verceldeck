@@ -46,7 +46,7 @@ export default function Slide4AIEraExpectations() {
 
   return (
     <Section id="slide-4" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -69,7 +69,7 @@ export default function Slide4AIEraExpectations() {
           <SlideHeader
             title="The AI era has changed expectations"
             subtitle="Customers, developers & enterprises are all demanding more"
-            className="mb-12 md:mb-16 text-left"
+            className="mb-20 md:mb-32 text-left"
           />
 
           {/* Three-Column Feature Cards */}

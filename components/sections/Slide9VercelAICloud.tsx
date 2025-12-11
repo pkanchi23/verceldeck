@@ -8,7 +8,7 @@ import SlideHeader from "@/components/SlideHeader";
 export default function Slide9VercelAICloud() {
   return (
     <Section id="slide-9" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -46,19 +46,20 @@ export default function Slide9VercelAICloud() {
               className="relative aspect-[16/9]"
               animate={{
                 filter: [
-                  "drop-shadow(0 0 60px rgba(255, 255, 255, 0.4))",
-                  "drop-shadow(0 0 100px rgba(255, 255, 255, 0.6))",
-                  "drop-shadow(0 0 60px rgba(255, 255, 255, 0.4))",
+                  "drop-shadow(0 0 0px rgba(255, 255, 255, 0))",
+                  "drop-shadow(0 0 80px rgba(255, 255, 255, 0.6))",
+                  "drop-shadow(0 0 0px rgba(255, 255, 255, 0))",
                 ],
               }}
               transition={{
                 duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut",
+                delay: 1.0
               }}
             >
               <Image
-                src="/Slide 9/Vercel Cloud.png"
+                src="/Slide 9/Vercel Cloud 2.png"
                 alt="Vercel AI Cloud"
                 fill
                 className="object-contain"

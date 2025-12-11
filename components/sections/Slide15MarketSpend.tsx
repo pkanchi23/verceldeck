@@ -56,8 +56,8 @@ const marketCategories = [
   },
   {
     label: "AI Coding",
-    tam: "$5B",
-    cagr: "'24–'29 CAGR: 23%",
+    tam: "$12B",
+    cagr: "'26–'32 CAGR: 24%",
     logos: [
       { name: "CURSOR", file: "Cursor Logo.png" },
       { name: "REPLIT", file: "Replit Logo.png" },
@@ -68,7 +68,7 @@ const marketCategories = [
 export default function Slide15MarketSpend() {
   return (
     <Section id="slide-15" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -184,7 +184,7 @@ export default function Slide15MarketSpend() {
 
           {/* Footnote */}
           <div className="max-w-6xl mx-auto text-white/40 text-[10px] leading-relaxed mt-4">
-            Note: Figures show 2023 TAM. 1 IDC Worldwide Content Delivery Networks Forecast, 2024; IDC Worldwide Edge Enterprise Spending Forecast (excl. Infrastructure spend), 2024. 2 Markets and Markets Severless Computing Market Forecast, 2024. 3 IDC DevOps Software Tools Forecast, 2024. 4 Gartner IT Operations Management Software Forecast, 2024. 5 Figma S-1 filing. 6 Technavio Global AI Code Tools Market Forecast, 2025.
+
           </div>
         </div>
 

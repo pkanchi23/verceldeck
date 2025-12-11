@@ -25,7 +25,7 @@ export default function Slide32RoadshowMetricsV2() {
 
   return (
     <Section id="slide-32" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -144,7 +144,7 @@ export default function Slide32RoadshowMetricsV2() {
           {/* Footer Footnote */}
           <div className="mt-6">
             <p className="text-white/40 text-xs">
-            Source: Public filings, IPO roadshow presentations
+
             </p>
           </div>
         </div>

@@ -30,7 +30,7 @@ const AnimatedWordImage = ({
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay, duration: 0.4, ease: "easeOut" }}
+      transition={{ delay, duration: 0.5, ease: "easeOut" }}
       onMouseEnter={() => withHover && setIsHovered(true)}
       onMouseLeave={() => withHover && setIsHovered(false)}
       className={`inline-block relative transition-all duration-200 ${className}`}
@@ -65,7 +65,7 @@ const AnimatedText = ({
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay, duration: 0.4, ease: "easeOut" }}
+      transition={{ delay, duration: 0.5, ease: "easeOut" }}
       className="inline-block"
     >
       {children}
@@ -92,7 +92,7 @@ const LogoImage = ({
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay, duration: 0.4, ease: "easeOut" }}
+      transition={{ delay, duration: 0.5, ease: "easeOut" }}
       className="inline-block relative ml-3"
       style={{ width: `${width}px`, height: `${height}px` }}
     >
@@ -125,7 +125,7 @@ const CornerLogo = ({
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay, duration: 0.4, ease: "easeOut" }}
+      transition={{ delay, duration: 0.5, ease: "easeOut" }}
       className="relative"
       style={{ width: `${width}px`, height: `${height}px` }}
     >
@@ -149,14 +149,14 @@ export default function Slide18FastAINative() {
     },
     transition: {
       delay: 1.5,
-      duration: 0.9,
+      duration: 1.1,
       ease: "easeOut" as const,
     },
   };
 
   return (
     <Section id="slide-18" className="bg-black">
-      <div className="relative w-full h-screen flex items-center justify-center">
+      <div className="relative w-full h-full flex items-center justify-center">
         {/* Triangle Graphic - Background */}
         <div className="absolute inset-0 flex items-center justify-center z-0 -mt-24">
           <motion.div

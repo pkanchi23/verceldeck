@@ -41,7 +41,7 @@ const vercelFeatures = [
 export default function Slide14Differentiation() {
   return (
     <Section id="slide-14" className="bg-black">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full h-full">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -173,6 +173,7 @@ export default function Slide14Differentiation() {
                   <ul className="space-y-1 text-red-400 text-sm md:text-base">
                     <li>• Strong edge network, but limited in AI-native orchestration</li>
                     <li>• Lacks deep inference integration</li>
+                    <li>• Nascent Developer Ecosystem</li>
                   </ul>
                 </motion.div>
 

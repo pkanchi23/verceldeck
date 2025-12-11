@@ -7,7 +7,7 @@ import Section from "@/components/Section";
 export default function Slide3Agenda() {
   return (
     <Section id="slide-3" className="bg-black">
-      <div className="relative w-full h-screen flex items-center justify-center">
+      <div className="relative w-full h-full flex items-center justify-center">
         {/* Top-Right Logo (Vercel) */}
         <motion.div
           initial={{ opacity: 0 }}

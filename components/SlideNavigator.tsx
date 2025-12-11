@@ -12,28 +12,36 @@ export default function SlideNavigator() {
 
       e.preventDefault();
 
+      const container = document.getElementById("main-scroll-container");
+      if (!container) return; // Should navigate relative to the main scroll container
+
       // Get all slide elements (sections or divs used as anchors)
-      const slides = Array.from(document.querySelectorAll('[id^="slide-"]'));
+      // Sort them by offsetTop to ensuring ordered navigation
+      const slides = Array.from(document.querySelectorAll('[id^="slide-"]'))
+        .map(slide => ({
+          id: slide.id,
+          element: slide as HTMLElement,
+          offsetTop: (slide as HTMLElement).offsetTop
+        }))
+        .sort((a, b) => a.offsetTop - b.offsetTop);
 
       if (slides.length === 0) return;
 
-      // Find the currently visible slide
-      // We'll consider a slide "visible" if it's closest to the top of the viewport
-      const currentScrollY = window.scrollY;
-      const viewportHeight = window.innerHeight;
+      const currentScrollTop = container.scrollTop;
 
+      // Find the slide that is currently "active" / closest to the top
+      // We use a small threshold (e.g., 50px) to handle slight misalignments
+      // Iterate to find the last slide that has offsetTop <= currentScrollTop + buffer
       let currentSlideIndex = 0;
-      let minDistance = Infinity;
-
-      slides.forEach((slide, index) => {
-        const rect = slide.getBoundingClientRect();
-        const distance = Math.abs(rect.top); // Distance from top of viewport
-
-        if (distance < minDistance) {
-          minDistance = distance;
-          currentSlideIndex = index;
+      for (let i = 0; i < slides.length; i++) {
+        // If the slide's top is "above" or "at" the current scroll position (within a small margin)
+        // then it is a candidate for being the current slide.
+        if (slides[i].offsetTop <= currentScrollTop + 10) {
+          currentSlideIndex = i;
+        } else {
+          break; // Since slides are sorted, once we pass the scroll point, we stop
         }
-      });
+      }
 
       let targetIndex = currentSlideIndex;
 
@@ -44,7 +52,10 @@ export default function SlideNavigator() {
       }
 
       if (targetIndex !== currentSlideIndex) {
-        slides[targetIndex].scrollIntoView({ behavior: "smooth" });
+        container.scrollTo({
+          top: slides[targetIndex].offsetTop,
+          behavior: "smooth"
+        });
       }
     };
 

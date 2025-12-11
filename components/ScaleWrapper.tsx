@@ -39,6 +39,9 @@ const ScaleWrapper = ({ children }: { children: React.ReactNode }) => {
         if (mainContainerRef.current && externalScrollbarRef.current) {
             const mainScrollTop = mainContainerRef.current.scrollTop;
             externalScrollbarRef.current.scrollTop = mainScrollTop * scale;
+
+            // Persist scroll position
+            sessionStorage.setItem("scrollPosition", mainScrollTop.toString());
         }
 
         // Small timeout to reset lock
@@ -46,6 +49,15 @@ const ScaleWrapper = ({ children }: { children: React.ReactNode }) => {
             isSyncingExternal.current = false;
         });
     };
+
+    // Restore scroll position on mount
+    useEffect(() => {
+        const savedPosition = sessionStorage.getItem("scrollPosition");
+        if (savedPosition && mainContainerRef.current) {
+            // Restore immediately without scroll animation
+            mainContainerRef.current.scrollTop = parseInt(savedPosition, 10);
+        }
+    }, [mainContainerRef.current]); // Run when ref attaches (effectively on mount)
 
     // Sync main container when external scrollbar scrolls
     const handleExternalScroll = () => {
@@ -76,8 +88,29 @@ const ScaleWrapper = ({ children }: { children: React.ReactNode }) => {
     }, [children]);
 
 
+    const handleBackgroundWheel = (e: React.WheelEvent) => {
+        // If the event target is the main container or inside it, let native scroll handle it
+        if (mainContainerRef.current && mainContainerRef.current.contains(e.target as Node)) {
+            return;
+        }
+
+        // Otherwise (scrolling on background), manually scroll the main container
+        if (mainContainerRef.current) {
+            // Divide by scale to ensure visual 1:1 scroll speed
+            // Multiply by 5.0 to match the perceived sensitivity/acceleration of native scroll
+            // Use scrollBy with behavior: 'auto' to bypass CSS scroll-smooth if present
+            mainContainerRef.current.scrollBy({
+                top: (e.deltaY / scale) * 5.0,
+                behavior: "auto"
+            });
+        }
+    };
+
     return (
-        <div className="fixed inset-0 flex items-center justify-center overflow-hidden bg-black">
+        <div
+            className="fixed inset-0 flex items-center justify-center overflow-hidden bg-black"
+            onWheel={handleBackgroundWheel}
+        >
             <div
                 style={{
                     width: `${BASE_WIDTH}px`,

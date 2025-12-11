@@ -31,7 +31,7 @@ export default function Slide2Context() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-16 md:mb-20"
             >
-              Table of Contents
+              Discussion Topics
             </motion.h1>
 
             {/* TOC Entries */}

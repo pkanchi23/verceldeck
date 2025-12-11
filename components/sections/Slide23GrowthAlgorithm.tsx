@@ -31,7 +31,7 @@ export default function Slide23GrowthAlgorithm() {
   const [hasEntered, setHasEntered] = useState(false);
   return (
     <Section id="slide-23" className="bg-black">
-      <div className="relative w-full h-full overflow-hidden">
+      <div className="relative w-full h-full">
         {/* Background Icons */}
         <BackgroundIcon x="10%" y="20%" delay={0.2} />
         <BackgroundIcon x="25%" y="60%" delay={0.4} />

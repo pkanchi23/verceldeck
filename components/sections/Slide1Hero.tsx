@@ -55,7 +55,7 @@ export default function Slide1Hero() {
               animate={{
                 filter: [
                   "drop-shadow(0 0 0px rgba(255, 255, 255, 0))",
-                  "drop-shadow(0 0 4px rgba(255, 255, 255, 0.2))",
+                  "drop-shadow(0 0 12px rgba(255, 255, 255, 0.6))",
                   "drop-shadow(0 0 0px rgba(255, 255, 255, 0))",
                 ],
               }}
@@ -78,7 +78,7 @@ export default function Slide1Hero() {
               animate={{
                 filter: [
                   "drop-shadow(0 0 0px rgba(255, 255, 255, 0))",
-                  "drop-shadow(0 0 4px rgba(255, 255, 255, 0.2))",
+                  "drop-shadow(0 0 12px rgba(255, 255, 255, 0.6))",
                   "drop-shadow(0 0 0px rgba(255, 255, 255, 0))",
                 ],
               }}

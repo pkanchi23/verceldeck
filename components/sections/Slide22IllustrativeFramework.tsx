@@ -199,8 +199,8 @@ export default function Slide22IllustrativeFramework() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
                 <ChartBlock
                   title="Total"
-                  color="#a855f7"
-                  colorClass="bg-purple-500"
+                  color="#FE02F1"
+                  colorClass="bg-[#FE02F1]"
                 />
                 <ChartBlock
                   title=">$50k ARR"

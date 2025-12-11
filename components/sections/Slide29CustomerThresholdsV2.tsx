@@ -85,7 +85,7 @@ export default function Slide29CustomerThresholdsV2() {
             className="mt-8 mb-6"
           >
             <p className="text-white/40 text-xs">
-              Source: Public filings, IPO roadshow presentations, Goldman Sachs Investment Research
+
             </p>
           </motion.div>
         </div>

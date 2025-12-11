@@ -23,7 +23,8 @@ export default function Slide5And6Combined() {
     const imageOpacity = useTransform(scrollYProgress, [0.4, 0.75], [1, 0.2]);
 
     // Page number transition
-    const pageNumber = useTransform(scrollYProgress, [0.48, 0.52], [5, 6]);
+    const rawPageNum = useTransform(scrollYProgress, [0.48, 0.52], [5, 6]);
+    const pageNumber = useTransform(rawPageNum, (v) => Math.floor(v));
     const pageNumberOpacity = useTransform(scrollYProgress, [0.45, 0.5, 0.55], [1, 0, 1]);
 
     return (
@@ -34,7 +35,7 @@ export default function Slide5And6Combined() {
             {/* Anchor for Slide 6 navigation - placed halfway */}
             <div id="slide-6" className="absolute top-[40%] w-full h-px" />
 
-            <div className="sticky top-0 h-[830px] overflow-hidden">
+            <div className="sticky top-0 h-[830px]">
                 <div className="relative w-full h-full">
                     {/* Shared Layout Container for Logos/Page Number */}
                     <div className="absolute inset-0 pointer-events-none z-50">

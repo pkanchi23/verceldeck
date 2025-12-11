@@ -72,22 +72,25 @@ export default function Slide12Foundation() {
             {/* Left Column (AWS) */}
             <div className="flex flex-col items-center gap-8 justify-between w-full">
               {/* AWS Categories */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
+              <div
                 className="flex flex-wrap justify-center gap-4 md:gap-6 mb-4"
               >
-                {awsCategories.map((category) => (
-                  <div key={category} className="flex flex-col items-center">
+                {awsCategories.map((category, index) => (
+                  <motion.div
+                    key={category}
+                    className="flex flex-col items-center"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 4.8 + (index * 0.1), duration: 0.5, ease: "easeOut" }}
+                  >
                     <p className="text-white text-sm md:text-base lg:text-lg font-semibold whitespace-nowrap mb-1">
                       {category}
                     </p>
                     <div className="w-full h-[2px] bg-white" />
-                  </div>
+                  </motion.div>
                 ))}
-              </motion.div>
+              </div>
 
               {/* Left Pyramid (AWS) */}
               <div className="flex flex-col items-center gap-2 w-full">
@@ -100,7 +103,7 @@ export default function Slide12Foundation() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.5 }}
                       transition={{
-                        delay: 1.0 + row.delay * 2,
+                        delay: 0.5 + row.delay * 2,
                         duration: 1.0,
                         ease: "easeOut",
                       }}
@@ -133,7 +136,7 @@ export default function Slide12Foundation() {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
-                  transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
+                  transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
                   className="w-full max-w-[1200px] h-16 md:h-20 border-2 border-yellow-500 rounded-lg bg-yellow-500/10 flex items-center justify-center mt-2"
                 >
                   <div className="relative w-[100px] h-[40px]">
@@ -151,22 +154,25 @@ export default function Slide12Foundation() {
             {/* Right Column (Vercel) */}
             <div className="flex flex-col items-center gap-8 justify-between w-full">
               {/* Vercel Categories */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
+              <div
                 className="flex flex-nowrap justify-center gap-2 md:gap-4 mb-4"
               >
-                {vercelCategories.map((category) => (
-                  <div key={category} className="flex flex-col items-center">
+                {vercelCategories.map((category, index) => (
+                  <motion.div
+                    key={category}
+                    className="flex flex-col items-center"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 5.2 + (index * 0.1), duration: 0.5, ease: "easeOut" }}
+                  >
                     <p className="text-white text-sm md:text-base lg:text-lg font-semibold whitespace-nowrap mb-1">
                       {category}
                     </p>
                     <div className="w-full h-[2px] bg-white" />
-                  </div>
+                  </motion.div>
                 ))}
-              </motion.div>
+              </div>
 
               {/* Right Pyramid (Vercel) */}
               <div className="flex flex-col items-center gap-3 w-full">
@@ -179,7 +185,7 @@ export default function Slide12Foundation() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.5 }}
                       transition={{
-                        delay: 1.0 + row.delay * 2,
+                        delay: 2.5 + row.delay * 2,
                         duration: 1.0,
                         ease: "easeOut",
                       }}
@@ -212,8 +218,8 @@ export default function Slide12Foundation() {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
-                  transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
-                  className="w-full max-w-[1200px] h-12 md:h-16 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-1 px-6"
+                  transition={{ delay: 2.5, duration: 0.5, ease: "easeOut" }}
+                  className="w-full max-w-[1200px] h-16 md:h-20 border-2 border-white rounded-lg bg-zinc-900/40 flex items-center justify-center mt-2 px-6"
                 >
                   <div className="relative w-[160px] h-[50px]">
                     <Image

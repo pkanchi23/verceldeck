@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { GeistSans, GeistMono } from "geist/font";
 import "./globals.css";
 import TableOfContents from "@/components/TableOfContents";
-import ScreenSizeWarning from "@/components/ScreenSizeWarning";
 import AppGuard from "@/components/AppGuard";
 import SlideJump from "@/components/SlideJump";
 import ScaleWrapper from "@/components/ScaleWrapper";

@@ -103,7 +103,7 @@ export default function Slide12Foundation() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.5 }}
                       transition={{
-                        delay: 0.5 + row.delay * 2,
+                        delay: 0.8 + row.delay * 2, // Start slightly after base box (0.5s)
                         duration: 1.0,
                         ease: "easeOut",
                       }}
@@ -185,7 +185,7 @@ export default function Slide12Foundation() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.5 }}
                       transition={{
-                        delay: 2.5 + row.delay * 2,
+                        delay: 2.8 + row.delay * 2, // Start slightly after base box (2.5s)
                         duration: 1.0,
                         ease: "easeOut",
                       }}

@@ -31,6 +31,8 @@ const ScaleWrapper = ({ children }: { children: React.ReactNode }) => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
+
     // Sync external scrollbar when main container scrolls
     const handleMainScroll = () => {
         if (isSyncingMain.current) return;
@@ -40,11 +42,15 @@ const ScaleWrapper = ({ children }: { children: React.ReactNode }) => {
             const mainScrollTop = mainContainerRef.current.scrollTop;
             externalScrollbarRef.current.scrollTop = mainScrollTop * scale;
 
-            // Persist scroll position
-            sessionStorage.setItem("scrollPosition", mainScrollTop.toString());
+            // Debounce persistence to improve consistency
+            if (scrollTimeout.current) {
+                clearTimeout(scrollTimeout.current);
+            }
+            scrollTimeout.current = setTimeout(() => {
+                sessionStorage.setItem("scrollPosition", mainScrollTop.toString());
+            }, 100);
         }
 
-        // Small timeout to reset lock
         requestAnimationFrame(() => {
             isSyncingExternal.current = false;
         });
@@ -123,7 +129,7 @@ const ScaleWrapper = ({ children }: { children: React.ReactNode }) => {
                 <div
                     ref={mainContainerRef}
                     id="main-scroll-container"
-                    className="w-full h-full overflow-y-auto scroll-smooth no-scrollbar"
+                    className="w-full h-full overflow-y-auto scroll-smooth no-scrollbar relative"
                     onScroll={handleMainScroll}
                 >
                     {children}

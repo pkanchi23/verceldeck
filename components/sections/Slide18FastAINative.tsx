@@ -245,8 +245,8 @@ export default function Slide18FastAINative() {
         {/* Bottom-Right Logo (v0) */}
         <div className="absolute bottom-16 right-4 md:bottom-20 md:right-6">
           <CornerLogo
-            src="/v0 Logo.svg"
-            alt="v0"
+            src="/V0 Logo.svg"
+            alt=""
             delay={2.05}
             width={96}
             height={32}

@@ -60,10 +60,31 @@ export default function SlideNavigator() {
       }
 
       if (targetIndex !== currentSlideIndex) {
-        container.scrollTo({
-          top: slides[targetIndex].offsetTop,
-          behavior: "smooth"
-        });
+        // Native properties
+        const start = container.scrollTop;
+        const target = slides[targetIndex].offsetTop;
+        const distance = target - start;
+        const duration = 800; // ms
+        let startTime: number | null = null;
+
+        const animation = (currentTime: number) => {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+
+          // Easing function: easeInOutCubic
+          const ease = progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+          container.scrollTop = start + (distance * ease);
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+          }
+        };
+
+        requestAnimationFrame(animation);
       }
     };
 
